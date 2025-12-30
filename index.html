@@ -1,25 +1,12 @@
 <!DOCTYPE html>
-
 <html lang="en">
 <head>
-<!-- Google tag (gtag.js) -->
-<script async="" src="https://www.googletagmanager.com/gtag/js?id=G-9XQBJW3FXC"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-
-  gtag('config', 'G-9XQBJW3FXC');
-</script>
-<meta charset="utf-8"/>
-<meta content="PDXK53m3jbol2eaexn3PAoygEdroDwbegAuQOEcQsNs" name="google-site-verification"/>
-<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
-<meta content="BrightSmile Dental provides top-tier family and cosmetic dentistry services. Book your appointment for teeth whitening, implants, and routine checkups today." name="description"/>
-<meta content="dentist, cosmetic dentistry, teeth whitening, family dental, dental implants" name="keywords"/>
-<meta content="BrightSmile Dental" name="author">
-<title>BrightSmile Dental | Family &amp; Cosmetic Dentistry</title>
-<style>
-        /* --- RESET & BASICS --- */
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Upgrade your dental practice website with a modern homepage redesign. Attract more patients and showcase your services with our expert design solutions.">
+    <meta name="keywords" content="dental practice">
+    <title>Asquitt - Transform Your Dental Practice Homepage</title>
+    <style>
         * {
             margin: 0;
             padding: 0;
@@ -28,403 +15,746 @@
 
         body {
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            line-height: 1.6;
             color: #333;
-            background-color: #f9f9f9;
-        }
-
-        a { text-decoration: none; color: inherit; }
-        ul { list-style: none; }
-        img { max-width: 100%; display: block; }
-
-        /* --- VARIABLES --- */
-        :root {
-            --primary-color: #0077b6; /* Dental Blue */
-            --secondary-color: #00b4d8; /* Lighter Blue */
-            --accent-color: #caf0f8;
-            --text-light: #fff;
-            --text-dark: #333;
-        }
-
-        /* --- HEADER & NAV --- */
-        header {
-            background: var(--primary-color);
-            color: var(--text-light);
-            padding: 1rem 0;
-            position: sticky;
-            top: 0;
-            z-index: 1000;
-            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+            line-height: 1.6;
+            overflow-x: hidden;
         }
 
         .container {
-            width: 90%;
             max-width: 1200px;
             margin: 0 auto;
-            padding: 0 1rem;
+            padding: 0 20px;
+        }
+
+        header {
+            background: #fff;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
+            transition: all 0.3s ease;
         }
 
         nav {
             display: flex;
             justify-content: space-between;
             align-items: center;
+            padding: 1rem 0;
         }
 
         .logo {
-            font-size: 1.5rem;
-            font-weight: bold;
+            font-size: 1.8rem;
+            font-weight: 700;
+            color: #333;
+            text-decoration: none;
+            letter-spacing: -1px;
         }
 
         .nav-links {
             display: flex;
-            gap: 20px;
-        }
-
-        .nav-links a:hover {
-            color: var(--accent-color);
-            transition: 0.3s;
-        }
-
-        .cta-btn {
-            background-color: var(--text-light);
-            color: var(--primary-color);
-            padding: 0.5rem 1rem;
-            border-radius: 5px;
-            font-weight: bold;
-        }
-
-        /* --- HERO SECTION --- */
-        .hero {
-            background: linear-gradient(rgba(0, 119, 182, 0.8), rgba(0, 180, 216, 0.8)), url('https://placehold.co/1200x600/png?text=Dental+Office+Background');
-            background-size: cover;
-            background-position: center;
-            height: 80vh;
-            display: flex;
+            gap: 2rem;
             align-items: center;
-            justify-content: center;
+        }
+
+        .nav-link {
+            color: #333;
+            text-decoration: none;
+            font-weight: 500;
+            transition: color 0.3s ease;
+            font-size: 0.95rem;
+        }
+
+        .nav-link:hover {
+            color: #666;
+        }
+
+        .nav-link:last-child {
+            background: #333;
+            color: #fff;
+            padding: 0.7rem 1.5rem;
+            border-radius: 5px;
+            transition: all 0.3s ease;
+        }
+
+        .nav-link:last-child:hover {
+            background: #555;
+            transform: translateY(-2px);
+            box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+        }
+
+        .mobile-menu-toggle {
+            display: none;
+            flex-direction: column;
+            cursor: pointer;
+            gap: 5px;
+        }
+
+        .mobile-menu-toggle span {
+            width: 25px;
+            height: 3px;
+            background: #333;
+            transition: all 0.3s ease;
+        }
+
+        .hero {
+            background: linear-gradient(135deg, #2c3e50 0%, #3d566e 50%, #4a6fa5 100%);
+            color: #fff;
+            padding: 140px 20px 100px;
             text-align: center;
-            color: var(--text-light);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: url('data:image/svg+xml,<svg width="100" height="100" xmlns="http://www.w3.org/2000/svg"><path d="M0 0h100v100H0z" fill="none"/><path d="M50 10l5 15h16l-13 9 5 15-13-9-13 9 5-15-13-9h16z" fill="rgba(255,255,255,0.03)"/></svg>');
+            opacity: 0.3;
+        }
+
+        .hero-content {
+            position: relative;
+            z-index: 1;
+            max-width: 800px;
+            margin: 0 auto;
         }
 
         .hero h1 {
             font-size: 3rem;
-            margin-bottom: 1rem;
+            margin-bottom: 1.5rem;
+            line-height: 1.2;
+            font-weight: 700;
         }
 
         .hero p {
+            font-size: 1.3rem;
+            margin-bottom: 2.5rem;
+            opacity: 0.95;
+            line-height: 1.7;
+        }
+
+        .cta-buttons {
+            display: flex;
+            gap: 1.5rem;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+
+        .btn {
+            padding: 1rem 2.5rem;
+            text-decoration: none;
+            border-radius: 5px;
+            font-weight: 600;
+            transition: all 0.3s ease;
+            display: inline-block;
+            font-size: 1rem;
+        }
+
+        .btn-primary {
+            background: #fff;
+            color: #333;
+        }
+
+        .btn-primary:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 6px 20px rgba(255,255,255,0.3);
+        }
+
+        .btn-secondary {
+            background: transparent;
+            color: #fff;
+            border: 2px solid #fff;
+        }
+
+        .btn-secondary:hover {
+            background: #fff;
+            color: #333;
+            transform: translateY(-3px);
+        }
+
+        section {
+            padding: 80px 20px;
+        }
+
+        .section-title {
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+            text-align: center;
+            color: #333;
+            font-weight: 700;
+        }
+
+        .section-subtitle {
             font-size: 1.2rem;
-            margin-bottom: 2rem;
-            max-width: 600px;
+            text-align: center;
+            color: #666;
+            margin-bottom: 3rem;
+            max-width: 700px;
             margin-left: auto;
             margin-right: auto;
         }
 
-        .hero-btn {
-            background-color: #ffb703;
-            color: #000;
-            padding: 1rem 2rem;
-            font-size: 1.1rem;
-            border-radius: 5px;
-            transition: transform 0.2s;
+        .why-redesign {
+            background: #f8f9fa;
         }
 
-        .hero-btn:hover {
-            transform: scale(1.05);
+        .content-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 3rem;
+            margin-top: 3rem;
         }
 
-        /* --- SERVICES SECTION --- */
-        .services {
-            padding: 4rem 0;
-            background-color: #fff;
+        .content-block {
+            background: #fff;
+            padding: 2rem;
+            border-radius: 10px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.08);
+            transition: all 0.3s ease;
         }
 
-        .section-title {
+        .content-block:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 25px rgba(0,0,0,0.15);
+        }
+
+        .content-block h3 {
+            font-size: 1.5rem;
+            margin-bottom: 1rem;
+            color: #333;
+        }
+
+        .content-block p {
+            color: #666;
+            line-height: 1.8;
+        }
+
+        .benefits {
+            background: #fff;
+        }
+
+        .benefits-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+            margin-top: 3rem;
+        }
+
+        .benefit-card {
             text-align: center;
+            padding: 2rem;
+            border-radius: 10px;
+            transition: all 0.3s ease;
+            background: #f8f9fa;
+        }
+
+        .benefit-card:hover {
+            background: #fff;
+            box-shadow: 0 8px 25px rgba(0,0,0,0.1);
+            transform: translateY(-5px);
+        }
+
+        .benefit-icon {
+            width: 70px;
+            height: 70px;
+            background: linear-gradient(135deg, #333 0%, #555 100%);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 1.5rem;
+            font-size: 2rem;
+            color: #fff;
+        }
+
+        .benefit-card h3 {
+            font-size: 1.3rem;
+            margin-bottom: 1rem;
+            color: #333;
+        }
+
+        .benefit-card p {
+            color: #666;
+            line-height: 1.7;
+        }
+
+        .process {
+            background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+        }
+
+        .process-steps {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 2.5rem;
+            margin-top: 3rem;
+        }
+
+        .step {
+            background: #fff;
+            padding: 2.5rem;
+            border-radius: 10px;
+            position: relative;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.08);
+            transition: all 0.3s ease;
+        }
+
+        .step:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 25px rgba(0,0,0,0.15);
+        }
+
+        .step-number {
+            position: absolute;
+            top: -20px;
+            left: 30px;
+            width: 50px;
+            height: 50px;
+            background: #333;
+            color: #fff;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.5rem;
+            font-weight: 700;
+        }
+
+        .step h3 {
+            font-size: 1.4rem;
+            margin-bottom: 1rem;
+            margin-top: 1rem;
+            color: #333;
+        }
+
+        .step p {
+            color: #666;
+            line-height: 1.8;
+        }
+
+        .features {
+            background: #fff;
+        }
+
+        .features-list {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 2rem;
+            margin-top: 3rem;
+        }
+
+        .feature-item {
+            display: flex;
+            gap: 1.5rem;
+            padding: 1.5rem;
+            background: #f8f9fa;
+            border-radius: 10px;
+            transition: all 0.3s ease;
+        }
+
+        .feature-item:hover {
+            background: #fff;
+            box-shadow: 0 6px 20px rgba(0,0,0,0.1);
+            transform: translateX(5px);
+        }
+
+        .feature-icon {
+            width: 50px;
+            height: 50px;
+            background: #333;
+            color: #fff;
+            border-radius: 8px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.5rem;
+            flex-shrink: 0;
+        }
+
+        .feature-content h4 {
+            font-size: 1.2rem;
+            margin-bottom: 0.5rem;
+            color: #333;
+        }
+
+        .feature-content p {
+            color: #666;
+            line-height: 1.7;
+            font-size: 0.95rem;
+        }
+
+        .cta-section {
+            background: linear-gradient(135deg, #2c3e50 0%, #3d566e 50%, #4a6fa5 100%);
+            color: #fff;
+            text-align: center;
+            padding: 100px 20px;
+        }
+
+        .cta-section h2 {
+            font-size: 2.8rem;
+            margin-bottom: 1.5rem;
+            font-weight: 700;
+        }
+
+        .cta-section p {
+            font-size: 1.3rem;
+            margin-bottom: 2.5rem;
+            opacity: 0.95;
+            max-width: 700px;
+            margin-left: auto;
+            margin-right: auto;
+            line-height: 1.7;
+        }
+
+        footer {
+            background: #1a1a1a;
+            color: #fff;
+            padding: 60px 20px 30px;
+        }
+
+        .footer-content {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 3rem;
             margin-bottom: 3rem;
         }
 
-        .section-title h2 {
-            font-size: 2.5rem;
-            color: var(--primary-color);
+        .footer-section h3 {
+            font-size: 1.3rem;
+            margin-bottom: 1.5rem;
+            color: #fff;
         }
 
-        .services-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 2rem;
+        .footer-section p,
+        .footer-section a {
+            color: #ccc;
+            text-decoration: none;
+            line-height: 2;
+            display: block;
+            transition: color 0.3s ease;
         }
 
-        .service-card {
-            background: #f4f4f4;
-            padding: 2rem;
+        .footer-section a:hover {
+            color: #fff;
+        }
+
+        .footer-bottom {
             text-align: center;
-            border-radius: 8px;
-            box-shadow: 0 4px 6px rgba(0,0,0,0.05);
-            transition: 0.3s;
+            padding-top: 2rem;
+            border-top: 1px solid #333;
+            color: #999;
         }
 
-        .service-card:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 8px 12px rgba(0,0,0,0.1);
-        }
-
-        .service-card img {
-            width: 100%;
-            height: 200px;
-            object-fit: cover;
-            border-radius: 5px;
-            margin-bottom: 1rem;
-        }
-
-        /* --- ABOUT SECTION --- */
-        .about {
-            padding: 4rem 0;
-            display: flex;
-            align-items: center;
-            gap: 2rem;
-            flex-wrap: wrap;
-        }
-
-        .about-text {
-            flex: 1;
-            min-width: 300px;
-        }
-
-        .about-image {
-            flex: 1;
-            min-width: 300px;
-        }
-
-        .about-image img {
-            border-radius: 8px;
-            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
-        }
-
-        /* --- CONTACT/FORM SECTION --- */
-        .contact {
-            background-color: var(--primary-color);
-            color: var(--text-light);
-            padding: 4rem 0;
-        }
-
-        .contact-container {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 2rem;
-            justify-content: center;
-        }
-
-        .contact-info, .contact-form {
-            flex: 1;
-            min-width: 300px;
-            background: rgba(255,255,255,0.1);
-            padding: 2rem;
-            border-radius: 8px;
-        }
-
-        .contact-form input, .contact-form textarea {
-            width: 100%;
-            padding: 0.8rem;
-            margin-bottom: 1rem;
-            border: none;
-            border-radius: 4px;
-        }
-
-        .contact-form button {
-            background-color: #ffb703;
-            color: #333;
-            border: none;
-            padding: 0.8rem 2rem;
-            font-size: 1rem;
-            cursor: pointer;
-            border-radius: 4px;
-            font-weight: bold;
-        }
-
-        /* --- FOOTER --- */
-        footer {
-            background-color: #222;
-            color: #aaa;
-            text-align: center;
-            padding: 2rem 0;
-        }
-
-        /* --- RESPONSIVE --- */
         @media (max-width: 768px) {
-            .hero h1 { font-size: 2rem; }
-            .nav-links { display: none; } /* Simplified for this raw html demo */
-            .logo { flex-grow: 1; text-align: center; }
+            .nav-links {
+                position: fixed;
+                top: 70px;
+                left: -100%;
+                flex-direction: column;
+                background: #fff;
+                width: 100%;
+                padding: 2rem;
+                box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+                transition: left 0.3s ease;
+                gap: 1.5rem;
+            }
+
+            .nav-links.active {
+                left: 0;
+            }
+
+            .mobile-menu-toggle {
+                display: flex;
+            }
+
+            .hero h1 {
+                font-size: 2rem;
+            }
+
+            .hero p {
+                font-size: 1.1rem;
+            }
+
+            .section-title {
+                font-size: 2rem;
+            }
+
+            .cta-buttons {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .btn {
+                width: 100%;
+                max-width: 300px;
+                text-align: center;
+            }
+
+            .content-grid,
+            .benefits-grid,
+            .process-steps,
+            .features-list {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .hero h1 {
+                font-size: 1.7rem;
+            }
+
+            .hero p {
+                font-size: 1rem;
+            }
+
+            .section-title {
+                font-size: 1.7rem;
+            }
+
+            .cta-section h2 {
+                font-size: 2rem;
+            }
         }
     </style>
-</meta></head>
+</head>
 <body>
-<header>
-<div class="container">
-<nav>
-<div class="logo">BrightSmile Dental</div>
-<ul class="nav-links">
-<li><a href="#home">Home</a></li>
-<li><a href="#services">Services</a></li>
-<li><a href="#about">About Us</a></li>
-<li><a class="cta-btn" href="homepage-redesign.html">Homepage Redesign for Your Dental Practice | Modern Patient Experience</a></li><li><a class="cta-btn" href="dental-faq.html">FAQ</a></li><li><a class="cta-btn" href="our-services.html">Our Services</a></li><li><a class="cta-btn" href="page-1.html">Page 1</a></li><li><a class="cta-btn" href="page-2.html">Page 2</a></li><li><a class="cta-btn" href="#contact">Book Now</a></li>
-</ul>
-</nav>
-</div>
-</header>
-<section class="hero" id="home">
-<div class="container">
-<h1>A Brighter Smile Starts Here</h1>
-<p>Comprehensive dental care for the whole family. From routine checkups to advanced cosmetic procedures, your smile is our priority.</p>
-<a class="hero-btn" href="#contact">Schedule Appointment</a>
-</div>
-</section>
-<section class="services" id="services">
-<div class="container">
-<div class="section-title">
-<h2>Our Services</h2>
-<p>Modern dentistry with a gentle touch.</p>
-</div>
-<div class="services-grid">
-<article class="service-card">
-<img alt="Teeth Whitening Service" src="https://placehold.co/400x300/e0f7fa/0077b6?text=Teeth+Whitening"/>
-<h3>Teeth Whitening</h3>
-<p>Restore the natural brilliance of your smile with our professional whitening treatments.</p>
-</article>
-<article class="service-card">
-<img alt="Dental Implants" src="https://placehold.co/400x300/e0f7fa/0077b6?text=Implants"/>
-<h3>Dental Implants</h3>
-<p>Permanent, natural-looking solutions for missing teeth using state-of-the-art technology.</p>
-</article>
-<article class="service-card">
-<img alt="Routine Checkups" src="https://placehold.co/400x300/e0f7fa/0077b6?text=Checkups"/>
-<h3>Routine Checkups</h3>
-<p>Preventative care including cleaning, exams, and x-rays to keep your oral health on track.</p>
-</article>
-</div>
-</div>
-</section>
-<section class="about" id="about">
-<div class="container">
-<div class="about-text">
-<h2>About Dr. Sarah Bright</h2>
-<p>With over 15 years of experience, Dr. Bright believes that visiting the dentist should be a comfortable and positive experience. Our clinic utilizes the latest in dental technology to ensure precise and pain-free treatments.</p>
-<br/>
-<p>We accept most major insurance plans and offer flexible payment options for cosmetic procedures.</p>
-</div>
-<div class="about-image">
-<img alt="Dr. Sarah Bright at the clinic" src="https://placehold.co/600x400/caf0f8/0077b6?text=Dr.+Sarah+Bright"/>
-</div>
-</div>
-</section>
-<section class="contact" id="contact">
-<div class="container">
-<div class="section-title">
-<h2 style="color: white;">Contact Us</h2>
-</div>
-<div class="contact-container">
-<div class="contact-info">
-<h3>Office Hours</h3>
-<p>Mon - Fri: 8:00 AM - 6:00 PM</p>
-<p>Saturday: 9:00 AM - 2:00 PM</p>
-<p>Sunday: Closed</p>
-<br/>
-<h3>Location</h3>
-<p>123 Wellness Blvd, Suite 100</p>
-<p>Health City, ST 12345</p>
-<br/>
-<p><strong>Phone:</strong> (555) 123-4567</p>
-<p><strong>Email:</strong> hello@brightsmiledental.test</p>
-</div>
-<div class="contact-form">
-<h3>Request an Appointment</h3>
-<form action="#" method="POST">
-<input name="name" placeholder="Your Name" required="" type="text"/>
-<input name="email" placeholder="Your Email" required="" type="email"/>
-<input name="phone" placeholder="Phone Number" type="tel"/>
-<textarea name="message" placeholder="How can we help you?" rows="4"></textarea>
-<button type="submit">Submit Request</button>
-</form>
-</div>
-</div>
-</div>
-</section>
-<footer>
-<div class="container">
-<p>© 2024 BrightSmile Dental. All rights reserved.</p>
-<p style="font-size: 0.8rem; margin-top: 10px;">This is a demo site for testing.</p>
-</div>
-</footer>
-<!-- Our Services Section -->
-<section id="our-services" style="padding: 40px 20px; max-width: 800px; margin: 0 auto;">
-<h1>Our Services</h1>
-<p># Professional Dental Services for Your Complete Oral Health</p>
-<p>Welcome to our comprehensive dental services center, where we combine advanced technology with compassionate care to deliver exceptional results. Whether you're seeking preventive care, cosmetic enhancements, or restorative treatments, our dental services are designed to meet your unique needs and exceed your expectations.</p>
-<p><h2>Why Choose Our Dental Services?</h2></p>
-<p>Our dental services stand out because we prioritize patient comfort, clinical excellence, and personalized treatment plans. With over 15 years of experience, our team of certified dental professionals understands that every patient deserves individualized attention and the highest standard of care.</p>
-<p><h3>Our Commitment to Excellence</h3></p>
-<p>When you choose our dental services, you're investing in your long-term oral health. We utilize state-of-the-art equipment and evidence-based techniques to ensure optimal outcomes. Our team stays current with the latest advancements in dental technology, allowing us to offer cutting-edge solutions that were previously unavailable.</p>
-<p><h2>Comprehensive Range of Dental Services</h2></p>
-<p><h3>Preventive Dental Services</h3></p>
-<p>Prevention is the foundation of excellent oral health. Our preventive dental services include:</p>
-<p>- **Professional Cleanings**: Regular cleanings remove tartar and plaque buildup that brushing alone cannot eliminate
-- **Dental Examinations**: Comprehensive evaluations detect issues early, preventing costly treatments later
-- **Fluoride Treatments**: Strengthen enamel and protect against decay
-- **Oral Cancer Screenings**: Early detection saves lives</p>
-<p>Regular preventive dental services reduce your risk of cavities, gum disease, and tooth loss by up to 80%.</p>
-<p><h3>Restorative Dental Services</h3></p>
-<p>When tooth damage occurs, our restorative dental services restore both function and appearance:</p>
-<p>- **Fillings**: Tooth-colored composite materials blend seamlessly with natural teeth
-- **Crowns and Bridges**: Restore damaged teeth or replace missing teeth with natural-looking solutions
-- **Root Canal Therapy**: Save infected or severely damaged teeth
-- **Dental Implants**: Permanent solutions for missing teeth that look and function like natural teeth</p>
-<p>Our restorative dental services are designed to preserve your natural smile while ensuring lasting durability.</p>
-<p><h3>Cosmetic Dental Services</h3></p>
-<p>Your smile is often the first impression you make. Our cosmetic dental services enhance aesthetics while maintaining dental health:</p>
-<p>- **Teeth Whitening**: Professional-grade treatments deliver dramatic results safely
-- **Veneers**: Thin porcelain shells transform discolored, chipped, or misaligned teeth
-- **Bonding**: Repair minor imperfections with tooth-colored resin
-- **Smile Makeovers**: Comprehensive treatments combining multiple services for stunning transformations</p>
-<p>With our cosmetic dental services, you can achieve the confident smile you've always wanted.</p>
-<p><h3>Specialized Dental Services</h3></p>
-<p>For complex cases, we offer specialized dental services including:</p>
-<p>- **Periodontal Therapy**: Advanced treatment for gum disease
-- **Orthodontics**: Teeth straightening with traditional and clear options
-- **Oral Surgery**: Tooth extractions and surgical procedures
-- **TMJ Treatment**: Relief from jaw pain and dysfunction</p>
-<p><h2>Benefits of Regular Dental Services</h2></p>
-<p>Investing in consistent dental services provides multiple benefits:</p>
-<p>**Better Overall Health**: Research shows strong connections between oral health and systemic health conditions. Regular dental services reduce your risk of heart disease, diabetes complications, and respiratory infections.</p>
-<p>**Cost Savings**: Preventive dental services cost far less than emergency treatments. A $150 cleaning now prevents a $2,000 root canal later.</p>
-<p>**Increased Confidence**: A healthy, attractive smile boosts self-esteem and improves social and professional interactions.</p>
-<p>**Early Problem Detection**: Our dental services catch issues at early stages when treatments are simpler and more affordable.</p>
-<p>**Personalized Care Plans**: We develop customized dental services plans based on your specific needs, goals, and budget.</p>
-<p><h2>Our Dental Services Process</h2></p>
-<p>1. **Comprehensive Consultation**: We discuss your concerns and goals
-2. **Thorough Examination**: Advanced diagnostics identify all issues
-3. **Personalized Treatment Plan**: We explain options and recommendations clearly
-4. **Comfortable Treatment**: Our gentle techniques minimize discomfort
-5. **Follow-Up Care**: We monitor your progress and adjust treatments as needed</p>
-<p><h2>What Our Patients Say</h2></p>
-<p>"The dental services here are exceptional. Dr. Smith and the team made me feel completely comfortable, and my smile has never looked better." — Sarah M.</p>
-<p>"I was nervous about dental work, but their dental services are so professional and caring. Highly recommended!" — Michael T.</p>
-<p><h2>Flexible Scheduling and Payment Options</h2></p>
-<p>We understand that accessing quality dental services shouldn't be complicated. That's why we offer:</p>
-<p>- Early morning and evening appointments
-- Saturday availability
-- Multiple payment plans
-- Insurance acceptance
-- Financing options for larger treatments</p>
-<p><h2>Schedule Your Dental Services Appointment Today</h2></p>
-<p>Don't wait for a dental emergency to receive care. Proactive dental services keep your smile healthy and bright for life. Whether you need a routine cleaning, cosmetic enhancement, or complex restoration, our team is ready to help.</p>
-<p>**Contact us today to schedule your comprehensive dental services consultation. Your best smile is just one appointment away.**</p>
-<p>---</p>
-<p><h3>Get Started Now</h3></p>
-<p>📞 **Call us at (555) 123-4567**</p>
-<p>📧 **Email: appointments@dentalpractice.com**</p>
-<p>💻 **Book online at [YourWebsite.com/booking](https://yourwebsite.com/booking)**</p>
-<p>✨ **Special Offer**: New patients receive a complimentary consultation and 20% off their first treatment when booking this week.</p>
-<p>---</p>
-<p>*Quality dental services that transform smiles and improve lives.*</p>
-</section>
+    <header>
+        <nav class="container">
+            <a href="#home" class="logo">Asquitt</a>
+            <div class="mobile-menu-toggle" onclick="toggleMenu()">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+            <div class="nav-links" id="navLinks">
+                <a href="#home" class="nav-link">Home</a>
+                <a href="#services" class="nav-link">Services</a>
+                <a href="#about" class="nav-link">About Us</a>
+                <a href="dental-faq.html" class="nav-link">FAQ</a>
+                <a href="our-services.html" class="nav-link">Our Services</a>
+                <a href="page-1.html" class="nav-link">Page 1</a>
+                <a href="page-2.html" class="nav-link">Page 2</a>
+                <a href="#contact" class="nav-link">Book Now</a>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <section id="home" class="hero">
+            <div class="hero-content">
+                <h1>Transform Your Dental Practice with a Professional Homepage Redesign</h1>
+                <p>Your website is often the first smile your patients see. Create a homepage that truly represents your practice and connects with patients.</p>
+                <div class="cta-buttons">
+                    <a href="#contact" class="btn btn-primary">Book Free Consultation</a>
+                    <a href="#services" class="btn btn-secondary">Learn More</a>
+                </div>
+            </div>
+        </section>
+
+        <section id="services" class="why-redesign">
+            <div class="container">
+                <h2 class="section-title">Why Your Dental Practice Needs a Homepage Redesign</h2>
+                <p class="section-subtitle">Patients today expect modern, easy-to-use websites. They want to find information quickly and book appointments without hassle.</p>
+                
+                <div class="content-grid">
+                    <div class="content-block">
+                        <h3>Modern Patient Expectations</h3>
+                        <p>If your current homepage doesn't deliver a simple, intuitive experience, it's time for a change. An outdated homepage sends the wrong message about your practice's commitment to modern care.</p>
+                    </div>
+                    <div class="content-block">
+                        <h3>Showcase Your Expertise</h3>
+                        <p>Your dental practice deserves a website that showcases your expertise and compassionate care. Don't let an old design hold you back from attracting the patients you deserve.</p>
+                    </div>
+                    <div class="content-block">
+                        <h3>Build Trust Instantly</h3>
+                        <p>A professional, modern design builds trust immediately. Show patients you're committed to providing the best experience from their very first interaction with your practice.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="benefits">
+            <div class="container">
+                <h2 class="section-title">What a New Homepage Can Do for You</h2>
+                <p class="section-subtitle">Transform your online presence and attract more patients with a homepage designed for results.</p>
+                
+                <div class="benefits-grid">
+                    <div class="benefit-card">
+                        <div class="benefit-icon">👥</div>
+                        <h3>Attract More Patients</h3>
+                        <p>A fresh, professional design builds trust immediately and encourages visitors to become patients.</p>
+                    </div>
+                    <div class="benefit-card">
+                        <div class="benefit-icon">✨</div>
+                        <h3>Showcase Your Services</h3>
+                        <p>Highlight cosmetic treatments, teeth whitening, and complete dental care with beautiful, engaging displays.</p>
+                    </div>
+                    <div class="benefit-card">
+                        <div class="benefit-icon">⏰</div>
+                        <h3>Save Time</h3>
+                        <p>Integrated booking systems let patients schedule appointments 24/7, reducing phone calls and administrative work.</p>
+                    </div>
+                    <div class="benefit-card">
+                        <div class="benefit-icon">⭐</div>
+                        <h3>Boost Your Reputation</h3>
+                        <p>Modern design shows you're committed to the best patient experience and staying current with technology.</p>
+                    </div>
+                    <div class="benefit-card">
+                        <div class="benefit-icon">💼</div>
+                        <h3>Transform First Impressions</h3>
+                        <p>Make visitors feel welcome before they even walk through your door with a warm, inviting design.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="about" class="process">
+            <div class="container">
+                <h2 class="section-title">Our Simple Redesign Process for Your Dental Practice</h2>
+                <p class="section-subtitle">We've made getting a new homepage incredibly easy. You shouldn't need to stress about technical details or complicated processes.</p>
+                
+                <div class="process-steps">
+                    <div class="step">
+                        <div class="step-number">1</div>
+                        <h3>Listen to Your Needs</h3>
+                        <p>We start by understanding what makes your practice special. What do your patients love most? We build personalized treatment plans for your website, just like you do for your patients.</p>
+                    </div>
+                    <div class="step">
+                        <div class="step-number">2</div>
+                        <h3>Design with Patients in Mind</h3>
+                        <p>Clear navigation helps patients find services quickly. Beautiful photos of your smile transformations show real results. Every element creates a comfortable and positive experience.</p>
+                    </div>
+                    <div class="step">
+                        <div class="step-number">3</div>
+                        <h3>Ensure Mobile Excellence</h3>
+                        <p>We ensure your homepage works perfectly on phones and tablets. Most patients search for dental care on mobile devices, so your new site will look amazing everywhere.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="features">
+            <div class="container">
+                <h2 class="section-title">Features That Make a Difference</h2>
+                <p class="section-subtitle">Everything you need to create an outstanding patient experience online.</p>
+                
+                <div class="features-list">
+                    <div class="feature-item">
+                        <div class="feature-icon">📅</div>
+                        <div class="feature-content">
+                            <h4>Online Appointment Booking</h4>
+                            <p>Let patients schedule visits anytime, day or night, with seamless integration into your practice management system.</p>
+                        </div>
+                    </div>
+                    <div class="feature-item">
+                        <div class="feature-icon">🦷</div>
+                        <div class="feature-content">
+                            <h4>Service Showcases</h4>
+                            <p>Highlight cosmetic and general dental treatments with stunning visuals that help patients understand their options.</p>
+                        </div>
+                    </div>
+                    <div class="feature-item">
+                        <div class="feature-icon">💬</div>
+                        <div class="feature-content">
+                            <h4>Patient Testimonials</h4>
+                            <p>Share success stories and beautiful smiles that build trust and confidence in your practice.</p>
+                        </div>
+                    </div>
+                    <div class="feature-item">
+                        <div class="feature-icon">📍</div>
+                        <div class="feature-content">
+                            <h4>Contact Information</h4>
+                            <p>Make it easy for patients to call or find your office with clear, accessible contact details.</p>
+                        </div>
+                    </div>
+                    <div class="feature-item">
+                        <div class="feature-icon">💳</div>
+                        <div class="feature-content">
+                            <h4>Insurance Details</h4>
+                            <p>Answer common questions upfront about accepted insurance plans and payment options.</p>
+                        </div>
+                    </div>
+                    <div class="feature-item">
+                        <div class="feature-icon">📱</div>
+                        <div class="feature-content">
+                            <h4>Mobile Responsive</h4>
+                            <p>Perfect experience on every device, ensuring patients can access your site from anywhere.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="contact" class="cta-section">
+            <div class="container">
+                <h2>Your Smile Is Our Priority – Let's Get Started</h2>
+                <p>You care about every patient who walks through your door. We care about every visitor who lands on your homepage. Together, we'll create a website that reflects your gentle touch and commitment to excellence.</p>
+                <p>Don't let another day go by with a homepage that doesn't serve you well. Your dental practice deserves better.</p>
+                <div class="cta-buttons">
+                    <a href="#contact" class="btn btn-primary">Book Your Free Consultation Today</a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>Asquitt</h3>
+                    <p>Transforming dental practice websites with modern, professional designs that attract more patients and showcase your expertise.</p>
+                </div>
+                <div class="footer-section">
+                    <h3>Quick Links</h3>
+                    <a href="#home">Home</a>
+                    <a href="#services">Services</a>
+                    <a href="#about">About Us</a>
+                    <a href="dental-faq.html">FAQ</a>
+                </div>
+                <div class="footer-section">
+                    <h3>Services</h3>
+                    <a href="our-services.html">Our Services</a>
+                    <a href="page-1.html">Page 1</a>
+                    <a href="page-2.html">Page 2</a>
+                    <a href="#contact">Book Now</a>
+                </div>
+                <div class="footer-section">
+                    <h3>Contact</h3>
+                    <p>Ready to transform your dental practice website?</p>
+                    <p>Get in touch today for a free consultation.</p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 Asquitt. All rights reserved. | Dental Practice Homepage Design Solutions</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        function toggleMenu() {
+            const navLinks = document.getElementById('navLinks');
+            navLinks.classList.toggle('active');
+        }
+
+        document.querySelectorAll('.nav-link').forEach(link => {
+            link.addEventListener('click', () => {
+                const navLinks = document.getElementById('navLinks');
+                navLinks.classList.remove('active');
+            });
+        });
+
+        window.addEventListener('scroll', () => {
+            const header = document.querySelector('header');
+            if (window.scrollY > 50) {
+                header.style.boxShadow = '0 4px 15px rgba(0,0,0,0.15)';
+            } else {
+                header.style.boxShadow = '0 2px 10px rgba(0,0,0,0.1)';
+            }
+        });
+    </script>
 </body>
 </html>
