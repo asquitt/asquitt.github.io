@@ -410,6 +410,153 @@
             line-height: 1.7;
         }
 
+        /* New CTA Styles */
+        .mid-page-cta {
+            background: linear-gradient(135deg, #4a6fa5 0%, #3d566e 100%);
+            padding: 60px 20px;
+            margin: 60px 0;
+            border-radius: 15px;
+            text-align: center;
+            box-shadow: 0 10px 40px rgba(0,0,0,0.15);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .mid-page-cta::before {
+            content: '';
+            position: absolute;
+            top: -50%;
+            right: -50%;
+            width: 200%;
+            height: 200%;
+            background: radial-gradient(circle, rgba(255,255,255,0.1) 0%, transparent 70%);
+            animation: pulse 8s ease-in-out infinite;
+        }
+
+        @keyframes pulse {
+            0%, 100% { transform: scale(1); opacity: 0.5; }
+            50% { transform: scale(1.1); opacity: 0.8; }
+        }
+
+        .mid-page-cta-content {
+            position: relative;
+            z-index: 1;
+            max-width: 700px;
+            margin: 0 auto;
+        }
+
+        .mid-page-cta h3 {
+            font-size: 2.2rem;
+            margin-bottom: 1rem;
+            color: #fff;
+            font-weight: 700;
+        }
+
+        .mid-page-cta p {
+            font-size: 1.15rem;
+            margin-bottom: 2rem;
+            color: rgba(255,255,255,0.95);
+            line-height: 1.7;
+        }
+
+        .cta-badge {
+            display: inline-block;
+            background: rgba(255,255,255,0.2);
+            color: #fff;
+            padding: 0.4rem 1rem;
+            border-radius: 20px;
+            font-size: 0.85rem;
+            font-weight: 600;
+            margin-bottom: 1.5rem;
+            letter-spacing: 0.5px;
+        }
+
+        .btn-cta-large {
+            background: #fff;
+            color: #2c3e50;
+            padding: 1.2rem 3rem;
+            font-size: 1.1rem;
+            text-decoration: none;
+            border-radius: 8px;
+            font-weight: 700;
+            display: inline-block;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .btn-cta-large::before {
+            content: '';
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            width: 0;
+            height: 0;
+            border-radius: 50%;
+            background: rgba(74,111,165,0.1);
+            transform: translate(-50%, -50%);
+            transition: width 0.6s, height 0.6s;
+        }
+
+        .btn-cta-large:hover::before {
+            width: 300px;
+            height: 300px;
+        }
+
+        .btn-cta-large:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 8px 25px rgba(0,0,0,0.3);
+        }
+
+        .btn-cta-large span {
+            position: relative;
+            z-index: 1;
+        }
+
+        .sticky-cta {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            z-index: 999;
+            animation: slideInRight 0.5s ease-out;
+        }
+
+        @keyframes slideInRight {
+            from {
+                transform: translateX(400px);
+                opacity: 0;
+            }
+            to {
+                transform: translateX(0);
+                opacity: 1;
+            }
+        }
+
+        .sticky-cta .btn {
+            background: #4a6fa5;
+            color: #fff;
+            padding: 1rem 2rem;
+            border-radius: 50px;
+            box-shadow: 0 6px 25px rgba(74,111,165,0.4);
+            font-weight: 700;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            animation: bounce 2s ease-in-out infinite;
+        }
+
+        @keyframes bounce {
+            0%, 100% { transform: translateY(0); }
+            50% { transform: translateY(-10px); }
+        }
+
+        .sticky-cta .btn:hover {
+            background: #3d566e;
+            box-shadow: 0 8px 30px rgba(74,111,165,0.6);
+            animation: none;
+        }
+
         footer {
             background: #1a1a1a;
             color: #fff;
@@ -500,6 +647,24 @@
             .features-list {
                 grid-template-columns: 1fr;
             }
+
+            .mid-page-cta h3 {
+                font-size: 1.7rem;
+            }
+
+            .mid-page-cta p {
+                font-size: 1rem;
+            }
+
+            .sticky-cta {
+                bottom: 10px;
+                right: 10px;
+            }
+
+            .sticky-cta .btn {
+                padding: 0.8rem 1.5rem;
+                font-size: 0.9rem;
+            }
         }
 
         @media (max-width: 480px) {
@@ -517,6 +682,16 @@
 
             .cta-section h2 {
                 font-size: 2rem;
+            }
+
+            .mid-page-cta {
+                padding: 40px 20px;
+                margin: 40px 0;
+            }
+
+            .btn-cta-large {
+                padding: 1rem 2rem;
+                font-size: 1rem;
             }
         }
     </style>
@@ -538,7 +713,7 @@
                 <a href="our-services.html" class="nav-link">Our Services</a>
                 <a href="page-1.html" class="nav-link">Page 1</a>
                 <a href="page-2.html" class="nav-link">Page 2</a>
-                <a href="#contact" class="nav-link">Book Now</a>
+                <a href="/contact" class="nav-link">Book Now</a>
             </div>
         </nav>
     </header>
@@ -549,7 +724,7 @@
                 <h1>Transform Your Dental Practice with a Professional Homepage Redesign</h1>
                 <p>Your website is often the first smile your patients see. Create a homepage that truly represents your practice and connects with patients.</p>
                 <div class="cta-buttons">
-                    <a href="#contact" class="btn btn-primary">Book Free Consultation</a>
+                    <a href="/contact" class="btn btn-primary">Get Started Today</a>
                     <a href="#services" class="btn btn-secondary">Learn More</a>
                 </div>
             </div>
@@ -563,15 +738,25 @@
                 <div class="content-grid">
                     <div class="content-block">
                         <h3>Modern Patient Expectations</h3>
-                        <p>If your current homepage doesn't deliver a simple, intuitive experience, it's time for a change. An outdated homepage sends the wrong message about your practice's commitment to modern care.</p>
+                        <p>If your current homepage doesn't deliver a simple, intuitive experience, it's time for a change. An outdated website can drive potential patients away before they even contact you. Modern design principles ensure your practice looks professional and trustworthy.</p>
                     </div>
                     <div class="content-block">
-                        <h3>Showcase Your Expertise</h3>
-                        <p>Your dental practice deserves a website that showcases your expertise and compassionate care. Don't let an old design hold you back from attracting the patients you deserve.</p>
+                        <h3>Mobile-First Experience</h3>
+                        <p>Over 60% of patients search for dental services on their mobile devices. A responsive, mobile-optimized homepage ensures you're capturing this crucial audience and making it easy for them to connect with your practice.</p>
                     </div>
                     <div class="content-block">
-                        <h3>Build Trust Instantly</h3>
-                        <p>A professional, modern design builds trust immediately. Show patients you're committed to providing the best experience from their very first interaction with your practice.</p>
+                        <h3>Competitive Advantage</h3>
+                        <p>Stand out from other dental practices in your area with a homepage that showcases your unique value proposition. A well-designed site builds trust and positions your practice as the premier choice for dental care.</p>
+                    </div>
+                </div>
+
+                <!-- MID-PAGE CTA #1 -->
+                <div class="mid-page-cta">
+                    <div class="mid-page-cta-content">
+                        <span class="cta-badge">✨ LIMITED TIME OFFER</span>
+                        <h3>Ready to Attract More Patients?</h3>
+                        <p>Get a free consultation and discover how a redesigned homepage can transform your dental practice. No obligation, just expert advice tailored to your needs.</p>
+                        <a href="/contact" class="btn-cta-large"><span>Schedule Free Consultation →</span></a>
                     </div>
                 </div>
             </div>
@@ -579,59 +764,59 @@
 
         <section class="benefits">
             <div class="container">
-                <h2 class="section-title">What a New Homepage Can Do for You</h2>
-                <p class="section-subtitle">Transform your online presence and attract more patients with a homepage designed for results.</p>
+                <h2 class="section-title">Benefits of a Professional Homepage Redesign</h2>
+                <p class="section-subtitle">Invest in your online presence and watch your practice grow with increased patient engagement and bookings.</p>
                 
                 <div class="benefits-grid">
                     <div class="benefit-card">
-                        <div class="benefit-icon">👥</div>
-                        <h3>Attract More Patients</h3>
-                        <p>A fresh, professional design builds trust immediately and encourages visitors to become patients.</p>
+                        <div class="benefit-icon">📈</div>
+                        <h3>Increase Patient Bookings</h3>
+                        <p>A streamlined, user-friendly homepage makes it easier for patients to book appointments, leading to higher conversion rates and more filled chairs.</p>
                     </div>
                     <div class="benefit-card">
-                        <div class="benefit-icon">✨</div>
-                        <h3>Showcase Your Services</h3>
-                        <p>Highlight cosmetic treatments, teeth whitening, and complete dental care with beautiful, engaging displays.</p>
+                        <div class="benefit-icon">💎</div>
+                        <h3>Build Trust & Credibility</h3>
+                        <p>Professional design signals quality care. Show patients you're invested in providing the best experience from their very first interaction.</p>
                     </div>
                     <div class="benefit-card">
-                        <div class="benefit-icon">⏰</div>
-                        <h3>Save Time</h3>
-                        <p>Integrated booking systems let patients schedule appointments 24/7, reducing phone calls and administrative work.</p>
+                        <div class="benefit-icon">⚡</div>
+                        <h3>Faster Load Times</h3>
+                        <p>Modern optimization techniques ensure your homepage loads quickly, reducing bounce rates and keeping potential patients engaged.</p>
                     </div>
                     <div class="benefit-card">
-                        <div class="benefit-icon">⭐</div>
-                        <h3>Boost Your Reputation</h3>
-                        <p>Modern design shows you're committed to the best patient experience and staying current with technology.</p>
-                    </div>
-                    <div class="benefit-card">
-                        <div class="benefit-icon">💼</div>
-                        <h3>Transform First Impressions</h3>
-                        <p>Make visitors feel welcome before they even walk through your door with a warm, inviting design.</p>
+                        <div class="benefit-icon">🎯</div>
+                        <h3>Better SEO Rankings</h3>
+                        <p>A well-structured homepage improves your search engine visibility, helping more local patients find your practice online.</p>
                     </div>
                 </div>
             </div>
         </section>
 
-        <section id="about" class="process">
+        <section class="process">
             <div class="container">
-                <h2 class="section-title">Our Simple Redesign Process for Your Dental Practice</h2>
-                <p class="section-subtitle">We've made getting a new homepage incredibly easy. You shouldn't need to stress about technical details or complicated processes.</p>
+                <h2 class="section-title">Our Homepage Redesign Process</h2>
+                <p class="section-subtitle">We follow a proven methodology to deliver a homepage that exceeds your expectations and drives real results.</p>
                 
                 <div class="process-steps">
                     <div class="step">
                         <div class="step-number">1</div>
-                        <h3>Listen to Your Needs</h3>
-                        <p>We start by understanding what makes your practice special. What do your patients love most? We build personalized treatment plans for your website, just like you do for your patients.</p>
+                        <h3>Discovery & Analysis</h3>
+                        <p>We start by understanding your practice, target patients, and goals. We analyze your current homepage and identify opportunities for improvement.</p>
                     </div>
                     <div class="step">
                         <div class="step-number">2</div>
-                        <h3>Design with Patients in Mind</h3>
-                        <p>Clear navigation helps patients find services quickly. Beautiful photos of your smile transformations show real results. Every element creates a comfortable and positive experience.</p>
+                        <h3>Design & Strategy</h3>
+                        <p>Our team creates custom design concepts that align with your brand and appeal to your ideal patients. We focus on user experience and conversion optimization.</p>
                     </div>
                     <div class="step">
                         <div class="step-number">3</div>
-                        <h3>Ensure Mobile Excellence</h3>
-                        <p>We ensure your homepage works perfectly on phones and tablets. Most patients search for dental care on mobile devices, so your new site will look amazing everywhere.</p>
+                        <h3>Development & Testing</h3>
+                        <p>We build your new homepage using modern technologies, ensuring it's fast, responsive, and accessible across all devices and browsers.</p>
+                    </div>
+                    <div class="step">
+                        <div class="step-number">4</div>
+                        <h3>Launch & Support</h3>
+                        <p>After thorough testing, we launch your redesigned homepage and provide ongoing support to ensure everything runs smoothly and continues to perform.</p>
                     </div>
                 </div>
             </div>
@@ -639,158 +824,115 @@
 
         <section class="features">
             <div class="container">
-                <h2 class="section-title">Features That Make a Difference</h2>
-                <p class="section-subtitle">Everything you need to create an outstanding patient experience online.</p>
+                <h2 class="section-title">What's Included in Your Redesign</h2>
+                <p class="section-subtitle">Every homepage redesign package includes these essential features to ensure your practice succeeds online.</p>
                 
                 <div class="features-list">
                     <div class="feature-item">
-                        <div class="feature-icon">📅</div>
-                        <div class="feature-content">
-                            <h4>Online Appointment Booking</h4>
-                            <p>Let patients schedule visits anytime, day or night, with seamless integration into your practice management system.</p>
-                        </div>
-                    </div>
-                    <div class="feature-item">
-                        <div class="feature-icon">🦷</div>
-                        <div class="feature-content">
-                            <h4>Service Showcases</h4>
-                            <p>Highlight cosmetic and general dental treatments with stunning visuals that help patients understand their options.</p>
-                        </div>
-                    </div>
-                    <div class="feature-item">
-                        <div class="feature-icon">💬</div>
-                        <div class="feature-content">
-                            <h4>Patient Testimonials</h4>
-                            <p>Share success stories and beautiful smiles that build trust and confidence in your practice.</p>
-                        </div>
-                    </div>
-                    <div class="feature-item">
-                        <div class="feature-icon">📍</div>
-                        <div class="feature-content">
-                            <h4>Contact Information</h4>
-                            <p>Make it easy for patients to call or find your office with clear, accessible contact details.</p>
-                        </div>
-                    </div>
-                    <div class="feature-item">
-                        <div class="feature-icon">💳</div>
-                        <div class="feature-content">
-                            <h4>Insurance Details</h4>
-                            <p>Answer common questions upfront about accepted insurance plans and payment options.</p>
-                        </div>
-                    </div>
-                    <div class="feature-item">
                         <div class="feature-icon">📱</div>
                         <div class="feature-content">
-                            <h4>Mobile Responsive</h4>
-                            <p>Perfect experience on every device, ensuring patients can access your site from anywhere.</p>
+                            <h4>Responsive Design</h4>
+                            <p>Your homepage will look perfect on all devices - desktop, tablet, and mobile.</p>
                         </div>
+                    </div>
+                    <div class="feature-item">
+                        <div class="feature-icon">🎨</div>
+                        <div class="feature-content">
+                            <h4>Custom Branding</h4>
+                            <p>Unique design elements that reflect your practice's personality and values.</p>
+                        </div>
+                    </div>
+                    <div class="feature-item">
+                        <div class="feature-icon">📅</div>
+                        <div class="feature-content">
+                            <h4>Online Booking Integration</h4>
+                            <p>Seamless appointment scheduling directly from your homepage.</p>
+                        </div>
+                    </div>
+                    <div class="feature-item">
+                        <div class="feature-icon">⭐</div>
+                        <div class="feature-content">
+                            <h4>Patient Testimonials</h4>
+                            <p>Showcase reviews and build trust with social proof from happy patients.</p>
+                        </div>
+                    </div>
+                    <div class="feature-item">
+                        <div class="feature-icon">🔍</div>
+                        <div class="feature-content">
+                            <h4>SEO Optimization</h4>
+                            <p>Built-in SEO best practices to help patients find you in local searches.</p>
+                        </div>
+                    </div>
+                    <div class="feature-item">
+                        <div class="feature-icon">⚙️</div>
+                        <div class="feature-content">
+                            <h4>Easy Content Management</h4>
+                            <p>Update your homepage content easily without technical knowledge.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- MID-PAGE CTA #2 -->
+                <div class="mid-page-cta" style="margin-top: 60px;">
+                    <div class="mid-page-cta-content">
+                        <span class="cta-badge">🚀 START YOUR TRANSFORMATION</span>
+                        <h3>Let's Redesign Your Homepage Together</h3>
+                        <p>Join hundreds of dental practices that have transformed their online presence. Book your free consultation now and take the first step toward a better website.</p>
+                        <a href="/contact" class="btn-cta-large"><span>Contact Us Now →</span></a>
                     </div>
                 </div>
             </div>
         </section>
 
-        <section id="resources" style="padding: 60px 20px; background-color: #f9f9f9; font-family: Arial, sans-serif;">
-  <div style="max-width: 1200px; margin: 0 auto;">
-    <h2 style="text-align: center; color: #333; font-size: 36px; margin-bottom: 15px; font-weight: bold;">Free Resources for Dental Practice Owners</h2>
-    <p style="text-align: center; color: #666; font-size: 18px; margin-bottom: 50px; max-width: 800px; margin-left: auto; margin-right: auto;">Download our exclusive guides and tools to help grow your practice, improve patient satisfaction, and streamline operations.</p>
-    
-    <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 30px;">
-      
-      <!-- Resource 1 -->
-      <div style="background-color: #fff; padding: 30px; border-radius: 5px; box-shadow: 0 2px 10px rgba(0,0,0,0.1); transition: transform 0.3s ease;">
-        <div style="width: 60px; height: 60px; background-color: #333; border-radius: 5px; display: flex; align-items: center; justify-content: center; margin-bottom: 20px;">
-          <span style="color: #fff; font-size: 28px; font-weight: bold;">📊</span>
-        </div>
-        <h3 style="color: #333; font-size: 22px; margin-bottom: 15px; font-weight: bold;">Patient Retention Checklist</h3>
-        <p style="color: #666; font-size: 15px; line-height: 1.6; margin-bottom: 20px;">A comprehensive 25-point checklist to boost patient loyalty and reduce attrition. Includes proven strategies used by top-performing practices.</p>
-        <a href="#download" style="display: inline-block; background-color: #333; color: #fff; padding: 12px 30px; text-decoration: none; border-radius: 5px; font-size: 16px; font-weight: bold; transition: background-color 0.3s ease;">Download Free Guide</a>
-      </div>
-      
-      <!-- Resource 2 -->
-      <div style="background-color: #fff; padding: 30px; border-radius: 5px; box-shadow: 0 2px 10px rgba(0,0,0,0.1); transition: transform 0.3s ease;">
-        <div style="width: 60px; height: 60px; background-color: #555; border-radius: 5px; display: flex; align-items: center; justify-content: center; margin-bottom: 20px;">
-          <span style="color: #fff; font-size: 28px; font-weight: bold;">💰</span>
-        </div>
-        <h3 style="color: #333; font-size: 22px; margin-bottom: 15px; font-weight: bold;">ROI Calculator for Dental Marketing</h3>
-        <p style="color: #666; font-size: 15px; line-height: 1.6; margin-bottom: 20px;">Excel template to track and measure your marketing spend effectiveness. Calculate patient acquisition costs and lifetime value instantly.</p>
-        <a href="#download" style="display: inline-block; background-color: #555; color: #fff; padding: 12px 30px; text-decoration: none; border-radius: 5px; font-size: 16px; font-weight: bold; transition: background-color 0.3s ease;">Get Calculator</a>
-      </div>
-      
-      <!-- Resource 3 -->
-      <div style="background-color: #fff; padding: 30px; border-radius: 5px; box-shadow: 0 2px 10px rgba(0,0,0,0.1); transition: transform 0.3s ease;">
-        <div style="width: 60px; height: 60px; background-color: #333; border-radius: 5px; display: flex; align-items: center; justify-content: center; margin-bottom: 20px;">
-          <span style="color: #fff; font-size: 28px; font-weight: bold;">📱</span>
-        </div>
-        <h3 style="color: #333; font-size: 22px; margin-bottom: 15px; font-weight: bold;">Social Media Content Calendar</h3>
-        <p style="color: #666; font-size: 15px; line-height: 1.6; margin-bottom: 20px;">90 days of ready-to-post content ideas for dental practices. Includes post templates, hashtags, and engagement strategies.</p>
-        <a href="#download" style="display: inline-block; background-color: #333; color: #fff; padding: 12px 30px; text-decoration: none; border-radius: 5px; font-size: 16px; font-weight: bold; transition: background-color 0.3s ease;">Download Calendar</a>
-      </div>
-      
-      <!-- Resource 4 -->
-      <div style="background-color: #fff; padding: 30px; border-radius: 5px; box-shadow: 0 2px 10px rgba(0,0,0,0.1); transition: transform 0.3s ease;">
-        <div style="width: 60px; height: 60px; background-color: #555; border-radius: 5px; display: flex; align-items: center; justify-content: center; margin-bottom: 20px;">
-          <span style="color: #fff; font-size: 28px; font-weight: bold;">⭐</span>
-        </div>
-        <h3 style="color: #333; font-size: 22px; margin-bottom: 15px; font-weight: bold;">Online Reviews Toolkit</h3>
-        <p style="color: #666; font-size: 15px; line-height: 1.6; margin-bottom: 20px;">Complete guide to generating 5-star reviews. Includes email scripts, SMS templates, and response guidelines for negative feedback.</p>
-        <a href="#download" style="display: inline-block; background-color: #555; color: #fff; padding: 12px 30px; text-decoration: none; border-radius: 5px; font-size: 16px; font-weight: bold; transition: background-color 0.3s ease;">Get Toolkit</a>
-      </div>
-      
-      <!-- Resource 5 -->
-      <div style="background-color: #fff; padding: 30px; border-radius: 5px; box-shadow: 0 2px 10px rgba(0,0,0,0.1); transition: transform 0.3s ease;">
-        <div style="width: 60px; height: 60px; background-color: #333; border-radius: 5px; display: flex; align-items: center; justify-content: center; margin-bottom: 20px;">
-          <span style="color: #fff; font-size: 28px; font-weight: bold;">📈</span>
-        </div>
-        <h3 style="color: #333; font-size: 22px; margin-bottom: 15px; font-weight: bold;">Practice Growth Benchmark Report</h3>
-        <p style="color: #666; font-size: 15px; line-height: 1.6; margin-bottom: 20px;">2024 industry data on revenue, patient volume, and operational metrics. Compare your practice performance against regional averages.</p>
-        <a href="#download" style="display: inline-block; background-color: #333; color: #fff; padding: 12px 30px; text-decoration: none; border-radius: 5px; font-size: 16px; font-weight: bold; transition: background-color 0.3s ease;">Download Report</a>
-      </div>
-      
-    </div>
-  </div>
-</section>
-
-        <section id="contact" class="cta-section">
+        <section class="cta-section">
             <div class="container">
-                <h2>Your Smile Is Our Priority – Let's Get Started</h2>
-                <p>You care about every patient who walks through your door. We care about every visitor who lands on your homepage. Together, we'll create a website that reflects your gentle touch and commitment to excellence.</p>
-                <p>Don't let another day go by with a homepage that doesn't serve you well. Your dental practice deserves better.</p>
+                <h2>Transform Your Practice's Online Presence Today</h2>
+                <p>Don't let an outdated homepage hold your practice back. Partner with Asquitt and create a website that attracts patients and grows your business.</p>
                 <div class="cta-buttons">
-                    <a href="#contact" class="btn btn-primary">Book Your Free Consultation Today</a>
+                    <a href="/contact" class="btn btn-primary">Get Your Free Consultation</a>
+                    <a href="#services" class="btn btn-secondary">View Our Work</a>
                 </div>
             </div>
         </section>
     </main>
+
+    <!-- STICKY CTA -->
+    <div class="sticky-cta" id="stickyCta" style="display: none;">
+        <a href="/contact" class="btn">
+            <span>💬 Get Started</span>
+        </a>
+    </div>
 
     <footer>
         <div class="container">
             <div class="footer-content">
                 <div class="footer-section">
                     <h3>Asquitt</h3>
-                    <p>Transforming dental practice websites with modern, professional designs that attract more patients and showcase your expertise.</p>
+                    <p>Transforming dental practice websites with modern, patient-focused design solutions.</p>
                 </div>
                 <div class="footer-section">
                     <h3>Quick Links</h3>
                     <a href="#home">Home</a>
                     <a href="#services">Services</a>
                     <a href="#about">About Us</a>
-                    <a href="dental-faq.html">FAQ</a>
+                    <a href="/contact">Contact</a>
                 </div>
                 <div class="footer-section">
                     <h3>Services</h3>
-                    <a href="our-services.html">Our Services</a>
-                    <a href="page-1.html">Page 1</a>
-                    <a href="page-2.html">Page 2</a>
-                    <a href="#contact">Book Now</a>
+                    <a href="#">Homepage Redesign</a>
+                    <a href="#">Full Website Design</a>
+                    <a href="#">SEO Optimization</a>
+                    <a href="#">Maintenance & Support</a>
                 </div>
                 <div class="footer-section">
                     <h3>Contact</h3>
-                    <p>Ready to transform your dental practice website?</p>
-                    <p>Get in touch today for a free consultation.</p>
+                    <p>Email: info@asquitt.com</p>
+                    <p>Phone: (555) 123-4567</p>
+                    <p>Hours: Mon-Fri 9AM-5PM</p>
                 </div>
             </div>
             <div class="footer-bottom">
-                <p>&copy; 2024 Asquitt. All rights reserved. | Dental Practice Homepage Design Solutions</p>
+                <p>&copy; 2024 Asquitt. All rights reserved.</p>
             </div>
         </div>
     </footer>
@@ -801,20 +943,31 @@
             navLinks.classList.toggle('active');
         }
 
-        document.querySelectorAll('.nav-link').forEach(link => {
-            link.addEventListener('click', () => {
-                const navLinks = document.getElementById('navLinks');
-                navLinks.classList.remove('active');
-            });
+        // Show sticky CTA after scrolling
+        window.addEventListener('scroll', function() {
+            const stickyCta = document.getElementById('stickyCta');
+            if (window.scrollY > 800) {
+                stickyCta.style.display = 'block';
+            } else {
+                stickyCta.style.display = 'none';
+            }
         });
 
-        window.addEventListener('scroll', () => {
-            const header = document.querySelector('header');
-            if (window.scrollY > 50) {
-                header.style.boxShadow = '0 4px 15px rgba(0,0,0,0.15)';
-            } else {
-                header.style.boxShadow = '0 2px 10px rgba(0,0,0,0.1)';
-            }
+        // Smooth scrolling for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                const href = this.getAttribute('href');
+                if (href !== '#' && href !== '#contact') {
+                    e.preventDefault();
+                    const target = document.querySelector(href);
+                    if (target) {
+                        target.scrollIntoView({
+                            behavior: 'smooth',
+                            block: 'start'
+                        });
+                    }
+                }
+            });
         });
     </script>
 </body>
