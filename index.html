@@ -1,44 +1,275 @@
-I'll analyze the page and strategically add CTAs to optimize conversions. Here's the updated HTML with enhanced CTAs:
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Connecticut Ave Dental Studio | Washington DC</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <style>
+        /* --- VARIABLES & RESET --- */
+        :root {
+            --primary: #1e3a8a; /* DC Navy */
+            --accent: #2dd4bf; /* Mint/Teal */
+            --dark: #0f172a;
+            --light: #f8fafc;
+            --white: #ffffff;
+            --font-serif: 'Playfair Display', serif;
+            --font-sans: 'Inter', sans-serif;
+        }
 
-```html
-<!-- (Previous HTML remains the same, with the following modifications) -->
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        
+        body {
+            font-family: var(--font-sans);
+            color: var(--dark);
+            line-height: 1.6;
+            background-color: var(--light);
+        }
 
-<!-- Hero Section: Enhanced Primary CTA -->
-<section class="hero">
-    <div class="container hero-content">
-        <h1>Refined Dentistry in the<br>Heart of DC</h1>
-        <p>Experience world-class dental care on Connecticut Avenue. We combine modern technology with neighborhood warmth.</p>
-        <a href="/contact" class="btn" style="font-size: 1.1rem; padding: 14px 35px; box-shadow: 0 4px 15px rgba(0,0,0,0.2);">
-            Book Your Smile Consultation
-        </a>
-        <a href="#services" class="btn btn-outline" style="margin-left: 10px;">Our Services</a>
-    </div>
-</section>
+        /* --- TYPOGRAPHY --- */
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&family=Playfair+Display:wght@400;700&display=swap');
 
-<!-- After Services Section: Mid-Page CTA -->
-<section class="services-cta" style="background-color: var(--primary); color: var(--white); text-align: center; padding: 60px 0;">
-    <div class="container">
-        <h2 style="color: var(--white); margin-bottom: 20px;">Ready for a Dental Transformation?</h2>
-        <p style="max-width: 600px; margin: 0 auto 30px; opacity: 0.9;">
-            Discover personalized dental care that goes beyond expectations. Schedule your comprehensive consultation today.
-        </p>
-        <a href="/contact" class="btn btn-outline" style="font-size: 1.1rem; padding: 14px 35px;">
-            Schedule Your Consultation
-        </a>
-    </div>
-</section>
+        h1, h2, h3 { font-family: var(--font-serif); color: var(--primary); }
+        h2 { font-size: 2.5rem; margin-bottom: 1rem; text-align: center; }
+        p { margin-bottom: 1rem; }
+        
+        /* --- UTILITIES --- */
+        .container { max-width: 1200px; margin: 0 auto; padding: 0 20px; }
+        .btn {
+            display: inline-block;
+            padding: 12px 30px;
+            background-color: var(--accent);
+            color: var(--primary);
+            font-weight: 700;
+            text-decoration: none;
+            border-radius: 50px;
+            transition: all 0.3s ease;
+            border: 2px solid var(--accent);
+        }
+        .btn:hover { background-color: transparent; color: var(--accent); }
+        .btn-outline { background: transparent; border: 2px solid var(--white); color: var(--white); }
+        .btn-outline:hover { background: var(--white); color: var(--primary); }
 
-<!-- Before Footer: Final Conversion CTA -->
-<section class="final-cta" style="background-color: var(--accent); color: var(--primary); text-align: center; padding: 60px 0;">
-    <div class="container">
-        <h2 style="color: var(--primary); margin-bottom: 20px;">Your Smile Deserves the Best</h2>
-        <p style="max-width: 600px; margin: 0 auto 30px;">
-            Don't wait to achieve the confident, healthy smile you've always wanted. Our expert team is ready to help.
-        </p>
-        <a href="/contact" class="btn" style="font-size: 1.1rem; padding: 14px 35px; background-color: var(--primary); color: var(--white);">
-            Start Your Dental Journey
-        </a>
-    </div>
-</section>
+        /* --- HEADER --- */
+        header {
+            background-color: var(--white);
+            box-shadow: 0 2px 15px rgba(0,0,0,0.05);
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
+        }
+        .nav-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            height: 80px;
+        }
+        .logo { font-family: var(--font-serif); font-size: 1.5rem; font-weight: 700; color: var(--primary); text-decoration: none; }
+        .logo span { color: var(--accent); }
+        
+        nav ul { list-style: none; display: flex; gap: 30px; }
+        nav a { text-decoration: none; color: var(--dark); font-weight: 500; transition: color 0.3s; }
+        nav a:hover { color: var(--accent); }
+        .mobile-toggle { display: none; font-size: 1.5rem; cursor: pointer; }
 
-<!-- (Rest of the HTML remains the same) -->
+        /* --- HERO --- */
+        .hero {
+            background: linear-gradient(rgba(30, 58, 138, 0.9), rgba(30, 58, 138, 0.7)), url('https://images.unsplash.com/photo-1629909613654-28e377c37b09?auto=format&fit=crop&q=80');
+            background-size: cover;
+            background-position: center;
+            height: 90vh;
+            display: flex;
+            align-items: center;
+            text-align: center;
+            color: var(--white);
+            padding-top: 80px;
+        }
+        .hero-content h1 {
+            font-size: 3.5rem;
+            color: var(--white);
+            margin-bottom: 20px;
+        }
+        .hero-content p { font-size: 1.2rem; margin-bottom: 30px; max-width: 600px; margin-left: auto; margin-right: auto; opacity: 0.9; }
+
+        /* --- FEATURES --- */
+        .features { padding: 80px 0; background: var(--white); }
+        .features-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 40px; }
+        .feature-card { text-align: center; padding: 30px; border-radius: 10px; transition: transform 0.3s; }
+        .feature-card:hover { transform: translateY(-5px); box-shadow: 0 10px 30px rgba(0,0,0,0.05); }
+        .icon-box { font-size: 2.5rem; color: var(--accent); margin-bottom: 20px; }
+
+        /* --- SERVICES --- */
+        .services { padding: 80px 0; background: var(--light); }
+        .service-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 30px; margin-top: 40px; }
+        .service-card {
+            background: var(--white);
+            padding: 30px;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.02);
+            border-bottom: 4px solid var(--accent);
+        }
+        .service-card h3 { font-size: 1.25rem; margin-bottom: 10px; }
+
+        /* --- LOCATION / CONTACT --- */
+        .location { padding: 80px 0; background: var(--white); }
+        .location-wrapper { display: flex; flex-wrap: wrap; gap: 40px; align-items: center; }
+        .map-frame { flex: 1; min-width: 300px; height: 400px; background: #eee; border-radius: 10px; overflow: hidden; }
+        .contact-info { flex: 1; min-width: 300px; }
+        .info-item { display: flex; align-items: flex-start; gap: 15px; margin-bottom: 20px; }
+        .info-item i { color: var(--primary); font-size: 1.2rem; margin-top: 5px; }
+
+        /* --- FOOTER --- */
+        footer { background: var(--primary); color: var(--white); padding: 50px 0 20px; text-align: center; }
+        .footer-content { margin-bottom: 30px; }
+        .copyright { font-size: 0.9rem; opacity: 0.6; border-top: 1px solid rgba(255,255,255,0.1); padding-top: 20px; }
+
+        /* --- RESPONSIVE --- */
+        @media (max-width: 768px) {
+            .nav-links { display: none; }
+            .mobile-toggle { display: block; }
+            .hero-content h1 { font-size: 2.5rem; }
+            .location-wrapper { flex-direction: column; }
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="container nav-container">
+            <a href="#" class="logo">ConnAve <span>Dental</span></a>
+            <nav>
+                <ul class="nav-links">
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#services">Services</a></li>
+                    <li><a href="#location">Location</a></li>
+                    <li><a href="#contact" class="btn" style="padding: 8px 20px; margin-left: 10px;">Book Visit</a></li>
+                </ul>
+                <div class="mobile-toggle"><i class="fas fa-bars"></i></div>
+            </nav>
+        </div>
+    </header>
+
+    <section class="hero">
+        <div class="container hero-content">
+            <h1>Refined Dentistry in the<br>Heart of DC</h1>
+            <p>Experience world-class dental care on Connecticut Avenue. We combine modern technology with neighborhood warmth.</p>
+            <a href="#contact" class="btn">Schedule Appointment</a>
+            <a href="#services" class="btn btn-outline" style="margin-left: 10px;">Our Services</a>
+        </div>
+    </section>
+
+    <section class="features" id="about">
+        <div class="container">
+            <div class="features-grid">
+                <div class="feature-card">
+                    <div class="icon-box"><i class="fas fa-heart-pulse"></i></div>
+                    <h3>Patient-First Care</h3>
+                    <p>We prioritize your comfort with sedation options, noise-canceling headphones, and a gentle touch.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="icon-box"><i class="fas fa-gem"></i></div>
+                    <h3>Modern Technology</h3>
+                    <p>From 3D imaging to same-day crowns, we utilize the latest tech for precise, pain-free treatments.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="icon-box"><i class="fas fa-map-marker-alt"></i></div>
+                    <h3>Prime Location</h3>
+                    <p>Conveniently located in the 20008 zip code, serving Cleveland Park, Woodley Park, and beyond.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="services" id="services">
+        <div class="container">
+            <h2>Our Services</h2>
+            <p style="text-align: center; max-width: 600px; margin: 0 auto;">Comprehensive care for the whole family.</p>
+            <div class="service-grid">
+                <div class="service-card">
+                    <h3>General Dentistry</h3>
+                    <p>Cleanings, exams, and preventative care to keep your smile healthy year-round.</p>
+                </div>
+                <div class="service-card">
+                    <h3>Cosmetic Enhancements</h3>
+                    <p>Teeth whitening, veneers, and bonding to give you the "Capitol Glow."</p>
+                </div>
+                <div class="service-card">
+                    <h3>Invisalign & Ortho</h3>
+                    <p>Clear aligners to straighten your teeth discreetly without metal brackets.</p>
+                </div>
+                <div class="service-card">
+                    <h3>Emergency Care</h3>
+                    <p>Same-day appointments available for toothaches and urgent dental needs.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="location" id="location">
+        <div class="container">
+            <h2>Visit Us</h2>
+            <div class="location-wrapper">
+                <div class="contact-info">
+                    <h3>Connecticut Ave Dental Studio</h3>
+                    <br>
+                    <div class="info-item">
+                        <i class="fas fa-map-pin"></i>
+                        <div>
+                            <strong>Address:</strong><br>
+                            3501 Connecticut Ave NW<br>
+                            Washington, DC 20008
+                        </div>
+                    </div>
+                    <div class="info-item">
+                        <i class="fas fa-clock"></i>
+                        <div>
+                            <strong>Hours:</strong><br>
+                            Mon - Fri: 8:00 AM - 6:00 PM<br>
+                            Sat: 9:00 AM - 2:00 PM<br>
+                            Sun: Closed
+                        </div>
+                    </div>
+                    <div class="info-item">
+                        <i class="fas fa-phone-alt"></i>
+                        <div>
+                            <strong>Phone:</strong><br>
+                            (202) 555-0123
+                        </div>
+                    </div>
+                    <a href="#" class="btn" style="margin-top: 20px;">Get Directions</a>
+                </div>
+                <div class="map-frame">
+                    <iframe 
+                        width="100%" 
+                        height="100%" 
+                        frameborder="0" 
+                        scrolling="no" 
+                        marginheight="0" 
+                        marginwidth="0" 
+                        src="https://maps.google.com/maps?q=Connecticut%20Ave%20NW%2C%20Washington%2C%20DC%2020008&t=&z=15&ie=UTF8&iwloc=&output=embed">
+                    </iframe>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer id="contact">
+        <div class="container">
+            <div class="footer-content">
+                <h3>ConnAve Dental</h3>
+                <p>Bringing smiles to Washington DC since 2025.</p>
+                <div style="font-size: 1.5rem; margin-top: 20px;">
+                    <i class="fab fa-instagram" style="margin: 0 10px;"></i>
+                    <i class="fab fa-facebook" style="margin: 0 10px;"></i>
+                    <i class="fab fa-twitter" style="margin: 0 10px;"></i>
+                </div>
+            </div>
+            <div class="copyright">
+                &copy; 2026 Connecticut Ave Dental Studio. All Rights Reserved.
+            </div>
+        </div>
+    </footer>
+
+</body>
+</html>
