@@ -6,772 +6,234 @@
     <meta name="description" content="Learn about Page 1">
     <title>Page 1</title>
     <style>
+
+        /* --- VARIABLES & RESET --- */
         :root {
-            --primary-color: #0077b6;
-            --secondary-color: #00b4d8;
-            --text-color: #1a1a1a;
-            --bg-color: #ffffff;
-            --light-bg: #f8f9fa;
+            --primary: #1e3a8a; /* DC Navy */
+            --accent: #2dd4bf; /* Mint/Teal */
+            --dark: #0f172a;
+            --light: #f8fafc;
+            --white: #ffffff;
+            --font-serif: 'Playfair Display', serif;
+            --font-sans: 'Inter', sans-serif;
         }
 
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        
         body {
-            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, sans-serif;
+            font-family: var(--font-sans);
+            color: var(--dark);
             line-height: 1.6;
-            color: var(--text-color);
-            background: var(--bg-color);
+            background-color: var(--light);
         }
 
-        .site-header {
-            background: var(--primary-color);
-            padding: 1rem 2rem;
-        }
+        /* --- TYPOGRAPHY --- */
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&family=Playfair+Display:wght@400;700&display=swap');
 
-        .site-header a {
-            color: white;
+        h1, h2, h3 { font-family: var(--font-serif); color: var(--primary); }
+        h2 { font-size: 2.5rem; margin-bottom: 1rem; text-align: center; }
+        p { margin-bottom: 1rem; }
+        
+        /* --- UTILITIES --- */
+        .container { max-width: 1200px; margin: 0 auto; padding: 0 20px; }
+        .btn {
+            display: inline-block;
+            padding: 12px 30px;
+            background-color: var(--accent);
+            color: var(--primary);
+            font-weight: 700;
             text-decoration: none;
-            font-weight: 600;
-            font-size: 1.25rem;
+            border-radius: 50px;
+            transition: all 0.3s ease;
+            border: 2px solid var(--accent);
         }
+        .btn:hover { background-color: transparent; color: var(--accent); }
+        .btn-outline { background: transparent; border: 2px solid var(--white); color: var(--white); }
+        .btn-outline:hover { background: var(--white); color: var(--primary); }
 
+        /* --- HEADER --- */
+        header {
+            background-color: var(--white);
+            box-shadow: 0 2px 15px rgba(0,0,0,0.05);
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
+        }
+        .nav-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            height: 80px;
+        }
+        .logo { font-family: var(--font-serif); font-size: 1.5rem; font-weight: 700; color: var(--primary); text-decoration: none; }
+        .logo span { color: var(--accent); }
+        
+        nav ul { list-style: none; display: flex; gap: 30px; }
+        nav a { text-decoration: none; color: var(--dark); font-weight: 500; transition: color 0.3s; }
+        nav a:hover { color: var(--accent); }
+        .mobile-toggle { display: none; font-size: 1.5rem; cursor: pointer; }
+
+        /* --- HERO --- */
+        .hero {
+            background: linear-gradient(rgba(30, 58, 138, 0.9), rgba(30, 58, 138, 0.7)), url('https://images.unsplash.com/photo-1629909613654-28e377c37b09?auto=format&fit=crop&q=80');
+            background-size: cover;
+            background-position: center;
+            height: 90vh;
+            display: flex;
+            align-items: center;
+            text-align: center;
+            color: var(--white);
+            padding-top: 80px;
+        }
+        .hero-content h1 {
+            font-size: 3.5rem;
+            color: var(--white);
+            margin-bottom: 20px;
+        }
+        .hero-content p { font-size: 1.2rem; margin-bottom: 30px; max-width: 600px; margin-left: auto; margin-right: auto; opacity: 0.9; }
+
+        /* --- FEATURES --- */
+        .features { padding: 80px 0; background: var(--white); }
+        .features-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 40px; }
+        .feature-card { text-align: center; padding: 30px; border-radius: 10px; transition: transform 0.3s; }
+        .feature-card:hover { transform: translateY(-5px); box-shadow: 0 10px 30px rgba(0,0,0,0.05); }
+        .icon-box { font-size: 2.5rem; color: var(--accent); margin-bottom: 20px; }
+
+        /* --- SERVICES --- */
+        .services { padding: 80px 0; background: var(--light); }
+        .service-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 30px; margin-top: 40px; }
+        .service-card {
+            background: var(--white);
+            padding: 30px;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.02);
+            border-bottom: 4px solid var(--accent);
+        }
+        .service-card h3 { font-size: 1.25rem; margin-bottom: 10px; }
+
+        /* --- LOCATION / CONTACT --- */
+        .location { padding: 80px 0; background: var(--white); }
+        .location-wrapper { display: flex; flex-wrap: wrap; gap: 40px; align-items: center; }
+        .map-frame { flex: 1; min-width: 300px; height: 400px; background: #eee; border-radius: 10px; overflow: hidden; }
+        .contact-info { flex: 1; min-width: 300px; }
+        .info-item { display: flex; align-items: flex-start; gap: 15px; margin-bottom: 20px; }
+        .info-item i { color: var(--primary); font-size: 1.2rem; margin-top: 5px; }
+
+        /* --- FOOTER --- */
+        footer { background: var(--primary); color: var(--white); padding: 50px 0 20px; text-align: center; }
+        .footer-content { margin-bottom: 30px; }
+        .copyright { font-size: 0.9rem; opacity: 0.6; border-top: 1px solid rgba(255,255,255,0.1); padding-top: 20px; }
+
+        /* --- RESPONSIVE --- */
+        @media (max-width: 768px) {
+            .nav-links { display: none; }
+            .mobile-toggle { display: block; }
+            .hero-content h1 { font-size: 2.5rem; }
+            .location-wrapper { flex-direction: column; }
+        }
+    
+
+        /* Page content styles */
         .page-content {
             max-width: 900px;
             margin: 0 auto;
             padding: 3rem 2rem;
         }
-
         .page-content h1 {
-            color: var(--primary-color);
+            color: var(--primary-color, #0077b6);
             font-size: 2.5rem;
             margin-bottom: 1.5rem;
             font-weight: 700;
         }
-
         .page-content h2 {
-            color: var(--primary-color);
+            color: var(--secondary-color, #005f8a);
             font-size: 1.5rem;
             margin-top: 2.5rem;
             margin-bottom: 1rem;
             font-weight: 600;
         }
-
         .page-content p {
             margin-bottom: 1.25rem;
             line-height: 1.8;
+            color: #333;
         }
-
         .page-content ul {
             margin: 1.5rem 0;
             padding-left: 1.5rem;
         }
-
         .page-content li {
             margin-bottom: 0.75rem;
-        }
-
-        .site-footer {
-            background: var(--light-bg);
-            padding: 2rem;
-            text-align: center;
-            margin-top: 3rem;
-            border-top: 1px solid #e9ecef;
-        }
-
-        .site-footer a {
-            color: var(--primary-color);
-            text-decoration: none;
-        }
-
-        .site-footer a:hover {
-            text-decoration: underline;
-        }
-
-
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-
-        body {
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            color: #333;
             line-height: 1.6;
-            overflow-x: hidden;
         }
-
-        .container {
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 0 20px;
-        }
-
-        header {
-            background: #fff;
-            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
-            position: fixed;
-            width: 100%;
-            top: 0;
-            z-index: 1000;
-            transition: all 0.3s ease;
-        }
-
-        nav {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            padding: 1rem 0;
-        }
-
-        .logo {
-            font-size: 1.8rem;
-            font-weight: 700;
-            color: #333;
-            text-decoration: none;
-            letter-spacing: -1px;
-        }
-
-        .nav-links {
-            display: flex;
-            gap: 2rem;
-            align-items: center;
-        }
-
-        .nav-link {
-            color: #333;
-            text-decoration: none;
-            font-weight: 500;
-            transition: color 0.3s ease;
-            font-size: 0.95rem;
-        }
-
-        .nav-link:hover {
-            color: #666;
-        }
-
-        .nav-link:last-child {
-            background: #333;
-            color: #fff;
-            padding: 0.7rem 1.5rem;
-            border-radius: 5px;
-            transition: all 0.3s ease;
-        }
-
-        .nav-link:last-child:hover {
-            background: #555;
-            transform: translateY(-2px);
-            box-shadow: 0 4px 12px rgba(0,0,0,0.2);
-        }
-
-        .mobile-menu-toggle {
-            display: none;
-            flex-direction: column;
-            cursor: pointer;
-            gap: 5px;
-        }
-
-        .mobile-menu-toggle span {
-            width: 25px;
-            height: 3px;
-            background: #333;
-            transition: all 0.3s ease;
-        }
-
-        .hero {
-            background: linear-gradient(135deg, #2c3e50 0%, #3d566e 50%, #4a6fa5 100%);
-            color: #fff;
-            padding: 140px 20px 100px;
-            text-align: center;
-            position: relative;
-            overflow: hidden;
-        }
-
-        .hero::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            right: 0;
-            bottom: 0;
-            background: url('data:image/svg+xml,<svg width="100" height="100" xmlns="http://www.w3.org/2000/svg"><path d="M0 0h100v100H0z" fill="none"/><path d="M50 10l5 15h16l-13 9 5 15-13-9-13 9 5-15-13-9h16z" fill="rgba(255,255,255,0.03)"/></svg>');
-            opacity: 0.3;
-        }
-
-        .hero-content {
-            position: relative;
-            z-index: 1;
-            max-width: 800px;
-            margin: 0 auto;
-        }
-
-        .hero h1 {
-            font-size: 3rem;
-            margin-bottom: 1.5rem;
-            line-height: 1.2;
-            font-weight: 700;
-        }
-
-        .hero p {
-            font-size: 1.3rem;
-            margin-bottom: 2.5rem;
-            opacity: 0.95;
-            line-height: 1.7;
-        }
-
-        .cta-buttons {
-            display: flex;
-            gap: 1.5rem;
-            justify-content: center;
-            flex-wrap: wrap;
-        }
-
-        .btn {
-            padding: 1rem 2.5rem;
-            text-decoration: none;
-            border-radius: 5px;
-            font-weight: 600;
-            transition: all 0.3s ease;
-            display: inline-block;
-            font-size: 1rem;
-        }
-
-        .btn-primary {
-            background: #fff;
-            color: #333;
-        }
-
-        .btn-primary:hover {
-            transform: translateY(-3px);
-            box-shadow: 0 6px 20px rgba(255,255,255,0.3);
-        }
-
-        .btn-secondary {
-            background: transparent;
-            color: #fff;
-            border: 2px solid #fff;
-        }
-
-        .btn-secondary:hover {
-            background: #fff;
-            color: #333;
-            transform: translateY(-3px);
-        }
-
-        section {
-            padding: 80px 20px;
-        }
-
-        .section-title {
-            font-size: 2.5rem;
-            margin-bottom: 1rem;
-            text-align: center;
-            color: #333;
-            font-weight: 700;
-        }
-
-        .section-subtitle {
-            font-size: 1.2rem;
-            text-align: center;
-            color: #666;
-            margin-bottom: 3rem;
-            max-width: 700px;
-            margin-left: auto;
-            margin-right: auto;
-        }
-
-        .why-redesign {
-            background: #f8f9fa;
-        }
-
-        .content-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 3rem;
-            margin-top: 3rem;
-        }
-
-        .content-block {
-            background: #fff;
-            padding: 2rem;
-            border-radius: 10px;
-            box-shadow: 0 4px 15px rgba(0,0,0,0.08);
-            transition: all 0.3s ease;
-        }
-
-        .content-block:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 8px 25px rgba(0,0,0,0.15);
-        }
-
-        .content-block h3 {
-            font-size: 1.5rem;
-            margin-bottom: 1rem;
-            color: #333;
-        }
-
-        .content-block p {
-            color: #666;
-            line-height: 1.8;
-        }
-
-        .benefits {
-            background: #fff;
-        }
-
-        .benefits-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 2rem;
-            margin-top: 3rem;
-        }
-
-        .benefit-card {
-            text-align: center;
-            padding: 2rem;
-            border-radius: 10px;
-            transition: all 0.3s ease;
-            background: #f8f9fa;
-        }
-
-        .benefit-card:hover {
-            background: #fff;
-            box-shadow: 0 8px 25px rgba(0,0,0,0.1);
-            transform: translateY(-5px);
-        }
-
-        .benefit-icon {
-            width: 70px;
-            height: 70px;
-            background: linear-gradient(135deg, #333 0%, #555 100%);
-            border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            margin: 0 auto 1.5rem;
-            font-size: 2rem;
-            color: #fff;
-        }
-
-        .benefit-card h3 {
-            font-size: 1.3rem;
-            margin-bottom: 1rem;
-            color: #333;
-        }
-
-        .benefit-card p {
-            color: #666;
-            line-height: 1.7;
-        }
-
-        .process {
-            background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
-        }
-
-        .process-steps {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-            gap: 2.5rem;
-            margin-top: 3rem;
-        }
-
-        .step {
-            background: #fff;
-            padding: 2.5rem;
-            border-radius: 10px;
-            position: relative;
-            box-shadow: 0 4px 15px rgba(0,0,0,0.08);
-            transition: all 0.3s ease;
-        }
-
-        .step:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 8px 25px rgba(0,0,0,0.15);
-        }
-
-        .step-number {
-            position: absolute;
-            top: -20px;
-            left: 30px;
-            width: 50px;
-            height: 50px;
-            background: #333;
-            color: #fff;
-            border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-size: 1.5rem;
-            font-weight: 700;
-        }
-
-        .step h3 {
-            font-size: 1.4rem;
-            margin-bottom: 1rem;
-            margin-top: 1rem;
-            color: #333;
-        }
-
-        .step p {
-            color: #666;
-            line-height: 1.8;
-        }
-
-        .features {
-            background: #fff;
-        }
-
-        .features-list {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-            gap: 2rem;
-            margin-top: 3rem;
-        }
-
-        .feature-item {
-            display: flex;
-            gap: 1.5rem;
-            padding: 1.5rem;
-            background: #f8f9fa;
-            border-radius: 10px;
-            transition: all 0.3s ease;
-        }
-
-        .feature-item:hover {
-            background: #fff;
-            box-shadow: 0 6px 20px rgba(0,0,0,0.1);
-            transform: translateX(5px);
-        }
-
-        .feature-icon {
-            width: 50px;
-            height: 50px;
-            background: #333;
-            color: #fff;
-            border-radius: 8px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-size: 1.5rem;
-            flex-shrink: 0;
-        }
-
-        .feature-content h4 {
-            font-size: 1.2rem;
-            margin-bottom: 0.5rem;
-            color: #333;
-        }
-
-        .feature-content p {
-            color: #666;
-            line-height: 1.7;
-            font-size: 0.95rem;
-        }
-
-        .cta-section {
-            background: linear-gradient(135deg, #2c3e50 0%, #3d566e 50%, #4a6fa5 100%);
-            color: #fff;
-            text-align: center;
-            padding: 100px 20px;
-        }
-
-        .cta-section h2 {
-            font-size: 2.8rem;
-            margin-bottom: 1.5rem;
-            font-weight: 700;
-        }
-
-        .cta-section p {
-            font-size: 1.3rem;
-            margin-bottom: 2.5rem;
-            opacity: 0.95;
-            max-width: 700px;
-            margin-left: auto;
-            margin-right: auto;
-            line-height: 1.7;
-        }
-
-        /* New CTA Styles */
-        .mid-page-cta {
-            background: linear-gradient(135deg, #4a6fa5 0%, #3d566e 100%);
-            padding: 60px 20px;
-            margin: 60px 0;
-            border-radius: 15px;
-            text-align: center;
-            box-shadow: 0 10px 40px rgba(0,0,0,0.15);
-            position: relative;
-            overflow: hidden;
-        }
-
-        .mid-page-cta::before {
-            content: '';
-            position: absolute;
-            top: -50%;
-            right: -50%;
-            width: 200%;
-            height: 200%;
-            background: radial-gradient(circle, rgba(255,255,255,0.1) 0%, transparent 70%);
-            animation: pulse 8s ease-in-out infinite;
-        }
-
-        @keyframes pulse {
-            0%, 100% { transform: scale(1); opacity: 0.5; }
-            50% { transform: scale(1.1); opacity: 0.8; }
-        }
-
-        .mid-page-cta-content {
-            position: relative;
-            z-index: 1;
-            max-width: 700px;
-            margin: 0 auto;
-        }
-
-        .mid-page-cta h3 {
-            font-size: 2.2rem;
-            margin-bottom: 1rem;
-            color: #fff;
-            font-weight: 700;
-        }
-
-        .mid-page-cta p {
-            font-size: 1.15rem;
-            margin-bottom: 2rem;
-            color: rgba(255,255,255,0.95);
-            line-height: 1.7;
-        }
-
-        .cta-badge {
-            display: inline-block;
-            background: rgba(255,255,255,0.2);
-            color: #fff;
-            padding: 0.4rem 1rem;
-            border-radius: 20px;
-            font-size: 0.85rem;
-            font-weight: 600;
-            margin-bottom: 1.5rem;
-            letter-spacing: 0.5px;
-        }
-
-        .btn-cta-large {
-            background: #fff;
-            color: #2c3e50;
-            padding: 1.2rem 3rem;
-            font-size: 1.1rem;
-            text-decoration: none;
-            border-radius: 8px;
-            font-weight: 700;
-            display: inline-block;
-            transition: all 0.3s ease;
-            box-shadow: 0 4px 15px rgba(0,0,0,0.2);
-            position: relative;
-            overflow: hidden;
-        }
-
-        .btn-cta-large::before {
-            content: '';
-            position: absolute;
-            top: 50%;
-            left: 50%;
-            width: 0;
-            height: 0;
-            border-radius: 50%;
-            background: rgba(74,111,165,0.1);
-            transform: translate(-50%, -50%);
-            transition: width 0.6s, height 0.6s;
-        }
-
-        .btn-cta-large:hover::before {
-            width: 300px;
-            height: 300px;
-        }
-
-        .btn-cta-large:hover {
-            transform: translateY(-3px);
-            box-shadow: 0 8px 25px rgba(0,0,0,0.3);
-        }
-
-        .btn-cta-large span {
-            position: relative;
-            z-index: 1;
-        }
-
-        .sticky-cta {
-            position: fixed;
-            bottom: 20px;
-            right: 20px;
-            z-index: 999;
-            animation: slideInRight 0.5s ease-out;
-        }
-
-        @keyframes slideInRight {
-            from {
-                transform: translateX(400px);
-                opacity: 0;
-            }
-            to {
-                transform: translateX(0);
-                opacity: 1;
-            }
-        }
-
-        .sticky-cta .btn {
-            background: #4a6fa5;
-            color: #fff;
-            padding: 1rem 2rem;
-            border-radius: 50px;
-            box-shadow: 0 6px 25px rgba(74,111,165,0.4);
-            font-weight: 700;
-            display: flex;
-            align-items: center;
-            gap: 0.5rem;
-            animation: bounce 2s ease-in-out infinite;
-        }
-
-        @keyframes bounce {
-            0%, 100% { transform: translateY(0); }
-            50% { transform: translateY(-10px); }
-        }
-
-        .sticky-cta .btn:hover {
-            background: #3d566e;
-            box-shadow: 0 8px 30px rgba(74,111,165,0.6);
-            animation: none;
-        }
-
-        footer {
-            background: #1a1a1a;
-            color: #fff;
-            padding: 60px 20px 30px;
-        }
-
-        .footer-content {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 3rem;
-            margin-bottom: 3rem;
-        }
-
-        .footer-section h3 {
-            font-size: 1.3rem;
-            margin-bottom: 1.5rem;
-            color: #fff;
-        }
-
-        .footer-section p,
-        .footer-section a {
-            color: #ccc;
-            text-decoration: none;
-            line-height: 2;
-            display: block;
-            transition: color 0.3s ease;
-        }
-
-        .footer-section a:hover {
-            color: #fff;
-        }
-
-        .footer-bottom {
-            text-align: center;
-            padding-top: 2rem;
-            border-top: 1px solid #333;
-            color: #999;
-        }
-
-        @media (max-width: 768px) {
-            .nav-links {
-                display: none;
-            }
-
-            .mobile-menu-toggle {
-                display: flex;
-            }
-
-            .hero h1 {
-                font-size: 2rem;
-            }
-
-            .hero p {
-                font-size: 1.1rem;
-            }
-
-            .section-title {
-                font-size: 2rem;
-            }
-
-            .cta-section h2 {
-                font-size: 2rem;
-            }
-
-            .sticky-cta {
-                bottom: 10px;
-                right: 10px;
-            }
-
-            .sticky-cta .btn {
-                padding: 0.8rem 1.5rem;
-                font-size: 0.9rem;
-            }
-        }
-    
     </style>
 </head>
 <body>
-    <header class="site-header">
-        <a href="index.html">Home</a>
-    </header>
+    <header>
+<div class="container nav-container">
+<a class="logo" href="#">ConnAve <span>Dental</span></a>
+<nav>
+<ul class="nav-links">
+<li><a href="#about">About</a></li>
+<li><a href="#services">Services</a></li>
+<li><a href="#location">Location</a></li>
+<li><a class="btn" href="#contact" style="padding: 8px 20px; margin-left: 10px;">Book Visit</a></li>
+</ul>
+<div class="mobile-toggle"><i class="fas fa-bars"></i></div>
+</nav>
+</div>
+</header>
+    
     <main class="page-content">
         <h1>Page 1</h1>
-        <h1>Dental Website Design That Grows Your Practice</h1>
-<p>Your website isn't just a digital brochure—it's your most powerful patient attraction tool. We create high-performance dental websites that turn online visitors into loyal patients.</p>
-<h2>Why Your Website Matters More Than Ever</h2>
-<p>In today's competitive healthcare market, your digital first impression determines patient trust. Our strategic design delivers:</p>
+        <h1>Transform Your Smile with Expert Hartford Dental Care</h1>
+<p>Welcome to Capitol Glow Dental Studio, where precision Connecticut dental care meets cutting-edge technology. Our expert team delivers exceptional, pain-free dental experiences tailored to your unique oral health needs.</p>
+<h2>Comprehensive Dental Solutions for Hartford County Patients</h2>
+<p>We provide advanced dental care that combines expert precision, compassionate treatment, and state-of-the-art technology:</p>
+<h3>Precision Diagnostic Examinations</h3>
+Our advanced digital imaging detects potential issues with 95% accuracy. We proactively identify and address dental concerns before they become complex problems, protecting your long-term oral health and saving you potential costly treatments.
+<h3>Transformative Cosmetic Procedures</h3>
+Restore confidence with personalized smile solutions. Our treatments include:
 <ul>
-<li>50% more patient attraction</li>
-<li>35% higher booking rates</li>
-<li>Instant professional credibility</li>
-<li>Top local search rankings</li>
+<li>Professional teeth whitening (up to 8 shades brighter)</li>
+<li>Precision ceramic veneers</li>
+<li>Smile redesign consultations</li>
+<li>Advanced bonding techniques</li>
 </ul>
-<h2>Real Results, Real Growth</h2>
-<p>Case Study: Dr. Sarah Martinez increased patient inquiries by 42% with a strategic website redesign:
+<p>Each treatment is meticulously crafted to enhance your natural aesthetic and boost your self-confidence.</p>
+<h3>Comfort-Centered Patient Experience</h3>
+We understand dental anxiety. Our gentle techniques and modern sedation options ensure a stress-free, comfortable experience for every patient. Over 4,000 patients have transformed their dental journey with our compassionate approach.
+<h2>Why Hartford Trusts Capitol Glow Dental Studio</h2>
+<p>Our commitment to excellence is proven:
 <ul>
-<li>Mobile-friendly design</li>
-<li>One-click appointment booking</li>
-<li>Local SEO optimization</li>
-<li>Trust-building visual approach</li>
+<li>15+ years of specialized dental expertise</li>
+<li>5,000+ successful patient treatments</li>
+<li>Advanced diagnostic technologies</li>
+<li>Personalized care plans</li>
+<li>Transparent, competitive pricing</li>
+<li>State-of-the-art sterilization protocols</li>
 </ul></p>
-<h2>What Makes Our Dental Websites Different</h2>
-<ul>
-<li>Lightning-fast loading</li>
-<li>Patient-friendly navigation</li>
-<li>HIPAA-secure platform</li>
-<li>Conversion-focused design</li>
-<li>Personalized user experience</li>
-</ul>
-<h3>Proven Success Across 500+ Dental Practices</h3>
-<p>"Our new website revolutionized our patient acquisition strategy." 
-— Dr. Michael Chen, Smile Dental Studio</p>
-<h2>Our Streamlined Development Process</h2>
-<p>1. Free website performance analysis
-2. Custom strategic blueprint
-3. Professional design implementation
-4. Continuous performance tracking
-5. Monthly optimization</p>
-<h3>Pricing Designed for Your Practice</h3>
-<ul>
-<li>Startup Package: $1,997</li>
-<li>Growth Package: $2,997</li>
-<li>Enterprise Solution: Custom Pricing</li>
-</ul>
-<h3>Ready to Transform Your Online Presence?</h3>
-<p>Get a free website audit that reveals exactly how to supercharge your practice's digital performance.</p>
-<strong>Unlock Your Practice's Potential →</strong>
+<h3>Conveniently Located in Hartford County</h3>
+<p>Situated in the heart of Connecticut, our modern, sterilized facility combines professional expertise with a warm, welcoming environment. We serve patients throughout Greater Hartford with cutting-edge dental care.</p>
+<h2>Your Path to a Healthier, Brighter Smile</h2>
+<p>Investing in your dental health has never been more accessible. Our complimentary initial consultation provides a comprehensive assessment of your dental needs, with zero financial commitment.</p>
+<strong>Discover the Capitol Glow Difference – Schedule Your Free Consultation Now!</strong>
+<p>[Book Your Appointment]</p>
     </main>
-    <footer class="site-footer">
-        <p><a href="index.html">&larr; Back to Home</a></p>
-    </footer>
+    <footer id="contact">
+<div class="container">
+<div class="footer-content">
+<h3>ConnAve Dental</h3>
+<p>Bringing smiles to Washington DC since 2025.</p>
+<div style="font-size: 1.5rem; margin-top: 20px;">
+<i class="fab fa-instagram" style="margin: 0 10px;"></i>
+<i class="fab fa-facebook" style="margin: 0 10px;"></i>
+<i class="fab fa-twitter" style="margin: 0 10px;"></i>
+</div>
+</div>
+<div class="copyright">
+                © 2026 Connecticut Ave Dental Studio. All Rights Reserved.
+            </div>
+</div></footer>
 </body>
 </html>
