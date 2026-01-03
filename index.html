@@ -1,53 +1,126 @@
-<!-- Hero section: Enhanced primary CTA -->
-<section class="hero">
-    <div class="container hero-content">
-        <h1>Refined Dentistry in the<br>Heart of DC</h1>
-        <p>Experience world-class dental care on Connecticut Avenue. We combine modern technology with neighborhood warmth.</p>
-        <a href="/contact" class="btn" style="background-color: var(--accent); color: var(--primary); font-size: 1.1rem; padding: 15px 35px;">
-            Book Your Smile Consultation
-        </a>
-        <a href="#services" class="btn btn-outline" style="margin-left: 10px;">Our Services</a>
-    </div>
-</section>
-
-<!-- Services section: Mid-page CTA -->
-<section class="services" id="services">
-    <div class="container">
-        <h2>Our Services</h2>
-        <p style="text-align: center; max-width: 600px; margin: 0 auto;">Comprehensive care for the whole family.</p>
-        <div class="service-grid">
-            <!-- Existing service cards -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DC Dental Care</title>
+    <style>
+        :root {
+            --primary: #1A3B5C;
+            --accent: #4CAF50;
+            --white: #FFFFFF;
+        }
+        .btn {
+            transition: all 0.3s ease;
+        }
+        .btn:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 6px 12px rgba(0,0,0,0.2);
+            opacity: 0.9;
+        }
+    </style>
+</head>
+<body>
+    <!-- Hero section: Enhanced primary CTA -->
+    <section class="hero">
+        <div class="container hero-content">
+            <h1>Refined Dentistry in the<br>Heart of DC</h1>
+            <p>Experience world-class dental care on Connecticut Avenue. We combine modern technology with neighborhood warmth.</p>
+            <div class="cta-group" style="display: flex; align-items: center; gap: 15px;">
+                <a href="/contact" class="btn" style="
+                    background-color: var(--accent); 
+                    color: var(--primary); 
+                    font-size: 1.1rem; 
+                    padding: 15px 35px; 
+                    text-decoration: none; 
+                    border-radius: 5px;
+                    font-weight: bold;
+                ">
+                    Book Your Smile Consultation
+                </a>
+                <a href="#services" class="btn btn-outline" style="
+                    border: 2px solid var(--accent); 
+                    color: var(--primary); 
+                    background: transparent; 
+                    padding: 13px 30px; 
+                    text-decoration: none;
+                    border-radius: 5px;
+                ">
+                    Our Services
+                </a>
+            </div>
         </div>
-        <div style="text-align: center; margin-top: 40px;">
+    </section>
+
+    <!-- Services section: Mid-page CTA -->
+    <section class="services" id="services">
+        <div class="container">
+            <h2>Our Services</h2>
+            <p style="text-align: center; max-width: 600px; margin: 0 auto;">Comprehensive care for the whole family.</p>
+            <div class="service-grid">
+                <!-- Existing service cards -->
+            </div>
+            <div style="text-align: center; margin-top: 40px;">
+                <a href="/contact" class="btn" style="
+                    background-color: var(--primary); 
+                    color: var(--white); 
+                    font-size: 1rem; 
+                    padding: 12px 30px;
+                    box-shadow: 0 4px 6px rgba(0,0,0,0.2);
+                    text-decoration: none;
+                    border-radius: 5px;
+                ">
+                    Transform Your Smile Today
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- New Mid-Content CTA -->
+    <section style="
+        background-color: #F4F4F4; 
+        text-align: center; 
+        padding: 50px 0;
+    ">
+        <div class="container">
+            <h2 style="color: var(--primary); margin-bottom: 20px;">Invest in Your Dental Health</h2>
+            <p style="max-width: 700px; margin: 0 auto 30px; font-size: 1.1rem;">
+                Quality dental care is an investment in your overall well-being. Our expert team is ready to provide personalized care.
+            </p>
+            <a href="/contact" class="btn" style="
+                background-color: var(--accent); 
+                color: var(--primary); 
+                font-size: 1.1rem; 
+                padding: 15px 40px;
+                text-decoration: none;
+                border-radius: 5px;
+                font-weight: bold;
+            ">
+                Get Your Personalized Consultation
+            </a>
+        </div>
+    </section>
+
+    <!-- Pre-footer CTA -->
+    <section style="background-color: var(--accent); color: var(--primary); text-align: center; padding: 60px 0;">
+        <div class="container">
+            <h2 style="color: var(--primary); margin-bottom: 20px;">Your Dental Health Can't Wait</h2>
+            <p style="max-width: 600px; margin: 0 auto 30px; font-size: 1.1rem;">
+                Don't put off your dental care. Schedule your comprehensive consultation today.
+            </p>
             <a href="/contact" class="btn" style="
                 background-color: var(--primary); 
                 color: var(--white); 
-                font-size: 1rem; 
-                padding: 12px 30px;
-                box-shadow: 0 4px 6px rgba(0,0,0,0.2);
+                font-size: 1.1rem; 
+                padding: 15px 40px;
+                border: none;
+                box-shadow: 0 6px 12px rgba(0,0,0,0.15);
+                text-decoration: none;
+                border-radius: 5px;
             ">
-                Ready to Transform Your Smile? Contact Us
+                Schedule Your Appointment Now
             </a>
         </div>
-    </div>
-</section>
-
-<!-- Pre-footer CTA -->
-<section style="background-color: var(--accent); color: var(--primary); text-align: center; padding: 60px 0;">
-    <div class="container">
-        <h2 style="color: var(--primary); margin-bottom: 20px;">Your Dental Health Can't Wait</h2>
-        <p style="max-width: 600px; margin: 0 auto 30px; font-size: 1.1rem;">
-            Don't put off your dental care. Schedule your comprehensive consultation today.
-        </p>
-        <a href="/contact" class="btn" style="
-            background-color: var(--primary); 
-            color: var(--white); 
-            font-size: 1.1rem; 
-            padding: 15px 40px;
-            border: none;
-            box-shadow: 0 6px 12px rgba(0,0,0,0.15);
-        ">
-            Schedule Your Appointment Now
-        </a>
-    </div>
-</section>
+    </section>
+</body>
+</html>
