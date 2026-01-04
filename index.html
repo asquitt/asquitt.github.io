@@ -1,421 +1,450 @@
 <!DOCTYPE html>
-
 <html lang="en">
 <head>
-<meta charset="utf-8">
-<meta content="width=device-width, initial-scale=1.0" name="viewport">
-<title>Connecticut Ave Dental Studio | Premier Dentist Washington DC 20008</title>
-<meta content="Experience exceptional dental care at Connecticut Ave Dental Studio in Washington DC. Modern technology, patient-first approach, serving Cleveland Park &amp; Woodley Park. Book your appointment today!" name="description">
-<meta content="dentist Washington DC, dental care 20008, Connecticut Avenue dentist, Cleveland Park dental, cosmetic dentistry DC, emergency dentist Washington" name="keywords">
-<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
-<style>
-        /* --- VARIABLES & RESET --- */
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Connecticut Ave Dental Studio | Washington DC</title>
+    
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&family=Playfair+Display:wght@400;700&display=swap" rel="stylesheet">
+
+    <style>
+        /* --- CSS RESET & VARIABLES --- */
         :root {
-            --primary: #1e3a8a; /* DC Navy */
-            --accent: #2dd4bf; /* Mint/Teal */
-            --dark: #0f172a;
-            --light: #f8fafc;
+            --primary: #0f2746; /* Deep DC Navy */
+            --secondary: #2dd4bf; /* Modern Mint/Teal */
+            --gold: #d4af37; /* Subtle Gold Accent */
+            --light: #f3f4f6;
             --white: #ffffff;
-            --font-serif: 'Playfair Display', serif;
-            --font-sans: 'Inter', sans-serif;
+            --text-dark: #1e293b;
+            --text-light: #64748b;
         }
 
         * { margin: 0; padding: 0; box-sizing: border-box; }
+        html { scroll-behavior: smooth; }
         
         body {
-            font-family: var(--font-sans);
-            color: var(--dark);
+            font-family: 'Inter', sans-serif;
+            color: var(--text-dark);
             line-height: 1.6;
-            background-color: var(--light);
+            background-color: var(--white);
         }
 
-        /* --- TYPOGRAPHY --- */
-        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&family=Playfair+Display:wght@400;700&display=swap');
-
-        h1, h2, h3 { font-family: var(--font-serif); color: var(--primary); }
-        h2 { font-size: 2.5rem; margin-bottom: 1rem; text-align: center; }
-        p { margin-bottom: 1rem; }
-        
-        /* --- UTILITIES --- */
-        .container { max-width: 1200px; margin: 0 auto; padding: 0 20px; }
-        .btn {
-            display: inline-block;
-            padding: 12px 30px;
-            background-color: var(--accent);
+        h1, h2, h3, h4 {
+            font-family: 'Playfair Display', serif;
             color: var(--primary);
             font-weight: 700;
-            text-decoration: none;
-            border-radius: 50px;
-            transition: all 0.3s ease;
-            border: 2px solid var(--accent);
         }
-        .btn:hover { background-color: transparent; color: var(--accent); }
-        .btn-outline { background: transparent; border: 2px solid var(--white); color: var(--white); }
-        .btn-outline:hover { background: var(--white); color: var(--primary); }
 
-        /* --- HEADER --- */
-        header {
+        /* --- UTILITY CLASSES --- */
+        .container { max-width: 1200px; margin: 0 auto; padding: 0 20px; }
+        .text-center { text-align: center; }
+        .section { padding: 80px 0; }
+        .bg-light { background-color: var(--light); }
+        
+        .btn {
+            display: inline-block;
+            padding: 14px 32px;
+            border-radius: 50px;
+            font-weight: 600;
+            text-decoration: none;
+            transition: all 0.3s ease;
+            text-transform: uppercase;
+            font-size: 0.9rem;
+            letter-spacing: 0.5px;
+        }
+        .btn-primary {
+            background-color: var(--secondary);
+            color: var(--primary);
+            border: 2px solid var(--secondary);
+        }
+        .btn-primary:hover {
+            background-color: transparent;
+            color: var(--secondary);
+        }
+        .btn-outline {
+            background-color: transparent;
+            color: var(--white);
+            border: 2px solid var(--white);
+        }
+        .btn-outline:hover {
             background-color: var(--white);
-            box-shadow: 0 2px 15px rgba(0,0,0,0.05);
+            color: var(--primary);
+        }
+
+        /* --- HEADER & NAV --- */
+        header {
+            background: rgba(255, 255, 255, 0.98);
+            box-shadow: 0 2px 20px rgba(0,0,0,0.05);
             position: fixed;
             width: 100%;
             top: 0;
             z-index: 1000;
         }
-        .nav-container {
+        .nav-wrapper {
             display: flex;
             justify-content: space-between;
             align-items: center;
-            height: 80px;
+            height: 90px;
         }
-        .logo { font-family: var(--font-serif); font-size: 1.5rem; font-weight: 700; color: var(--primary); text-decoration: none; }
-        .logo span { color: var(--accent); }
-        
-        nav ul { list-style: none; display: flex; gap: 30px; }
-        nav a { text-decoration: none; color: var(--dark); font-weight: 500; transition: color 0.3s; }
-        nav a:hover { color: var(--accent); }
-        .mobile-toggle { display: none; font-size: 1.5rem; cursor: pointer; }
+        .logo {
+            font-size: 1.5rem;
+            font-weight: bold;
+            color: var(--primary);
+            text-decoration: none;
+            font-family: 'Playfair Display', serif;
+            letter-spacing: -0.5px;
+        }
+        .logo span { color: var(--secondary); }
 
-        /* --- HERO --- */
+        nav ul { display: flex; list-style: none; gap: 35px; align-items: center; }
+        nav a { text-decoration: none; color: var(--primary); font-weight: 500; font-size: 0.95rem; transition: color 0.3s; }
+        nav a:hover { color: var(--secondary); }
+        
+        .mobile-toggle { display: none; font-size: 1.5rem; color: var(--primary); cursor: pointer; }
+
+        /* --- HERO SECTION --- */
         .hero {
-            background: linear-gradient(rgba(30, 58, 138, 0.9), rgba(30, 58, 138, 0.7)), url('https://images.unsplash.com/photo-1629909613654-28e377c37b09?auto=format&fit=crop&q=80');
+            position: relative;
+            height: 90vh; /* Full screen height */
+            background: linear-gradient(rgba(15, 39, 70, 0.85), rgba(15, 39, 70, 0.7)), url('https://images.unsplash.com/photo-1609840114035-1c99d59242cc?auto=format&fit=crop&q=80');
             background-size: cover;
             background-position: center;
-            height: 90vh;
             display: flex;
             align-items: center;
+            justify-content: center;
             text-align: center;
-            color: var(--white);
-            padding-top: 80px;
+            color: white;
+            margin-top: 90px;
         }
         .hero-content h1 {
-            font-size: 3.5rem;
-            color: var(--white);
+            font-size: 4rem;
+            color: white;
             margin-bottom: 20px;
+            line-height: 1.1;
         }
-        .hero-content p { font-size: 1.2rem; margin-bottom: 30px; max-width: 600px; margin-left: auto; margin-right: auto; opacity: 0.9; }
+        .hero-content p {
+            font-size: 1.3rem;
+            max-width: 700px;
+            margin: 0 auto 40px auto;
+            opacity: 0.9;
+            font-weight: 300;
+        }
 
-        /* --- FEATURES --- */
-        .features { padding: 80px 0; background: var(--white); }
-        .features-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 40px; }
-        .feature-card { text-align: center; padding: 30px; border-radius: 10px; transition: transform 0.3s; }
-        .feature-card:hover { transform: translateY(-5px); box-shadow: 0 10px 30px rgba(0,0,0,0.05); }
-        .icon-box { font-size: 2.5rem; color: var(--accent); margin-bottom: 20px; }
+        /* --- INFO BAR --- */
+        .info-bar {
+            background: var(--secondary);
+            color: var(--primary);
+            padding: 20px 0;
+            margin-top: -5px;
+        }
+        .info-grid {
+            display: flex;
+            justify-content: space-around;
+            text-align: center;
+            font-weight: 600;
+        }
+        .info-item i { margin-right: 8px; }
+
+        /* --- ABOUT --- */
+        .about-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 60px;
+            align-items: center;
+        }
+        .about-image img {
+            width: 100%;
+            border-radius: 10px;
+            box-shadow: 20px 20px 0px var(--light);
+        }
 
         /* --- SERVICES --- */
-        .services { padding: 80px 0; background: var(--light); }
-        .service-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 30px; margin-top: 40px; }
-        .service-card {
-            background: var(--white);
-            padding: 30px;
-            border-radius: 8px;
-            box-shadow: 0 4px 6px rgba(0,0,0,0.02);
-            border-bottom: 4px solid var(--accent);
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+            margin-top: 50px;
         }
-        .service-card h3 { font-size: 1.25rem; margin-bottom: 10px; }
+        .service-card {
+            background: white;
+            padding: 40px 30px;
+            border-radius: 8px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.03);
+            transition: transform 0.3s;
+            border-top: 4px solid var(--secondary);
+        }
+        .service-card:hover { transform: translateY(-5px); }
+        .service-icon { font-size: 2.5rem; color: var(--primary); margin-bottom: 20px; }
+        .service-card h3 { font-size: 1.5rem; margin-bottom: 15px; }
 
-        /* --- LOCATION / CONTACT --- */
-        .location { padding: 80px 0; background: var(--white); }
-        .location-wrapper { display: flex; flex-wrap: wrap; gap: 40px; align-items: center; }
-        .map-frame { flex: 1; min-width: 300px; height: 400px; background: #eee; border-radius: 10px; overflow: hidden; }
-        .contact-info { flex: 1; min-width: 300px; }
-        .info-item { display: flex; align-items: flex-start; gap: 15px; margin-bottom: 20px; }
-        .info-item i { color: var(--primary); font-size: 1.2rem; margin-top: 5px; }
+        /* --- TESTIMONIALS --- */
+        .testimonials { background-color: var(--primary); color: white; text-align: center; }
+        .testimonials h2 { color: white; }
+        .quote-box {
+            font-size: 1.2rem;
+            font-style: italic;
+            max-width: 800px;
+            margin: 30px auto;
+            opacity: 0.9;
+        }
+        .stars { color: var(--gold); margin-bottom: 10px; }
+
+        /* --- CONTACT / MAP --- */
+        .contact-wrapper {
+            display: flex;
+            flex-wrap: wrap;
+            box-shadow: 0 10px 40px rgba(0,0,0,0.1);
+            border-radius: 15px;
+            overflow: hidden;
+            background: white;
+        }
+        .contact-info {
+            flex: 1;
+            padding: 60px;
+            min-width: 300px;
+            background: white;
+        }
+        .map-container {
+            flex: 1;
+            min-width: 300px;
+            background: #eee;
+            min-height: 400px;
+        }
+        .contact-row {
+            display: flex;
+            align-items: center;
+            margin-bottom: 30px;
+        }
+        .contact-row i {
+            font-size: 1.5rem;
+            color: var(--secondary);
+            margin-right: 20px;
+            width: 30px;
+        }
 
         /* --- FOOTER --- */
-        footer { background: var(--primary); color: var(--white); padding: 50px 0 20px; text-align: center; }
-        .footer-content { margin-bottom: 30px; }
-        .copyright { font-size: 0.9rem; opacity: 0.6; border-top: 1px solid rgba(255,255,255,0.1); padding-top: 20px; }
+        footer {
+            background: var(--primary);
+            color: white;
+            padding: 60px 0 20px;
+            text-align: center;
+        }
+        .social-icons { margin: 20px 0; }
+        .social-icons a { color: white; margin: 0 10px; font-size: 1.2rem; transition: color 0.3s; }
+        .social-icons a:hover { color: var(--secondary); }
+        .copyright { border-top: 1px solid rgba(255,255,255,0.1); padding-top: 20px; margin-top: 40px; font-size: 0.8rem; opacity: 0.6; }
 
-        /* --- RESPONSIVE --- */
+        /* --- MOBILE RESPONSIVE --- */
         @media (max-width: 768px) {
-            .nav-links { display: none; }
+            .nav-menu { display: none; }
             .mobile-toggle { display: block; }
             .hero-content h1 { font-size: 2.5rem; }
-            .location-wrapper { flex-direction: column; }
+            .about-grid { grid-template-columns: 1fr; }
+            .contact-info { padding: 30px; }
+            .info-grid { flex-direction: column; gap: 10px; }
         }
     </style>
 </head>
 <body>
-<header>
-<div class="container nav-container">
-<a class="logo" href="#">ConnAve <span>Dental</span></a>
-<nav>
-<ul class="nav-links">
-<li><a href="#about">About</a></li>
-<li><a href="#services">Services</a></li>
-<li><a href="#location">Location</a></li>
-<li><a class="btn" href="#contact" style="padding: 8px 20px; margin-left: 10px;">Book Appointment</a></li>
-<li><a href="contact.html">Contact</a></li></ul>
-<div class="mobile-toggle"><i class="fas fa-bars"></i></div>
-<a href="/blog">Blog</a>
-</nav>
-</div>
-</header>
-<section class="hero">
-<div class="container hero-content">
-<h1>Premier Dental Care in the<br>Heart of Washington DC</h1>
-<p>Experience exceptional dental care on Connecticut Avenue. We combine cutting-edge technology with personalized, compassionate care for every patient.</p>
-<a class="btn" href="#contact">Schedule Your Visit Today</a>
-<a class="btn btn-outline" href="#services" style="margin-left: 10px;">Explore Our Services</a>
-</div>
-</section>
-<section class="features" id="about">
-<div class="container">
-<h2>Why Choose Connecticut Ave Dental Studio?</h2>
-<div class="features-grid">
-<div class="feature-card">
-<div class="icon-box"><i class="fas fa-heart-pulse"></i></div>
-<h3>Comfort-Focused Care</h3>
-<p>Your comfort is our priority. We offer sedation dentistry, noise-canceling headphones, and a gentle approach to ensure a relaxing experience.</p>
-</div>
-<div class="feature-card">
-<div class="icon-box"><i class="fas fa-gem"></i></div>
-<h3>Advanced Technology</h3>
-<p>State-of-the-art digital imaging, CEREC same-day crowns, and laser dentistry for precise, efficient, and comfortable treatments.</p>
-</div>
-<div class="feature-card">
-<div class="icon-box"><i class="fas fa-map-marker-alt"></i></div>
-<h3>Convenient DC Location</h3>
-<p>Perfectly located in the 20008 area, easily accessible from Cleveland Park, Woodley Park, Dupont Circle, and surrounding neighborhoods.</p>
-</div>
-</div>
-</div>
-</section>
-<section class="services" id="services">
-<div class="container">
-<h2>Comprehensive Dental Services</h2>
-<p style="text-align: center; max-width: 600px; margin: 0 auto;">From routine cleanings to complete smile makeovers, we provide exceptional care for patients of all ages.</p>
-<div class="service-grid">
-<div class="service-card">
-<h3>Preventive &amp; General Dentistry</h3>
-<p>Regular cleanings, comprehensive exams, digital X-rays, and fluoride treatments to maintain optimal oral health.</p>
-</div>
-<div class="service-card">
-<h3>Cosmetic Smile Enhancements</h3>
-<p>Professional teeth whitening, porcelain veneers, and cosmetic bonding to achieve your perfect "Capitol smile."</p>
-</div>
-<div class="service-card">
-<h3>Invisalign &amp; Clear Aligners</h3>
-<p>Discreet orthodontic treatment with clear aligners to straighten your teeth without traditional metal braces.</p>
-</div>
-<div class="service-card">
-<h3>Emergency Dental Care</h3>
-<p>Same-day emergency appointments available for dental pain, broken teeth, and other urgent oral health concerns.</p>
-</div>
-<div class="service-card">
-<h3>Restorative Dentistry</h3>
-<p>Crowns, bridges, fillings, and implant restoration to repair and replace damaged or missing teeth.</p>
-</div>
-<div class="service-card">
-<h3>Periodontal Care</h3>
-<p>Comprehensive gum disease treatment and maintenance to preserve your oral health and prevent tooth loss.</p>
-</div>
-</div>
-</div>
-</section>
-<section class="location" id="location">
-<div class="container">
-<h2>Visit Our Modern DC Practice</h2>
-<div class="location-wrapper">
-<div class="contact-info">
-<h3>Connecticut Ave Dental Studio</h3>
-<br>
-<div class="info-item">
-<i class="fas fa-map-pin"></i>
-<div>
-<strong>Address:</strong><br>
+
+    <header>
+        <div class="container nav-wrapper">
+            <a href="#" class="logo">ConnAve <span>Dental</span></a>
+            <nav>
+                <ul class="nav-menu">
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#services">Services</a></li>
+                    <li><a href="#new-patients">New Patients</a></li>
+                    <li><a href="#reviews">Reviews</a></li>
+                    <li><a href="#contact" class="btn btn-primary">Book Visit</a></li>
+                </ul>
+                <div class="mobile-toggle"><i class="fas fa-bars"></i></div>
+            </nav>
+        </div>
+    </header>
+
+    <section class="hero">
+        <div class="container hero-content">
+            <p>SERVING WASHINGTON DC 20008</p>
+            <h1>Refined Dentistry on<br>Connecticut Avenue</h1>
+            <p>Experience world-class dental care in the heart of Cleveland Park. Modern technology, neighborhood warmth, and a patient-first approach.</p>
+            <div style="margin-top: 30px;">
+                <a href="#contact" class="btn btn-primary">Book Appointment</a>
+                <a href="#services" class="btn btn-outline" style="margin-left: 15px;">Explore Services</a>
+            </div>
+        </div>
+    </section>
+
+    <div class="info-bar">
+        <div class="container info-grid">
+            <div class="info-item"><i class="fas fa-map-marker-alt"></i> Connecticut Ave NW, DC 20008</div>
+            <div class="info-item"><i class="fas fa-phone-alt"></i> (202) 555-0123</div>
+            <div class="info-item"><i class="fas fa-star"></i> 5-Star Rated on Google</div>
+        </div>
+    </div>
+
+    <section class="section" id="about">
+        <div class="container about-grid">
+            <div class="about-text">
+                <h3>Welcome to ConnAve Dental</h3>
+                <h2 style="margin-bottom: 20px;">Your Neighborhood Dental Studio</h2>
+                <p>Located in the historic 20008 zip code, we bridge the gap between clinical excellence and luxury comfort.</p>
+                <p>We understand that visiting the dentist isn't everyone's favorite activity. That's why we've designed our studio to feel less like a clinic and more like a lounge. From noise-canceling headphones to warm towels, we prioritize your relaxation.</p>
+                <br>
+                <ul style="list-style: none;">
+                    <li style="margin-bottom: 10px;"><i class="fas fa-check" style="color: var(--secondary); margin-right: 10px;"></i> Advanced 3D Imaging</li>
+                    <li style="margin-bottom: 10px;"><i class="fas fa-check" style="color: var(--secondary); margin-right: 10px;"></i> Sedation Dentistry Options</li>
+                    <li style="margin-bottom: 10px;"><i class="fas fa-check" style="color: var(--secondary); margin-right: 10px;"></i> Weekend Appointments Available</li>
+                </ul>
+            </div>
+            <div class="about-image">
+                <img src="https://images.unsplash.com/photo-1629909613654-28e377c37b09?auto=format&fit=crop&q=80" alt="Modern Dental Office DC">
+            </div>
+        </div>
+    </section>
+
+    <section class="section bg-light" id="services">
+        <div class="container">
+            <div class="text-center" style="max-width: 700px; margin: 0 auto;">
+                <h3>Comprehensive Care</h3>
+                <h2 style="margin-bottom: 20px;">Our Services</h2>
+                <p>Whether you need a routine cleaning or a complete smile makeover, our team of specialists is here for you.</p>
+            </div>
+            
+            <div class="services-grid">
+                <div class="service-card">
+                    <div class="service-icon"><i class="fas fa-tooth"></i></div>
+                    <h3>General Dentistry</h3>
+                    <p>Routine exams, ultrasonic cleanings, and oral cancer screenings to maintain optimal health.</p>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon"><i class="fas fa-magic"></i></div>
+                    <h3>Cosmetic Design</h3>
+                    <p>Porcelain veneers, professional whitening, and bonding to craft your perfect "Capitol Smile."</p>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon"><i class="fas fa-smile"></i></div>
+                    <h3>Invisalign</h3>
+                    <p>We are a Diamond Plus Invisalign provider. Straighten your teeth discreetly without metal.</p>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon"><i class="fas fa-heartbeat"></i></div>
+                    <h3>Emergency Care</h3>
+                    <p>Same-day appointments for toothaches, chipped teeth, or lost crowns. We are here when you need us.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="section testimonials" id="reviews">
+        <div class="container">
+            <div class="stars">
+                <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+            </div>
+            <h2>"Best Dentist in DC!"</h2>
+            <div class="quote-box">
+                "I've lived in Cleveland Park for 10 years and finally found a dentist I trust. The office is beautiful, the staff is incredibly kind, and the location on Connecticut Ave is perfect."
+            </div>
+            <p style="font-weight: bold;">— Sarah J., Washington DC</p>
+        </div>
+    </section>
+
+    <section class="section" id="contact">
+        <div class="container">
+            <div class="text-center" style="margin-bottom: 50px;">
+                <h2>Visit Our Studio</h2>
+                <p>We are accepting new patients in the 20008 area.</p>
+            </div>
+            
+            <div class="contact-wrapper">
+                <div class="contact-info">
+                    <h3 style="margin-bottom: 30px; color: var(--primary);">Contact Details</h3>
+                    
+                    <div class="contact-row">
+                        <i class="fas fa-map-pin"></i>
+                        <div>
+                            <strong>Address</strong><br>
                             3501 Connecticut Ave NW<br>
                             Washington, DC 20008
                         </div>
-</div>
-<div class="info-item">
-<i class="fas fa-clock"></i>
-<div>
-<strong>Office Hours:</strong><br>
-                            Monday - Friday: 7:30 AM - 6:00 PM<br>
-                            Saturday: 8:00 AM - 3:00 PM<br>
-                            Sunday: Closed
+                    </div>
+                    
+                    <div class="contact-row">
+                        <i class="fas fa-clock"></i>
+                        <div>
+                            <strong>Hours</strong><br>
+                            Mon - Fri: 8:00 AM - 6:00 PM<br>
+                            Sat: 9:00 AM - 2:00 PM
                         </div>
-</div>
-<div class="info-item">
-<i class="fas fa-phone-alt"></i>
-<div>
-<strong>Phone:</strong><br>
+                    </div>
+
+                    <div class="contact-row">
+                        <i class="fas fa-phone"></i>
+                        <div>
+                            <strong>Phone</strong><br>
                             (202) 555-0123
                         </div>
-</div>
-<div class="info-item">
-<i class="fas fa-envelope"></i>
-<div>
-<strong>Email:</strong><br>
-                            info@connavedental.com
+                    </div>
+
+                    <div class="contact-row">
+                        <i class="fas fa-envelope"></i>
+                        <div>
+                            <strong>Email</strong><br>
+                            hello@connavedental.com
                         </div>
-</div>
-<a class="btn" href="#" style="margin-top: 20px;">Get Directions &amp; Parking Info</a>
-</div>
-<div class="map-frame">
-<iframe frameborder="0" height="100%" marginheight="0" marginwidth="0" scrolling="no" src="https://maps.google.com/maps?q=Connecticut%20Ave%20NW%2C%20Washington%2C%20DC%2020008&amp;t=&amp;z=15&amp;ie=UTF8&amp;iwloc=&amp;output=embed" width="100%">
-</iframe>
-</div>
-</div>
-</div>
-</section>
-<section id="resources" style="padding: 80px 0; background: linear-gradient(135deg, #f8fafe 0%, #ffffff 100%); position: relative;">
-<div style="max-width: 1200px; margin: 0 auto; padding: 0 20px;">
-<!-- Section Header -->
-<div style="text-align: center; margin-bottom: 60px;">
-<h2 style="font-size: 2.5rem; font-weight: 700; color: #1a365d; margin-bottom: 20px; line-height: 1.2;">
-        Practice Growth Resources
-      </h2>
-<p style="font-size: 1.2rem; color: #4a5568; max-width: 600px; margin: 0 auto; line-height: 1.6;">
-        Download our exclusive guides and tools to help grow your dental practice and enhance patient care
-      </p>
-</div>
-<!-- Resources Grid -->
-<div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(350px, 1fr)); gap: 30px; margin-bottom: 50px;">
-<!-- Resource 1 -->
-<div style="background: #ffffff; padding: 40px 30px; border-radius: 12px; box-shadow: 0 8px 25px rgba(0,0,0,0.08); border: 2px solid var(--primary-light, #e2e8f0); transition: transform 0.3s ease, box-shadow 0.3s ease; position: relative; overflow: hidden;">
-<div style="position: absolute; top: 0; left: 0; width: 100%; height: 4px; background: linear-gradient(90deg, #4299e1, #3182ce);"></div>
-<div style="display: flex; align-items: flex-start; margin-bottom: 20px;">
-<div style="background: #ebf8ff; padding: 12px; border-radius: 8px; margin-right: 15px;">
-<svg fill="#3182ce" height="24" viewbox="0 0 24 24" width="24">
-<path d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path>
-</svg>
-</div>
-<div>
-<h3 style="font-size: 1.4rem; font-weight: 600; color: #1a365d; margin-bottom: 10px;">
-              Patient Retention Checklist
-            </h3>
-<p style="color: #4a5568; line-height: 1.6; font-size: 0.95rem;">
-              A comprehensive 25-point checklist to improve patient satisfaction and increase retention rates by up to 40%
-            </p>
-</div>
-</div>
-<button style="width: 100%; background: linear-gradient(135deg, #4299e1, #3182ce); color: white; border: none; padding: 14px 20px; border-radius: 8px; font-weight: 600; cursor: pointer; transition: all 0.3s ease; font-size: 1rem;">
-          Download Free Guide
-        </button>
-</div>
-<!-- Resource 2 -->
-<div style="background: #ffffff; padding: 40px 30px; border-radius: 12px; box-shadow: 0 8px 25px rgba(0,0,0,0.08); border: 2px solid var(--primary-light, #e2e8f0); transition: transform 0.3s ease, box-shadow 0.3s ease; position: relative; overflow: hidden;">
-<div style="position: absolute; top: 0; left: 0; width: 100%; height: 4px; background: linear-gradient(90deg, #48bb78, #38a169);"></div>
-<div style="display: flex; align-items: flex-start; margin-bottom: 20px;">
-<div style="background: #f0fff4; padding: 12px; border-radius: 8px; margin-right: 15px;">
-<svg fill="#38a169" height="24" viewbox="0 0 24 24" width="24">
-<path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"></path>
-</svg>
-</div>
-<div>
-<h3 style="font-size: 1.4rem; font-weight: 600; color: #1a365d; margin-bottom: 10px;">
-              5-Star Review Generator Kit
-            </h3>
-<p style="color: #4a5568; line-height: 1.6; font-size: 0.95rem;">
-              Email templates, follow-up sequences, and proven strategies to generate more positive online reviews
-            </p>
-</div>
-</div>
-<button style="width: 100%; background: linear-gradient(135deg, #48bb78, #38a169); color: white; border: none; padding: 14px 20px; border-radius: 8px; font-weight: 600; cursor: pointer; transition: all 0.3s ease; font-size: 1rem;">
-          Get Templates Now
-        </button>
-</div>
-<!-- Resource 3 -->
-<div style="background: #ffffff; padding: 40px 30px; border-radius: 12px; box-shadow: 0 8px 25px rgba(0,0,0,0.08); border: 2px solid var(--primary-light, #e2e8f0); transition: transform 0.3s ease, box-shadow 0.3s ease; position: relative; overflow: hidden;">
-<div style="position: absolute; top: 0; left: 0; width: 100%; height: 4px; background: linear-gradient(90deg, #ed8936, #dd6b20);"></div>
-<div style="display: flex; align-items: flex-start; margin-bottom: 20px;">
-<div style="background: #fffaf0; padding: 12px; border-radius: 8px; margin-right: 15px;">
-<svg fill="#dd6b20" height="24" viewbox="0 0 24 24" width="24">
-<path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z"></path>
-</svg>
-</div>
-<div>
-<h3 style="font-size: 1.4rem; font-weight: 600; color: #1a365d; margin-bottom: 10px;">
-              Emergency Protocol Handbook
-            </h3>
-<p style="color: #4a5568; line-height: 1.6; font-size: 0.95rem;">
-              Step-by-step emergency procedures, staff training materials, and patient communication scripts
-            </p>
-</div>
-</div>
-<button style="width: 100%; background: linear-gradient(135deg, #ed8936, #dd6b20); color: white; border: none; padding: 14px 20px; border-radius: 8px; font-weight: 600; cursor: pointer; transition: all 0.3s ease; font-size: 1rem;">
-          Download Handbook
-        </button>
-</div>
-<!-- Resource 4 -->
-<div style="background: #ffffff; padding: 40px 30px; border-radius: 12px; box-shadow: 0 8px 25px rgba(0,0,0,0.08); border: 2px solid var(--primary-light, #e2e8f0); transition: transform 0.3s ease, box-shadow 0.3s ease; position: relative; overflow: hidden;">
-<div style="position: absolute; top: 0; left: 0; width: 100%; height: 4px; background: linear-gradient(90deg, #9f7aea, #805ad5);"></div>
-<div style="display: flex; align-items: flex-start; margin-bottom: 20px;">
-<div style="background: #faf5ff; padding: 12px; border-radius: 8px; margin-right: 15px;">
-<svg fill="#805ad5" height="24" viewbox="0 0 24 24" width="24">
-<path d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z"></path>
-</svg>
-</div>
-<div>
-<h3 style="font-size: 1.4rem; font-weight: 600; color: #1a365d; margin-bottom: 10px;">
-              Practice Profitability Calculator
-            </h3>
-<p style="color: #4a5568; line-height: 1.6; font-size: 0.95rem;">
-              Interactive Excel tool to analyze your practice finances, track KPIs, and identify growth opportunities
-            </p>
-</div>
-</div>
-<button style="width: 100%; background: linear-gradient(135deg, #9f7aea, #805ad5); color: white; border: none; padding: 14px 20px; border-radius: 8px; font-weight: 600; cursor: pointer; transition: all 0.3s ease; font-size: 1rem;">
-          Get Calculator
-        </button>
-</div>
-<!-- Resource 5 -->
-<div style="background: #ffffff; padding: 40px 30px; border-radius: 12px; box-shadow: 0 8px 25px rgba(0,0,0,0.08); border: 2px solid var(--primary-light, #e2e8f0); transition: transform 0.3s ease, box-shadow 0.3s ease; position: relative; overflow: hidden;">
-<div style="position: absolute; top: 0; left: 0; width: 100%; height: 4px; background: linear-gradient(90deg, #38b2ac, #319795);"></div>
-<div style="display: flex; align-items: flex-start; margin-bottom: 20px;">
-<div style="background: #e6fffa; padding: 12px; border-radius: 8px; margin-right: 15px;">
-<svg fill="#319795" height="24" viewbox="0 0 24 24" width="24">
-<path d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z"></path>
-</svg>
-</div>
-<div>
-<h3 style="font-size: 1.4rem; font-weight: 600; color: #1a365d; margin-bottom: 10px;">
-              Team Training Playbook
-            </h3>
-<p style="color: #4a5568; line-height: 1.6; font-size: 0.95rem;">
-              Complete staff onboarding system, training modules, and performance evaluation templates
-            </p>
-</div>
-</div>
-<button style="width: 100%; background: linear-gradient(135deg, #38b2ac, #319795); color: white; border: none; padding: 14px 20px; border-radius: 8px; font-weight: 600; cursor: pointer; transition: all 0.3s ease; font-size: 1rem;">
-          Access Playbook
-        </button>
-</div>
-</div>
-<!-- Bottom CTA -->
-<div style="text-align: center; background: linear-gradient(135deg, #1a365d, #2d3748); padding: 50px 40px; border-radius: 16px; color: white; position: relative; overflow: hidden;">
-<div style="position: absolute; top: -50px; right: -50px; width: 100px; height: 100px; background: rgba(255,255,255,0.1); border-radius: 50%; opacity: 0.3;"></div>
-<div style="position: absolute; bottom: -30px; left: -30px; width: 60px; height: 60px; background: rgba(255,255,255,0.1); border-radius: 50%; opacity: 0.3;"></div>
-<h3 style="font-size: 1.8rem; font-weight: 600; margin-bottom: 15px; position: relative; z-index: 2;">
-        Want More Practice Growth Resources?
-      </h3>
-<p style="font-size: 1.1rem; margin-bottom: 25px; opacity: 0.9; position: relative; z-index: 2;">
-        Join our newsletter for weekly tips, exclusive content, and early access to new resources
-      </p>
-<button style="background: transparent; color: white; border: 2px solid white; padding: 14px 30px; border-radius: 50px; font-weight: 600; cursor: pointer; transition: all 0.3s ease; font-size: 1rem; position: relative; z-index: 2;">
-        Subscribe Now
-      </button>
-</div>
-</div>
-</section><footer id="contact">
-<div class="container">
-<div class="footer-content">
-<h3>ConnAve Dental Studio</h3>
-<p>Proudly serving Washington DC families with exceptional dental care since 2020.</p>
-<p style="margin-top: 15px; font-size: 0.95rem;">Now accepting new patients &bull; Most insurance plans welcome &bull; Flexible financing available</p>
-<div style="font-size: 1.5rem; margin-top: 20px;">
-<i class="fab fa-instagram" style="margin: 0 10px; cursor: pointer;"></i>
-<i class="fab fa-facebook" style="margin: 0 10px; cursor: pointer;"></i>
-<i class="fab fa-twitter" style="margin: 0 10px; cursor: pointer;"></i>
-</div>
-</div>
-<div class="copyright">
-                &copy; 2025 Connecticut Ave Dental Studio. All Rights Reserved. | <a href="contact.html" style="color: var(--accent); text-decoration: none;">Contact Us</a> | <a href="#" style="color: var(--accent); text-decoration: none;">Privacy Policy</a>
-</div>
-</div>
-</footer>
+                    </div>
+
+                    <a href="#" class="btn btn-primary" style="margin-top: 20px; width: 100%; text-align: center;">Book Appointment Online</a>
+                </div>
+
+                <div class="map-container">
+                    <iframe 
+                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3103.886026857997!2d-77.058!3d38.935!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89b7c83b8b8b8b8b%3A0x8b8b8b8b8b8b8b8b!2sConnecticut%20Ave%20NW%2C%20Washington%2C%20DC%2020008!5e0!3m2!1sen!2sus!4v1620000000000!5m2!1sen!2sus" 
+                        width="100%" 
+                        height="100%" 
+                        style="border:0;" 
+                        allowfullscreen="" 
+                        loading="lazy">
+                    </iframe>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <h2>ConnAve Dental</h2>
+            <p>Refined Dentistry in Washington DC</p>
+            <div class="social-icons">
+                <a href="#"><i class="fab fa-instagram"></i></a>
+                <a href="#"><i class="fab fa-facebook-f"></i></a>
+                <a href="#"><i class="fab fa-twitter"></i></a>
+            </div>
+            <div class="copyright">
+                © 2026 Connecticut Ave Dental Studio. All Rights Reserved.
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        document.querySelector('.mobile-toggle').addEventListener('click', function() {
+            const nav = document.querySelector('.nav-menu');
+            if(nav.style.display === 'flex') {
+                nav.style.display = 'none';
+            } else {
+                nav.style.display = 'flex';
+                nav.style.flexDirection = 'column';
+                nav.style.position = 'absolute';
+                nav.style.top = '90px';
+                nav.style.left = '0';
+                nav.style.width = '100%';
+                nav.style.background = 'white';
+                nav.style.padding = '20px';
+                nav.style.boxShadow = '0 5px 10px rgba(0,0,0,0.1)';
+            }
+        });
+    </script>
 </body>
 </html>
