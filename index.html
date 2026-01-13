@@ -525,5 +525,21 @@ window.addEventListener('scroll', function() {
     }
 });
 </script>
+
+<!-- Orbitr A/B Test: bf4f1c31-1d1d-4786-84c5-f408b61ebf07 -->
+<script>
+window.ORBITR_AB = {
+  testId: "bf4f1c31-1d1d-4786-84c5-f408b61ebf07",
+  endpoint: "https://api.orbitr.ai/api/v1/ab",
+  selector: ".cta-button, #cta, button.btn-primary, a.btn",
+  controlValue: "Generic company/product name headline",
+  variationValue: "Outcome-focused headline with timeframe and guarantee",
+  conversionSelector: ".cta-button, #cta, button.btn-primary, a.btn",
+  modifyAttribute: "textContent"
+};
+</script>
+<script src="https://api.orbitr.ai/static/orbitr-ab.js"></script>
+<!-- End Orbitr A/B Test: bf4f1c31-1d1d-4786-84c5-f408b61ebf07 -->
+
 </body>
 </html>
