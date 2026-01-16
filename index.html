@@ -3,149 +3,262 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Family Dental Care Washington DC | Connecticut Ave Dental Studio | Award-Winning 2025</title>
-    <meta name="description" content="Premier family dental care Washington DC at Connecticut Ave Dental Studio. Comprehensive dental services for all ages in Cleveland Park. Advanced AI diagnostics, same-day restorations, luxury comfort. New patients welcome - $250 credit available.">
-    <meta name="keywords" content="family dental care Washington DC, dentist Washington DC 2025, Connecticut Avenue dental, Cleveland Park dentist, cosmetic dentistry DC, Invisalign Washington DC, emergency dentist DC, family dentistry Cleveland Park, AI dental diagnostics, same-day crowns DC">
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet">
+    <title>Connecticut Ave Dental Studio | Washington DC</title>
+    
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&family=Playfair+Display:wght@400;700&display=swap" rel="stylesheet">
+
     <style>
-        /* --- VARIABLES & RESET --- */
+        /* --- CSS RESET & VARIABLES --- */
         :root {
-            --primary: #1e3a8a; /* DC Navy */
-            --accent: #2dd4bf; /* Mint/Teal */
-            --dark: #0f172a;
-            --light: #f8fafc;
+            --primary: #0f2746; /* Deep DC Navy */
+            --secondary: #2dd4bf; /* Modern Mint/Teal */
+            --gold: #d4af37; /* Subtle Gold Accent */
+            --light: #f3f4f6;
             --white: #ffffff;
-            --font-serif: 'Playfair Display', serif;
-            --font-sans: 'Inter', sans-serif;
+            --text-dark: #1e293b;
+            --text-light: #64748b;
         }
 
         * { margin: 0; padding: 0; box-sizing: border-box; }
+        html { scroll-behavior: smooth; }
         
         body {
-            font-family: var(--font-sans);
-            color: var(--dark);
+            font-family: 'Inter', sans-serif;
+            color: var(--text-dark);
             line-height: 1.6;
-            background-color: var(--light);
+            background-color: var(--white);
         }
 
-        /* --- TYPOGRAPHY --- */
-        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&family=Playfair+Display:wght@400;700&display=swap');
-
-        h1, h2, h3 { font-family: var(--font-serif); color: var(--primary); }
-        h2 { font-size: 2.5rem; margin-bottom: 1rem; text-align: center; }
-        p { margin-bottom: 1rem; }
-        
-        /* --- UTILITIES --- */
-        .container { max-width: 1200px; margin: 0 auto; padding: 0 20px; }
-        .btn {
-            display: inline-block;
-            padding: 12px 30px;
-            background-color: var(--accent);
+        h1, h2, h3, h4 {
+            font-family: 'Playfair Display', serif;
             color: var(--primary);
             font-weight: 700;
-            text-decoration: none;
-            border-radius: 50px;
-            transition: all 0.3s ease;
-            border: 2px solid var(--accent);
         }
-        .btn:hover { background-color: transparent; color: var(--accent); }
-        .btn-outline { background: transparent; border: 2px solid var(--white); color: var(--white); }
-        .btn-outline:hover { background: var(--white); color: var(--primary); }
 
-        /* --- HEADER --- */
-        header {
+        /* --- UTILITY CLASSES --- */
+        .container { max-width: 1200px; margin: 0 auto; padding: 0 20px; }
+        .text-center { text-align: center; }
+        .section { padding: 80px 0; }
+        .bg-light { background-color: var(--light); }
+        
+        .btn {
+            display: inline-block;
+            padding: 14px 32px;
+            border-radius: 50px;
+            font-weight: 600;
+            text-decoration: none;
+            transition: all 0.3s ease;
+            text-transform: uppercase;
+            font-size: 0.9rem;
+            letter-spacing: 0.5px;
+        }
+        .btn-primary {
+            background-color: var(--secondary);
+            color: var(--primary);
+            border: 2px solid var(--secondary);
+        }
+        .btn-primary:hover {
+            background-color: transparent;
+            color: var(--secondary);
+        }
+        .btn-outline {
+            background-color: transparent;
+            color: var(--white);
+            border: 2px solid var(--white);
+        }
+        .btn-outline:hover {
             background-color: var(--white);
-            box-shadow: 0 2px 15px rgba(0,0,0,0.05);
+            color: var(--primary);
+        }
+
+        /* --- HEADER & NAV --- */
+        header {
+            background: rgba(255, 255, 255, 0.98);
+            box-shadow: 0 2px 20px rgba(0,0,0,0.05);
             position: fixed;
             width: 100%;
             top: 0;
             z-index: 1000;
         }
-        .nav-container {
+        .nav-wrapper {
             display: flex;
             justify-content: space-between;
             align-items: center;
-            height: 80px;
+            height: 90px;
         }
-        .logo { font-family: var(--font-serif); font-size: 1.5rem; font-weight: 700; color: var(--primary); text-decoration: none; }
-        .logo span { color: var(--accent); }
-        
-        nav ul { list-style: none; display: flex; gap: 30px; }
-        nav a { text-decoration: none; color: var(--dark); font-weight: 500; transition: color 0.3s; }
-        nav a:hover { color: var(--accent); }
-        .mobile-toggle { display: none; font-size: 1.5rem; cursor: pointer; }
+        .logo {
+            font-size: 1.5rem;
+            font-weight: bold;
+            color: var(--primary);
+            text-decoration: none;
+            font-family: 'Playfair Display', serif;
+            letter-spacing: -0.5px;
+        }
+        .logo span { color: var(--secondary); }
 
-        /* --- HERO --- */
+        nav ul { display: flex; list-style: none; gap: 35px; align-items: center; }
+        nav a { text-decoration: none; color: var(--primary); font-weight: 500; font-size: 0.95rem; transition: color 0.3s; }
+        nav a:hover { color: var(--secondary); }
+        
+        .mobile-toggle { display: none; font-size: 1.5rem; color: var(--primary); cursor: pointer; }
+
+        /* --- HERO SECTION --- */
         .hero {
-            background: linear-gradient(rgba(30, 58, 138, 0.9), rgba(30, 58, 138, 0.7)), url('https://images.unsplash.com/photo-1629909613654-28e377c37b09?auto=format&fit=crop&q=80');
+            position: relative;
+            height: 90vh; /* Full screen height */
+            background: linear-gradient(rgba(15, 39, 70, 0.85), rgba(15, 39, 70, 0.7)), url('https://images.unsplash.com/photo-1609840114035-1c99d59242cc?auto=format&fit=crop&q=80');
             background-size: cover;
             background-position: center;
-            height: 90vh;
             display: flex;
             align-items: center;
+            justify-content: center;
             text-align: center;
-            color: var(--white);
-            padding-top: 80px;
+            color: white;
+            margin-top: 90px;
         }
         .hero-content h1 {
-            font-size: 3.5rem;
-            color: var(--white);
+            font-size: 4rem;
+            color: white;
             margin-bottom: 20px;
+            line-height: 1.1;
         }
-        .hero-content p { font-size: 1.2rem; margin-bottom: 30px; max-width: 600px; margin-left: auto; margin-right: auto; opacity: 0.9; }
+        .hero-content p {
+            font-size: 1.3rem;
+            max-width: 700px;
+            margin: 0 auto 40px auto;
+            opacity: 0.9;
+            font-weight: 300;
+        }
 
-        /* --- FEATURES --- */
-        .features { padding: 80px 0; background: var(--white); }
-        .features-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 40px; }
-        .feature-card { text-align: center; padding: 30px; border-radius: 10px; transition: transform 0.3s; }
-        .feature-card:hover { transform: translateY(-5px); box-shadow: 0 10px 30px rgba(0,0,0,0.05); }
-        .icon-box { font-size: 2.5rem; color: var(--accent); margin-bottom: 20px; }
+        /* --- INFO BAR --- */
+        .info-bar {
+            background: var(--secondary);
+            color: var(--primary);
+            padding: 20px 0;
+            margin-top: -5px;
+        }
+        .info-grid {
+            display: flex;
+            justify-content: space-around;
+            text-align: center;
+            font-weight: 600;
+        }
+        .info-item i { margin-right: 8px; }
+
+        /* --- ABOUT --- */
+        .about-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 60px;
+            align-items: center;
+        }
+        .about-image img {
+            width: 100%;
+            border-radius: 10px;
+            box-shadow: 20px 20px 0px var(--light);
+        }
 
         /* --- SERVICES --- */
-        .services { padding: 80px 0; background: var(--light); }
-        .service-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 30px; margin-top: 40px; }
-        .service-card {
-            background: var(--white);
-            padding: 30px;
-            border-radius: 8px;
-            box-shadow: 0 4px 6px rgba(0,0,0,0.02);
-            border-bottom: 4px solid var(--accent);
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+            margin-top: 50px;
         }
-        .service-card h3 { font-size: 1.25rem; margin-bottom: 10px; }
+        .service-card {
+            background: white;
+            padding: 40px 30px;
+            border-radius: 8px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.03);
+            transition: transform 0.3s;
+            border-top: 4px solid var(--secondary);
+        }
+        .service-card:hover { transform: translateY(-5px); }
+        .service-icon { font-size: 2.5rem; color: var(--primary); margin-bottom: 20px; }
+        .service-card h3 { font-size: 1.5rem; margin-bottom: 15px; }
 
-        /* --- LOCATION / CONTACT --- */
-        .location { padding: 80px 0; background: var(--white); }
-        .location-wrapper { display: flex; flex-wrap: wrap; gap: 40px; align-items: center; }
-        .map-frame { flex: 1; min-width: 300px; height: 400px; background: #eee; border-radius: 10px; overflow: hidden; }
-        .contact-info { flex: 1; min-width: 300px; }
-        .info-item { display: flex; align-items: flex-start; gap: 15px; margin-bottom: 20px; }
-        .info-item i { color: var(--primary); font-size: 1.2rem; margin-top: 5px; }
+        /* --- TESTIMONIALS --- */
+        .testimonials { background-color: var(--primary); color: white; text-align: center; }
+        .testimonials h2 { color: white; }
+        .quote-box {
+            font-size: 1.2rem;
+            font-style: italic;
+            max-width: 800px;
+            margin: 30px auto;
+            opacity: 0.9;
+        }
+        .stars { color: var(--gold); margin-bottom: 10px; }
+
+        /* --- CONTACT / MAP --- */
+        .contact-wrapper {
+            display: flex;
+            flex-wrap: wrap;
+            box-shadow: 0 10px 40px rgba(0,0,0,0.1);
+            border-radius: 15px;
+            overflow: hidden;
+            background: white;
+        }
+        .contact-info {
+            flex: 1;
+            padding: 60px;
+            min-width: 300px;
+            background: white;
+        }
+        .map-container {
+            flex: 1;
+            min-width: 300px;
+            background: #eee;
+            min-height: 400px;
+        }
+        .contact-row {
+            display: flex;
+            align-items: center;
+            margin-bottom: 30px;
+        }
+        .contact-row i {
+            font-size: 1.5rem;
+            color: var(--secondary);
+            margin-right: 20px;
+            width: 30px;
+        }
 
         /* --- FOOTER --- */
-        footer { background: var(--primary); color: var(--white); padding: 50px 0 20px; text-align: center; }
-        .footer-content { margin-bottom: 30px; }
-        .copyright { font-size: 0.9rem; opacity: 0.6; border-top: 1px solid rgba(255,255,255,0.1); padding-top: 20px; }
+        footer {
+            background: var(--primary);
+            color: white;
+            padding: 60px 0 20px;
+            text-align: center;
+        }
+        .social-icons { margin: 20px 0; }
+        .social-icons a { color: white; margin: 0 10px; font-size: 1.2rem; transition: color 0.3s; }
+        .social-icons a:hover { color: var(--secondary); }
+        .copyright { border-top: 1px solid rgba(255,255,255,0.1); padding-top: 20px; margin-top: 40px; font-size: 0.8rem; opacity: 0.6; }
 
-        /* --- RESPONSIVE --- */
+        /* --- MOBILE RESPONSIVE --- */
         @media (max-width: 768px) {
-            .nav-links { display: none; }
+            .nav-menu { display: none; }
             .mobile-toggle { display: block; }
             .hero-content h1 { font-size: 2.5rem; }
-            .location-wrapper { flex-direction: column; }
+            .about-grid { grid-template-columns: 1fr; }
+            .contact-info { padding: 30px; }
+            .info-grid { flex-direction: column; gap: 10px; }
         }
     </style>
 </head>
 <body>
 
     <header>
-        <div class="container nav-container">
+        <div class="container nav-wrapper">
             <a href="#" class="logo">ConnAve <span>Dental</span></a>
             <nav>
-                <ul class="nav-links">
+                <ul class="nav-menu">
                     <li><a href="#about">About</a></li>
                     <li><a href="#services">Services</a></li>
-                    <li><a href="#location">Location</a></li>
-                    <li><a href="#contact" class="btn" style="padding: 8px 20px; margin-left: 10px;">Book Online</a></li>
+                    <li><a href="#new-patients">New Patients</a></li>
+                    <li><a href="#reviews">Reviews</a></li>
+                    <li><a href="#contact" class="btn btn-primary">Book Visit</a></li>
                 </ul>
                 <div class="mobile-toggle"><i class="fas fa-bars"></i></div>
             </nav>
@@ -154,113 +267,146 @@
 
     <section class="hero">
         <div class="container hero-content">
-            <h1>Premier Family Dental Care Washington DC<br>Advanced Practice in 2025</h1>
-            <p>Experience exceptional family dental care Washington DC at Connecticut Avenue's most trusted practice. We combine cutting-edge AI-powered diagnostics, digital smile design, and personalized wellness plans to deliver outstanding results for patients of all ages in our award-winning, eco-conscious Cleveland Park location.</p>
-            <a href="#contact" class="btn">Schedule Your Family Visit Today</a>
-            <a href="#services" class="btn btn-outline" style="margin-left: 10px;">Explore Our Services</a>
+            <p>SERVING WASHINGTON DC 20008</p>
+            <h1>Refined Dentistry on<br>Connecticut Avenue</h1>
+            <p>Experience world-class dental care in the heart of Cleveland Park. Modern technology, neighborhood warmth, and a patient-first approach.</p>
+            <div style="margin-top: 30px;">
+                <a href="#contact" class="btn btn-primary">Book Appointment</a>
+                <a href="#services" class="btn btn-outline" style="margin-left: 15px;">Explore Services</a>
+            </div>
         </div>
     </section>
 
-    <section class="features" id="about">
+    <div class="info-bar">
+        <div class="container info-grid">
+            <div class="info-item"><i class="fas fa-map-marker-alt"></i> Connecticut Ave NW, DC 20008</div>
+            <div class="info-item"><i class="fas fa-phone-alt"></i> (202) 555-0123</div>
+            <div class="info-item"><i class="fas fa-star"></i> 5-Star Rated on Google</div>
+        </div>
+    </div>
+
+    <section class="section" id="about">
+        <div class="container about-grid">
+            <div class="about-text">
+                <h3>Welcome to ConnAve Dental</h3>
+                <h2 style="margin-bottom: 20px;">Your Neighborhood Dental Studio</h2>
+                <p>Located in the historic 20008 zip code, we bridge the gap between clinical excellence and luxury comfort.</p>
+                <p>We understand that visiting the dentist isn't everyone's favorite activity. That's why we've designed our studio to feel less like a clinic and more like a lounge. From noise-canceling headphones to warm towels, we prioritize your relaxation.</p>
+                <br>
+                <ul style="list-style: none;">
+                    <li style="margin-bottom: 10px;"><i class="fas fa-check" style="color: var(--secondary); margin-right: 10px;"></i> Advanced 3D Imaging</li>
+                    <li style="margin-bottom: 10px;"><i class="fas fa-check" style="color: var(--secondary); margin-right: 10px;"></i> Sedation Dentistry Options</li>
+                    <li style="margin-bottom: 10px;"><i class="fas fa-check" style="color: var(--secondary); margin-right: 10px;"></i> Weekend Appointments Available</li>
+                </ul>
+            </div>
+            <div class="about-image">
+                <img src="https://images.unsplash.com/photo-1629909613654-28e377c37b09?auto=format&fit=crop&q=80" alt="Modern Dental Office DC">
+            </div>
+        </div>
+    </section>
+
+    <section class="section bg-light" id="services">
         <div class="container">
-            <h2>Leading Family Dental Care Washington DC Since 2020</h2>
-            <div class="features-grid">
-                <div class="feature-card">
-                    <div class="icon-box"><i class="fas fa-spa"></i></div>
-                    <h3>Luxury Spa-Inspired Comfort Experience</h3>
-                    <p>Relax with our premium wellness amenities including therapeutic aromatherapy, heated massage chairs with lumbar support, noise-canceling headphones, immersive virtual reality relaxation experiences, and multiple conscious sedation options for completely anxiety-free visits for the whole family.</p>
+            <div class="text-center" style="max-width: 700px; margin: 0 auto;">
+                <h3>Comprehensive Care</h3>
+                <h2 style="margin-bottom: 20px;">Our Services</h2>
+                <p>Whether you need a routine cleaning or a complete smile makeover, our team of specialists is here for you.</p>
+            </div>
+            
+            <div class="services-grid">
+                <div class="service-card">
+                    <div class="service-icon"><i class="fas fa-tooth"></i></div>
+                    <h3>General Dentistry</h3>
+                    <p>Routine exams, ultrasonic cleanings, and oral cancer screenings to maintain optimal health.</p>
                 </div>
-                <div class="feature-card">
-                    <div class="icon-box"><i class="fas fa-robot"></i></div>
-                    <h3>Revolutionary AI-Powered Dentistry</h3>
-                    <p>Experience precision care with next-generation artificial intelligence diagnostics, 3D digital impressions, CEREC same-day crowns and veneers, advanced laser periodontal therapy, and biomimetic restorations that deliver superior, long-lasting results with minimal discomfort for all family members.</p>
+                <div class="service-card">
+                    <div class="service-icon"><i class="fas fa-magic"></i></div>
+                    <h3>Cosmetic Design</h3>
+                    <p>Porcelain veneers, professional whitening, and bonding to craft your perfect "Capitol Smile."</p>
                 </div>
-                <div class="feature-card">
-                    <div class="icon-box"><i class="fas fa-metro"></i></div>
-                    <h3>Unbeatable Cleveland Park Location</h3>
-                    <p>Perfectly positioned just steps from Cleveland Park Metro Red Line station, with seamless access from Woodley Park, Dupont Circle, and throughout Northwest DC. Complimentary validated parking, secure bike storage, and convenient evening hours available for busy families.</p>
+                <div class="service-card">
+                    <div class="service-icon"><i class="fas fa-smile"></i></div>
+                    <h3>Invisalign</h3>
+                    <p>We are a Diamond Plus Invisalign provider. Straighten your teeth discreetly without metal.</p>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon"><i class="fas fa-heartbeat"></i></div>
+                    <h3>Emergency Care</h3>
+                    <p>Same-day appointments for toothaches, chipped teeth, or lost crowns. We are here when you need us.</p>
                 </div>
             </div>
         </div>
     </section>
 
-    <section class="services" id="services">
+    <section class="section testimonials" id="reviews">
         <div class="container">
-            <h2>Comprehensive Family Dental Care Washington DC Solutions</h2>
-            <p style="text-align: center; max-width: 700px; margin: 0 auto;">From preventive wellness to complete smile transformations, we deliver personalized family dental care Washington DC using the most advanced techniques and technology available in 2025 for patients throughout the Washington DC metropolitan area.</p>
-            <div class="service-grid">
-                <div class="service-card">
-                    <h3>Advanced Preventive & Family Wellness Care</h3>
-                    <p>Comprehensive cleanings with ultrasonic scaling technology, thorough oral cancer screenings using advanced imaging, personalized nutrition counseling for all ages, fluoride treatments, and custom prevention protocols designed to maintain optimal oral health for your entire family.</p>
-                </div>
-                <div class="service-card">
-                    <h3>Digital Smile Design & Complete Makeovers</h3>
-                    <p>Transform your confidence with professional whitening systems, handcrafted porcelain veneers, and revolutionary digital smile design technology that lets you preview your perfect smile before any treatment begins - guaranteed results you'll love.</p>
-                </div>
-                <div class="service-card">
-                    <h3>Invisalign® & Advanced Orthodontics</h3>
-                    <p>Achieve straighter teeth discreetly with Invisalign clear aligners featuring SmartTrack technology and precision attachments. Perfect for busy DC professionals and teens seeking invisible orthodontic solutions with predictable, comfortable results.</p>
-                </div>
-                <div class="service-card">
-                    <h3>24/7 Emergency Dental Response</h3>
-                    <p>Dental emergency? Our dedicated after-hours emergency hotline provides immediate guidance and urgent care coordination. Same-day emergency appointments guaranteed for all urgent dental situations - we're here when your family needs us most.</p>
-                </div>
-                <div class="service-card">
-                    <h3>Premium Restorative Dentistry</h3>
-                    <p>Biomimetic crowns, precision bridges, and titanium dental implant restorations that perfectly mimic natural teeth using the latest ceramic materials and digital fabrication techniques for lasting beauty, function, and durability for all family members.</p>
-                </div>
-                <div class="service-card">
-                    <h3>Complete Family Dental Care for All Ages</h3>
-                    <p>Comprehensive oral health services for every family member, from gentle pediatric dentistry with interactive entertainment systems to specialized geriatric care and everything in between - providing trusted family dental care Washington DC families rely on year after year.</p>
-                </div>
+            <div class="stars">
+                <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
             </div>
+            <h2>"Best Dentist in DC!"</h2>
+            <div class="quote-box">
+                "I've lived in Cleveland Park for 10 years and finally found a dentist I trust. The office is beautiful, the staff is incredibly kind, and the location on Connecticut Ave is perfect."
+            </div>
+            <p style="font-weight: bold;">— Sarah J., Washington DC</p>
         </div>
     </section>
 
-    <section class="location" id="location">
+    <section class="section" id="contact">
         <div class="container">
-            <h2>Visit Washington DC's Premier Family Dental Destination</h2>
-            <div class="location-wrapper">
+            <div class="text-center" style="margin-bottom: 50px;">
+                <h2>Visit Our Studio</h2>
+                <p>We are accepting new patients in the 20008 area.</p>
+            </div>
+            
+            <div class="contact-wrapper">
                 <div class="contact-info">
-                    <h3>Connecticut Ave Dental Studio</h3>
-                    <p style="color: var(--accent); font-weight: 600; margin-bottom: 20px;">★★★★★ 5-Star Rated | Winner: Best Family Dental Practice Cleveland Park 2024 | Top 5 DC Family Dentists 2025</p>
-                    <div class="info-item">
+                    <h3 style="margin-bottom: 30px; color: var(--primary);">Contact Details</h3>
+                    
+                    <div class="contact-row">
                         <i class="fas fa-map-pin"></i>
                         <div>
-                            <strong>Prime Cleveland Park Location:</strong><br>
+                            <strong>Address</strong><br>
                             3501 Connecticut Ave NW<br>
-                            Washington, DC 20008<br>
-                            <small>(2-minute walk from Cleveland Park Metro - Red Line)</small>
+                            Washington, DC 20008
                         </div>
                     </div>
-                    <div class="info-item">
+                    
+                    <div class="contact-row">
                         <i class="fas fa-clock"></i>
                         <div>
-                            <strong>2025 Extended Family-Friendly Hours:</strong><br>
-                            Monday - Thursday: 7:00 AM - 7:00 PM<br>
-                            Friday: 7:00 AM - 5:00 PM<br>
-                            Saturday: 8:00 AM - 4:00 PM<br>
-                            <small>Evening appointments available • 24/7 emergency care • Sunday consultations by appointment</small>
+                            <strong>Hours</strong><br>
+                            Mon - Fri: 8:00 AM - 6:00 PM<br>
+                            Sat: 9:00 AM - 2:00 PM
                         </div>
                     </div>
-                    <div class="info-item">
-                        <i class="fas fa-phone-alt"></i>
+
+                    <div class="contact-row">
+                        <i class="fas fa-phone"></i>
                         <div>
-                            <strong>Connect With Us Today:</strong><br>
-                            (202) 555-0123<br>
-                            <small>Text appointments accepted • Online booking available • New families receive $250 welcome credit</small>
+                            <strong>Phone</strong><br>
+                            (202) 555-0123
                         </div>
                     </div>
-                    <a href="#" class="btn" style="margin-top: 20px;">Book Family Appointment & Get Directions</a>
+
+                    <div class="contact-row">
+                        <i class="fas fa-envelope"></i>
+                        <div>
+                            <strong>Email</strong><br>
+                            hello@connavedental.com
+                        </div>
+                    </div>
+
+                    <a href="#" class="btn btn-primary" style="margin-top: 20px; width: 100%; text-align: center;">Book Appointment Online</a>
                 </div>
-                <div class="map-frame">
+
+                <div class="map-container">
                     <iframe 
+                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3103.886026857997!2d-77.058!3d38.935!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89b7c83b8b8b8b8b%3A0x8b8b8b8b8b8b8b8b!2sConnecticut%20Ave%20NW%2C%20Washington%2C%20DC%2020008!5e0!3m2!1sen!2sus!4v1620000000000!5m2!1sen!2sus" 
                         width="100%" 
                         height="100%" 
-                        frameborder="0" 
-                        style="border:0" 
-                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3104.8!2d-77.0547!3d38.9358!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89b7c82f8f8f8f8f%3A0x8f8f8f8f8f8f8f8f!2s3501%20Connecticut%20Ave%20NW%2C%20Washington%2C%20DC%2020008!5e0!3m2!1sen!2sus!4v1234567890123" 
-                        allowfullscreen>
+                        style="border:0;" 
+                        allowfullscreen="" 
+                        loading="lazy">
                     </iframe>
                 </div>
             </div>
@@ -269,18 +415,36 @@
 
     <footer>
         <div class="container">
-            <div class="footer-content">
-                <h3>Connecticut Ave Dental Studio</h3>
-                <p>Your trusted partner for exceptional family dental care Washington DC. Serving Cleveland Park, Woodley Park, Dupont Circle, and surrounding communities with comprehensive dental services for all ages.</p>
-                <p><strong>Call Today:</strong> (202) 555-0123 | <strong>Email:</strong> info@connavedental.com</p>
-                <p><strong>Address:</strong> 3501 Connecticut Ave NW, Washington, DC 20008</p>
+            <h2>ConnAve Dental</h2>
+            <p>Refined Dentistry in Washington DC</p>
+            <div class="social-icons">
+                <a href="#"><i class="fab fa-instagram"></i></a>
+                <a href="#"><i class="fab fa-facebook-f"></i></a>
+                <a href="#"><i class="fab fa-twitter"></i></a>
             </div>
             <div class="copyright">
-                <p>&copy; 2025 Connecticut Ave Dental Studio. All rights reserved. | Privacy Policy | Terms of Service</p>
-                <p>Providing premier family dental care Washington DC with advanced technology and personalized service.</p>
+                © 2026 Connecticut Ave Dental Studio. All Rights Reserved.
             </div>
         </div>
     </footer>
 
+    <script>
+        document.querySelector('.mobile-toggle').addEventListener('click', function() {
+            const nav = document.querySelector('.nav-menu');
+            if(nav.style.display === 'flex') {
+                nav.style.display = 'none';
+            } else {
+                nav.style.display = 'flex';
+                nav.style.flexDirection = 'column';
+                nav.style.position = 'absolute';
+                nav.style.top = '90px';
+                nav.style.left = '0';
+                nav.style.width = '100%';
+                nav.style.background = 'white';
+                nav.style.padding = '20px';
+                nav.style.boxShadow = '0 5px 10px rgba(0,0,0,0.1)';
+            }
+        });
+    </script>
 </body>
 </html>
