@@ -1,0 +1,476 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta content="width=device-width, initial-scale=1.0" name="viewport">
+<meta name="description" content="Looking for Dental Services in Adams Morgan? Connecticut Ave Dental Studio offers professional Dental Services services in Washington DC with comprehensive dental care, modern technology, and personalized treatment plans.">
+<meta name="keywords" content="dental services adams morgan, dentist adams morgan, dental care dc, adams morgan dentist, connecticut ave dental">
+<title>Dental Services in Adams Morgan, DC | Connecticut Ave Dental Studio</title>
+<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&amp;family=Playfair+Display:wght@400;700&amp;display=swap" rel="stylesheet">
+<style>
+        /* --- CSS RESET & VARIABLES --- */
+        :root {
+            --primary: #0f2746; /* Deep DC Navy */
+            --secondary: #2dd4bf; /* Modern Mint/Teal */
+            --gold: #d4af37; /* Subtle Gold Accent */
+            --light: #f3f4f6;
+            --white: #ffffff;
+            --text-dark: #1e293b;
+            --text-light: #64748b;
+        }
+
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        html { scroll-behavior: smooth; }
+        
+        body {
+            font-family: 'Inter', sans-serif;
+            color: var(--text-dark);
+            line-height: 1.6;
+            background-color: var(--white);
+        }
+
+        h1, h2, h3, h4 {
+            font-family: 'Playfair Display', serif;
+            color: var(--primary);
+            font-weight: 700;
+        }
+
+        /* --- UTILITY CLASSES --- */
+        .container { max-width: 1200px; margin: 0 auto; padding: 0 20px; }
+        .text-center { text-align: center; }
+        .section { padding: 80px 0; }
+        .bg-light { background-color: var(--light); }
+        
+        .btn {
+            display: inline-block;
+            padding: 14px 32px;
+            border-radius: 50px;
+            font-weight: 600;
+            text-decoration: none;
+            transition: all 0.3s ease;
+            text-transform: uppercase;
+            font-size: 0.9rem;
+            letter-spacing: 0.5px;
+        }
+        .btn-primary {
+            background-color: var(--secondary);
+            color: var(--primary);
+            border: 2px solid var(--secondary);
+        }
+        .btn-primary:hover {
+            background-color: transparent;
+            color: var(--secondary);
+        }
+        .btn-outline {
+            background-color: transparent;
+            color: var(--white);
+            border: 2px solid var(--white);
+        }
+        .btn-outline:hover {
+            background-color: var(--white);
+            color: var(--primary);
+        }
+
+        /* --- HEADER & NAV --- */
+        header {
+            background: rgba(255, 255, 255, 0.98);
+            box-shadow: 0 2px 20px rgba(0,0,0,0.05);
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
+        }
+        .nav-wrapper {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            height: 90px;
+        }
+        .logo {
+            font-size: 1.5rem;
+            font-weight: bold;
+            color: var(--primary);
+            text-decoration: none;
+            font-family: 'Playfair Display', serif;
+            letter-spacing: -0.5px;
+        }
+        .logo span { color: var(--secondary); }
+
+        nav ul { display: flex; list-style: none; gap: 35px; align-items: center; }
+        nav a { text-decoration: none; color: var(--primary); font-weight: 500; font-size: 0.95rem; transition: color 0.3s; }
+        nav a:hover { color: var(--secondary); }
+        
+        .mobile-toggle { display: none; font-size: 1.5rem; color: var(--primary); cursor: pointer; }
+
+        /* --- HERO SECTION --- */
+        .hero {
+            position: relative;
+            height: 90vh; /* Full screen height */
+            background: linear-gradient(rgba(15, 39, 70, 0.85), rgba(15, 39, 70, 0.7)), url('https://images.unsplash.com/photo-1609840114035-1c99d59242cc?auto=format&fit=crop&q=80');
+            background-size: cover;
+            background-position: center;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            color: white;
+            margin-top: 90px;
+        }
+        .hero-content h1 {
+            font-size: 4rem;
+            color: white;
+            margin-bottom: 20px;
+            line-height: 1.1;
+        }
+        .hero-content p {
+            font-size: 1.3rem;
+            max-width: 700px;
+            margin: 0 auto 40px auto;
+            opacity: 0.9;
+            font-weight: 300;
+        }
+
+        /* --- INFO BAR --- */
+        .info-bar {
+            background: var(--secondary);
+            color: var(--primary);
+            padding: 20px 0;
+            margin-top: -5px;
+        }
+        .info-grid {
+            display: flex;
+            justify-content: space-around;
+            text-align: center;
+            font-weight: 600;
+        }
+        .info-item i { margin-right: 8px; }
+
+        /* --- ABOUT --- */
+        .about-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 60px;
+            align-items: center;
+        }
+        .about-image img {
+            width: 100%;
+            border-radius: 10px;
+            box-shadow: 20px 20px 0px var(--light);
+        }
+
+        /* --- SERVICES --- */
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+            margin-top: 50px;
+        }
+        .service-card {
+            background: white;
+            padding: 40px 30px;
+            border-radius: 8px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.03);
+            transition: transform 0.3s;
+            border-top: 4px solid var(--secondary);
+        }
+        .service-card:hover { transform: translateY(-5px); }
+        .service-icon { font-size: 2.5rem; color: var(--primary); margin-bottom: 20px; }
+        .service-card h3 { font-size: 1.5rem; margin-bottom: 15px; }
+
+        /* --- TESTIMONIALS --- */
+        .testimonials { background-color: var(--primary); color: white; text-align: center; }
+        .testimonials h2 { color: white; }
+        .quote-box {
+            font-size: 1.2rem;
+            font-style: italic;
+            max-width: 800px;
+            margin: 30px auto;
+            opacity: 0.9;
+        }
+        .stars { color: var(--gold); margin-bottom: 10px; }
+
+        /* --- CONTACT / MAP --- */
+        .contact-wrapper {
+            display: flex;
+            flex-wrap: wrap;
+            box-shadow: 0 10px 40px rgba(0,0,0,0.1);
+            border-radius: 15px;
+            overflow: hidden;
+            background: white;
+        }
+        .contact-info {
+            flex: 1;
+            padding: 60px;
+            min-width: 300px;
+            background: white;
+        }
+        .map-container {
+            flex: 1;
+            min-width: 300px;
+            background: #eee;
+            min-height: 400px;
+        }
+        .contact-row {
+            display: flex;
+            align-items: center;
+            margin-bottom: 30px;
+        }
+        .contact-row i {
+            font-size: 1.5rem;
+            color: var(--secondary);
+            margin-right: 20px;
+            width: 30px;
+        }
+
+        /* --- FOOTER --- */
+        footer {
+            background: var(--primary);
+            color: white;
+            padding: 60px 0 20px;
+            text-align: center;
+        }
+        .social-icons { margin: 20px 0; }
+        .social-icons a { color: white; margin: 0 10px; font-size: 1.2rem; transition: color 0.3s; }
+        .social-icons a:hover { color: var(--secondary); }
+        .copyright { border-top: 1px solid rgba(255,255,255,0.1); padding-top: 20px; margin-top: 40px; font-size: 0.8rem; opacity: 0.6; }
+
+        /* --- MOBILE RESPONSIVE --- */
+        @media (max-width: 768px) {
+            .nav-menu { display: none; }
+            .mobile-toggle { display: block; }
+            .hero-content h1 { font-size: 2.5rem; }
+            .about-grid { grid-template-columns: 1fr; }
+            .contact-info { padding: 30px; }
+            .info-grid { flex-direction: column; gap: 10px; }
+        }
+    </style>
+</head>
+<body>
+<header>
+<div class="container nav-wrapper">
+<a class="logo" href="#">ConnAve <span>Dental</span></a>
+<nav>
+<ul class="nav-menu">
+<li><a href="#about">About</a></li>
+<li><a href="#services">Services</a></li>
+<li><a href="#new-patients">New Patients</a></li>
+<li><a href="#reviews">Reviews</a></li>
+<li><a class="btn btn-primary" href="#contact">Book Appointment</a></li>
+<li><a href="/blog">Blog</a></li></ul>
+<div class="mobile-toggle"><i class="fas fa-bars"></i></div>
+</nav>
+</div>
+</header>
+
+<section class="hero">
+<div class="container hero-content">
+<p>YOUR TRUSTED DENTAL CARE PARTNER IN ADAMS MORGAN</p>
+<h1>Dental Services in Adams Morgan, DC</h1>
+<p>Connecticut Ave Dental Studio delivers comprehensive dental services to the Adams Morgan community. Our experienced team provides personalized treatment in a comfortable, modern environment. From routine cleanings to advanced procedures, we're committed to helping you achieve optimal oral health. Experience quality dental care that puts your comfort first. Schedule your appointment today and discover the difference professional, compassionate dentistry makes.</p>
+<div style="margin-top: 30px;">
+<a class="btn btn-primary" href="#contact">Schedule Your Visit Today</a>
+<a class="btn btn-outline" href="#services" style="margin-left: 15px;">Explore Our Services</a>
+</div>
+</div>
+</section>
+
+<div class="info-bar">
+<div class="container info-grid">
+<div class="info-item"><i class="fas fa-map-marker-alt"></i> Connecticut Ave NW, DC 20008</div>
+<div class="info-item"><i class="fas fa-phone-alt"></i> (202) 555-0123</div>
+<div class="info-item"><i class="fas fa-star"></i> 4.9★ Rated Adams Morgan Dentist</div>
+</div>
+</div>
+
+<section class="section" id="about">
+<div class="container about-grid">
+<div class="about-text">
+<h3>Professional Dental Care</h3>
+<h2 style="margin-bottom: 20px;">Connecticut Ave Dental Studio - Adams Morgan</h2>
+<p>Welcome to Connecticut Ave Dental Studio, your trusted dental care provider in Adams Morgan, Washington DC. Our professional dental practice is dedicated to delivering comprehensive dental services that prioritize your oral health and comfort. From routine cleanings and preventive care to advanced restorative treatments, we combine modern techniques with personalized attention to ensure exceptional results for every patient.</p>
+<p>At Connecticut Ave Dental Studio, we understand that quality dental care is essential for your overall well-being. Our experienced team works closely with you to develop customized treatment plans that meet your unique needs and goals. Contact us today to schedule your appointment and experience the difference professional dental care makes.</p>
+<br>
+<ul style="list-style: none;">
+<li style="margin-bottom: 10px;"><i class="fas fa-check" style="color: var(--secondary); margin-right: 10px;"></i> Comprehensive Dental Services for All Ages</li>
+<li style="margin-bottom: 10px;"><i class="fas fa-check" style="color: var(--secondary); margin-right: 10px;"></i> Modern Equipment and Advanced Techniques</li>
+<li style="margin-bottom: 10px;"><i class="fas fa-check" style="color: var(--secondary); margin-right: 10px;"></i> Personalized Treatment Plans</li>
+<li style="margin-bottom: 10px;"><i class="fas fa-check" style="color: var(--secondary); margin-right: 10px;"></i> Comfortable and Welcoming Environment</li>
+</ul>
+</div>
+<div class="about-image">
+<img alt="Dental Services Adams Morgan - Connecticut Ave Dental Studio" src="https://images.unsplash.com/photo-1629909613654-28e377c37b09?auto=format&amp;fit=crop&amp;q=80">
+</div>
+</div>
+</section>
+
+<section class="section bg-light" id="services">
+<div class="container">
+<div class="text-center" style="max-width: 700px; margin: 0 auto;">
+<h3>Comprehensive Dental Care</h3>
+<h2 style="margin-bottom: 20px;">Our Services in Adams Morgan</h2>
+<p>At Connecticut Ave Dental Studio, we provide comprehensive dental services to keep your smile healthy and bright in Adams Morgan. Our experienced team offers preventive care including routine cleanings, examinations, and fluoride treatments to maintain optimal oral health. We also specialize in restorative dentistry, featuring fillings, crowns, and bridges to repair damaged teeth and restore function.</p>
+</div>
+<div class="services-grid">
+<div class="service-card">
+<div class="service-icon"><i class="fas fa-tooth"></i></div>
+<h3>Preventive Care</h3>
+<p>Routine cleanings, examinations, and fluoride treatments to maintain optimal oral health and prevent dental problems before they develop.</p>
+</div>
+<div class="service-card">
+<div class="service-icon"><i class="fas fa-magic"></i></div>
+<h3>Restorative Dentistry</h3>
+<p>Fillings, crowns, and bridges to repair damaged teeth and restore function using modern materials and proven techniques.</p>
+</div>
+<div class="service-card">
+<div class="service-icon"><i class="fas fa-smile"></i></div>
+<h3>Cosmetic Treatments</h3>
+<p>Professional teeth whitening and aesthetic treatments to enhance your smile's appearance and boost your confidence.</p>
+</div>
+<div class="service-card">
+<div class="service-icon"><i class="fas fa-heartbeat"></i></div>
+<h3>Emergency Care</h3>
+<p>Prompt and effective treatment for urgent dental issues, addressing pain and dental emergencies when you need care most.</p>
+</div>
+<div class="service-card">
+<div class="service-icon"><i class="fas fa-cog"></i></div>
+<h3>Advanced Procedures</h3>
+<p>Complex dental work performed with modern technology and techniques to ensure comfortable, efficient treatment for every patient.</p>
+</div>
+<div class="service-card">
+<div class="service-icon"><i class="fas fa-shield-alt"></i></div>
+<h3>Personalized Care</h3>
+<p>Customized treatment plans tailored to your unique needs and goals, ensuring the best possible outcomes for your oral health.</p>
+</div>
+</div>
+</div>
+</section>
+
+<section class="section" id="areas">
+<div class="container">
+<div class="text-center" style="max-width: 700px; margin: 0 auto;">
+<h3>Serving the Community</h3>
+<h2 style="margin-bottom: 20px;">Areas We Serve Near Adams Morgan</h2>
+<p>Connecticut Ave Dental Studio proudly serves Adams Morgan and surrounding Washington DC neighborhoods with comprehensive dental care. Our convenient location makes quality dental services easily accessible to residents throughout the area. Whether you need routine cleanings, preventive care, or advanced dental treatments, our experienced team is committed to helping you achieve optimal oral health. We welcome patients from Adams Morgan, Dupont Circle, Columbia Heights, and nearby communities. Schedule your appointment today to experience personalized dental care in a comfortable, modern environment.</p>
+</div>
+</div>
+</section>
+
+<section class="section testimonials" id="reviews">
+<div class="container">
+<div class="stars">
+<i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+</div>
+<h2>What Adams Morgan Customers Say</h2>
+<div class="quote-box">
+<p><strong>"Outstanding dental care in the heart of Adams Morgan! The team at Connecticut Ave Dental Studio made my routine cleaning comfortable and thorough. Their modern equipment and gentle approach put me at ease immediately."</strong></p>
+<p><em>- Sarah M.</em></p>
+</div>
+<div class="quote-box">
+<p><strong>"I've been searching for quality dental services in DC, and I finally found my dental home. The staff is professional, the office is spotless, and they genuinely care about patient comfort. Highly recommend!"</strong></p>
+<p><em>- Michael R.</em></p>
+</div>
+<div class="quote-box">
+<p><strong>"From preventive care to cosmetic treatments, Connecticut Ave Dental Studio delivers exceptional results. They take time to explain procedures and never rush appointments. Best dental experience I've had!"</strong></p>
+<p><em>- Jennifer L.</em></p>
+</div>
+<p style="margin-top: 30px;">Ready to experience exceptional dental care? Contact us today to schedule your appointment.</p>
+</div>
+</section>
+
+<section class="section bg-light" id="faq">
+<div class="container">
+<div class="text-center" style="max-width: 700px; margin: 0 auto;">
+<h2 style="margin-bottom: 40px;">Frequently Asked Questions About Dental Services in Adams Morgan</h2>
+</div>
+<div style="max-width: 800px; margin: 0 auto;">
+<div style="margin-bottom: 30px;">
+<h3>What dental services do you offer?</h3>
+<p>Connecticut Ave Dental Studio provides comprehensive dental care including routine cleanings, fillings, crowns, root canals, extractions, and cosmetic dentistry procedures. We focus on both preventive and restorative treatments to maintain optimal oral health.</p>
+</div>
+<div style="margin-bottom: 30px;">
+<h3>How often should I schedule dental checkups?</h3>
+<p>Most patients benefit from professional cleanings and examinations every six months. However, your specific needs may vary based on your oral health condition and risk factors.</p>
+</div>
+<div style="margin-bottom: 30px;">
+<h3>Do you accept dental insurance?</h3>
+<p>We work with most major dental insurance plans. Contact us to verify your specific coverage and discuss payment options available for your treatment.</p>
+</div>
+<div style="margin-bottom: 30px;">
+<h3>What should I expect during my first visit?</h3>
+<p>Your initial appointment includes a comprehensive examination, digital X-rays if needed, and discussion of your dental history and concerns. We'll create a personalized treatment plan tailored to your needs.</p>
+</div>
+<div style="margin-bottom: 30px;">
+<h3>Do you offer emergency dental services?</h3>
+<p>Yes, we provide urgent dental care for patients experiencing severe pain, trauma, or other dental emergencies in Adams Morgan.</p>
+</div>
+<p style="text-align: center; margin-top: 40px;">Schedule your appointment today to experience quality dental services.</p>
+</div>
+</div>
+</section>
+
+<section class="section" id="contact">
+<div class="container">
+<div class="text-center" style="margin-bottom: 50px;">
+<h3>Get Started Today</h3>
+<h2>Get Started with Dental Services in Adams Morgan</h2>
+<p>Ready to transform your smile in Adams Morgan? Connecticut Ave Dental Studio offers comprehensive dental services tailored to your needs. From routine cleanings to advanced treatments, our professional team is committed to your oral health. Schedule your appointment today and experience quality dental care in Washington DC.</p>
+</div>
+<div class="contact-wrapper">
+<div class="contact-info">
+<h3 style="margin-bottom: 30px;">Contact Information</h3>
+<div class="contact-row">
+<i class="fas fa-map-marker-alt"></i>
+<div>
+<strong>Address</strong><br>
+Connecticut Ave NW<br>
+Washington, DC 20008
+</div>
+</div>
+<div class="contact-row">
+<i class="fas fa-phone-alt"></i>
+<div>
+<strong>Phone</strong><br>
+(202) 555-0123
+</div>
+</div>
+<div class="contact-row">
+<i class="fas fa-clock"></i>
+<div>
+<strong>Hours</strong><br>
+Mon-Fri: 8:00 AM - 6:00 PM<br>
+Sat: 8:00 AM - 2:00 PM
+</div>
+</div>
+<a class="btn btn-primary" href="tel:(202)555-0123" style="margin-top: 20px;">Call Now to Schedule</a>
+</div>
+<div class="map-container">
+<div style="width: 100%; height: 100%; background: #f0f0f0; display: flex; align-items: center; justify-content: center; color: #666;">
+<div style="text-align: center;">
+<i class="fas fa-map-marker-alt" style="font-size: 3rem; margin-bottom: 20px;"></i>
+<p>Interactive Map<br>Connecticut Ave NW<br>Washington, DC 20008</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+
+<footer>
+<div class="container">
+<h3 style="color: white; margin-bottom: 20px;">Connecticut Ave Dental Studio</h3>
+<p>Your trusted dental care provider in Adams Morgan, Washington DC</p>
+<div class="social-icons">
+<a href="#"><i class="fab fa-facebook"></i></a>
+<a href="#"><i class="fab fa-twitter"></i></a>
+<a href="#"><i class="fab fa-instagram"></i></a>
+<a href="#"><i class="fab fa-linkedin"></i></a>
+</div>
+<div class="copyright">
+<p>&copy; 2025 Connecticut Ave Dental Studio. All rights reserved. | Dental Services Adams Morgan DC</p>
+</div>
+</div>
+</footer>
+</body>
+</html>
