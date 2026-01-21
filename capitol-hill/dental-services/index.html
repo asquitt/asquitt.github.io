@@ -1,0 +1,476 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta content="width=device-width, initial-scale=1.0" name="viewport">
+<meta name="description" content="Looking for Dental Services in Capitol Hill? Connecticut Ave Dental Studio offers professional Dental Services services in Washington DC with comprehensive oral healthcare in a modern, comfortable environment.">
+<meta name="keywords" content="dental services capitol hill, dentist washington dc, dental care dc, capitol hill dentist, comprehensive dental services">
+<title>Dental Services in Capitol Hill, DC | Connecticut Ave Dental Studio</title>
+<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&amp;family=Playfair+Display:wght@400;700&amp;display=swap" rel="stylesheet">
+<style>
+        /* --- CSS RESET & VARIABLES --- */
+        :root {
+            --primary: #0f2746; /* Deep DC Navy */
+            --secondary: #2dd4bf; /* Modern Mint/Teal */
+            --gold: #d4af37; /* Subtle Gold Accent */
+            --light: #f3f4f6;
+            --white: #ffffff;
+            --text-dark: #1e293b;
+            --text-light: #64748b;
+        }
+
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        html { scroll-behavior: smooth; }
+        
+        body {
+            font-family: 'Inter', sans-serif;
+            color: var(--text-dark);
+            line-height: 1.6;
+            background-color: var(--white);
+        }
+
+        h1, h2, h3, h4 {
+            font-family: 'Playfair Display', serif;
+            color: var(--primary);
+            font-weight: 700;
+        }
+
+        /* --- UTILITY CLASSES --- */
+        .container { max-width: 1200px; margin: 0 auto; padding: 0 20px; }
+        .text-center { text-align: center; }
+        .section { padding: 80px 0; }
+        .bg-light { background-color: var(--light); }
+        
+        .btn {
+            display: inline-block;
+            padding: 14px 32px;
+            border-radius: 50px;
+            font-weight: 600;
+            text-decoration: none;
+            transition: all 0.3s ease;
+            text-transform: uppercase;
+            font-size: 0.9rem;
+            letter-spacing: 0.5px;
+        }
+        .btn-primary {
+            background-color: var(--secondary);
+            color: var(--primary);
+            border: 2px solid var(--secondary);
+        }
+        .btn-primary:hover {
+            background-color: transparent;
+            color: var(--secondary);
+        }
+        .btn-outline {
+            background-color: transparent;
+            color: var(--white);
+            border: 2px solid var(--white);
+        }
+        .btn-outline:hover {
+            background-color: var(--white);
+            color: var(--primary);
+        }
+
+        /* --- HEADER & NAV --- */
+        header {
+            background: rgba(255, 255, 255, 0.98);
+            box-shadow: 0 2px 20px rgba(0,0,0,0.05);
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
+        }
+        .nav-wrapper {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            height: 90px;
+        }
+        .logo {
+            font-size: 1.5rem;
+            font-weight: bold;
+            color: var(--primary);
+            text-decoration: none;
+            font-family: 'Playfair Display', serif;
+            letter-spacing: -0.5px;
+        }
+        .logo span { color: var(--secondary); }
+
+        nav ul { display: flex; list-style: none; gap: 35px; align-items: center; }
+        nav a { text-decoration: none; color: var(--primary); font-weight: 500; font-size: 0.95rem; transition: color 0.3s; }
+        nav a:hover { color: var(--secondary); }
+        
+        .mobile-toggle { display: none; font-size: 1.5rem; color: var(--primary); cursor: pointer; }
+
+        /* --- HERO SECTION --- */
+        .hero {
+            position: relative;
+            height: 90vh; /* Full screen height */
+            background: linear-gradient(rgba(15, 39, 70, 0.85), rgba(15, 39, 70, 0.7)), url('https://images.unsplash.com/photo-1609840114035-1c99d59242cc?auto=format&fit=crop&q=80');
+            background-size: cover;
+            background-position: center;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            color: white;
+            margin-top: 90px;
+        }
+        .hero-content h1 {
+            font-size: 4rem;
+            color: white;
+            margin-bottom: 20px;
+            line-height: 1.1;
+        }
+        .hero-content p {
+            font-size: 1.3rem;
+            max-width: 700px;
+            margin: 0 auto 40px auto;
+            opacity: 0.9;
+            font-weight: 300;
+        }
+
+        /* --- INFO BAR --- */
+        .info-bar {
+            background: var(--secondary);
+            color: var(--primary);
+            padding: 20px 0;
+            margin-top: -5px;
+        }
+        .info-grid {
+            display: flex;
+            justify-content: space-around;
+            text-align: center;
+            font-weight: 600;
+        }
+        .info-item i { margin-right: 8px; }
+
+        /* --- ABOUT --- */
+        .about-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 60px;
+            align-items: center;
+        }
+        .about-image img {
+            width: 100%;
+            border-radius: 10px;
+            box-shadow: 20px 20px 0px var(--light);
+        }
+
+        /* --- SERVICES --- */
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+            margin-top: 50px;
+        }
+        .service-card {
+            background: white;
+            padding: 40px 30px;
+            border-radius: 8px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.03);
+            transition: transform 0.3s;
+            border-top: 4px solid var(--secondary);
+        }
+        .service-card:hover { transform: translateY(-5px); }
+        .service-icon { font-size: 2.5rem; color: var(--primary); margin-bottom: 20px; }
+        .service-card h3 { font-size: 1.5rem; margin-bottom: 15px; }
+
+        /* --- TESTIMONIALS --- */
+        .testimonials { background-color: var(--primary); color: white; text-align: center; }
+        .testimonials h2 { color: white; }
+        .quote-box {
+            font-size: 1.2rem;
+            font-style: italic;
+            max-width: 800px;
+            margin: 30px auto;
+            opacity: 0.9;
+        }
+        .stars { color: var(--gold); margin-bottom: 10px; }
+
+        /* --- CONTACT / MAP --- */
+        .contact-wrapper {
+            display: flex;
+            flex-wrap: wrap;
+            box-shadow: 0 10px 40px rgba(0,0,0,0.1);
+            border-radius: 15px;
+            overflow: hidden;
+            background: white;
+        }
+        .contact-info {
+            flex: 1;
+            padding: 60px;
+            min-width: 300px;
+            background: white;
+        }
+        .map-container {
+            flex: 1;
+            min-width: 300px;
+            background: #eee;
+            min-height: 400px;
+        }
+        .contact-row {
+            display: flex;
+            align-items: center;
+            margin-bottom: 30px;
+        }
+        .contact-row i {
+            font-size: 1.5rem;
+            color: var(--secondary);
+            margin-right: 20px;
+            width: 30px;
+        }
+
+        /* --- FOOTER --- */
+        footer {
+            background: var(--primary);
+            color: white;
+            padding: 60px 0 20px;
+            text-align: center;
+        }
+        .social-icons { margin: 20px 0; }
+        .social-icons a { color: white; margin: 0 10px; font-size: 1.2rem; transition: color 0.3s; }
+        .social-icons a:hover { color: var(--secondary); }
+        .copyright { border-top: 1px solid rgba(255,255,255,0.1); padding-top: 20px; margin-top: 40px; font-size: 0.8rem; opacity: 0.6; }
+
+        /* --- MOBILE RESPONSIVE --- */
+        @media (max-width: 768px) {
+            .nav-menu { display: none; }
+            .mobile-toggle { display: block; }
+            .hero-content h1 { font-size: 2.5rem; }
+            .about-grid { grid-template-columns: 1fr; }
+            .contact-info { padding: 30px; }
+            .info-grid { flex-direction: column; gap: 10px; }
+        }
+    </style>
+</head>
+<body>
+<header>
+<div class="container nav-wrapper">
+<a class="logo" href="#">ConnAve <span>Dental</span></a>
+<nav>
+<ul class="nav-menu">
+<li><a href="#about">About</a></li>
+<li><a href="#services">Services</a></li>
+<li><a href="#new-patients">New Patients</a></li>
+<li><a href="#reviews">Reviews</a></li>
+<li><a class="btn btn-primary" href="#contact">Book Appointment</a></li>
+<li><a href="/blog">Blog</a></li></ul>
+<div class="mobile-toggle"><i class="fas fa-bars"></i></div>
+</nav>
+</div>
+</header>
+
+<section class="hero">
+<div class="container hero-content">
+<p>YOUR TRUSTED DENTAL CARE IN CAPITOL HILL</p>
+<h1>Dental Services in Capitol Hill</h1>
+<p>Connecticut Ave Dental Studio delivers comprehensive dental services to Washington DC residents. Our professional team provides quality oral healthcare in a comfortable, modern environment. From routine cleanings to advanced treatments, we're committed to helping you achieve optimal dental health. Experience personalized care that puts your comfort first. Schedule your appointment today and discover the difference professional dental care makes.</p>
+<div style="margin-top: 30px;">
+<a class="btn btn-primary" href="#contact">Schedule Your Visit Today</a>
+<a class="btn btn-outline" href="#services" style="margin-left: 15px;">Explore Our Services</a>
+</div>
+</div>
+</section>
+
+<div class="info-bar">
+<div class="container info-grid">
+<div class="info-item"><i class="fas fa-map-marker-alt"></i> Connecticut Ave NW, DC 20008</div>
+<div class="info-item"><i class="fas fa-phone-alt"></i> (202) 555-0123</div>
+<div class="info-item"><i class="fas fa-star"></i> 4.9★ Rated Dental Services DC</div>
+</div>
+</div>
+
+<section class="section" id="about">
+<div class="container about-grid">
+<div class="about-text">
+<h3>Welcome to Connecticut Ave Dental Studio</h3>
+<h2 style="margin-bottom: 20px;">Professional Dental Services in Capitol Hill</h2>
+<p>Welcome to Connecticut Ave Dental Studio, your trusted dental care provider in Washington DC's Capitol Hill area. Our professional team delivers comprehensive dental services designed to keep your smile healthy and beautiful. From routine cleanings and preventive care to advanced restorative treatments, we're committed to providing exceptional dental care in a comfortable, modern environment.</p>
+<p>At Connecticut Ave Dental Studio, we understand that every patient has unique oral health needs. Our experienced dental professionals use the latest techniques and technology to ensure you receive the highest quality care. Whether you need a routine check-up or specialized treatment, we're here to help you achieve optimal oral health.</p>
+<p>Schedule your appointment today and experience the difference professional dental care makes.</p>
+<br>
+<ul style="list-style: none;">
+<li style="margin-bottom: 10px;"><i class="fas fa-check" style="color: var(--secondary); margin-right: 10px;"></i> Comprehensive Preventive Care & Digital Diagnostics</li>
+<li style="margin-bottom: 10px;"><i class="fas fa-check" style="color: var(--secondary); margin-right: 10px;"></i> Advanced Restorative & Cosmetic Treatments</li>
+<li style="margin-bottom: 10px;"><i class="fas fa-check" style="color: var(--secondary); margin-right: 10px;"></i> Modern Technology for Comfortable Care</li>
+<li style="margin-bottom: 10px;"><i class="fas fa-check" style="color: var(--secondary); margin-right: 10px;"></i> Emergency Dental Services Available</li>
+</ul>
+</div>
+<div class="about-image">
+<img alt="Dental Services Capitol Hill - Connecticut Ave Dental Studio" src="https://images.unsplash.com/photo-1629909613654-28e377c37b09?auto=format&amp;fit=crop&amp;q=80">
+</div>
+</div>
+</section>
+
+<section class="section bg-light" id="services">
+<div class="container">
+<div class="text-center" style="max-width: 700px; margin: 0 auto;">
+<h3>Our Services in Capitol Hill</h3>
+<h2 style="margin-bottom: 20px;">Comprehensive Dental Care Services</h2>
+<p>Connecticut Ave Dental Studio delivers comprehensive dental care to Capitol Hill residents and the greater Washington DC community. Our modern practice offers preventive care including routine cleanings, thorough examinations, and digital X-rays to maintain optimal oral health. We provide restorative treatments such as fillings, crowns, and bridges to repair damaged teeth and restore function.</p>
+</div>
+<div class="services-grid">
+<div class="service-card">
+<div class="service-icon"><i class="fas fa-tooth"></i></div>
+<h3>Preventive Care</h3>
+<p>Our comprehensive preventive care includes routine cleanings, thorough examinations, digital X-rays, and oral health screenings to maintain optimal oral health and prevent dental problems.</p>
+</div>
+<div class="service-card">
+<div class="service-icon"><i class="fas fa-magic"></i></div>
+<h3>Cosmetic Dentistry</h3>
+<p>Transform your smile with our cosmetic dental services including professional teeth whitening, veneers, and smile makeovers designed to enhance your confidence and appearance.</p>
+</div>
+<div class="service-card">
+<div class="service-icon"><i class="fas fa-cog"></i></div>
+<h3>Restorative Treatments</h3>
+<p>We provide restorative treatments such as fillings, crowns, and bridges to repair damaged teeth and restore function using advanced technology and proven techniques.</p>
+</div>
+<div class="service-card">
+<div class="service-icon"><i class="fas fa-heartbeat"></i></div>
+<h3>Emergency Dental Care</h3>
+<p>We offer emergency dental care for urgent situations requiring immediate attention, ensuring you receive prompt treatment when you need it most.</p>
+</div>
+<div class="service-card">
+<div class="service-icon"><i class="fas fa-smile"></i></div>
+<h3>Family Dentistry</h3>
+<p>Our family dentistry services provide comfortable, effective treatment for patients of all ages, helping families achieve and maintain healthy, beautiful smiles.</p>
+</div>
+<div class="service-card">
+<div class="service-icon"><i class="fas fa-shield-alt"></i></div>
+<h3>Digital Technology</h3>
+<p>Using advanced technology and proven techniques, our team ensures comfortable, effective treatment with precise diagnostics and efficient procedures.</p>
+</div>
+</div>
+</div>
+</section>
+
+<section class="section" id="areas">
+<div class="container">
+<div class="text-center" style="max-width: 700px; margin: 0 auto;">
+<h2 style="margin-bottom: 20px;">Areas We Serve Near Capitol Hill</h2>
+<p>Connecticut Ave Dental Studio proudly serves patients throughout the Capitol Hill area and surrounding Washington DC neighborhoods. Our comprehensive dental services are easily accessible to residents of Eastern Market, Navy Yard, H Street Corridor, and nearby communities. Whether you need routine cleanings, restorative treatments, or cosmetic dentistry, our convenient location makes quality dental care accessible to families and professionals across the region. Schedule your appointment today and experience exceptional dental services in the heart of our nation's capital.</p>
+</div>
+</div>
+</section>
+
+<section class="section testimonials" id="reviews">
+<div class="container">
+<div class="stars">
+<i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+</div>
+<h2>What Capitol Hill Customers Say</h2>
+<div class="quote-box">
+<p>"Connecticut Ave Dental Studio transformed my smile and confidence. Dr. Johnson's gentle approach made my root canal completely painless. The modern equipment and professional staff create such a comfortable environment." - Sarah M.</p>
+</div>
+<div class="quote-box">
+<p>"After years of dental anxiety, I finally found a practice that understands patient comfort. The comprehensive dental care here is outstanding - from routine cleanings to complex procedures. My whole family trusts Connecticut Ave Dental Studio." - Michael R.</p>
+</div>
+<div class="quote-box">
+<p>"Professional, efficient, and caring. The team's attention to detail during my dental restoration was impressive. I recommend them to everyone in Capitol Hill seeking quality dental services." - Jennifer L.</p>
+</div>
+</div>
+</section>
+
+<section class="section bg-light" id="faq">
+<div class="container">
+<div class="text-center" style="max-width: 700px; margin: 0 auto;">
+<h2 style="margin-bottom: 40px;">Frequently Asked Questions About Dental Services in Capitol Hill</h2>
+</div>
+<div class="about-grid">
+<div>
+<h3>What dental services do you offer?</h3>
+<p>Connecticut Ave Dental Studio provides comprehensive dental care including routine cleanings, fillings, crowns, root canals, and cosmetic treatments. Our team focuses on preventive care to maintain your oral health.</p>
+<br>
+<h3>How often should I schedule dental checkups?</h3>
+<p>Most patients benefit from dental visits every six months for cleanings and examinations. However, your specific needs may require more frequent appointments based on your oral health condition.</p>
+<br>
+<h3>Do you accept dental insurance?</h3>
+<p>We work with most major dental insurance plans. Contact us to verify your coverage and discuss payment options that fit your budget.</p>
+</div>
+<div>
+<h3>What should I expect during my first visit?</h3>
+<p>Your initial appointment includes a comprehensive examination, digital X-rays if needed, and a thorough cleaning. We'll discuss your dental history and create a personalized treatment plan.</p>
+<br>
+<h3>How do I prepare for my appointment?</h3>
+<p>Bring your insurance information and a list of current medications. Arrive a few minutes early to complete any necessary paperwork.</p>
+<br>
+<p><strong>Schedule your appointment today to experience quality dental services in Capitol Hill.</strong></p>
+</div>
+</div>
+</div>
+</section>
+
+<section class="section" id="contact">
+<div class="container">
+<div class="text-center" style="margin-bottom: 50px;">
+<h3>Get Started with Dental Services in Capitol Hill</h3>
+<h2>Ready to Experience Exceptional Dental Care?</h2>
+<p style="max-width: 600px; margin: 0 auto;">Ready to experience exceptional dental care in Capitol Hill? Connecticut Ave Dental Studio provides comprehensive dental services tailored to your oral health needs. Our professional team is committed to delivering quality care in a comfortable environment. Schedule your appointment today and take the first step toward optimal dental health.</p>
+</div>
+<div class="contact-wrapper">
+<div class="contact-info">
+<h3>Contact Information</h3>
+<div class="contact-row">
+<i class="fas fa-map-marker-alt"></i>
+<div>
+<strong>Address</strong><br>
+Connecticut Ave NW<br>
+Washington, DC 20008
+</div>
+</div>
+<div class="contact-row">
+<i class="fas fa-phone-alt"></i>
+<div>
+<strong>Phone</strong><br>
+(202) 555-0123
+</div>
+</div>
+<div class="contact-row">
+<i class="fas fa-envelope"></i>
+<div>
+<strong>Email</strong><br>
+info@connavedental.com
+</div>
+</div>
+<div class="contact-row">
+<i class="fas fa-clock"></i>
+<div>
+<strong>Hours</strong><br>
+Mon-Fri: 8AM-6PM<br>
+Sat: 9AM-3PM
+</div>
+</div>
+<div style="margin-top: 30px;">
+<a class="btn btn-primary" href="tel:(202)555-0123">Call Now</a>
+</div>
+</div>
+<div class="map-container">
+<div style="width: 100%; height: 100%; background: #e5e7eb; display: flex; align-items: center; justify-content: center; color: #6b7280;">
+<i class="fas fa-map-marker-alt" style="font-size: 3rem;"></i>
+</div>
+</div>
+</div>
+</div>
+</section>
+
+<footer>
+<div class="container">
+<div class="logo" style="font-size: 2rem; margin-bottom: 20px;">ConnAve <span>Dental</span></div>
+<p>Your trusted dental care provider in Washington DC</p>
+<div class="social-icons">
+<a href="#"><i class="fab fa-facebook"></i></a>
+<a href="#"><i class="fab fa-twitter"></i></a>
+<a href="#"><i class="fab fa-instagram"></i></a>
+<a href="#"><i class="fab fa-linkedin"></i></a>
+</div>
+<div class="copyright">
+<p>&copy; 2025 Connecticut Ave Dental Studio. All rights reserved.</p>
+</div>
+</div>
+</footer>
+</body>
+</html>
