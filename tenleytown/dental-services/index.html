@@ -1,0 +1,454 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta content="width=device-width, initial-scale=1.0" name="viewport">
+<meta name="description" content="Looking for Dental Services in Tenleytown? Connecticut Ave Dental Studio offers professional Dental Services services in Washington DC. Contact us today for comprehensive dental care in a comfortable environment.">
+<meta name="keywords" content="dental services tenleytown, dentist washington dc, dental care tenleytown, connecticut ave dental studio">
+<title>Dental Services in Tenleytown, DC | Connecticut Ave Dental Studio</title>
+<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&amp;family=Playfair+Display:wght@400;700&amp;display=swap" rel="stylesheet">
+<style>
+        /* --- CSS RESET & VARIABLES --- */
+        :root {
+            --primary: #0f2746; /* Deep DC Navy */
+            --secondary: #2dd4bf; /* Modern Mint/Teal */
+            --gold: #d4af37; /* Subtle Gold Accent */
+            --light: #f3f4f6;
+            --white: #ffffff;
+            --text-dark: #1e293b;
+            --text-light: #64748b;
+        }
+
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        html { scroll-behavior: smooth; }
+        
+        body {
+            font-family: 'Inter', sans-serif;
+            color: var(--text-dark);
+            line-height: 1.6;
+            background-color: var(--white);
+        }
+
+        h1, h2, h3, h4 {
+            font-family: 'Playfair Display', serif;
+            color: var(--primary);
+            font-weight: 700;
+        }
+
+        /* --- UTILITY CLASSES --- */
+        .container { max-width: 1200px; margin: 0 auto; padding: 0 20px; }
+        .text-center { text-align: center; }
+        .section { padding: 80px 0; }
+        .bg-light { background-color: var(--light); }
+        
+        .btn {
+            display: inline-block;
+            padding: 14px 32px;
+            border-radius: 50px;
+            font-weight: 600;
+            text-decoration: none;
+            transition: all 0.3s ease;
+            text-transform: uppercase;
+            font-size: 0.9rem;
+            letter-spacing: 0.5px;
+        }
+        .btn-primary {
+            background-color: var(--secondary);
+            color: var(--primary);
+            border: 2px solid var(--secondary);
+        }
+        .btn-primary:hover {
+            background-color: transparent;
+            color: var(--secondary);
+        }
+        .btn-outline {
+            background-color: transparent;
+            color: var(--white);
+            border: 2px solid var(--white);
+        }
+        .btn-outline:hover {
+            background-color: var(--white);
+            color: var(--primary);
+        }
+
+        /* --- HEADER & NAV --- */
+        header {
+            background: rgba(255, 255, 255, 0.98);
+            box-shadow: 0 2px 20px rgba(0,0,0,0.05);
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
+        }
+        .nav-wrapper {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            height: 90px;
+        }
+        .logo {
+            font-size: 1.5rem;
+            font-weight: bold;
+            color: var(--primary);
+            text-decoration: none;
+            font-family: 'Playfair Display', serif;
+            letter-spacing: -0.5px;
+        }
+        .logo span { color: var(--secondary); }
+
+        nav ul { display: flex; list-style: none; gap: 35px; align-items: center; }
+        nav a { text-decoration: none; color: var(--primary); font-weight: 500; font-size: 0.95rem; transition: color 0.3s; }
+        nav a:hover { color: var(--secondary); }
+        
+        .mobile-toggle { display: none; font-size: 1.5rem; color: var(--primary); cursor: pointer; }
+
+        /* --- HERO SECTION --- */
+        .hero {
+            position: relative;
+            height: 90vh; /* Full screen height */
+            background: linear-gradient(rgba(15, 39, 70, 0.85), rgba(15, 39, 70, 0.7)), url('https://images.unsplash.com/photo-1609840114035-1c99d59242cc?auto=format&fit=crop&q=80');
+            background-size: cover;
+            background-position: center;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            color: white;
+            margin-top: 90px;
+        }
+        .hero-content h1 {
+            font-size: 4rem;
+            color: white;
+            margin-bottom: 20px;
+            line-height: 1.1;
+        }
+        .hero-content p {
+            font-size: 1.3rem;
+            max-width: 700px;
+            margin: 0 auto 40px auto;
+            opacity: 0.9;
+            font-weight: 300;
+        }
+
+        /* --- INFO BAR --- */
+        .info-bar {
+            background: var(--secondary);
+            color: var(--primary);
+            padding: 20px 0;
+            margin-top: -5px;
+        }
+        .info-grid {
+            display: flex;
+            justify-content: space-around;
+            text-align: center;
+            font-weight: 600;
+        }
+        .info-item i { margin-right: 8px; }
+
+        /* --- ABOUT --- */
+        .about-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 60px;
+            align-items: center;
+        }
+        .about-image img {
+            width: 100%;
+            border-radius: 10px;
+            box-shadow: 20px 20px 0px var(--light);
+        }
+
+        /* --- SERVICES --- */
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+            margin-top: 50px;
+        }
+        .service-card {
+            background: white;
+            padding: 40px 30px;
+            border-radius: 8px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.03);
+            transition: transform 0.3s;
+            border-top: 4px solid var(--secondary);
+        }
+        .service-card:hover { transform: translateY(-5px); }
+        .service-icon { font-size: 2.5rem; color: var(--primary); margin-bottom: 20px; }
+        .service-card h3 { font-size: 1.5rem; margin-bottom: 15px; }
+
+        /* --- TESTIMONIALS --- */
+        .testimonials { background-color: var(--primary); color: white; text-align: center; }
+        .testimonials h2 { color: white; }
+        .quote-box {
+            font-size: 1.2rem;
+            font-style: italic;
+            max-width: 800px;
+            margin: 30px auto;
+            opacity: 0.9;
+        }
+        .stars { color: var(--gold); margin-bottom: 10px; }
+
+        /* --- CONTACT / MAP --- */
+        .contact-wrapper {
+            display: flex;
+            flex-wrap: wrap;
+            box-shadow: 0 10px 40px rgba(0,0,0,0.1);
+            border-radius: 15px;
+            overflow: hidden;
+            background: white;
+        }
+        .contact-info {
+            flex: 1;
+            padding: 60px;
+            min-width: 300px;
+            background: white;
+        }
+        .map-container {
+            flex: 1;
+            min-width: 300px;
+            background: #eee;
+            min-height: 400px;
+        }
+        .contact-row {
+            display: flex;
+            align-items: center;
+            margin-bottom: 30px;
+        }
+        .contact-row i {
+            font-size: 1.5rem;
+            color: var(--secondary);
+            margin-right: 20px;
+            width: 30px;
+        }
+
+        /* --- FOOTER --- */
+        footer {
+            background: var(--primary);
+            color: white;
+            padding: 60px 0 20px;
+            text-align: center;
+        }
+        .social-icons { margin: 20px 0; }
+        .social-icons a { color: white; margin: 0 10px; font-size: 1.2rem; transition: color 0.3s; }
+        .social-icons a:hover { color: var(--secondary); }
+        .copyright { border-top: 1px solid rgba(255,255,255,0.1); padding-top: 20px; margin-top: 40px; font-size: 0.8rem; opacity: 0.6; }
+
+        /* --- MOBILE RESPONSIVE --- */
+        @media (max-width: 768px) {
+            .nav-menu { display: none; }
+            .mobile-toggle { display: block; }
+            .hero-content h1 { font-size: 2.5rem; }
+            .about-grid { grid-template-columns: 1fr; }
+            .contact-info { padding: 30px; }
+            .info-grid { flex-direction: column; gap: 10px; }
+        }
+    </style>
+</head>
+<body>
+<header>
+<div class="container nav-wrapper">
+<a class="logo" href="#">ConnAve <span>Dental</span></a>
+<nav>
+<ul class="nav-menu">
+<li><a href="#about">About</a></li>
+<li><a href="#services">Services</a></li>
+<li><a href="#new-patients">New Patients</a></li>
+<li><a href="#reviews">Reviews</a></li>
+<li><a class="btn btn-primary" href="#contact">Book Appointment</a></li>
+<li><a href="/blog">Blog</a></li></ul>
+<div class="mobile-toggle"><i class="fas fa-bars"></i></div>
+</nav>
+</div>
+</header>
+
+<section class="hero">
+<div class="container hero-content">
+<p>PROFESSIONAL DENTAL CARE IN WASHINGTON DC</p>
+<h1>Dental Services in Tenleytown, DC</h1>
+<p>Experience exceptional dental care at Connecticut Ave Dental Studio in Washington DC. Our professional dental practice offers comprehensive dental services designed to keep your smile healthy and bright. From routine cleanings to advanced treatments, we're committed to providing quality care in a comfortable environment.</p>
+<div style="margin-top: 30px;">
+<a class="btn btn-primary" href="#contact">Schedule Your Visit Today</a>
+<a class="btn btn-outline" href="#services" style="margin-left: 15px;">Explore Our Services</a>
+</div>
+</div>
+</section>
+
+<div class="info-bar">
+<div class="container info-grid">
+<div class="info-item"><i class="fas fa-map-marker-alt"></i> Serving Tenleytown & Washington DC</div>
+<div class="info-item"><i class="fas fa-phone-alt"></i> (202) 555-0123</div>
+<div class="info-item"><i class="fas fa-star"></i> Professional Dental Services</div>
+</div>
+</div>
+
+<section class="section" id="about">
+<div class="container about-grid">
+<div class="about-text">
+<h3>Welcome to Connecticut Ave Dental Studio</h3>
+<h2 style="margin-bottom: 20px;">Your Trusted Dental Care Provider</h2>
+<p>Welcome to Connecticut Ave Dental Studio, your trusted dental care provider in Washington DC. Our professional dental practice is dedicated to delivering comprehensive dental services to help you achieve and maintain optimal oral health. Whether you need routine cleanings, preventive care, or more advanced dental treatments, our experienced team provides personalized care in a comfortable, modern environment.</p>
+<p>We understand that every patient has unique dental needs, and we're committed to creating treatment plans tailored specifically for you. Contact us today to schedule your appointment and take the first step toward a healthier, more confident smile.</p>
+<br>
+<ul style="list-style: none;">
+<li style="margin-bottom: 10px;"><i class="fas fa-check" style="color: var(--secondary); margin-right: 10px;"></i> Comprehensive Dental Services</li>
+<li style="margin-bottom: 10px;"><i class="fas fa-check" style="color: var(--secondary); margin-right: 10px;"></i> Modern, Comfortable Environment</li>
+<li style="margin-bottom: 10px;"><i class="fas fa-check" style="color: var(--secondary); margin-right: 10px;"></i> Personalized Treatment Plans</li>
+<li style="margin-bottom: 10px;"><i class="fas fa-check" style="color: var(--secondary); margin-right: 10px;"></i> Professional, Experienced Team</li>
+</ul>
+</div>
+<div class="about-image">
+<img alt="Dental Services in Tenleytown - Connecticut Ave Dental Studio" src="https://images.unsplash.com/photo-1629909613654-28e377c37b09?auto=format&amp;fit=crop&amp;q=80">
+</div>
+</div>
+</section>
+
+<section class="section bg-light" id="services">
+<div class="container">
+<div class="text-center" style="max-width: 700px; margin: 0 auto;">
+<h2 style="margin-bottom: 20px;">Our Services in Tenleytown</h2>
+<p>At Connecticut Ave Dental Studio, we provide comprehensive dental care services to patients throughout Tenleytown and the greater Washington DC area. Our professional dental practice is committed to delivering quality oral healthcare in a comfortable, welcoming environment. We offer a full range of dental services designed to meet your family's needs, from routine preventive care and cleanings to restorative treatments and cosmetic procedures.</p>
+</div>
+<div class="services-grid">
+<div class="service-card">
+<div class="service-icon"><i class="fas fa-tooth"></i></div>
+<h3>Preventive Care</h3>
+<p>Comprehensive dental examinations, professional cleanings, and preventive treatments to maintain optimal oral health and prevent dental problems before they start.</p>
+</div>
+<div class="service-card">
+<div class="service-icon"><i class="fas fa-magic"></i></div>
+<h3>Cosmetic Dentistry</h3>
+<p>Transform your smile with our cosmetic dental services including teeth whitening, veneers, and smile makeovers designed to enhance your natural beauty.</p>
+</div>
+<div class="service-card">
+<div class="service-icon"><i class="fas fa-cog"></i></div>
+<h3>Restorative Treatments</h3>
+<p>Restore function and beauty to your smile with crowns, bridges, fillings, and other restorative treatments using modern techniques and materials.</p>
+</div>
+<div class="service-card">
+<div class="service-icon"><i class="fas fa-heartbeat"></i></div>
+<h3>Emergency Care</h3>
+<p>When dental emergencies occur, we're here to help with prompt, professional treatment to relieve pain and address urgent dental concerns.</p>
+</div>
+<div class="service-card">
+<div class="service-icon"><i class="fas fa-smile"></i></div>
+<h3>Family Dentistry</h3>
+<p>Comprehensive dental care for patients of all ages, providing gentle, professional treatment in a comfortable environment for the whole family.</p>
+</div>
+<div class="service-card">
+<div class="service-icon"><i class="fas fa-shield-alt"></i></div>
+<h3>Oral Health Maintenance</h3>
+<p>Ongoing oral health maintenance programs designed to keep your smile healthy and prevent future dental problems through regular care and monitoring.</p>
+</div>
+</div>
+</section>
+
+<section class="section" id="areas">
+<div class="container">
+<div class="text-center" style="max-width: 700px; margin: 0 auto;">
+<h2 style="margin-bottom: 20px;">Areas We Serve Near Tenleytown</h2>
+<p>Connecticut Ave Dental Studio proudly serves patients throughout Tenleytown and the surrounding Washington DC area. Our conveniently located dental practice provides comprehensive dental care services to families and individuals in the community. We welcome new patients from Tenleytown and neighboring areas who are seeking quality dental treatment in a professional, comfortable environment. Contact us today to schedule your appointment and experience exceptional dental care close to home.</p>
+</div>
+</div>
+</section>
+
+<section class="section testimonials">
+<div class="container">
+<h2>Why Choose Us in Tenleytown</h2>
+<div class="quote-box">
+<p>Discover why Tenleytown residents choose Connecticut Ave Dental Studio for their needs. Our commitment to quality service and customer satisfaction has made us a trusted choice in the community. We focus on delivering excellent results while ensuring a comfortable, professional experience for every client. Contact us today to learn how we can help you.</p>
+</div>
+</div>
+</section>
+
+<section class="section bg-light" id="faq">
+<div class="container">
+<div class="text-center" style="max-width: 800px; margin: 0 auto;">
+<h2 style="margin-bottom: 40px;">Frequently Asked Questions About Dental Services in Tenleytown</h2>
+<div style="text-align: left;">
+<h3>What dental services do you offer?</h3>
+<p style="margin-bottom: 30px;">Connecticut Ave Dental Studio provides comprehensive dental care services to meet all your oral health needs. Our professional dental practice focuses on delivering quality care in a comfortable environment.</p>
+
+<h3>Do you accept new patients?</h3>
+<p style="margin-bottom: 30px;">Yes, we welcome new patients to our Washington DC practice. Contact us today to schedule your initial consultation and begin your journey to optimal oral health.</p>
+
+<h3>How often should I visit the dentist?</h3>
+<p style="margin-bottom: 30px;">Most patients benefit from regular dental checkups and cleanings every six months. However, your specific needs may vary based on your oral health condition and our professional recommendations.</p>
+
+<h3>What should I expect during my first visit?</h3>
+<p style="margin-bottom: 30px;">Your initial appointment typically includes a comprehensive examination and discussion of your dental health goals. We'll work with you to develop a personalized treatment plan.</p>
+
+<h3>How do I schedule an appointment?</h3>
+<p>Contact us today to schedule your appointment at our convenient Washington DC location. We'll work with you to find a time that fits your schedule.</p>
+</div>
+</div>
+</div>
+</section>
+
+<section class="section" id="contact">
+<div class="container">
+<div class="text-center" style="margin-bottom: 50px;">
+<h2>Get Started with Dental Services in Tenleytown</h2>
+<p>Ready to transform your smile? Connecticut Ave Dental Studio in Washington DC provides comprehensive dental care services to help you achieve optimal oral health. Our professional team is committed to delivering quality dental services in a comfortable environment. Contact us today to schedule your appointment and take the first step toward better dental health.</p>
+</div>
+<div class="contact-wrapper">
+<div class="contact-info">
+<h3>Contact Information</h3>
+<div class="contact-row">
+<i class="fas fa-map-marker-alt"></i>
+<div>
+<strong>Address</strong><br>
+Connecticut Ave NW<br>
+Washington, DC 20008
+</div>
+</div>
+<div class="contact-row">
+<i class="fas fa-phone-alt"></i>
+<div>
+<strong>Phone</strong><br>
+(202) 555-0123
+</div>
+</div>
+<div class="contact-row">
+<i class="fas fa-envelope"></i>
+<div>
+<strong>Email</strong><br>
+info@connavedental.com
+</div>
+</div>
+<div class="contact-row">
+<i class="fas fa-clock"></i>
+<div>
+<strong>Hours</strong><br>
+Mon-Fri: 8AM-6PM<br>
+Sat: 9AM-3PM
+</div>
+</div>
+</div>
+<div class="map-container">
+<div style="width: 100%; height: 100%; background: #e5e7eb; display: flex; align-items: center; justify-content: center; color: #6b7280;">
+<i class="fas fa-map-marker-alt" style="font-size: 3rem;"></i>
+</div>
+</div>
+</div>
+</div>
+</section>
+
+<footer>
+<div class="container">
+<h3>Connecticut Ave Dental Studio</h3>
+<p>Professional Dental Care in Washington DC</p>
+<div class="social-icons">
+<a href="#"><i class="fab fa-facebook"></i></a>
+<a href="#"><i class="fab fa-instagram"></i></a>
+<a href="#"><i class="fab fa-google"></i></a>
+</div>
+<div class="copyright">
+<p>&copy; 2025 Connecticut Ave Dental Studio. All rights reserved. | Professional Dental Services in Tenleytown, Washington DC</p>
+</div>
+</div>
+</footer>
+</body>
+</html>
