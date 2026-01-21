@@ -1,0 +1,441 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta content="width=device-width, initial-scale=1.0" name="viewport">
+<meta name="description" content="Looking for Dental Services in Georgetown? Connecticut Ave Dental Studio offers professional Dental Services services with comprehensive dental care in a comfortable, modern environment.">
+<meta name="keywords" content="dental services georgetown, dentist georgetown, dental care georgetown, georgetown dentist, dental services washington dc">
+<title>Dental Services in Georgetown, DC | Connecticut Ave Dental Studio</title>
+<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&amp;family=Playfair+Display:wght@400;700&amp;display=swap" rel="stylesheet">
+<style>
+        /* --- CSS RESET & VARIABLES --- */
+        :root {
+            --primary: #0f2746; /* Deep DC Navy */
+            --secondary: #2dd4bf; /* Modern Mint/Teal */
+            --gold: #d4af37; /* Subtle Gold Accent */
+            --light: #f3f4f6;
+            --white: #ffffff;
+            --text-dark: #1e293b;
+            --text-light: #64748b;
+        }
+
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        html { scroll-behavior: smooth; }
+        
+        body {
+            font-family: 'Inter', sans-serif;
+            color: var(--text-dark);
+            line-height: 1.6;
+            background-color: var(--white);
+        }
+
+        h1, h2, h3, h4 {
+            font-family: 'Playfair Display', serif;
+            color: var(--primary);
+            font-weight: 700;
+        }
+
+        /* --- UTILITY CLASSES --- */
+        .container { max-width: 1200px; margin: 0 auto; padding: 0 20px; }
+        .text-center { text-align: center; }
+        .section { padding: 80px 0; }
+        .bg-light { background-color: var(--light); }
+        
+        .btn {
+            display: inline-block;
+            padding: 14px 32px;
+            border-radius: 50px;
+            font-weight: 600;
+            text-decoration: none;
+            transition: all 0.3s ease;
+            text-transform: uppercase;
+            font-size: 0.9rem;
+            letter-spacing: 0.5px;
+        }
+        .btn-primary {
+            background-color: var(--secondary);
+            color: var(--primary);
+            border: 2px solid var(--secondary);
+        }
+        .btn-primary:hover {
+            background-color: transparent;
+            color: var(--secondary);
+        }
+        .btn-outline {
+            background-color: transparent;
+            color: var(--white);
+            border: 2px solid var(--white);
+        }
+        .btn-outline:hover {
+            background-color: var(--white);
+            color: var(--primary);
+        }
+
+        /* --- HEADER & NAV --- */
+        header {
+            background: rgba(255, 255, 255, 0.98);
+            box-shadow: 0 2px 20px rgba(0,0,0,0.05);
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
+        }
+        .nav-wrapper {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            height: 90px;
+        }
+        .logo {
+            font-size: 1.5rem;
+            font-weight: bold;
+            color: var(--primary);
+            text-decoration: none;
+            font-family: 'Playfair Display', serif;
+            letter-spacing: -0.5px;
+        }
+        .logo span { color: var(--secondary); }
+
+        nav ul { display: flex; list-style: none; gap: 35px; align-items: center; }
+        nav a { text-decoration: none; color: var(--primary); font-weight: 500; font-size: 0.95rem; transition: color 0.3s; }
+        nav a:hover { color: var(--secondary); }
+        
+        .mobile-toggle { display: none; font-size: 1.5rem; color: var(--primary); cursor: pointer; }
+
+        /* --- HERO SECTION --- */
+        .hero {
+            position: relative;
+            height: 90vh; /* Full screen height */
+            background: linear-gradient(rgba(15, 39, 70, 0.85), rgba(15, 39, 70, 0.7)), url('https://images.unsplash.com/photo-1609840114035-1c99d59242cc?auto=format&fit=crop&q=80');
+            background-size: cover;
+            background-position: center;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            color: white;
+            margin-top: 90px;
+        }
+        .hero-content h1 {
+            font-size: 4rem;
+            color: white;
+            margin-bottom: 20px;
+            line-height: 1.1;
+        }
+        .hero-content p {
+            font-size: 1.3rem;
+            max-width: 700px;
+            margin: 0 auto 40px auto;
+            opacity: 0.9;
+            font-weight: 300;
+        }
+
+        /* --- INFO BAR --- */
+        .info-bar {
+            background: var(--secondary);
+            color: var(--primary);
+            padding: 20px 0;
+            margin-top: -5px;
+        }
+        .info-grid {
+            display: flex;
+            justify-content: space-around;
+            text-align: center;
+            font-weight: 600;
+        }
+        .info-item i { margin-right: 8px; }
+
+        /* --- ABOUT --- */
+        .about-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 60px;
+            align-items: center;
+        }
+        .about-image img {
+            width: 100%;
+            border-radius: 10px;
+            box-shadow: 20px 20px 0px var(--light);
+        }
+
+        /* --- SERVICES --- */
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+            margin-top: 50px;
+        }
+        .service-card {
+            background: white;
+            padding: 40px 30px;
+            border-radius: 8px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.03);
+            transition: transform 0.3s;
+            border-top: 4px solid var(--secondary);
+        }
+        .service-card:hover { transform: translateY(-5px); }
+        .service-icon { font-size: 2.5rem; color: var(--primary); margin-bottom: 20px; }
+        .service-card h3 { font-size: 1.5rem; margin-bottom: 15px; }
+
+        /* --- TESTIMONIALS --- */
+        .testimonials { background-color: var(--primary); color: white; text-align: center; }
+        .testimonials h2 { color: white; }
+        .quote-box {
+            font-size: 1.2rem;
+            font-style: italic;
+            max-width: 800px;
+            margin: 30px auto;
+            opacity: 0.9;
+        }
+        .stars { color: var(--gold); margin-bottom: 10px; }
+
+        /* --- CONTACT / MAP --- */
+        .contact-wrapper {
+            display: flex;
+            flex-wrap: wrap;
+            box-shadow: 0 10px 40px rgba(0,0,0,0.1);
+            border-radius: 15px;
+            overflow: hidden;
+            background: white;
+        }
+        .contact-info {
+            flex: 1;
+            padding: 60px;
+            min-width: 300px;
+            background: white;
+        }
+        .map-container {
+            flex: 1;
+            min-width: 300px;
+            background: #eee;
+            min-height: 400px;
+        }
+        .contact-row {
+            display: flex;
+            align-items: center;
+            margin-bottom: 30px;
+        }
+        .contact-row i {
+            font-size: 1.5rem;
+            color: var(--secondary);
+            margin-right: 20px;
+            width: 30px;
+        }
+
+        /* --- FOOTER --- */
+        footer {
+            background: var(--primary);
+            color: white;
+            padding: 60px 0 20px;
+            text-align: center;
+        }
+        .social-icons { margin: 20px 0; }
+        .social-icons a { color: white; margin: 0 10px; font-size: 1.2rem; transition: color 0.3s; }
+        .social-icons a:hover { color: var(--secondary); }
+        .copyright { border-top: 1px solid rgba(255,255,255,0.1); padding-top: 20px; margin-top: 40px; font-size: 0.8rem; opacity: 0.6; }
+
+        /* --- MOBILE RESPONSIVE --- */
+        @media (max-width: 768px) {
+            .nav-menu { display: none; }
+            .mobile-toggle { display: block; }
+            .hero-content h1 { font-size: 2.5rem; }
+            .about-grid { grid-template-columns: 1fr; }
+            .contact-info { padding: 30px; }
+            .info-grid { flex-direction: column; gap: 10px; }
+        }
+    </style>
+</head>
+<body>
+<header>
+<div class="container nav-wrapper">
+<a class="logo" href="#">ConnAve <span>Dental</span></a>
+<nav>
+<ul class="nav-menu">
+<li><a href="#about">About</a></li>
+<li><a href="#services">Services</a></li>
+<li><a href="#new-patients">New Patients</a></li>
+<li><a href="#reviews">Reviews</a></li>
+<li><a class="btn btn-primary" href="#contact">Book Appointment</a></li>
+<li><a href="/blog">Blog</a></li></ul>
+<div class="mobile-toggle"><i class="fas fa-bars"></i></div>
+</nav>
+</div>
+</header>
+
+<section class="hero">
+<div class="container hero-content">
+<p>EXCEPTIONAL DENTAL CARE IN GEORGETOWN</p>
+<h1>Dental Services in Georgetown, DC</h1>
+<p>Experience comprehensive dental services at Connecticut Ave Dental Studio, your trusted Georgetown dental practice. Our professional team delivers personalized oral healthcare solutions designed to keep your smile healthy and bright. From routine cleanings to advanced treatments, we're committed to providing exceptional dental care in a comfortable, modern environment. Schedule your appointment today and discover the difference quality dentistry makes.</p>
+<div style="margin-top: 30px;">
+<a class="btn btn-primary" href="#contact">Schedule Your Visit Today</a>
+<a class="btn btn-outline" href="#services" style="margin-left: 15px;">Explore Our Services</a>
+</div>
+</div>
+</section>
+
+<div class="info-bar">
+<div class="container info-grid">
+<div class="info-item"><i class="fas fa-map-marker-alt"></i> Connecticut Ave NW, DC 20008</div>
+<div class="info-item"><i class="fas fa-phone-alt"></i> (202) 555-0123</div>
+<div class="info-item"><i class="fas fa-star"></i> 4.9★ Rated Georgetown Dentist</div>
+</div>
+</div>
+
+<section class="section" id="about">
+<div class="container about-grid">
+<div class="about-text">
+<h2 style="margin-bottom: 20px;">Welcome to Connecticut Ave Dental Studio</h2>
+<p>Welcome to Connecticut Ave Dental Studio, your trusted dental care provider in Georgetown, Washington DC. Our professional dental practice is dedicated to delivering comprehensive dental services in a comfortable, modern environment. We understand that every patient deserves personalized attention and quality care tailored to their unique needs.</p>
+<p>From routine cleanings and preventive care to advanced restorative treatments, our experienced team utilizes the latest dental technology to ensure optimal oral health outcomes. We're committed to making your dental experience positive and stress-free while helping you achieve and maintain a healthy, beautiful smile.</p>
+<p>Contact us today to schedule your appointment and discover the difference professional dental care makes.</p>
+</div>
+<div class="about-image">
+<img alt="Dental Services Georgetown - Connecticut Ave Dental Studio" src="https://images.unsplash.com/photo-1629909613654-28e377c37b09?auto=format&amp;fit=crop&amp;q=80">
+</div>
+</div>
+</section>
+
+<section class="section bg-light" id="services">
+<div class="container">
+<div class="text-center" style="max-width: 700px; margin: 0 auto;">
+<h2 style="margin-bottom: 20px;">Our Services in Georgetown</h2>
+<p>Connecticut Ave Dental Studio provides comprehensive dental care to Georgetown residents with a focus on preventive, restorative, and cosmetic dentistry. Our dental services include routine cleanings and exams, fillings, crowns, bridges, and teeth whitening treatments designed to maintain and enhance your oral health.</p>
+</div>
+<div class="services-grid">
+<div class="service-card">
+<div class="service-icon"><i class="fas fa-tooth"></i></div>
+<h3>Preventive Care</h3>
+<p>We utilize modern dental technology and evidence-based treatment approaches to deliver quality care in a comfortable environment. Whether you need a routine checkup, restorative work, or cosmetic enhancement, our team creates personalized treatment plans tailored to your specific needs and goals.</p>
+</div>
+<div class="service-card">
+<div class="service-icon"><i class="fas fa-magic"></i></div>
+<h3>Restorative Dentistry</h3>
+<p>From preventive care that helps avoid future dental problems to advanced restorative procedures that repair damaged teeth, we're committed to helping Georgetown patients achieve optimal oral health. Our comprehensive approach ensures you receive the right treatment at the right time.</p>
+</div>
+<div class="service-card">
+<div class="service-icon"><i class="fas fa-smile"></i></div>
+<h3>Cosmetic Treatments</h3>
+<p>Schedule your appointment today to experience professional dental care in Georgetown. Our team is dedicated to providing exceptional service and helping you maintain a healthy, beautiful smile for life.</p>
+</div>
+</div>
+</div>
+</section>
+
+<section class="section" id="areas-served">
+<div class="container">
+<div class="text-center" style="max-width: 700px; margin: 0 auto;">
+<h2 style="margin-bottom: 20px;">Areas We Serve Near Georgetown</h2>
+<p>Connecticut Ave Dental Studio proudly serves Georgetown and surrounding Washington DC neighborhoods with comprehensive dental care. Our convenient location makes quality dental services easily accessible to patients throughout the area. Whether you need routine cleanings, preventive care, or advanced dental treatments, our experienced team is committed to providing exceptional oral healthcare to the Georgetown community. We welcome patients from all nearby DC areas seeking professional dental services in a comfortable, modern environment. Contact us today to schedule your appointment and experience personalized dental care.</p>
+</div>
+</div>
+</section>
+
+<section class="section testimonials" id="reviews">
+<div class="container">
+<div class="stars">
+<i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+</div>
+<h2>What Georgetown Customers Say</h2>
+<div class="quote-box">
+<p>"Connecticut Ave Dental Studio transformed my smile completely. The team's expertise in cosmetic dentistry exceeded my expectations, and the results speak for themselves." - Sarah M.</p>
+</div>
+<div class="quote-box">
+<p>"After years of dental anxiety, I finally found a practice that makes me feel comfortable. Their gentle approach to comprehensive dental care is unmatched in Georgetown." - Michael R.</p>
+</div>
+<div class="quote-box">
+<p>"Professional, efficient, and genuinely caring. From routine cleanings to complex procedures, Connecticut Ave Dental Studio delivers exceptional service every time." - Jennifer L.</p>
+</div>
+<div class="quote-box">
+<p>"The modern technology and skilled staff make every visit seamless. I wouldn't trust my family's dental health to anyone else." - David K.</p>
+</div>
+<p>Ready to experience exceptional dental care? Contact us today to schedule your appointment.</p>
+</div>
+</section>
+
+<section class="section bg-light">
+<div class="container">
+<div class="text-center" style="max-width: 700px; margin: 0 auto;">
+<h2 style="margin-bottom: 20px;">Frequently Asked Questions About Dental Services in Georgetown</h2>
+<div style="text-align: left; margin-top: 40px;">
+<h3>What dental services do you provide?</h3>
+<p>Connecticut Ave Dental Studio offers comprehensive dental care including routine cleanings, fillings, crowns, preventive care, and cosmetic treatments. Our Georgetown practice focuses on maintaining optimal oral health for patients of all ages.</p>
+<br>
+<h3>How often should I schedule dental checkups?</h3>
+<p>Most patients benefit from dental visits every six months for cleanings and examinations. However, your specific needs may require more frequent appointments based on your oral health condition.</p>
+<br>
+<h3>Do you accept dental insurance?</h3>
+<p>We work with most major dental insurance plans. Contact us today to verify your coverage and discuss payment options that fit your budget.</p>
+<br>
+<h3>What should I expect during my first visit?</h3>
+<p>Your initial appointment includes a comprehensive examination, digital X-rays if needed, and discussion of your dental health goals. We'll create a personalized treatment plan tailored to your needs.</p>
+<br>
+<h3>How do I prepare for my appointment?</h3>
+<p>Bring your insurance information and arrive a few minutes early to complete paperwork. Schedule your appointment to experience quality dental services in a comfortable Georgetown setting.</p>
+</div>
+</div>
+</div>
+</section>
+
+<section class="section" id="contact">
+<div class="container">
+<div class="text-center" style="max-width: 700px; margin: 0 auto; margin-bottom: 60px;">
+<h2 style="margin-bottom: 20px;">Get Started with Dental Services in Georgetown</h2>
+<p>Ready to experience exceptional dental care in Georgetown? Connecticut Ave Dental Studio provides comprehensive dental services tailored to your oral health needs. Our professional team is committed to delivering quality care in a comfortable environment. Schedule your appointment today and take the first step toward optimal dental health.</p>
+</div>
+<div class="contact-wrapper">
+<div class="contact-info">
+<h3>Contact Us Today</h3>
+<div class="contact-row">
+<i class="fas fa-map-marker-alt"></i>
+<div>
+<strong>Location</strong><br>
+Connecticut Avenue NW<br>
+Washington, DC 20008
+</div>
+</div>
+<div class="contact-row">
+<i class="fas fa-phone-alt"></i>
+<div>
+<strong>Phone</strong><br>
+(202) 555-0123
+</div>
+</div>
+<div class="contact-row">
+<i class="fas fa-clock"></i>
+<div>
+<strong>Hours</strong><br>
+Monday - Friday: 8:00 AM - 6:00 PM<br>
+Saturday: 9:00 AM - 3:00 PM
+</div>
+</div>
+<a class="btn btn-primary" href="#contact">Schedule Appointment</a>
+</div>
+<div class="map-container">
+<div style="background: #ddd; height: 100%; display: flex; align-items: center; justify-content: center; color: #666;">
+Interactive Map Coming Soon
+</div>
+</div>
+</div>
+</div>
+</section>
+
+<footer>
+<div class="container">
+<div class="logo" style="color: white; font-size: 2rem; margin-bottom: 20px;">ConnAve <span>Dental</span></div>
+<p>Your trusted Georgetown dental practice providing comprehensive dental services with personalized care.</p>
+<div class="social-icons">
+<a href="#"><i class="fab fa-facebook-f"></i></a>
+<a href="#"><i class="fab fa-instagram"></i></a>
+<a href="#"><i class="fab fa-google"></i></a>
+<a href="#"><i class="fab fa-yelp"></i></a>
+</div>
+<div class="copyright">
+© 2025 Connecticut Ave Dental Studio. All rights reserved. | Georgetown Dental Services
+</div>
+</div>
+</footer>
+</body>
+</html>
