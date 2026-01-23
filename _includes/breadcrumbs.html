@@ -1,0 +1,62 @@
+<!-- Breadcrumb Navigation -->
+<nav class="breadcrumb-nav" aria-label="Breadcrumb">
+  <ol class="breadcrumb-list" itemscope itemtype="https://schema.org/BreadcrumbList">
+    {% assign path_parts = page.url | split: '/' %}
+    {% assign breadcrumb_url = '' %}
+
+    <!-- Home -->
+    <li class="breadcrumb-item" itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
+      <a class="breadcrumb-link" itemprop="item" href="{{ site.baseurl }}/">
+        <span itemprop="name">{{ site.title | default: "Home" }}</span>
+      </a>
+      <meta itemprop="position" content="1" />
+    </li>
+
+    {% for part in path_parts %}
+      {% if part != '' %}
+        {% assign breadcrumb_url = breadcrumb_url | append: '/' | append: part %}
+        {% assign position = forloop.index | plus: 1 %}
+        {% assign is_last = forloop.last %}
+
+        <li class="breadcrumb-item" itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
+          {% if is_last %}
+            <span class="breadcrumb-current" itemprop="name">{{ page.title | default: part | replace: '-', ' ' | capitalize }}</span>
+          {% else %}
+            <a class="breadcrumb-link" itemprop="item" href="{{ site.baseurl }}{{ breadcrumb_url }}/">
+              <span itemprop="name">{{ part | replace: '-', ' ' | capitalize }}</span>
+            </a>
+          {% endif %}
+          <meta itemprop="position" content="{{ position }}" />
+        </li>
+      {% endif %}
+    {% endfor %}
+  </ol>
+</nav>
+
+<!-- BreadcrumbList JSON-LD Schema -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "{{ site.title | default: 'Home' }}",
+      "item": "{{ site.url }}{{ site.baseurl }}/"
+    }
+    {% for part in path_parts %}
+      {% if part != '' %}
+        {% assign breadcrumb_url = breadcrumb_url | append: '/' | append: part %}
+        {% assign position = forloop.index | plus: 1 %}
+        ,{
+          "@type": "ListItem",
+          "position": {{ position }},
+          "name": "{% if forloop.last %}{{ page.title | default: part | replace: '-', ' ' | capitalize }}{% else %}{{ part | replace: '-', ' ' | capitalize }}{% endif %}",
+          "item": "{{ site.url }}{{ site.baseurl }}{{ breadcrumb_url }}{% unless forloop.last %}/{% endunless %}"
+        }
+      {% endif %}
+    {% endfor %}
+  ]
+}
+</script>
