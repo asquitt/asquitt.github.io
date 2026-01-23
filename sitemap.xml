@@ -11,22 +11,67 @@
     <priority>0.8</priority>
   </url>
   <url>
+    <loc>https://asquitt.github.io/adams-morgan/dental-services/</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
     <loc>https://asquitt.github.io/blog</loc>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://asquitt.github.io/blog/how-to-choose-the-right-dentist-on-connecticut-avenue/</loc>
+    <loc>https://asquitt.github.io/blog/professional-teeth-whitening-washington-dc-transform-your-smile/</loc>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://asquitt.github.io/blog/top-5-cosmetic-dentistry-procedures-in-washington-dc/</loc>
+    <loc>https://asquitt.github.io/capitol-hill/dental-services/</loc>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://asquitt.github.io/contact</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://asquitt.github.io/create-technology-and-equipment-showcase-page</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://asquitt.github.io/dupont-circle/dental-services/</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://asquitt.github.io/foggy-bottom/dental-services/</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://asquitt.github.io/georgetown/dental-services/</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://asquitt.github.io/privacy</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://asquitt.github.io/services</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://asquitt.github.io/tenleytown/dental-services/</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://asquitt.github.io/terms</loc>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
@@ -37,6 +82,11 @@
   </url>
   <url>
     <loc>https://asquitt.github.io/washington/dc/home-services/</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://asquitt.github.io/woodley-park/dental-services/</loc>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
