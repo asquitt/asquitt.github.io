@@ -1,8 +1,0 @@
-# robots.txt - SEO crawler directives
-User-agent: *
-Allow: /
-Disallow: /admin/
-Disallow: /_*/
-
-# Sitemap
-Sitemap: https://asquitt.github.io/sitemap.xml
