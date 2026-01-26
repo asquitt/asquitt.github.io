@@ -11,6 +11,11 @@
     <priority>0.8</priority>
   </url>
   <url>
+    <loc>https://asquitt.github.io/add-faq-schema-markup-to-3-existing-blog-posts</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
     <loc>https://asquitt.github.io/blog</loc>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
