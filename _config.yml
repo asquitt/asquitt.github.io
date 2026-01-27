@@ -1,0 +1,22 @@
+# Jekyll configuration
+title: Connecticut Ave Dental Studio
+description: Premier dental care in Cleveland Park, DC 20008. Modern dentistry with advanced technology, sedation options, and weekend appointments. Book your visit today!
+url: ""
+baseurl: ""
+
+# Build settings
+markdown: kramdown
+permalink: /blog/:title/
+
+# Plugins
+plugins:
+  - jekyll-feed
+  - jekyll-seo-tag
+
+# Collections
+defaults:
+  - scope:
+      path: "_posts"
+      type: "posts"
+    values:
+      layout: "post"
