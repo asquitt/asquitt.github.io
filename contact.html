@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Contact</title>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans:wght@300;400;600;700&family=Noto+Serif:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: 'Noto Sans', sans-serif; color: #333; }
+        .header { background: #8B0000; position: sticky; top: 0; z-index: 100; }
+        .header-top { background: #5C0000; padding: 8px 20px; display: flex; justify-content: space-between; align-items: center; font-size: 13px; color: #ffcccc; }
+        .nav-main { display: flex; justify-content: space-between; align-items: center; padding: 12px 40px; max-width: 1200px; margin: 0 auto; }
+        .logo { font-family: 'Noto Serif', serif; font-size: 28px; color: #FFD700; font-weight: 700; text-decoration: none; }
+        .logo span { color: #fff; font-size: 14px; display: block; font-family: 'Noto Sans', sans-serif; font-weight: 300; }
+        .nav-links { display: flex; gap: 28px; list-style: none; }
+        .nav-links a { color: #fff; text-decoration: none; font-size: 14px; font-weight: 600; text-transform: uppercase; }
+        .nav-links a:hover { color: #FFD700; }
+        .page-header { background: linear-gradient(rgba(139,0,0,0.9), rgba(92,0,0,0.9)); padding: 60px 40px; text-align: center; color: #fff; }
+        .page-header h1 { font-family: 'Noto Serif', serif; font-size: 42px; }
+        .section { padding: 60px 40px; max-width: 900px; margin: 0 auto; }
+        .contact-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 50px; }
+        .contact-grid h2 { font-family: 'Noto Serif', serif; font-size: 24px; color: #8B0000; margin-bottom: 16px; }
+        .contact-grid p { line-height: 1.8; color: #555; margin-bottom: 12px; }
+        .contact-form input, .contact-form textarea { width: 100%; padding: 14px; margin-bottom: 16px; border: 1px solid #ddd; border-radius: 4px; font-size: 14px; }
+        .contact-form textarea { height: 120px; }
+        .btn-submit { background: #8B0000; color: #fff; border: none; padding: 14px 36px; font-size: 15px; font-weight: 700; cursor: pointer; border-radius: 4px; text-transform: uppercase; }
+        .map-container { margin-top: 40px; }
+        .map-container iframe { width: 100%; height: 350px; border: none; border-radius: 8px; }
+        .footer { background: #0a0a0a; color: #999; padding: 40px; text-align: center; font-size: 13px; }
+        .footer a { color: #FFD700; text-decoration: none; }
+    </style>
+</head>
+<body>
+<header class="header">
+    <div class="header-top"><span>📞 (202) 555-0188</span><span>📍 1425 H Street NW, Washington, DC 20005</span><span>🕐 Mon-Sun: 11AM - 10PM</span></div>
+    <nav class="nav-main">
+        <a href="index.html" class="logo">Beijing Restaurant<span>Authentic Chinese Cuisine Since 1998</span></a>
+        <ul class="nav-links"><li><a href="index.html">Home</a></li><li><a href="menu.html">Menu</a></li><li><a href="about.html">About</a></li><li><a href="gallery.html">Gallery</a></li><li><a href="catering.html">Catering</a></li><li><a href="contact.html">Contact</a></li></ul>
+    </nav>
+</header>
+<div class="page-header"><h1>Contact Us</h1><p>We'd love to hear from you</p></div>
+<div class="section">
+    <div class="contact-grid">
+        <div>
+            <h2>Get In Touch</h2>
+            <p><strong>Address:</strong><br>1425 H St NW, Washington DC, 20005</p>
+            <p><strong>Phone:</strong><br>202-555-0188</p>
+            <p><strong>Email:</strong><br>info@beijingrestaurantdc.com</p>
+            <h2>Hours of Operation</h2>
+            <p>Mon-Thu: 11AM - 9:30PM<br>Fri-Sat: 11AM - 10:30PM<br>Sun: Noon - 9PM</p>
+        </div>
+        <div>
+            <h2>Send a Message</h2>
+            <form class="contact-form">
+                <input type="text" placeholder="Name">
+                <input type="email" placeholder="Email">
+                <input type="tel" placeholder="Phone">
+                <textarea placeholder="Message"></textarea>
+                <button type="submit" class="btn-submit">Submit</button>
+            </form>
+        </div>
+    </div>
+    <div class="map-container">
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3105.0!2d-77.0319!3d38.9001!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMzjCsDU0JzAwLjQiTiA3N8KwMDEnNTQuOCJX!5e0!3m2!1sen!2sus!4v1"></iframe>
+    </div>
+</div>
+<footer class="footer"><p>&copy; 2024 Beijing Restaurant.</p><p style="margin-top:8px;"><a href="index.html">Home</a> | <a href="menu.html">Menu</a> | <a href="about.html">About</a> | <a href="contact.html">Contact</a></p></footer>
+</body>
+</html>
