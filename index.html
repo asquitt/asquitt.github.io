@@ -3,94 +3,448 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <!-- ISSUE: duplicate_title (same as services.html) -->
-    <title>Sunrise Dental Care - Quality Dental Services in Austin TX</title>
-    <!-- ISSUE: missing_canonical -->
-    <meta name="description" content="Sunrise Dental Care provides comprehensive dental services in Austin, Texas. Family dentistry, cosmetic procedures, and emergency care.">
-    <!-- ISSUE: render_blocking_resources - large inline CSS block in head -->
+    <title>Connecticut Ave Dental Studio | Washington DC</title>
+
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&family=Playfair+Display:wght@400;700&display=swap" rel="stylesheet">
+
     <style>
-        .homepage-banner { position: relative; overflow: hidden; }
-        .homepage-banner::before { content: ''; position: absolute; top: 0; left: 0; right: 0; bottom: 0; background: rgba(0,0,0,0.3); }
-        .homepage-features { display: grid; grid-template-columns: repeat(4, 1fr); gap: 2rem; padding: 3rem 0; }
-        .homepage-features .feature-item { text-align: center; padding: 2rem; border-radius: 12px; background: #f0f7f4; transition: transform 0.3s ease, box-shadow 0.3s ease; }
-        .homepage-features .feature-item:hover { transform: translateY(-5px); box-shadow: 0 8px 25px rgba(0,0,0,0.1); }
-        .homepage-features .feature-icon { width: 64px; height: 64px; margin: 0 auto 1rem; background: #1a6b4a; border-radius: 50%; display: flex; align-items: center; justify-content: center; color: #fff; font-size: 1.5rem; }
-        .testimonial-slider { overflow: hidden; position: relative; padding: 2rem 0; }
-        .testimonial-slide { min-width: 100%; padding: 2rem; background: #f9f9f9; border-radius: 12px; border-left: 4px solid #1a6b4a; }
-        .testimonial-slide .stars { color: #f5a623; font-size: 1.2rem; margin-bottom: 0.5rem; }
-        .testimonial-slide .author { font-weight: bold; margin-top: 1rem; color: #1a6b4a; }
-        .cta-section { background: linear-gradient(135deg, #1a6b4a, #2d9b6e); color: #fff; text-align: center; padding: 4rem 2rem; border-radius: 12px; margin: 3rem 0; }
-        .cta-section h2 { color: #fff; font-size: 2rem; margin-bottom: 1rem; }
-        .cta-section .btn { background: #fff; color: #1a6b4a; font-weight: bold; }
-        .insurance-logos { display: flex; flex-wrap: wrap; gap: 2rem; justify-content: center; align-items: center; padding: 2rem 0; opacity: 0.7; }
-        .map-section { border-radius: 12px; overflow: hidden; margin: 2rem 0; height: 300px; background: #e0e0e0; }
-        .hours-table { width: 100%; border-collapse: collapse; margin: 1rem 0; }
-        .hours-table td { padding: 0.75rem 1rem; border-bottom: 1px solid #eee; }
-        .hours-table tr:last-child td { border-bottom: none; }
-        .emergency-banner { background: #c0392b; color: #fff; text-align: center; padding: 0.75rem; font-weight: bold; }
-        .emergency-banner a { color: #fff; text-decoration: underline; }
+        /* --- CSS RESET & VARIABLES --- */
+        :root {
+            --primary: #0f2746; /* Deep DC Navy */
+            --secondary: #2dd4bf; /* Modern Mint/Teal */
+            --gold: #d4af37; /* Subtle Gold Accent */
+            --light: #f3f4f6;
+            --white: #ffffff;
+            --text-dark: #1e293b;
+            --text-light: #64748b;
+        }
+
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        html { scroll-behavior: smooth; }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            color: var(--text-dark);
+            line-height: 1.6;
+            background-color: var(--white);
+        }
+
+        h1, h2, h3, h4 {
+            font-family: 'Playfair Display', serif;
+            color: var(--primary);
+            font-weight: 700;
+        }
+
+        /* --- UTILITY CLASSES --- */
+        .container { max-width: 1200px; margin: 0 auto; padding: 0 20px; }
+        .text-center { text-align: center; }
+        .section { padding: 80px 0; }
+        .bg-light { background-color: var(--light); }
+
+        .btn {
+            display: inline-block;
+            padding: 14px 32px;
+            border-radius: 50px;
+            font-weight: 600;
+            text-decoration: none;
+            transition: all 0.3s ease;
+            text-transform: uppercase;
+            font-size: 0.9rem;
+            letter-spacing: 0.5px;
+        }
+        .btn-primary {
+            background-color: var(--secondary);
+            color: var(--primary);
+            border: 2px solid var(--secondary);
+        }
+        .btn-primary:hover {
+            background-color: transparent;
+            color: var(--secondary);
+        }
+        .btn-outline {
+            background-color: transparent;
+            color: var(--white);
+            border: 2px solid var(--white);
+        }
+        .btn-outline:hover {
+            background-color: var(--white);
+            color: var(--primary);
+        }
+
+        /* --- HEADER & NAV --- */
+        header {
+            background: rgba(255, 255, 255, 0.98);
+            box-shadow: 0 2px 20px rgba(0,0,0,0.05);
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
+        }
+        .nav-wrapper {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            height: 90px;
+        }
+        .logo {
+            font-size: 1.5rem;
+            font-weight: bold;
+            color: var(--primary);
+            text-decoration: none;
+            font-family: 'Playfair Display', serif;
+            letter-spacing: -0.5px;
+        }
+        .logo span { color: var(--secondary); }
+
+        nav ul { display: flex; list-style: none; gap: 35px; align-items: center; }
+        nav a { text-decoration: none; color: var(--primary); font-weight: 500; font-size: 0.95rem; transition: color 0.3s; }
+        nav a:hover { color: var(--secondary); }
+
+        .mobile-toggle { display: none; font-size: 1.5rem; color: var(--primary); cursor: pointer; }
+
+        /* --- HERO SECTION --- */
+        .hero {
+            position: relative;
+            height: 90vh; /* Full screen height */
+            background: linear-gradient(rgba(15, 39, 70, 0.85), rgba(15, 39, 70, 0.7)), url('https://images.unsplash.com/photo-1609840114035-1c99d59242cc?auto=format&fit=crop&q=80');
+            background-size: cover;
+            background-position: center;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            color: white;
+            margin-top: 90px;
+        }
+        .hero-content h1 {
+            font-size: 4rem;
+            color: white;
+            margin-bottom: 20px;
+            line-height: 1.1;
+        }
+        .hero-content p {
+            font-size: 1.3rem;
+            max-width: 700px;
+            margin: 0 auto 40px auto;
+            opacity: 0.9;
+            font-weight: 300;
+        }
+
+        /* --- INFO BAR --- */
+        .info-bar {
+            background: var(--secondary);
+            color: var(--primary);
+            padding: 20px 0;
+            margin-top: -5px;
+        }
+        .info-grid {
+            display: flex;
+            justify-content: space-around;
+            text-align: center;
+            font-weight: 600;
+        }
+        .info-item i { margin-right: 8px; }
+
+        /* --- ABOUT --- */
+        .about-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 60px;
+            align-items: center;
+        }
+        .about-image img {
+            width: 100%;
+            border-radius: 10px;
+            box-shadow: 20px 20px 0px var(--light);
+        }
+
+        /* --- SERVICES --- */
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+            margin-top: 50px;
+        }
+        .service-card {
+            background: white;
+            padding: 40px 30px;
+            border-radius: 8px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.03);
+            transition: transform 0.3s;
+            border-top: 4px solid var(--secondary);
+        }
+        .service-card:hover { transform: translateY(-5px); }
+        .service-icon { font-size: 2.5rem; color: var(--primary); margin-bottom: 20px; }
+        .service-card h3 { font-size: 1.5rem; margin-bottom: 15px; }
+
+        /* --- TESTIMONIALS --- */
+        .testimonials { background-color: var(--primary); color: white; text-align: center; }
+        .testimonials h2 { color: white; }
+        .quote-box {
+            font-size: 1.2rem;
+            font-style: italic;
+            max-width: 800px;
+            margin: 30px auto;
+            opacity: 0.9;
+        }
+        .stars { color: var(--gold); margin-bottom: 10px; }
+
+        /* --- CONTACT / MAP --- */
+        .contact-wrapper {
+            display: flex;
+            flex-wrap: wrap;
+            box-shadow: 0 10px 40px rgba(0,0,0,0.1);
+            border-radius: 15px;
+            overflow: hidden;
+            background: white;
+        }
+        .contact-info {
+            flex: 1;
+            padding: 60px;
+            min-width: 300px;
+            background: white;
+        }
+        .map-container {
+            flex: 1;
+            min-width: 300px;
+            background: #eee;
+            min-height: 400px;
+        }
+        .contact-row {
+            display: flex;
+            align-items: center;
+            margin-bottom: 30px;
+        }
+        .contact-row i {
+            font-size: 1.5rem;
+            color: var(--secondary);
+            margin-right: 20px;
+            width: 30px;
+        }
+
+        /* --- FOOTER --- */
+        footer {
+            background: var(--primary);
+            color: white;
+            padding: 60px 0 20px;
+            text-align: center;
+        }
+        .social-icons { margin: 20px 0; }
+        .social-icons a { color: white; margin: 0 10px; font-size: 1.2rem; transition: color 0.3s; }
+        .social-icons a:hover { color: var(--secondary); }
+        .copyright { border-top: 1px solid rgba(255,255,255,0.1); padding-top: 20px; margin-top: 40px; font-size: 0.8rem; opacity: 0.6; }
+
+        /* --- MOBILE RESPONSIVE --- */
+        @media (max-width: 768px) {
+            .nav-menu { display: none; }
+            .mobile-toggle { display: block; }
+            .hero-content h1 { font-size: 2.5rem; }
+            .about-grid { grid-template-columns: 1fr; }
+            .contact-info { padding: 30px; }
+            .info-grid { flex-direction: column; gap: 10px; }
+        }
     </style>
-    <!-- ISSUE: render_blocking_resources - JS without defer/async -->
-    <script src="https://cdn.example.com/analytics.js"></script>
-    <script src="https://cdn.example.com/tracking.js"></script>
-    <link rel="stylesheet" href="style.css">
-    <!-- ISSUE: missing_schema - no structured data -->
 </head>
 <body>
-    <nav>
-        <a href="index.html" class="logo">Sunrise Dental Care</a>
-        <ul>
-            <li><a href="index.html">Home</a></li>
-            <li><a href="services.html">Services</a></li>
-            <li><a href="about.html">About</a></li>
-            <li><a href="contact.html">Contact</a></li>
-            <li><a href="blog.html">Blog</a></li>
-            <li><a href="gallery.html">Gallery</a></li>
-            <li><a href="page_2_final_v3.html">Testimonials</a></li>
-        </ul>
-    </nav>
-    <!-- NOTE: No link to orphan-page.html anywhere on this site -->
 
-    <div class="hero">
-        <h1>Welcome to Sunrise Dental Care</h1>
-        <p>Your trusted family dentist in Austin, Texas. We provide compassionate, comprehensive dental care for patients of all ages.</p>
-        <a href="contact.html" class="btn">Schedule an Appointment</a>
-    </div>
+    <header>
+        <div class="container nav-wrapper">
+            <a href="#" class="logo">ConnAve <span>Dental</span></a>
+            <nav>
+                <ul class="nav-menu">
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#services">Services</a></li>
+                    <li><a href="#new-patients">New Patients</a></li>
+                    <li><a href="#reviews">Reviews</a></li>
+                    <li><a href="#contact" class="btn btn-primary">Book Visit</a></li>
+                </ul>
+                <div class="mobile-toggle"><i class="fas fa-bars"></i></div>
+            </nav>
+        </div>
+    </header>
 
-    <div class="container">
-        <h2>Why Choose Sunrise Dental Care?</h2>
-        <p>At Sunrise Dental Care, we believe everyone deserves a healthy, beautiful smile. Our experienced team of dental professionals is committed to providing the highest quality care in a comfortable, welcoming environment. Located in the heart of Austin, Texas, we have been serving families in the greater Austin area for over 15 years.</p>
-
-        <p>Our state-of-the-art facility features the latest dental technology, including digital X-rays, intraoral cameras, and laser dentistry equipment. We stay at the forefront of dental innovation to ensure our patients receive the most effective and comfortable treatments available. Whether you need a routine cleaning, cosmetic enhancement, or complex restorative procedure, our team has the expertise to help.</p>
-
-        <div class="card-grid">
-            <div class="card">
-                <h3>General Dentistry</h3>
-                <p>Comprehensive exams, cleanings, fillings, and preventive care to maintain your oral health. We use gentle techniques and modern equipment to make every visit comfortable.</p>
-            </div>
-            <div class="card">
-                <h3>Cosmetic Dentistry</h3>
-                <p>Teeth whitening, veneers, bonding, and smile makeovers to give you the confident smile you deserve. Our cosmetic treatments are tailored to your unique goals.</p>
-            </div>
-            <div class="card">
-                <h3>Emergency Care</h3>
-                <p>Same-day appointments available for dental emergencies. Whether it is a toothache, broken tooth, or knocked-out tooth, we are here when you need us most.</p>
+    <section class="hero">
+        <div class="container hero-content">
+            <p>SERVING WASHINGTON DC 20008</p>
+            <h1>Refined Dentistry on<br>Connecticut Avenue</h1>
+            <p>Experience world-class dental care in the heart of Cleveland Park. Modern technology, neighborhood warmth, and a patient-first approach.</p>
+            <div style="margin-top: 30px;">
+                <a href="#contact" class="btn btn-primary">Book Appointment</a>
+                <a href="#services" class="btn btn-outline" style="margin-left: 15px;">Explore Services</a>
             </div>
         </div>
+    </section>
 
-        <h2>Our Commitment to You</h2>
-        <p>We understand that visiting the dentist can be stressful for some patients. That is why we prioritize creating a calm, reassuring atmosphere from the moment you walk through our doors. Our friendly staff will greet you with a smile, and our dental team will take the time to explain every procedure and answer all of your questions.</p>
-
-        <p>We accept most major dental insurance plans and offer flexible financing options to make quality dental care accessible to everyone. New patients are always welcome, and we offer special introductory rates for first-time visitors. Contact us today to schedule your appointment and experience the Sunrise Dental difference.</p>
-
-        <h2>Serving the Austin Community</h2>
-        <p>Conveniently located at 4521 Medical Parkway in Austin, TX, we serve patients from across the greater Austin area including Round Rock, Cedar Park, Pflugerville, Georgetown, and Lakeway. Our office is easily accessible with ample free parking available for all patients.</p>
-        <p>Office hours are Monday through Friday from 8:00 AM to 5:00 PM, with Saturday appointments available by request. We strive to accommodate your busy schedule and minimize wait times so you can get back to your day quickly.</p>
+    <div class="info-bar">
+        <div class="container info-grid">
+            <div class="info-item"><i class="fas fa-map-marker-alt"></i> Connecticut Ave NW, DC 20008</div>
+            <div class="info-item"><i class="fas fa-phone-alt"></i> (202) 555-0123</div>
+            <div class="info-item"><i class="fas fa-star"></i> 5-Star Rated on Google</div>
+        </div>
     </div>
 
+    <section class="section" id="about">
+        <div class="container about-grid">
+            <div class="about-text">
+                <h3>Welcome to ConnAve Dental</h3>
+                <h2 style="margin-bottom: 20px;">Your Neighborhood Dental Studio</h2>
+                <p>Located in the historic 20008 zip code, we bridge the gap between clinical excellence and luxury comfort.</p>
+                <p>We understand that visiting the dentist isn't everyone's favorite activity. That's why we've designed our studio to feel less like a clinic and more like a lounge. From noise-canceling headphones to warm towels, we prioritize your relaxation.</p>
+                <br>
+                <ul style="list-style: none;">
+                    <li style="margin-bottom: 10px;"><i class="fas fa-check" style="color: var(--secondary); margin-right: 10px;"></i> Advanced 3D Imaging</li>
+                    <li style="margin-bottom: 10px;"><i class="fas fa-check" style="color: var(--secondary); margin-right: 10px;"></i> Sedation Dentistry Options</li>
+                    <li style="margin-bottom: 10px;"><i class="fas fa-check" style="color: var(--secondary); margin-right: 10px;"></i> Weekend Appointments Available</li>
+                </ul>
+            </div>
+            <div class="about-image">
+                <img src="https://images.unsplash.com/photo-1629909613654-28e377c37b09?auto=format&fit=crop&q=80" alt="Modern Dental Office DC">
+            </div>
+        </div>
+    </section>
+
+    <section class="section bg-light" id="services">
+        <div class="container">
+            <div class="text-center" style="max-width: 700px; margin: 0 auto;">
+                <h3>Comprehensive Care</h3>
+                <h2 style="margin-bottom: 20px;">Our Services</h2>
+                <p>Whether you need a routine cleaning or a complete smile makeover, our team of specialists is here for you.</p>
+            </div>
+
+            <div class="services-grid">
+                <div class="service-card">
+                    <div class="service-icon"><i class="fas fa-tooth"></i></div>
+                    <h3>General Dentistry</h3>
+                    <p>Routine exams, ultrasonic cleanings, and oral cancer screenings to maintain optimal health.</p>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon"><i class="fas fa-magic"></i></div>
+                    <h3>Cosmetic Design</h3>
+                    <p>Porcelain veneers, professional whitening, and bonding to craft your perfect "Capitol Smile."</p>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon"><i class="fas fa-smile"></i></div>
+                    <h3>Invisalign</h3>
+                    <p>We are a Diamond Plus Invisalign provider. Straighten your teeth discreetly without metal.</p>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon"><i class="fas fa-heartbeat"></i></div>
+                    <h3>Emergency Care</h3>
+                    <p>Same-day appointments for toothaches, chipped teeth, or lost crowns. We are here when you need us.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="section testimonials" id="reviews">
+        <div class="container">
+            <div class="stars">
+                <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+            </div>
+            <h2>"Best Dentist in DC!"</h2>
+            <div class="quote-box">
+                "I've lived in Cleveland Park for 10 years and finally found a dentist I trust. The office is beautiful, the staff is incredibly kind, and the location on Connecticut Ave is perfect."
+            </div>
+            <p style="font-weight: bold;">— Sarah J., Washington DC</p>
+        </div>
+    </section>
+
+    <section class="section" id="contact">
+        <div class="container">
+            <div class="text-center" style="margin-bottom: 50px;">
+                <h2>Visit Our Studio</h2>
+                <p>We are accepting new patients in the 20008 area.</p>
+            </div>
+
+            <div class="contact-wrapper">
+                <div class="contact-info">
+                    <h3 style="margin-bottom: 30px; color: var(--primary);">Contact Details</h3>
+
+                    <div class="contact-row">
+                        <i class="fas fa-map-pin"></i>
+                        <div>
+                            <strong>Address</strong><br>
+                            3501 Connecticut Ave NW<br>
+                            Washington, DC 20008
+                        </div>
+                    </div>
+
+                    <div class="contact-row">
+                        <i class="fas fa-clock"></i>
+                        <div>
+                            <strong>Hours</strong><br>
+                            Mon - Fri: 8:00 AM - 6:00 PM<br>
+                            Sat: 9:00 AM - 2:00 PM
+                        </div>
+                    </div>
+
+                    <div class="contact-row">
+                        <i class="fas fa-phone"></i>
+                        <div>
+                            <strong>Phone</strong><br>
+                            (202) 555-0123
+                        </div>
+                    </div>
+
+                    <div class="contact-row">
+                        <i class="fas fa-envelope"></i>
+                        <div>
+                            <strong>Email</strong><br>
+                            hello@connavedental.com
+                        </div>
+                    </div>
+
+                    <a href="#" class="btn btn-primary" style="margin-top: 20px; width: 100%; text-align: center;">Book Appointment Online</a>
+                </div>
+
+                <div class="map-container">
+                    <iframe
+                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3103.886026857997!2d-77.058!3d38.935!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89b7c83b8b8b8b8b%3A0x8b8b8b8b8b8b8b8b!2sConnecticut%20Ave%20NW%2C%20Washington%2C%20DC%2020008!5e0!3m2!1sen!2sus!4v1620000000000!5m2!1sen!2sus"
+                        width="100%"
+                        height="100%"
+                        style="border:0;"
+                        allowfullscreen=""
+                        loading="lazy">
+                    </iframe>
+                </div>
+            </div>
+        </div>
+    </section>
+
     <footer>
-        <p>&copy; 2024 Sunrise Dental Care | 4521 Medical Parkway, Austin, TX 78756 | (512) 555-0147</p>
-        <p><a href="contact.html">Contact Us</a> | <a href="about.html">About Us</a> | <a href="services.html">Our Services</a></p>
+        <div class="container">
+            <h2>ConnAve Dental</h2>
+            <p>Refined Dentistry in Washington DC</p>
+            <div class="social-icons">
+                <a href="#"><i class="fab fa-instagram"></i></a>
+                <a href="#"><i class="fab fa-facebook-f"></i></a>
+                <a href="#"><i class="fab fa-twitter"></i></a>
+            </div>
+            <div class="copyright">
+                © 2026 Connecticut Ave Dental Studio. All Rights Reserved.
+            </div>
+        </div>
     </footer>
+
+    <script>
+        document.querySelector('.mobile-toggle').addEventListener('click', function() {
+            const nav = document.querySelector('.nav-menu');
+            if(nav.style.display === 'flex') {
+                nav.style.display = 'none';
+            } else {
+                nav.style.display = 'flex';
+                nav.style.flexDirection = 'column';
+                nav.style.position = 'absolute';
+                nav.style.top = '90px';
+                nav.style.left = '0';
+                nav.style.width = '100%';
+                nav.style.background = 'white';
+                nav.style.padding = '20px';
+                nav.style.boxShadow = '0 5px 10px rgba(0,0,0,0.1)';
+            }
+        });
+    </script>
 </body>
 </html>
