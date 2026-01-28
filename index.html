@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- ISSUE: duplicate_title (same as services.html) -->
+    <title>Sunrise Dental Care - Quality Dental Services in Austin TX</title>
+    <!-- ISSUE: missing_canonical -->
+    <meta name="description" content="Sunrise Dental Care provides comprehensive dental services in Austin, Texas. Family dentistry, cosmetic procedures, and emergency care.">
+    <!-- ISSUE: render_blocking_resources - large inline CSS block in head -->
+    <style>
+        .homepage-banner { position: relative; overflow: hidden; }
+        .homepage-banner::before { content: ''; position: absolute; top: 0; left: 0; right: 0; bottom: 0; background: rgba(0,0,0,0.3); }
+        .homepage-features { display: grid; grid-template-columns: repeat(4, 1fr); gap: 2rem; padding: 3rem 0; }
+        .homepage-features .feature-item { text-align: center; padding: 2rem; border-radius: 12px; background: #f0f7f4; transition: transform 0.3s ease, box-shadow 0.3s ease; }
+        .homepage-features .feature-item:hover { transform: translateY(-5px); box-shadow: 0 8px 25px rgba(0,0,0,0.1); }
+        .homepage-features .feature-icon { width: 64px; height: 64px; margin: 0 auto 1rem; background: #1a6b4a; border-radius: 50%; display: flex; align-items: center; justify-content: center; color: #fff; font-size: 1.5rem; }
+        .testimonial-slider { overflow: hidden; position: relative; padding: 2rem 0; }
+        .testimonial-slide { min-width: 100%; padding: 2rem; background: #f9f9f9; border-radius: 12px; border-left: 4px solid #1a6b4a; }
+        .testimonial-slide .stars { color: #f5a623; font-size: 1.2rem; margin-bottom: 0.5rem; }
+        .testimonial-slide .author { font-weight: bold; margin-top: 1rem; color: #1a6b4a; }
+        .cta-section { background: linear-gradient(135deg, #1a6b4a, #2d9b6e); color: #fff; text-align: center; padding: 4rem 2rem; border-radius: 12px; margin: 3rem 0; }
+        .cta-section h2 { color: #fff; font-size: 2rem; margin-bottom: 1rem; }
+        .cta-section .btn { background: #fff; color: #1a6b4a; font-weight: bold; }
+        .insurance-logos { display: flex; flex-wrap: wrap; gap: 2rem; justify-content: center; align-items: center; padding: 2rem 0; opacity: 0.7; }
+        .map-section { border-radius: 12px; overflow: hidden; margin: 2rem 0; height: 300px; background: #e0e0e0; }
+        .hours-table { width: 100%; border-collapse: collapse; margin: 1rem 0; }
+        .hours-table td { padding: 0.75rem 1rem; border-bottom: 1px solid #eee; }
+        .hours-table tr:last-child td { border-bottom: none; }
+        .emergency-banner { background: #c0392b; color: #fff; text-align: center; padding: 0.75rem; font-weight: bold; }
+        .emergency-banner a { color: #fff; text-decoration: underline; }
+    </style>
+    <!-- ISSUE: render_blocking_resources - JS without defer/async -->
+    <script src="https://cdn.example.com/analytics.js"></script>
+    <script src="https://cdn.example.com/tracking.js"></script>
+    <link rel="stylesheet" href="style.css">
+    <!-- ISSUE: missing_schema - no structured data -->
+</head>
+<body>
+    <nav>
+        <a href="index.html" class="logo">Sunrise Dental Care</a>
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="services.html">Services</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="contact.html">Contact</a></li>
+            <li><a href="blog.html">Blog</a></li>
+            <li><a href="gallery.html">Gallery</a></li>
+            <li><a href="page_2_final_v3.html">Testimonials</a></li>
+        </ul>
+    </nav>
+    <!-- NOTE: No link to orphan-page.html anywhere on this site -->
+
+    <div class="hero">
+        <h1>Welcome to Sunrise Dental Care</h1>
+        <p>Your trusted family dentist in Austin, Texas. We provide compassionate, comprehensive dental care for patients of all ages.</p>
+        <a href="contact.html" class="btn">Schedule an Appointment</a>
+    </div>
+
+    <div class="container">
+        <h2>Why Choose Sunrise Dental Care?</h2>
+        <p>At Sunrise Dental Care, we believe everyone deserves a healthy, beautiful smile. Our experienced team of dental professionals is committed to providing the highest quality care in a comfortable, welcoming environment. Located in the heart of Austin, Texas, we have been serving families in the greater Austin area for over 15 years.</p>
+
+        <p>Our state-of-the-art facility features the latest dental technology, including digital X-rays, intraoral cameras, and laser dentistry equipment. We stay at the forefront of dental innovation to ensure our patients receive the most effective and comfortable treatments available. Whether you need a routine cleaning, cosmetic enhancement, or complex restorative procedure, our team has the expertise to help.</p>
+
+        <div class="card-grid">
+            <div class="card">
+                <h3>General Dentistry</h3>
+                <p>Comprehensive exams, cleanings, fillings, and preventive care to maintain your oral health. We use gentle techniques and modern equipment to make every visit comfortable.</p>
+            </div>
+            <div class="card">
+                <h3>Cosmetic Dentistry</h3>
+                <p>Teeth whitening, veneers, bonding, and smile makeovers to give you the confident smile you deserve. Our cosmetic treatments are tailored to your unique goals.</p>
+            </div>
+            <div class="card">
+                <h3>Emergency Care</h3>
+                <p>Same-day appointments available for dental emergencies. Whether it is a toothache, broken tooth, or knocked-out tooth, we are here when you need us most.</p>
+            </div>
+        </div>
+
+        <h2>Our Commitment to You</h2>
+        <p>We understand that visiting the dentist can be stressful for some patients. That is why we prioritize creating a calm, reassuring atmosphere from the moment you walk through our doors. Our friendly staff will greet you with a smile, and our dental team will take the time to explain every procedure and answer all of your questions.</p>
+
+        <p>We accept most major dental insurance plans and offer flexible financing options to make quality dental care accessible to everyone. New patients are always welcome, and we offer special introductory rates for first-time visitors. Contact us today to schedule your appointment and experience the Sunrise Dental difference.</p>
+
+        <h2>Serving the Austin Community</h2>
+        <p>Conveniently located at 4521 Medical Parkway in Austin, TX, we serve patients from across the greater Austin area including Round Rock, Cedar Park, Pflugerville, Georgetown, and Lakeway. Our office is easily accessible with ample free parking available for all patients.</p>
+        <p>Office hours are Monday through Friday from 8:00 AM to 5:00 PM, with Saturday appointments available by request. We strive to accommodate your busy schedule and minimize wait times so you can get back to your day quickly.</p>
+    </div>
+
+    <footer>
+        <p>&copy; 2024 Sunrise Dental Care | 4521 Medical Parkway, Austin, TX 78756 | (512) 555-0147</p>
+        <p><a href="contact.html">Contact Us</a> | <a href="about.html">About Us</a> | <a href="services.html">Our Services</a></p>
+    </footer>
+</body>
+</html>
