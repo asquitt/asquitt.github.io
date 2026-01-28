@@ -1,0 +1,392 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Transform your smile with Invisalign at Connecticut Ave Dental Studio. Expert, personalized clear aligner treatment in Washington DC. Schedule your consultation">
+    <title>Invisalign Treatment Washington DC Area | Connecticut Ave Dental Studio</title>
+    <style>
+
+        /* --- CSS RESET & VARIABLES --- */
+        :root {
+            --primary: #0f2746; /* Deep DC Navy */
+            --secondary: #2dd4bf; /* Modern Mint/Teal */
+            --gold: #d4af37; /* Subtle Gold Accent */
+            --light: #f3f4f6;
+            --white: #ffffff;
+            --text-dark: #1e293b;
+            --text-light: #64748b;
+        }
+
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        html { scroll-behavior: smooth; }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            color: var(--text-dark);
+            line-height: 1.6;
+            background-color: var(--white);
+        }
+
+        h1, h2, h3, h4 {
+            font-family: 'Playfair Display', serif;
+            color: var(--primary);
+            font-weight: 700;
+        }
+
+        /* --- UTILITY CLASSES --- */
+        .container { max-width: 1200px; margin: 0 auto; padding: 0 20px; }
+        .text-center { text-align: center; }
+        .section { padding: 80px 0; }
+        .bg-light { background-color: var(--light); }
+
+        .btn {
+            display: inline-block;
+            padding: 14px 32px;
+            border-radius: 50px;
+            font-weight: 600;
+            text-decoration: none;
+            transition: all 0.3s ease;
+            text-transform: uppercase;
+            font-size: 0.9rem;
+            letter-spacing: 0.5px;
+        }
+        .btn-primary {
+            background-color: var(--secondary);
+            color: var(--primary);
+            border: 2px solid var(--secondary);
+        }
+        .btn-primary:hover {
+            background-color: transparent;
+            color: var(--secondary);
+        }
+        .btn-outline {
+            background-color: transparent;
+            color: var(--white);
+            border: 2px solid var(--white);
+        }
+        .btn-outline:hover {
+            background-color: var(--white);
+            color: var(--primary);
+        }
+
+        /* --- HEADER & NAV --- */
+        header {
+            background: rgba(255, 255, 255, 0.98);
+            box-shadow: 0 2px 20px rgba(0,0,0,0.05);
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
+        }
+        .nav-wrapper {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            height: 90px;
+        }
+        .logo {
+            font-size: 1.5rem;
+            font-weight: bold;
+            color: var(--primary);
+            text-decoration: none;
+            font-family: 'Playfair Display', serif;
+            letter-spacing: -0.5px;
+        }
+        .logo span { color: var(--secondary); }
+
+        nav ul { display: flex; list-style: none; gap: 35px; align-items: center; }
+        nav a { text-decoration: none; color: var(--primary); font-weight: 500; font-size: 0.95rem; transition: color 0.3s; }
+        nav a:hover { color: var(--secondary); }
+
+        .mobile-toggle { display: none; font-size: 1.5rem; color: var(--primary); cursor: pointer; }
+
+        /* --- HERO SECTION --- */
+        .hero {
+            position: relative;
+            height: 90vh; /* Full screen height */
+            background: linear-gradient(rgba(15, 39, 70, 0.85), rgba(15, 39, 70, 0.7)), url('https://images.unsplash.com/photo-1609840114035-1c99d59242cc?auto=format&fit=crop&q=80');
+            background-size: cover;
+            background-position: center;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            color: white;
+            margin-top: 90px;
+        }
+        .hero-content h1 {
+            font-size: 4rem;
+            color: white;
+            margin-bottom: 20px;
+            line-height: 1.1;
+        }
+        .hero-content p {
+            font-size: 1.3rem;
+            max-width: 700px;
+            margin: 0 auto 40px auto;
+            opacity: 0.9;
+            font-weight: 300;
+        }
+
+        /* --- INFO BAR --- */
+        .info-bar {
+            background: var(--secondary);
+            color: var(--primary);
+            padding: 20px 0;
+            margin-top: -5px;
+        }
+        .info-grid {
+            display: flex;
+            justify-content: space-around;
+            text-align: center;
+            font-weight: 600;
+        }
+        .info-item i { margin-right: 8px; }
+
+        /* --- ABOUT --- */
+        .about-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 60px;
+            align-items: center;
+        }
+        .about-image img {
+            width: 100%;
+            border-radius: 10px;
+            box-shadow: 20px 20px 0px var(--light);
+        }
+
+        /* --- SERVICES --- */
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+            margin-top: 50px;
+        }
+        .service-card {
+            background: white;
+            padding: 40px 30px;
+            border-radius: 8px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.03);
+            transition: transform 0.3s;
+            border-top: 4px solid var(--secondary);
+        }
+        .service-card:hover { transform: translateY(-5px); }
+        .service-icon { font-size: 2.5rem; color: var(--primary); margin-bottom: 20px; }
+        .service-card h3 { font-size: 1.5rem; margin-bottom: 15px; }
+
+        /* --- TESTIMONIALS --- */
+        .testimonials { background-color: var(--primary); color: white; text-align: center; }
+        .testimonials h2 { color: white; }
+        .quote-box {
+            font-size: 1.2rem;
+            font-style: italic;
+            max-width: 800px;
+            margin: 30px auto;
+            opacity: 0.9;
+        }
+        .stars { color: var(--gold); margin-bottom: 10px; }
+
+        /* --- CONTACT / MAP --- */
+        .contact-wrapper {
+            display: flex;
+            flex-wrap: wrap;
+            box-shadow: 0 10px 40px rgba(0,0,0,0.1);
+            border-radius: 15px;
+            overflow: hidden;
+            background: white;
+        }
+        .contact-info {
+            flex: 1;
+            padding: 60px;
+            min-width: 300px;
+            background: white;
+        }
+        .map-container {
+            flex: 1;
+            min-width: 300px;
+            background: #eee;
+            min-height: 400px;
+        }
+        .contact-row {
+            display: flex;
+            align-items: center;
+            margin-bottom: 30px;
+        }
+        .contact-row i {
+            font-size: 1.5rem;
+            color: var(--secondary);
+            margin-right: 20px;
+            width: 30px;
+        }
+
+        /* --- FOOTER --- */
+        footer {
+            background: var(--primary);
+            color: white;
+            padding: 60px 0 20px;
+            text-align: center;
+        }
+        .social-icons { margin: 20px 0; }
+        .social-icons a { color: white; margin: 0 10px; font-size: 1.2rem; transition: color 0.3s; }
+        .social-icons a:hover { color: var(--secondary); }
+        .copyright { border-top: 1px solid rgba(255,255,255,0.1); padding-top: 20px; margin-top: 40px; font-size: 0.8rem; opacity: 0.6; }
+
+        /* --- MOBILE RESPONSIVE --- */
+        @media (max-width: 768px) {
+            .nav-menu { display: none; }
+            .mobile-toggle { display: block; }
+            .hero-content h1 { font-size: 2.5rem; }
+            .about-grid { grid-template-columns: 1fr; }
+            .contact-info { padding: 30px; }
+            .info-grid { flex-direction: column; gap: 10px; }
+        }
+    
+
+/* Minimal structural styles for semantic elements */
+
+/* Minimal structural styles - NO colors or fonts */
+/* These are layout-only rules that won't conflict with brand styling */
+
+/* FAQ accordion functionality */
+.faq-item.active .faq-answer {
+    max-height: 500px;
+    padding: 1.5rem;
+}
+
+.faq-item.active .faq-icon {
+    transform: rotate(180deg);
+}
+
+.faq-answer {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.3s ease, padding 0.3s ease;
+}
+
+.faq-icon {
+    transition: transform 0.3s ease;
+}
+
+/* Responsive grid fallback (only if site has no grid) */
+@supports not (display: grid) {
+    .services-container,
+    .team-grid,
+    .contact-grid {
+        display: flex;
+        flex-wrap: wrap;
+    }
+}
+
+/* Form layout basics */
+.form-group {
+    margin-bottom: 1rem;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 0.5rem;
+}
+
+.form-group input,
+.form-group textarea {
+    width: 100%;
+    box-sizing: border-box;
+}
+
+    </style>
+</head>
+<body>
+    <header>
+<div class="container nav-wrapper">
+<a class="logo" href="#">ConnAve <span>Dental</span></a>
+<nav>
+<ul class="nav-menu">
+<li><a href="#about">About</a></li>
+<li><a href="#services">Services</a></li>
+<li><a href="#new-patients">New Patients</a></li>
+<li><a href="#reviews">Reviews</a></li>
+<li><a class="btn btn-primary" href="#contact">Book Visit</a></li>
+</ul>
+<div class="mobile-toggle"><i class="fas fa-bars"></i></div>
+</nav>
+</div>
+</header>
+
+    <main class="page-main">
+        
+        <section class="page-hero landing-hero">
+            <div class="container">
+                <h1>Transform Your Smile Discreetly with Invisalign Treatment in Washington, DC</h1>
+                <p class="hero-subtitle">Clear aligners that fit your lifestyle – straighter teeth without the metal brackets</p>
+                <a href="/contact" class="btn btn-primary">Contact Us</a>
+            </div>
+        </section>
+
+        <section class="landing-intro"><div class="container"><p class="lead">At Connecticut Ave Dental Studio, we understand that achieving your dream smile shouldn't disrupt your daily life. Our Invisalign treatment in the Washington, DC area offers a comfortable, nearly invisible solution to straighten your teeth. With our advanced digital 3D imaging technology and compassionate care approach, we'll guide you through every step of your smile transformation journey right here in the heart of DC.</p></div></section>
+
+        
+            <section class="landing-section">
+                <div class="container">
+                    <h2>Why Choose Invisalign Over Traditional Braces?</h2>
+                    <div>Invisalign clear aligners are virtually invisible, removable, and designed to fit seamlessly into your busy Washington, DC lifestyle. Unlike metal braces, you can eat your favorite foods, maintain excellent oral hygiene, and smile confidently throughout your treatment. Our patients love the freedom and flexibility that comes with these custom-made aligners, which gradually shift your teeth into perfect alignment without the discomfort of wires and brackets.</div>
+                </div>
+            </section>
+            <section class="landing-section">
+                <div class="container">
+                    <h2>Advanced Technology Meets Personalized Care</h2>
+                    <div>Our state-of-the-art digital 3D imaging and diagnostics technology allows us to create a precise treatment plan tailored specifically to your needs. We'll show you exactly how your smile will transform before treatment even begins. This advanced approach ensures optimal results and helps us deliver the compassionate, comprehensive care our Washington, DC families have trusted for years. Every step is carefully monitored to ensure your comfort and satisfaction.</div>
+                </div>
+            </section>
+            <section class="landing-section">
+                <div class="container">
+                    <h2>Your Journey to a Confident Smile Starts Here</h2>
+                    <div>Ready to discover how Invisalign can transform your smile? Our experienced team at Connecticut Ave Dental Studio makes the process simple and stress-free. From your initial consultation through your final reveal, we're committed to providing exceptional care in a comfortable, welcoming environment. Located conveniently on Connecticut Avenue, we're here to serve families throughout the DC area with the smile makeover solutions you deserve.
+
+**Ready to start your Invisalign journey? Call (202) 555-0123 today to schedule your complimentary consultation at 3501 Connecticut Ave NW, Washington, DC 20008.**</div>
+                </div>
+            </section>
+
+        <section class="landing-content">
+            <div class="container">
+                
+            </div>
+        </section>
+
+        <section class="landing-cta">
+            <div class="container">
+                <h2>Take the Next Step</h2>
+                <a href="/contact" class="btn btn-primary">Contact Us</a>
+            </div>
+        </section>
+        
+    </main>
+
+    <footer>
+<div class="container">
+<h2>Connecticut Ave Dental Studio</h2>
+<p>Excellence in dental care since 2019</p>
+<div class="social-icons">
+<a href="#"><i class="fab fa-facebook"></i></a>
+<a href="#"><i class="fab fa-instagram"></i></a>
+<a href="#"><i class="fab fa-google"></i></a>
+</div>
+<div class="copyright">
+© 2026 Connecticut Ave Dental Studio. All rights reserved. | Washington, DC 20008
+</div>
+</div>
+</footer>
+
+    <script>
+    // FAQ accordion functionality
+    document.querySelectorAll('.faq-question').forEach(button => {
+        button.addEventListener('click', () => {
+            const expanded = button.getAttribute('aria-expanded') === 'true';
+            button.setAttribute('aria-expanded', !expanded);
+            button.parentElement.classList.toggle('active');
+        });
+    });
+    </script>
+</body>
+</html>
