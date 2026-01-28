@@ -1,1 +1,450 @@
-PCFET0NUWVBFIGh0bWw+CjxodG1sIGxhbmc9ImVuIj4KPGhlYWQ+CiAgICA8bWV0YSBjaGFyc2V0PSJVVEYtOCI+CiAgICA8bWV0YSBuYW1lPSJ2aWV3cG9ydCIgY29udGVudD0id2lkdGg9ZGV2aWNlLXdpZHRoLCBpbml0aWFsLXNjYWxlPTEuMCI+CiAgICA8dGl0bGU+Q29ubmVjdGljdXQgQXZlIERlbnRhbCBTdHVkaW8gfCBXYXNoaW5ndG9uIERDPC90aXRsZT4KCiAgICA8bGluayBocmVmPSJodHRwczovL2NkbmpzLmNsb3VkZmxhcmUuY29tL2FqYXgvbGlicy9mb250LWF3ZXNvbWUvNi4wLjAvY3NzL2FsbC5taW4uY3NzIiByZWw9InN0eWxlc2hlZXQiPgoKICAgIDxsaW5rIGhyZWY9Imh0dHBzOi8vZm9udHMuZ29vZ2xlYXBpcy5jb20vY3NzMj9mYW1pbHk9SW50ZXI6d2dodEAzMDA7NDAwOzYwMCZmYW1pbHk9UGxheWZhaXIrRGlzcGxheTp3Z2h0QDQwMDs3MDAmZGlzcGxheT1zd2FwIiByZWw9InN0eWxlc2hlZXQiPgoKICAgIDxzdHlsZT4KICAgICAgICAvKiAtLS0gQ1NTIFJFU0VUICYgVkFSSUFCTEVTIC0tLSAqLwogICAgICAgIDpyb290IHsKICAgICAgICAgICAgLS1wcmltYXJ5OiAjMGYyNzQ2OyAvKiBEZWVwIERDIE5hdnkgKi8KICAgICAgICAgICAgLS1zZWNvbmRhcnk6ICMyZGQ0YmY7IC8qIE1vZGVybiBNaW50L1RlYWwgKi8KICAgICAgICAgICAgLS1nb2xkOiAjZDRhZjM3OyAvKiBTdWJ0bGUgR29sZCBBY2NlbnQgKi8KICAgICAgICAgICAgLS1saWdodDogI2YzZjRmNjsKICAgICAgICAgICAgLS13aGl0ZTogI2ZmZmZmZjsKICAgICAgICAgICAgLS10ZXh0LWRhcms6ICMxZTI5M2I7CiAgICAgICAgICAgIC0tdGV4dC1saWdodDogIzY0NzQ4YjsKICAgICAgICB9CgogICAgICAgICogeyBtYXJnaW46IDA7IHBhZGRpbmc6IDA7IGJveC1zaXppbmc6IGJvcmRlci1ib3g7IH0KICAgICAgICBodG1sIHsgc2Nyb2xsLWJlaGF2aW9yOiBzbW9vdGg7IH0KCiAgICAgICAgYm9keSB7CiAgICAgICAgICAgIGZvbnQtZmFtaWx5OiAnSW50ZXInLCBzYW5zLXNlcmlmOwogICAgICAgICAgICBjb2xvcjogdmFyKC0tdGV4dC1kYXJrKTsKICAgICAgICAgICAgbGluZS1oZWlnaHQ6IDEuNjsKICAgICAgICAgICAgYmFja2dyb3VuZC1jb2xvcjogdmFyKC0td2hpdGUpOwogICAgICAgIH0KCiAgICAgICAgaDEsIGgyLCBoMywgaDQgewogICAgICAgICAgICBmb250LWZhbWlseTogJ1BsYXlmYWlyIERpc3BsYXknLCBzZXJpZjsKICAgICAgICAgICAgY29sb3I6IHZhcigtLXByaW1hcnkpOwogICAgICAgICAgICBmb250LXdlaWdodDogNzAwOwogICAgICAgIH0KCiAgICAgICAgLyogLS0tIFVUSUxJVFkgQ0xBU1NFUyAtLS0gKi8KICAgICAgICAuY29udGFpbmVyIHsgbWF4LXdpZHRoOiAxMjAwcHg7IG1hcmdpbjogMCBhdXRvOyBwYWRkaW5nOiAwIDIwcHg7IH0KICAgICAgICAudGV4dC1jZW50ZXIgeyB0ZXh0LWFsaWduOiBjZW50ZXI7IH0KICAgICAgICAuc2VjdGlvbiB7IHBhZGRpbmc6IDgwcHggMDsgfQogICAgICAgIC5iZy1saWdodCB7IGJhY2tncm91bmQtY29sb3I6IHZhcigtLWxpZ2h0KTsgfQoKICAgICAgICAuYnRuIHsKICAgICAgICAgICAgZGlzcGxheTogaW5saW5lLWJsb2NrOwogICAgICAgICAgICBwYWRkaW5nOiAxNHB4IDMycHg7CiAgICAgICAgICAgIGJvcmRlci1yYWRpdXM6IDUwcHg7CiAgICAgICAgICAgIGZvbnQtd2VpZ2h0OiA2MDA7CiAgICAgICAgICAgIHRleHQtZGVjb3JhdGlvbjogbm9uZTsKICAgICAgICAgICAgdHJhbnNpdGlvbjogYWxsIDAuM3MgZWFzZTsKICAgICAgICAgICAgdGV4dC10cmFuc2Zvcm06IHVwcGVyY2FzZTsKICAgICAgICAgICAgZm9udC1zaXplOiAwLjlyZW07CiAgICAgICAgICAgIGxldHRlci1zcGFjaW5nOiAwLjVweDsKICAgICAgICB9CiAgICAgICAgLmJ0bi1wcmltYXJ5IHsKICAgICAgICAgICAgYmFja2dyb3VuZC1jb2xvcjogdmFyKC0tc2Vjb25kYXJ5KTsKICAgICAgICAgICAgY29sb3I6IHZhcigtLXByaW1hcnkpOwogICAgICAgICAgICBib3JkZXI6IDJweCBzb2xpZCB2YXIoLS1zZWNvbmRhcnkpOwogICAgICAgIH0KICAgICAgICAuYnRuLXByaW1hcnk6aG92ZXIgewogICAgICAgICAgICBiYWNrZ3JvdW5kLWNvbG9yOiB0cmFuc3BhcmVudDsKICAgICAgICAgICAgY29sb3I6IHZhcigtLXNlY29uZGFyeSk7CiAgICAgICAgfQogICAgICAgIC5idG4tb3V0bGluZSB7CiAgICAgICAgICAgIGJhY2tncm91bmQtY29sb3I6IHRyYW5zcGFyZW50OwogICAgICAgICAgICBjb2xvcjogdmFyKC0td2hpdGUpOwogICAgICAgICAgICBib3JkZXI6IDJweCBzb2xpZCB2YXIoLS13aGl0ZSk7CiAgICAgICAgfQogICAgICAgIC5idG4tb3V0bGluZTpob3ZlciB7CiAgICAgICAgICAgIGJhY2tncm91bmQtY29sb3I6IHZhcigtLXdoaXRlKTsKICAgICAgICAgICAgY29sb3I6IHZhcigtLXByaW1hcnkpOwogICAgICAgIH0KCiAgICAgICAgLyogLS0tIEhFQURFUiAmIE5BViAtLS0gKi8KICAgICAgICBoZWFkZXIgewogICAgICAgICAgICBiYWNrZ3JvdW5kOiByZ2JhKDI1NSwgMjU1LCAyNTUsIDAuOTgpOwogICAgICAgICAgICBib3gtc2hhZG93OiAwIDJweCAyMHB4IHJnYmEoMCwwLDAsMC4wNSk7CiAgICAgICAgICAgIHBvc2l0aW9uOiBmaXhlZDsKICAgICAgICAgICAgd2lkdGg6IDEwMCU7CiAgICAgICAgICAgIHRvcDogMDsKICAgICAgICAgICAgei1pbmRleDogMTAwMDsKICAgICAgICB9CiAgICAgICAgLm5hdi13cmFwcGVyIHsKICAgICAgICAgICAgZGlzcGxheTogZmxleDsKICAgICAgICAgICAganVzdGlmeS1jb250ZW50OiBzcGFjZS1iZXR3ZWVuOwogICAgICAgICAgICBhbGlnbi1pdGVtczogY2VudGVyOwogICAgICAgICAgICBoZWlnaHQ6IDkwcHg7CiAgICAgICAgfQogICAgICAgIC5sb2dvIHsKICAgICAgICAgICAgZm9udC1zaXplOiAxLjVyZW07CiAgICAgICAgICAgIGZvbnQtd2VpZ2h0OiBib2xkOwogICAgICAgICAgICBjb2xvcjogdmFyKC0tcHJpbWFyeSk7CiAgICAgICAgICAgIHRleHQtZGVjb3JhdGlvbjogbm9uZTsKICAgICAgICAgICAgZm9udC1mYW1pbHk6ICdQbGF5ZmFpciBEaXNwbGF5Jywgc2VyaWY7CiAgICAgICAgICAgIGxldHRlci1zcGFjaW5nOiAtMC41cHg7CiAgICAgICAgfQogICAgICAgIC5sb2dvIHNwYW4geyBjb2xvcjogdmFyKC0tc2Vjb25kYXJ5KTsgfQoKICAgICAgICBuYXYgdWwgeyBkaXNwbGF5OiBmbGV4OyBsaXN0LXN0eWxlOiBub25lOyBnYXA6IDM1cHg7IGFsaWduLWl0ZW1zOiBjZW50ZXI7IH0KICAgICAgICBuYXYgYSB7IHRleHQtZGVjb3JhdGlvbjogbm9uZTsgY29sb3I6IHZhcigtLXByaW1hcnkpOyBmb250LXdlaWdodDogNTAwOyBmb250LXNpemU6IDAuOTVyZW07IHRyYW5zaXRpb246IGNvbG9yIDAuM3M7IH0KICAgICAgICBuYXYgYTpob3ZlciB7IGNvbG9yOiB2YXIoLS1zZWNvbmRhcnkpOyB9CgogICAgICAgIC5tb2JpbGUtdG9nZ2xlIHsgZGlzcGxheTogbm9uZTsgZm9udC1zaXplOiAxLjVyZW07IGNvbG9yOiB2YXIoLS1wcmltYXJ5KTsgY3Vyc29yOiBwb2ludGVyOyB9CgogICAgICAgIC8qIC0tLSBIRVJPIFNFQ1RJT04gLS0tICovCiAgICAgICAgLmhlcm8gewogICAgICAgICAgICBwb3NpdGlvbjogcmVsYXRpdmU7CiAgICAgICAgICAgIGhlaWdodDogOTB2aDsgLyogRnVsbCBzY3JlZW4gaGVpZ2h0ICovCiAgICAgICAgICAgIGJhY2tncm91bmQ6IGxpbmVhci1ncmFkaWVudChyZ2JhKDE1LCAzOSwgNzAsIDAuODUpLCByZ2JhKDE1LCAzOSwgNzAsIDAuNykpLCB1cmwoJ2h0dHBzOi8vaW1hZ2VzLnVuc3BsYXNoLmNvbS9waG90by0xNjA5ODQwMTE0MDM1LTFjOTlkNTkyNDJjYz9hdXRvPWZvcm1hdCZmaXQ9Y3JvcCZxPTgwJyk7CiAgICAgICAgICAgIGJhY2tncm91bmQtc2l6ZTogY292ZXI7CiAgICAgICAgICAgIGJhY2tncm91bmQtcG9zaXRpb246IGNlbnRlcjsKICAgICAgICAgICAgZGlzcGxheTogZmxleDsKICAgICAgICAgICAgYWxpZ24taXRlbXM6IGNlbnRlcjsKICAgICAgICAgICAganVzdGlmeS1jb250ZW50OiBjZW50ZXI7CiAgICAgICAgICAgIHRleHQtYWxpZ246IGNlbnRlcjsKICAgICAgICAgICAgY29sb3I6IHdoaXRlOwogICAgICAgICAgICBtYXJnaW4tdG9wOiA5MHB4OwogICAgICAgIH0KICAgICAgICAuaGVyby1jb250ZW50IGgxIHsKICAgICAgICAgICAgZm9udC1zaXplOiA0cmVtOwogICAgICAgICAgICBjb2xvcjogd2hpdGU7CiAgICAgICAgICAgIG1hcmdpbi1ib3R0b206IDIwcHg7CiAgICAgICAgICAgIGxpbmUtaGVpZ2h0OiAxLjE7CiAgICAgICAgfQogICAgICAgIC5oZXJvLWNvbnRlbnQgcCB7CiAgICAgICAgICAgIGZvbnQtc2l6ZTogMS4zcmVtOwogICAgICAgICAgICBtYXgtd2lkdGg6IDcwMHB4OwogICAgICAgICAgICBtYXJnaW46IDAgYXV0byA0MHB4IGF1dG87CiAgICAgICAgICAgIG9wYWNpdHk6IDAuOTsKICAgICAgICAgICAgZm9udC13ZWlnaHQ6IDMwMDsKICAgICAgICB9CgogICAgICAgIC8qIC0tLSBJTkZPIEJBUiAtLS0gKi8KICAgICAgICAuaW5mby1iYXIgewogICAgICAgICAgICBiYWNrZ3JvdW5kOiB2YXIoLS1zZWNvbmRhcnkpOwogICAgICAgICAgICBjb2xvcjogdmFyKC0tcHJpbWFyeSk7CiAgICAgICAgICAgIHBhZGRpbmc6IDIwcHggMDsKICAgICAgICAgICAgbWFyZ2luLXRvcDogLTVweDsKICAgICAgICB9CiAgICAgICAgLmluZm8tZ3JpZCB7CiAgICAgICAgICAgIGRpc3BsYXk6IGZsZXg7CiAgICAgICAgICAgIGp1c3RpZnktY29udGVudDogc3BhY2UtYXJvdW5kOwogICAgICAgICAgICB0ZXh0LWFsaWduOiBjZW50ZXI7CiAgICAgICAgICAgIGZvbnQtd2VpZ2h0OiA2MDA7CiAgICAgICAgfQogICAgICAgIC5pbmZvLWl0ZW0gaSB7IG1hcmdpbi1yaWdodDogOHB4OyB9CgogICAgICAgIC8qIC0tLSBBQk9VVCAtLS0gKi8KICAgICAgICAuYWJvdXQtZ3JpZCB7CiAgICAgICAgICAgIGRpc3BsYXk6IGdyaWQ7CiAgICAgICAgICAgIGdyaWQtdGVtcGxhdGUtY29sdW1uczogMWZyIDFmcjsKICAgICAgICAgICAgZ2FwOiA2MHB4OwogICAgICAgICAgICBhbGlnbi1pdGVtczogY2VudGVyOwogICAgICAgIH0KICAgICAgICAuYWJvdXQtaW1hZ2UgaW1nIHsKICAgICAgICAgICAgd2lkdGg6IDEwMCU7CiAgICAgICAgICAgIGJvcmRlci1yYWRpdXM6IDEwcHg7CiAgICAgICAgICAgIGJveC1zaGFkb3c6IDIwcHggMjBweCAwcHggdmFyKC0tbGlnaHQpOwogICAgICAgIH0KCiAgICAgICAgLyogLS0tIFNFUlZJQ0VTIC0tLSAqLwogICAgICAgIC5zZXJ2aWNlcy1ncmlkIHsKICAgICAgICAgICAgZGlzcGxheTogZ3JpZDsKICAgICAgICAgICAgZ3JpZC10ZW1wbGF0ZS1jb2x1bW5zOiByZXBlYXQoYXV0by1maXQsIG1pbm1heCgzMDBweCwgMWZyKSk7CiAgICAgICAgICAgIGdhcDogMzBweDsKICAgICAgICAgICAgbWFyZ2luLXRvcDogNTBweDsKICAgICAgICB9CiAgICAgICAgLnNlcnZpY2UtY2FyZCB7CiAgICAgICAgICAgIGJhY2tncm91bmQ6IHdoaXRlOwogICAgICAgICAgICBwYWRkaW5nOiA0MHB4IDMwcHg7CiAgICAgICAgICAgIGJvcmRlci1yYWRpdXM6IDhweDsKICAgICAgICAgICAgYm94LXNoYWRvdzogMCAxMHB4IDMwcHggcmdiYSgwLDAsMCwwLjAzKTsKICAgICAgICAgICAgdHJhbnNpdGlvbjogdHJhbnNmb3JtIDAuM3M7CiAgICAgICAgICAgIGJvcmRlci10b3A6IDRweCBzb2xpZCB2YXIoLS1zZWNvbmRhcnkpOwogICAgICAgIH0KICAgICAgICAuc2VydmljZS1jYXJkOmhvdmVyIHsgdHJhbnNmb3JtOiB0cmFuc2xhdGVZKC01cHgpOyB9CiAgICAgICAgLnNlcnZpY2UtaWNvbiB7IGZvbnQtc2l6ZTogMi41cmVtOyBjb2xvcjogdmFyKC0tcHJpbWFyeSk7IG1hcmdpbi1ib3R0b206IDIwcHg7IH0KICAgICAgICAuc2VydmljZS1jYXJkIGgzIHsgZm9udC1zaXplOiAxLjVyZW07IG1hcmdpbi1ib3R0b206IDE1cHg7IH0KCiAgICAgICAgLyogLS0tIFRFU1RJTU9OSUFMUyAtLS0gKi8KICAgICAgICAudGVzdGltb25pYWxzIHsgYmFja2dyb3VuZC1jb2xvcjogdmFyKC0tcHJpbWFyeSk7IGNvbG9yOiB3aGl0ZTsgdGV4dC1hbGlnbjogY2VudGVyOyB9CiAgICAgICAgLnRlc3RpbW9uaWFscyBoMiB7IGNvbG9yOiB3aGl0ZTsgfQogICAgICAgIC5xdW90ZS1ib3ggewogICAgICAgICAgICBmb250LXNpemU6IDEuMnJlbTsKICAgICAgICAgICAgZm9udC1zdHlsZTogaXRhbGljOwogICAgICAgICAgICBtYXgtd2lkdGg6IDgwMHB4OwogICAgICAgICAgICBtYXJnaW46IDMwcHggYXV0bzsKICAgICAgICAgICAgb3BhY2l0eTogMC45OwogICAgICAgIH0KICAgICAgICAuc3RhcnMgeyBjb2xvcjogdmFyKC0tZ29sZCk7IG1hcmdpbi1ib3R0b206IDEwcHg7IH0KCiAgICAgICAgLyogLS0tIENPTlRBQ1QgLyBNQVAgLS0tICovCiAgICAgICAgLmNvbnRhY3Qtd3JhcHBlciB7CiAgICAgICAgICAgIGRpc3BsYXk6IGZsZXg7CiAgICAgICAgICAgIGZsZXgtd3JhcDogd3JhcDsKICAgICAgICAgICAgYm94LXNoYWRvdzogMCAxMHB4IDQwcHggcmdiYSgwLDAsMCwwLjEpOwogICAgICAgICAgICBib3JkZXItcmFkaXVzOiAxNXB4OwogICAgICAgICAgICBvdmVyZmxvdzogaGlkZGVuOwogICAgICAgICAgICBiYWNrZ3JvdW5kOiB3aGl0ZTsKICAgICAgICB9CiAgICAgICAgLmNvbnRhY3QtaW5mbyB7CiAgICAgICAgICAgIGZsZXg6IDE7CiAgICAgICAgICAgIHBhZGRpbmc6IDYwcHg7CiAgICAgICAgICAgIG1pbi13aWR0aDogMzAwcHg7CiAgICAgICAgICAgIGJhY2tncm91bmQ6IHdoaXRlOwogICAgICAgIH0KICAgICAgICAubWFwLWNvbnRhaW5lciB7CiAgICAgICAgICAgIGZsZXg6IDE7CiAgICAgICAgICAgIG1pbi13aWR0aDogMzAwcHg7CiAgICAgICAgICAgIGJhY2tncm91bmQ6ICNlZWU7CiAgICAgICAgICAgIG1pbi1oZWlnaHQ6IDQwMHB4OwogICAgICAgIH0KICAgICAgICAuY29udGFjdC1yb3cgewogICAgICAgICAgICBkaXNwbGF5OiBmbGV4OwogICAgICAgICAgICBhbGlnbi1pdGVtczogY2VudGVyOwogICAgICAgICAgICBtYXJnaW4tYm90dG9tOiAzMHB4OwogICAgICAgIH0KICAgICAgICAuY29udGFjdC1yb3cgaSB7CiAgICAgICAgICAgIGZvbnQtc2l6ZTogMS41cmVtOwogICAgICAgICAgICBjb2xvcjogdmFyKC0tc2Vjb25kYXJ5KTsKICAgICAgICAgICAgbWFyZ2luLXJpZ2h0OiAyMHB4OwogICAgICAgICAgICB3aWR0aDogMzBweDsKICAgICAgICB9CgogICAgICAgIC8qIC0tLSBGT09URVIgLS0tICovCiAgICAgICAgZm9vdGVyIHsKICAgICAgICAgICAgYmFja2dyb3VuZDogdmFyKC0tcHJpbWFyeSk7CiAgICAgICAgICAgIGNvbG9yOiB3aGl0ZTsKICAgICAgICAgICAgcGFkZGluZzogNjBweCAwIDIwcHg7CiAgICAgICAgICAgIHRleHQtYWxpZ246IGNlbnRlcjsKICAgICAgICB9CiAgICAgICAgLnNvY2lhbC1pY29ucyB7IG1hcmdpbjogMjBweCAwOyB9CiAgICAgICAgLnNvY2lhbC1pY29ucyBhIHsgY29sb3I6IHdoaXRlOyBtYXJnaW46IDAgMTBweDsgZm9udC1zaXplOiAxLjJyZW07IHRyYW5zaXRpb246IGNvbG9yIDAuM3M7IH0KICAgICAgICAuc29jaWFsLWljb25zIGE6aG92ZXIgeyBjb2xvcjogdmFyKC0tc2Vjb25kYXJ5KTsgfQogICAgICAgIC5jb3B5cmlnaHQgeyBib3JkZXItdG9wOiAxcHggc29saWQgcmdiYSgyNTUsMjU1LDI1NSwwLjEpOyBwYWRkaW5nLXRvcDogMjBweDsgbWFyZ2luLXRvcDogNDBweDsgZm9udC1zaXplOiAwLjhyZW07IG9wYWNpdHk6IDAuNjsgfQoKICAgICAgICAvKiAtLS0gTU9CSUxFIFJFU1BPTlNJVkUgLS0tICovCiAgICAgICAgQG1lZGlhIChtYXgtd2lkdGg6IDc2OHB4KSB7CiAgICAgICAgICAgIC5uYXYtbWVudSB7IGRpc3BsYXk6IG5vbmU7IH0KICAgICAgICAgICAgLm1vYmlsZS10b2dnbGUgeyBkaXNwbGF5OiBibG9jazsgfQogICAgICAgICAgICAuaGVyby1jb250ZW50IGgxIHsgZm9udC1zaXplOiAyLjVyZW07IH0KICAgICAgICAgICAgLmFib3V0LWdyaWQgeyBncmlkLXRlbXBsYXRlLWNvbHVtbnM6IDFmcjsgfQogICAgICAgICAgICAuY29udGFjdC1pbmZvIHsgcGFkZGluZzogMzBweDsgfQogICAgICAgICAgICAuaW5mby1ncmlkIHsgZmxleC1kaXJlY3Rpb246IGNvbHVtbjsgZ2FwOiAxMHB4OyB9CiAgICAgICAgfQogICAgPC9zdHlsZT4KPC9oZWFkPgo8Ym9keT4KCiAgICA8aGVhZGVyPgogICAgICAgIDxkaXYgY2xhc3M9ImNvbnRhaW5lciBuYXYtd3JhcHBlciI+CiAgICAgICAgICAgIDxhIGhyZWY9IiMiIGNsYXNzPSJsb2dvIj5Db25uQXZlIDxzcGFuPkRlbnRhbDwvc3Bhbj48L2E+CiAgICAgICAgICAgIDxuYXY+CiAgICAgICAgICAgICAgICA8dWwgY2xhc3M9Im5hdi1tZW51Ij4KICAgICAgICAgICAgICAgICAgICA8bGk+PGEgaHJlZj0iI2Fib3V0Ij5BYm91dDwvYT48L2xpPgogICAgICAgICAgICAgICAgICAgIDxsaT48YSBocmVmPSIjc2VydmljZXMiPlNlcnZpY2VzPC9hPjwvbGk+CiAgICAgICAgICAgICAgICAgICAgPGxpPjxhIGhyZWY9IiNuZXctcGF0aWVudHMiPk5ldyBQYXRpZW50czwvYT48L2xpPgogICAgICAgICAgICAgICAgICAgIDxsaT48YSBocmVmPSIjcmV2aWV3cyI+UmV2aWV3czwvYT48L2xpPgogICAgICAgICAgICAgICAgICAgIDxsaT48YSBocmVmPSIjY29udGFjdCIgY2xhc3M9ImJ0biBidG4tcHJpbWFyeSI+Qm9vayBWaXNpdDwvYT48L2xpPgogICAgICAgICAgICAgICAgPC91bD4KICAgICAgICAgICAgICAgIDxkaXYgY2xhc3M9Im1vYmlsZS10b2dnbGUiPjxpIGNsYXNzPSJmYXMgZmEtYmFycyI+PC9pPjwvZGl2PgogICAgICAgICAgICA8L25hdj4KICAgICAgICA8L2Rpdj4KICAgIDwvaGVhZGVyPgoKICAgIDxzZWN0aW9uIGNsYXNzPSJoZXJvIj4KICAgICAgICA8ZGl2IGNsYXNzPSJjb250YWluZXIgaGVyby1jb250ZW50Ij4KICAgICAgICAgICAgPHA+U0VSVklORyBXQVNISU5HVE9OIERDIDIwMDA4PC9wPgogICAgICAgICAgICA8aDE+UmVmaW5lZCBEZW50aXN0cnkgb248YnI+Q29ubmVjdGljdXQgQXZlbnVlPC9oMT4KICAgICAgICAgICAgPHA+RXhwZXJpZW5jZSB3b3JsZC1jbGFzcyBkZW50YWwgY2FyZSBpbiB0aGUgaGVhcnQgb2YgQ2xldmVsYW5kIFBhcmsuIE1vZGVybiB0ZWNobm9sb2d5LCBuZWlnaGJvcmhvb2Qgd2FybXRoLCBhbmQgYSBwYXRpZW50LWZpcnN0IGFwcHJvYWNoLjwvcD4KICAgICAgICAgICAgPGRpdiBzdHlsZT0ibWFyZ2luLXRvcDogMzBweDsiPgogICAgICAgICAgICAgICAgPGEgaHJlZj0iI2NvbnRhY3QiIGNsYXNzPSJidG4gYnRuLXByaW1hcnkiPkJvb2sgQXBwb2ludG1lbnQ8L2E+CiAgICAgICAgICAgICAgICA8YSBocmVmPSIjc2VydmljZXMiIGNsYXNzPSJidG4gYnRuLW91dGxpbmUiIHN0eWxlPSJtYXJnaW4tbGVmdDogMTVweDsiPkV4cGxvcmUgU2VydmljZXM8L2E+CiAgICAgICAgICAgIDwvZGl2PgogICAgICAgIDwvZGl2PgogICAgPC9zZWN0aW9uPgoKICAgIDxkaXYgY2xhc3M9ImluZm8tYmFyIj4KICAgICAgICA8ZGl2IGNsYXNzPSJjb250YWluZXIgaW5mby1ncmlkIj4KICAgICAgICAgICAgPGRpdiBjbGFzcz0iaW5mby1pdGVtIj48aSBjbGFzcz0iZmFzIGZhLW1hcC1tYXJrZXItYWx0Ij48L2k+IENvbm5lY3RpY3V0IEF2ZSBOVywgREMgMjAwMDg8L2Rpdj4KICAgICAgICAgICAgPGRpdiBjbGFzcz0iaW5mby1pdGVtIj48aSBjbGFzcz0iZmFzIGZhLXBob25lLWFsdCI+PC9pPiAoMjAyKSA1NTUtMDEyMzwvZGl2PgogICAgICAgICAgICA8ZGl2IGNsYXNzPSJpbmZvLWl0ZW0iPjxpIGNsYXNzPSJmYXMgZmEtc3RhciI+PC9pPiA1LVN0YXIgUmF0ZWQgb24gR29vZ2xlPC9kaXY+CiAgICAgICAgPC9kaXY+CiAgICA8L2Rpdj4KCiAgICA8c2VjdGlvbiBjbGFzcz0ic2VjdGlvbiIgaWQ9ImFib3V0Ij4KICAgICAgICA8ZGl2IGNsYXNzPSJjb250YWluZXIgYWJvdXQtZ3JpZCI+CiAgICAgICAgICAgIDxkaXYgY2xhc3M9ImFib3V0LXRleHQiPgogICAgICAgICAgICAgICAgPGgzPldlbGNvbWUgdG8gQ29ubkF2ZSBEZW50YWw8L2gzPgogICAgICAgICAgICAgICAgPGgyIHN0eWxlPSJtYXJnaW4tYm90dG9tOiAyMHB4OyI+WW91ciBOZWlnaGJvcmhvb2QgRGVudGFsIFN0dWRpbzwvaDI+CiAgICAgICAgICAgICAgICA8cD5Mb2NhdGVkIGluIHRoZSBoaXN0b3JpYyAyMDAwOCB6aXAgY29kZSwgd2UgYnJpZGdlIHRoZSBnYXAgYmV0d2VlbiBjbGluaWNhbCBleGNlbGxlbmNlIGFuZCBsdXh1cnkgY29tZm9ydC48L3A+CiAgICAgICAgICAgICAgICA8cD5XZSB1bmRlcnN0YW5kIHRoYXQgdmlzaXRpbmcgdGhlIGRlbnRpc3QgaXNuJ3QgZXZlcnlvbmUncyBmYXZvcml0ZSBhY3Rpdml0eS4gVGhhdCdzIHdoeSB3ZSd2ZSBkZXNpZ25lZCBvdXIgc3R1ZGlvIHRvIGZlZWwgbGVzcyBsaWtlIGEgY2xpbmljIGFuZCBtb3JlIGxpa2UgYSBsb3VuZ2UuIEZyb20gbm9pc2UtY2FuY2VsaW5nIGhlYWRwaG9uZXMgdG8gd2FybSB0b3dlbHMsIHdlIHByaW9yaXRpemUgeW91ciByZWxheGF0aW9uLjwvcD4KICAgICAgICAgICAgICAgIDxicj4KICAgICAgICAgICAgICAgIDx1bCBzdHlsZT0ibGlzdC1zdHlsZTogbm9uZTsiPgogICAgICAgICAgICAgICAgICAgIDxsaSBzdHlsZT0ibWFyZ2luLWJvdHRvbTogMTBweDsiPjxpIGNsYXNzPSJmYXMgZmEtY2hlY2siIHN0eWxlPSJjb2xvcjogdmFyKC0tc2Vjb25kYXJ5KTsgbWFyZ2luLXJpZ2h0OiAxMHB4OyI+PC9pPiBBZHZhbmNlZCAzRCBJbWFnaW5nPC9saT4KICAgICAgICAgICAgICAgICAgICA8bGkgc3R5bGU9Im1hcmdpbi1ib3R0b206IDEwcHg7Ij48aSBjbGFzcz0iZmFzIGZhLWNoZWNrIiBzdHlsZT0iY29sb3I6IHZhcigtLXNlY29uZGFyeSk7IG1hcmdpbi1yaWdodDogMTBweDsiPjwvaT4gU2VkYXRpb24gRGVudGlzdHJ5IE9wdGlvbnM8L2xpPgogICAgICAgICAgICAgICAgICAgIDxsaSBzdHlsZT0ibWFyZ2luLWJvdHRvbTogMTBweDsiPjxpIGNsYXNzPSJmYXMgZmEtY2hlY2siIHN0eWxlPSJjb2xvcjogdmFyKC0tc2Vjb25kYXJ5KTsgbWFyZ2luLXJpZ2h0OiAxMHB4OyI+PC9pPiBXZWVrZW5kIEFwcG9pbnRtZW50cyBBdmFpbGFibGU8L2xpPgogICAgICAgICAgICAgICAgPC91bD4KICAgICAgICAgICAgPC9kaXY+CiAgICAgICAgICAgIDxkaXYgY2xhc3M9ImFib3V0LWltYWdlIj4KICAgICAgICAgICAgICAgIDxpbWcgc3JjPSJodHRwczovL2ltYWdlcy51bnNwbGFzaC5jb20vcGhvdG8tMTYyOTkwOTYxMzY1NC0yOGUzNzdjMzdiMDk/YXV0bz1mb3JtYXQmZml0PWNyb3AmcT04MCIgYWx0PSJNb2Rlcm4gRGVudGFsIE9mZmljZSBEQyI+CiAgICAgICAgICAgIDwvZGl2PgogICAgICAgIDwvZGl2PgogICAgPC9zZWN0aW9uPgoKICAgIDxzZWN0aW9uIGNsYXNzPSJzZWN0aW9uIGJnLWxpZ2h0IiBpZD0ic2VydmljZXMiPgogICAgICAgIDxkaXYgY2xhc3M9ImNvbnRhaW5lciI+CiAgICAgICAgICAgIDxkaXYgY2xhc3M9InRleHQtY2VudGVyIiBzdHlsZT0ibWF4LXdpZHRoOiA3MDBweDsgbWFyZ2luOiAwIGF1dG87Ij4KICAgICAgICAgICAgICAgIDxoMz5Db21wcmVoZW5zaXZlIENhcmU8L2gzPgogICAgICAgICAgICAgICAgPGgyIHN0eWxlPSJtYXJnaW4tYm90dG9tOiAyMHB4OyI+T3VyIFNlcnZpY2VzPC9oMj4KICAgICAgICAgICAgICAgIDxwPldoZXRoZXIgeW91IG5lZWQgYSByb3V0aW5lIGNsZWFuaW5nIG9yIGEgY29tcGxldGUgc21pbGUgbWFrZW92ZXIsIG91ciB0ZWFtIG9mIHNwZWNpYWxpc3RzIGlzIGhlcmUgZm9yIHlvdS48L3A+CiAgICAgICAgICAgIDwvZGl2PgoKICAgICAgICAgICAgPGRpdiBjbGFzcz0ic2VydmljZXMtZ3JpZCI+CiAgICAgICAgICAgICAgICA8ZGl2IGNsYXNzPSJzZXJ2aWNlLWNhcmQiPgogICAgICAgICAgICAgICAgICAgIDxkaXYgY2xhc3M9InNlcnZpY2UtaWNvbiI+PGkgY2xhc3M9ImZhcyBmYS10b290aCI+PC9pPjwvZGl2PgogICAgICAgICAgICAgICAgICAgIDxoMz5HZW5lcmFsIERlbnRpc3RyeTwvaDM+CiAgICAgICAgICAgICAgICAgICAgPHA+Um91dGluZSBleGFtcywgdWx0cmFzb25pYyBjbGVhbmluZ3MsIGFuZCBvcmFsIGNhbmNlciBzY3JlZW5pbmdzIHRvIG1haW50YWluIG9wdGltYWwgaGVhbHRoLjwvcD4KICAgICAgICAgICAgICAgIDwvZGl2PgogICAgICAgICAgICAgICAgPGRpdiBjbGFzcz0ic2VydmljZS1jYXJkIj4KICAgICAgICAgICAgICAgICAgICA8ZGl2IGNsYXNzPSJzZXJ2aWNlLWljb24iPjxpIGNsYXNzPSJmYXMgZmEtbWFnaWMiPjwvaT48L2Rpdj4KICAgICAgICAgICAgICAgICAgICA8aDM+Q29zbWV0aWMgRGVzaWduPC9oMz4KICAgICAgICAgICAgICAgICAgICA8cD5Qb3JjZWxhaW4gdmVuZWVycywgcHJvZmVzc2lvbmFsIHdoaXRlbmluZywgYW5kIGJvbmRpbmcgdG8gY3JhZnQgeW91ciBwZXJmZWN0ICJDYXBpdG9sIFNtaWxlLiI8L3A+CiAgICAgICAgICAgICAgICA8L2Rpdj4KICAgICAgICAgICAgICAgIDxkaXYgY2xhc3M9InNlcnZpY2UtY2FyZCI+CiAgICAgICAgICAgICAgICAgICAgPGRpdiBjbGFzcz0ic2VydmljZS1pY29uIj48aSBjbGFzcz0iZmFzIGZhLXNtaWxlIj48L2k+PC9kaXY+CiAgICAgICAgICAgICAgICAgICAgPGgzPkludmlzYWxpZ248L2gzPgogICAgICAgICAgICAgICAgICAgIDxwPldlIGFyZSBhIERpYW1vbmQgUGx1cyBJbnZpc2FsaWduIHByb3ZpZGVyLiBTdHJhaWdodGVuIHlvdXIgdGVldGggZGlzY3JlZXRseSB3aXRob3V0IG1ldGFsLjwvcD4KICAgICAgICAgICAgICAgIDwvZGl2PgogICAgICAgICAgICAgICAgPGRpdiBjbGFzcz0ic2VydmljZS1jYXJkIj4KICAgICAgICAgICAgICAgICAgICA8ZGl2IGNsYXNzPSJzZXJ2aWNlLWljb24iPjxpIGNsYXNzPSJmYXMgZmEtaGVhcnRiZWF0Ij48L2k+PC9kaXY+CiAgICAgICAgICAgICAgICAgICAgPGgzPkVtZXJnZW5jeSBDYXJlPC9oMz4KICAgICAgICAgICAgICAgICAgICA8cD5TYW1lLWRheSBhcHBvaW50bWVudHMgZm9yIHRvb3RoYWNoZXMsIGNoaXBwZWQgdGVldGgsIG9yIGxvc3QgY3Jvd25zLiBXZSBhcmUgaGVyZSB3aGVuIHlvdSBuZWVkIHVzLjwvcD4KICAgICAgICAgICAgICAgIDwvZGl2PgogICAgICAgICAgICA8L2Rpdj4KICAgICAgICA8L2Rpdj4KICAgIDwvc2VjdGlvbj4KCiAgICA8c2VjdGlvbiBjbGFzcz0ic2VjdGlvbiB0ZXN0aW1vbmlhbHMiIGlkPSJyZXZpZXdzIj4KICAgICAgICA8ZGl2IGNsYXNzPSJjb250YWluZXIiPgogICAgICAgICAgICA8ZGl2IGNsYXNzPSJzdGFycyI+CiAgICAgICAgICAgICAgICA8aSBjbGFzcz0iZmFzIGZhLXN0YXIiPjwvaT48aSBjbGFzcz0iZmFzIGZhLXN0YXIiPjwvaT48aSBjbGFzcz0iZmFzIGZhLXN0YXIiPjwvaT48aSBjbGFzcz0iZmFzIGZhLXN0YXIiPjwvaT48aSBjbGFzcz0iZmFzIGZhLXN0YXIiPjwvaT4KICAgICAgICAgICAgPC9kaXY+CiAgICAgICAgICAgIDxoMj4iQmVzdCBEZW50aXN0IGluIERDISI8L2gyPgogICAgICAgICAgICA8ZGl2IGNsYXNzPSJxdW90ZS1ib3giPgogICAgICAgICAgICAgICAgIkkndmUgbGl2ZWQgaW4gQ2xldmVsYW5kIFBhcmsgZm9yIDEwIHllYXJzIGFuZCBmaW5hbGx5IGZvdW5kIGEgZGVudGlzdCBJIHRydXN0LiBUaGUgb2ZmaWNlIGlzIGJlYXV0aWZ1bCwgdGhlIHN0YWZmIGlzIGluY3JlZGlibHkga2luZCwgYW5kIHRoZSBsb2NhdGlvbiBvbiBDb25uZWN0aWN1dCBBdmUgaXMgcGVyZmVjdC4iCiAgICAgICAgICAgIDwvZGl2PgogICAgICAgICAgICA8cCBzdHlsZT0iZm9udC13ZWlnaHQ6IGJvbGQ7Ij7igJQgU2FyYWggSi4sIFdhc2hpbmd0b24gREM8L3A+CiAgICAgICAgPC9kaXY+CiAgICA8L3NlY3Rpb24+CgogICAgPHNlY3Rpb24gY2xhc3M9InNlY3Rpb24iIGlkPSJjb250YWN0Ij4KICAgICAgICA8ZGl2IGNsYXNzPSJjb250YWluZXIiPgogICAgICAgICAgICA8ZGl2IGNsYXNzPSJ0ZXh0LWNlbnRlciIgc3R5bGU9Im1hcmdpbi1ib3R0b206IDUwcHg7Ij4KICAgICAgICAgICAgICAgIDxoMj5WaXNpdCBPdXIgU3R1ZGlvPC9oMj4KICAgICAgICAgICAgICAgIDxwPldlIGFyZSBhY2NlcHRpbmcgbmV3IHBhdGllbnRzIGluIHRoZSAyMDAwOCBhcmVhLjwvcD4KICAgICAgICAgICAgPC9kaXY+CgogICAgICAgICAgICA8ZGl2IGNsYXNzPSJjb250YWN0LXdyYXBwZXIiPgogICAgICAgICAgICAgICAgPGRpdiBjbGFzcz0iY29udGFjdC1pbmZvIj4KICAgICAgICAgICAgICAgICAgICA8aDMgc3R5bGU9Im1hcmdpbi1ib3R0b206IDMwcHg7IGNvbG9yOiB2YXIoLS1wcmltYXJ5KTsiPkNvbnRhY3QgRGV0YWlsczwvaDM+CgogICAgICAgICAgICAgICAgICAgIDxkaXYgY2xhc3M9ImNvbnRhY3Qtcm93Ij4KICAgICAgICAgICAgICAgICAgICAgICAgPGkgY2xhc3M9ImZhcyBmYS1tYXAtcGluIj48L2k+CiAgICAgICAgICAgICAgICAgICAgICAgIDxkaXY+CiAgICAgICAgICAgICAgICAgICAgICAgICAgICA8c3Ryb25nPkFkZHJlc3M8L3N0cm9uZz48YnI+CiAgICAgICAgICAgICAgICAgICAgICAgICAgICAzNTAxIENvbm5lY3RpY3V0IEF2ZSBOVzxicj4KICAgICAgICAgICAgICAgICAgICAgICAgICAgIFdhc2hpbmd0b24sIERDIDIwMDA4CiAgICAgICAgICAgICAgICAgICAgICAgIDwvZGl2PgogICAgICAgICAgICAgICAgICAgIDwvZGl2PgoKICAgICAgICAgICAgICAgICAgICA8ZGl2IGNsYXNzPSJjb250YWN0LXJvdyI+CiAgICAgICAgICAgICAgICAgICAgICAgIDxpIGNsYXNzPSJmYXMgZmEtY2xvY2siPjwvaT4KICAgICAgICAgICAgICAgICAgICAgICAgPGRpdj4KICAgICAgICAgICAgICAgICAgICAgICAgICAgIDxzdHJvbmc+SG91cnM8L3N0cm9uZz48YnI+CiAgICAgICAgICAgICAgICAgICAgICAgICAgICBNb24gLSBGcmk6IDg6MDAgQU0gLSA2OjAwIFBNPGJyPgogICAgICAgICAgICAgICAgICAgICAgICAgICAgU2F0OiA5OjAwIEFNIC0gMjowMCBQTQogICAgICAgICAgICAgICAgICAgICAgICA8L2Rpdj4KICAgICAgICAgICAgICAgICAgICA8L2Rpdj4KCiAgICAgICAgICAgICAgICAgICAgPGRpdiBjbGFzcz0iY29udGFjdC1yb3ciPgogICAgICAgICAgICAgICAgICAgICAgICA8aSBjbGFzcz0iZmFzIGZhLXBob25lIj48L2k+CiAgICAgICAgICAgICAgICAgICAgICAgIDxkaXY+CiAgICAgICAgICAgICAgICAgICAgICAgICAgICA8c3Ryb25nPlBob25lPC9zdHJvbmc+PGJyPgogICAgICAgICAgICAgICAgICAgICAgICAgICAgKDIwMikgNTU1LTAxMjMKICAgICAgICAgICAgICAgICAgICAgICAgPC9kaXY+CiAgICAgICAgICAgICAgICAgICAgPC9kaXY+CgogICAgICAgICAgICAgICAgICAgIDxkaXYgY2xhc3M9ImNvbnRhY3Qtcm93Ij4KICAgICAgICAgICAgICAgICAgICAgICAgPGkgY2xhc3M9ImZhcyBmYS1lbnZlbG9wZSI+PC9pPgogICAgICAgICAgICAgICAgICAgICAgICA8ZGl2PgogICAgICAgICAgICAgICAgICAgICAgICAgICAgPHN0cm9uZz5FbWFpbDwvc3Ryb25nPjxicj4KICAgICAgICAgICAgICAgICAgICAgICAgICAgIGhlbGxvQGNvbm5hdmVkZW50YWwuY29tCiAgICAgICAgICAgICAgICAgICAgICAgIDwvZGl2PgogICAgICAgICAgICAgICAgICAgIDwvZGl2PgoKICAgICAgICAgICAgICAgICAgICA8YSBocmVmPSIjIiBjbGFzcz0iYnRuIGJ0bi1wcmltYXJ5IiBzdHlsZT0ibWFyZ2luLXRvcDogMjBweDsgd2lkdGg6IDEwMCU7IHRleHQtYWxpZ246IGNlbnRlcjsiPkJvb2sgQXBwb2ludG1lbnQgT25saW5lPC9hPgogICAgICAgICAgICAgICAgPC9kaXY+CgogICAgICAgICAgICAgICAgPGRpdiBjbGFzcz0ibWFwLWNvbnRhaW5lciI+CiAgICAgICAgICAgICAgICAgICAgPGlmcmFtZQogICAgICAgICAgICAgICAgICAgICAgICBzcmM9Imh0dHBzOi8vd3d3Lmdvb2dsZS5jb20vbWFwcy9lbWJlZD9wYj0hMW0xOCExbTEyITFtMyExZDMxMDMuODg2MDI2ODU3OTk3ITJkLTc3LjA1OCEzZDM4LjkzNSEybTMhMWYwITJmMCEzZjAhM20yITFpMTAyNCEyaTc2OCE0ZjEzLjEhM20zITFtMiExczB4ODliN2M4M2I4YjhiOGI4YiUzQTB4OGI4YjhiOGI4YjhiOGI4YiEyc0Nvbm5lY3RpY3V0JTIwQXZlJTIwTlclMkMlMjBXYXNoaW5ndG9uJTJDJTIwREMlMjAyMDAwOCE1ZTAhM20yITFzZW4hMnN1cyE0djE2MjAwMDAwMDAwMDAhNW0yITFzZW4hMnN1cyIKICAgICAgICAgICAgICAgICAgICAgICAgd2lkdGg9IjEwMCUiCiAgICAgICAgICAgICAgICAgICAgICAgIGhlaWdodD0iMTAwJSIKICAgICAgICAgICAgICAgICAgICAgICAgc3R5bGU9ImJvcmRlcjowOyIKICAgICAgICAgICAgICAgICAgICAgICAgYWxsb3dmdWxsc2NyZWVuPSIiCiAgICAgICAgICAgICAgICAgICAgICAgIGxvYWRpbmc9ImxhenkiPgogICAgICAgICAgICAgICAgICAgIDwvaWZyYW1lPgogICAgICAgICAgICAgICAgPC9kaXY+CiAgICAgICAgICAgIDwvZGl2PgogICAgICAgIDwvZGl2PgogICAgPC9zZWN0aW9uPgoKICAgIDxmb290ZXI+CiAgICAgICAgPGRpdiBjbGFzcz0iY29udGFpbmVyIj4KICAgICAgICAgICAgPGgyPkNvbm5BdmUgRGVudGFsPC9oMj4KICAgICAgICAgICAgPHA+UmVmaW5lZCBEZW50aXN0cnkgaW4gV2FzaGluZ3RvbiBEQzwvcD4KICAgICAgICAgICAgPGRpdiBjbGFzcz0ic29jaWFsLWljb25zIj4KICAgICAgICAgICAgICAgIDxhIGhyZWY9IiMiPjxpIGNsYXNzPSJmYWIgZmEtaW5zdGFncmFtIj48L2k+PC9hPgogICAgICAgICAgICAgICAgPGEgaHJlZj0iIyI+PGkgY2xhc3M9ImZhYiBmYS1mYWNlYm9vay1mIj48L2k+PC9hPgogICAgICAgICAgICAgICAgPGEgaHJlZj0iIyI+PGkgY2xhc3M9ImZhYiBmYS10d2l0dGVyIj48L2k+PC9hPgogICAgICAgICAgICA8L2Rpdj4KICAgICAgICAgICAgPGRpdiBjbGFzcz0iY29weXJpZ2h0Ij4KICAgICAgICAgICAgICAgIMKpIDIwMjYgQ29ubmVjdGljdXQgQXZlIERlbnRhbCBTdHVkaW8uIEFsbCBSaWdodHMgUmVzZXJ2ZWQuCiAgICAgICAgICAgIDwvZGl2PgogICAgICAgIDwvZGl2PgogICAgPC9mb290ZXI+CgogICAgPHNjcmlwdD4KICAgICAgICBkb2N1bWVudC5xdWVyeVNlbGVjdG9yKCcubW9iaWxlLXRvZ2dsZScpLmFkZEV2ZW50TGlzdGVuZXIoJ2NsaWNrJywgZnVuY3Rpb24oKSB7CiAgICAgICAgICAgIGNvbnN0IG5hdiA9IGRvY3VtZW50LnF1ZXJ5U2VsZWN0b3IoJy5uYXYtbWVudScpOwogICAgICAgICAgICBpZihuYXYuc3R5bGUuZGlzcGxheSA9PT0gJ2ZsZXgnKSB7CiAgICAgICAgICAgICAgICBuYXYuc3R5bGUuZGlzcGxheSA9ICdub25lJzsKICAgICAgICAgICAgfSBlbHNlIHsKICAgICAgICAgICAgICAgIG5hdi5zdHlsZS5kaXNwbGF5ID0gJ2ZsZXgnOwogICAgICAgICAgICAgICAgbmF2LnN0eWxlLmZsZXhEaXJlY3Rpb24gPSAnY29sdW1uJzsKICAgICAgICAgICAgICAgIG5hdi5zdHlsZS5wb3NpdGlvbiA9ICdhYnNvbHV0ZSc7CiAgICAgICAgICAgICAgICBuYXYuc3R5bGUudG9wID0gJzkwcHgnOwogICAgICAgICAgICAgICAgbmF2LnN0eWxlLmxlZnQgPSAnMCc7CiAgICAgICAgICAgICAgICBuYXYuc3R5bGUud2lkdGggPSAnMTAwJSc7CiAgICAgICAgICAgICAgICBuYXYuc3R5bGUuYmFja2dyb3VuZCA9ICd3aGl0ZSc7CiAgICAgICAgICAgICAgICBuYXYuc3R5bGUucGFkZGluZyA9ICcyMHB4JzsKICAgICAgICAgICAgICAgIG5hdi5zdHlsZS5ib3hTaGFkb3cgPSAnMCA1cHggMTBweCByZ2JhKDAsMCwwLDAuMSknOwogICAgICAgICAgICB9CiAgICAgICAgfSk7CiAgICA8L3NjcmlwdD4KPC9ib2R5Pgo8L2h0bWw+Cg==
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Connecticut Ave Dental Studio | Washington DC</title>
+
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&family=Playfair+Display:wght@400;700&display=swap" rel="stylesheet">
+
+    <style>
+        /* --- CSS RESET & VARIABLES --- */
+        :root {
+            --primary: #0f2746; /* Deep DC Navy */
+            --secondary: #2dd4bf; /* Modern Mint/Teal */
+            --gold: #d4af37; /* Subtle Gold Accent */
+            --light: #f3f4f6;
+            --white: #ffffff;
+            --text-dark: #1e293b;
+            --text-light: #64748b;
+        }
+
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        html { scroll-behavior: smooth; }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            color: var(--text-dark);
+            line-height: 1.6;
+            background-color: var(--white);
+        }
+
+        h1, h2, h3, h4 {
+            font-family: 'Playfair Display', serif;
+            color: var(--primary);
+            font-weight: 700;
+        }
+
+        /* --- UTILITY CLASSES --- */
+        .container { max-width: 1200px; margin: 0 auto; padding: 0 20px; }
+        .text-center { text-align: center; }
+        .section { padding: 80px 0; }
+        .bg-light { background-color: var(--light); }
+
+        .btn {
+            display: inline-block;
+            padding: 14px 32px;
+            border-radius: 50px;
+            font-weight: 600;
+            text-decoration: none;
+            transition: all 0.3s ease;
+            text-transform: uppercase;
+            font-size: 0.9rem;
+            letter-spacing: 0.5px;
+        }
+        .btn-primary {
+            background-color: var(--secondary);
+            color: var(--primary);
+            border: 2px solid var(--secondary);
+        }
+        .btn-primary:hover {
+            background-color: transparent;
+            color: var(--secondary);
+        }
+        .btn-outline {
+            background-color: transparent;
+            color: var(--white);
+            border: 2px solid var(--white);
+        }
+        .btn-outline:hover {
+            background-color: var(--white);
+            color: var(--primary);
+        }
+
+        /* --- HEADER & NAV --- */
+        header {
+            background: rgba(255, 255, 255, 0.98);
+            box-shadow: 0 2px 20px rgba(0,0,0,0.05);
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
+        }
+        .nav-wrapper {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            height: 90px;
+        }
+        .logo {
+            font-size: 1.5rem;
+            font-weight: bold;
+            color: var(--primary);
+            text-decoration: none;
+            font-family: 'Playfair Display', serif;
+            letter-spacing: -0.5px;
+        }
+        .logo span { color: var(--secondary); }
+
+        nav ul { display: flex; list-style: none; gap: 35px; align-items: center; }
+        nav a { text-decoration: none; color: var(--primary); font-weight: 500; font-size: 0.95rem; transition: color 0.3s; }
+        nav a:hover { color: var(--secondary); }
+
+        .mobile-toggle { display: none; font-size: 1.5rem; color: var(--primary); cursor: pointer; }
+
+        /* --- HERO SECTION --- */
+        .hero {
+            position: relative;
+            height: 90vh; /* Full screen height */
+            background: linear-gradient(rgba(15, 39, 70, 0.85), rgba(15, 39, 70, 0.7)), url('https://images.unsplash.com/photo-1609840114035-1c99d59242cc?auto=format&fit=crop&q=80');
+            background-size: cover;
+            background-position: center;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            color: white;
+            margin-top: 90px;
+        }
+        .hero-content h1 {
+            font-size: 4rem;
+            color: white;
+            margin-bottom: 20px;
+            line-height: 1.1;
+        }
+        .hero-content p {
+            font-size: 1.3rem;
+            max-width: 700px;
+            margin: 0 auto 40px auto;
+            opacity: 0.9;
+            font-weight: 300;
+        }
+
+        /* --- INFO BAR --- */
+        .info-bar {
+            background: var(--secondary);
+            color: var(--primary);
+            padding: 20px 0;
+            margin-top: -5px;
+        }
+        .info-grid {
+            display: flex;
+            justify-content: space-around;
+            text-align: center;
+            font-weight: 600;
+        }
+        .info-item i { margin-right: 8px; }
+
+        /* --- ABOUT --- */
+        .about-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 60px;
+            align-items: center;
+        }
+        .about-image img {
+            width: 100%;
+            border-radius: 10px;
+            box-shadow: 20px 20px 0px var(--light);
+        }
+
+        /* --- SERVICES --- */
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+            margin-top: 50px;
+        }
+        .service-card {
+            background: white;
+            padding: 40px 30px;
+            border-radius: 8px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.03);
+            transition: transform 0.3s;
+            border-top: 4px solid var(--secondary);
+        }
+        .service-card:hover { transform: translateY(-5px); }
+        .service-icon { font-size: 2.5rem; color: var(--primary); margin-bottom: 20px; }
+        .service-card h3 { font-size: 1.5rem; margin-bottom: 15px; }
+
+        /* --- TESTIMONIALS --- */
+        .testimonials { background-color: var(--primary); color: white; text-align: center; }
+        .testimonials h2 { color: white; }
+        .quote-box {
+            font-size: 1.2rem;
+            font-style: italic;
+            max-width: 800px;
+            margin: 30px auto;
+            opacity: 0.9;
+        }
+        .stars { color: var(--gold); margin-bottom: 10px; }
+
+        /* --- CONTACT / MAP --- */
+        .contact-wrapper {
+            display: flex;
+            flex-wrap: wrap;
+            box-shadow: 0 10px 40px rgba(0,0,0,0.1);
+            border-radius: 15px;
+            overflow: hidden;
+            background: white;
+        }
+        .contact-info {
+            flex: 1;
+            padding: 60px;
+            min-width: 300px;
+            background: white;
+        }
+        .map-container {
+            flex: 1;
+            min-width: 300px;
+            background: #eee;
+            min-height: 400px;
+        }
+        .contact-row {
+            display: flex;
+            align-items: center;
+            margin-bottom: 30px;
+        }
+        .contact-row i {
+            font-size: 1.5rem;
+            color: var(--secondary);
+            margin-right: 20px;
+            width: 30px;
+        }
+
+        /* --- FOOTER --- */
+        footer {
+            background: var(--primary);
+            color: white;
+            padding: 60px 0 20px;
+            text-align: center;
+        }
+        .social-icons { margin: 20px 0; }
+        .social-icons a { color: white; margin: 0 10px; font-size: 1.2rem; transition: color 0.3s; }
+        .social-icons a:hover { color: var(--secondary); }
+        .copyright { border-top: 1px solid rgba(255,255,255,0.1); padding-top: 20px; margin-top: 40px; font-size: 0.8rem; opacity: 0.6; }
+
+        /* --- MOBILE RESPONSIVE --- */
+        @media (max-width: 768px) {
+            .nav-menu { display: none; }
+            .mobile-toggle { display: block; }
+            .hero-content h1 { font-size: 2.5rem; }
+            .about-grid { grid-template-columns: 1fr; }
+            .contact-info { padding: 30px; }
+            .info-grid { flex-direction: column; gap: 10px; }
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="container nav-wrapper">
+            <a href="#" class="logo">ConnAve <span>Dental</span></a>
+            <nav>
+                <ul class="nav-menu">
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#services">Services</a></li>
+                    <li><a href="#new-patients">New Patients</a></li>
+                    <li><a href="#reviews">Reviews</a></li>
+                    <li><a href="#contact" class="btn btn-primary">Book Visit</a></li>
+                </ul>
+                <div class="mobile-toggle"><i class="fas fa-bars"></i></div>
+            </nav>
+        </div>
+    </header>
+
+    <section class="hero">
+        <div class="container hero-content">
+            <p>SERVING WASHINGTON DC 20008</p>
+            <h1>Refined Dentistry on<br>Connecticut Avenue</h1>
+            <p>Experience world-class dental care in the heart of Cleveland Park. Modern technology, neighborhood warmth, and a patient-first approach.</p>
+            <div style="margin-top: 30px;">
+                <a href="#contact" class="btn btn-primary">Book Appointment</a>
+                <a href="#services" class="btn btn-outline" style="margin-left: 15px;">Explore Services</a>
+            </div>
+        </div>
+    </section>
+
+    <div class="info-bar">
+        <div class="container info-grid">
+            <div class="info-item"><i class="fas fa-map-marker-alt"></i> Connecticut Ave NW, DC 20008</div>
+            <div class="info-item"><i class="fas fa-phone-alt"></i> (202) 555-0123</div>
+            <div class="info-item"><i class="fas fa-star"></i> 5-Star Rated on Google</div>
+        </div>
+    </div>
+
+    <section class="section" id="about">
+        <div class="container about-grid">
+            <div class="about-text">
+                <h3>Welcome to ConnAve Dental</h3>
+                <h2 style="margin-bottom: 20px;">Your Neighborhood Dental Studio</h2>
+                <p>Located in the historic 20008 zip code, we bridge the gap between clinical excellence and luxury comfort.</p>
+                <p>We understand that visiting the dentist isn't everyone's favorite activity. That's why we've designed our studio to feel less like a clinic and more like a lounge. From noise-canceling headphones to warm towels, we prioritize your relaxation.</p>
+                <br>
+                <ul style="list-style: none;">
+                    <li style="margin-bottom: 10px;"><i class="fas fa-check" style="color: var(--secondary); margin-right: 10px;"></i> Advanced 3D Imaging</li>
+                    <li style="margin-bottom: 10px;"><i class="fas fa-check" style="color: var(--secondary); margin-right: 10px;"></i> Sedation Dentistry Options</li>
+                    <li style="margin-bottom: 10px;"><i class="fas fa-check" style="color: var(--secondary); margin-right: 10px;"></i> Weekend Appointments Available</li>
+                </ul>
+            </div>
+            <div class="about-image">
+                <img src="https://images.unsplash.com/photo-1629909613654-28e377c37b09?auto=format&fit=crop&q=80" alt="Modern Dental Office DC">
+            </div>
+        </div>
+    </section>
+
+    <section class="section bg-light" id="services">
+        <div class="container">
+            <div class="text-center" style="max-width: 700px; margin: 0 auto;">
+                <h3>Comprehensive Care</h3>
+                <h2 style="margin-bottom: 20px;">Our Services</h2>
+                <p>Whether you need a routine cleaning or a complete smile makeover, our team of specialists is here for you.</p>
+            </div>
+
+            <div class="services-grid">
+                <div class="service-card">
+                    <div class="service-icon"><i class="fas fa-tooth"></i></div>
+                    <h3>General Dentistry</h3>
+                    <p>Routine exams, ultrasonic cleanings, and oral cancer screenings to maintain optimal health.</p>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon"><i class="fas fa-magic"></i></div>
+                    <h3>Cosmetic Design</h3>
+                    <p>Porcelain veneers, professional whitening, and bonding to craft your perfect "Capitol Smile."</p>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon"><i class="fas fa-smile"></i></div>
+                    <h3>Invisalign</h3>
+                    <p>We are a Diamond Plus Invisalign provider. Straighten your teeth discreetly without metal.</p>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon"><i class="fas fa-heartbeat"></i></div>
+                    <h3>Emergency Care</h3>
+                    <p>Same-day appointments for toothaches, chipped teeth, or lost crowns. We are here when you need us.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="section testimonials" id="reviews">
+        <div class="container">
+            <div class="stars">
+                <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+            </div>
+            <h2>"Best Dentist in DC!"</h2>
+            <div class="quote-box">
+                "I've lived in Cleveland Park for 10 years and finally found a dentist I trust. The office is beautiful, the staff is incredibly kind, and the location on Connecticut Ave is perfect."
+            </div>
+            <p style="font-weight: bold;">— Sarah J., Washington DC</p>
+        </div>
+    </section>
+
+    <section class="section" id="contact">
+        <div class="container">
+            <div class="text-center" style="margin-bottom: 50px;">
+                <h2>Visit Our Studio</h2>
+                <p>We are accepting new patients in the 20008 area.</p>
+            </div>
+
+            <div class="contact-wrapper">
+                <div class="contact-info">
+                    <h3 style="margin-bottom: 30px; color: var(--primary);">Contact Details</h3>
+
+                    <div class="contact-row">
+                        <i class="fas fa-map-pin"></i>
+                        <div>
+                            <strong>Address</strong><br>
+                            3501 Connecticut Ave NW<br>
+                            Washington, DC 20008
+                        </div>
+                    </div>
+
+                    <div class="contact-row">
+                        <i class="fas fa-clock"></i>
+                        <div>
+                            <strong>Hours</strong><br>
+                            Mon - Fri: 8:00 AM - 6:00 PM<br>
+                            Sat: 9:00 AM - 2:00 PM
+                        </div>
+                    </div>
+
+                    <div class="contact-row">
+                        <i class="fas fa-phone"></i>
+                        <div>
+                            <strong>Phone</strong><br>
+                            (202) 555-0123
+                        </div>
+                    </div>
+
+                    <div class="contact-row">
+                        <i class="fas fa-envelope"></i>
+                        <div>
+                            <strong>Email</strong><br>
+                            hello@connavedental.com
+                        </div>
+                    </div>
+
+                    <a href="#" class="btn btn-primary" style="margin-top: 20px; width: 100%; text-align: center;">Book Appointment Online</a>
+                </div>
+
+                <div class="map-container">
+                    <iframe
+                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3103.886026857997!2d-77.058!3d38.935!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89b7c83b8b8b8b8b%3A0x8b8b8b8b8b8b8b8b!2sConnecticut%20Ave%20NW%2C%20Washington%2C%20DC%2020008!5e0!3m2!1sen!2sus!4v1620000000000!5m2!1sen!2sus"
+                        width="100%"
+                        height="100%"
+                        style="border:0;"
+                        allowfullscreen=""
+                        loading="lazy">
+                    </iframe>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <h2>ConnAve Dental</h2>
+            <p>Refined Dentistry in Washington DC</p>
+            <div class="social-icons">
+                <a href="#"><i class="fab fa-instagram"></i></a>
+                <a href="#"><i class="fab fa-facebook-f"></i></a>
+                <a href="#"><i class="fab fa-twitter"></i></a>
+            </div>
+            <div class="copyright">
+                © 2026 Connecticut Ave Dental Studio. All Rights Reserved.
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        document.querySelector('.mobile-toggle').addEventListener('click', function() {
+            const nav = document.querySelector('.nav-menu');
+            if(nav.style.display === 'flex') {
+                nav.style.display = 'none';
+            } else {
+                nav.style.display = 'flex';
+                nav.style.flexDirection = 'column';
+                nav.style.position = 'absolute';
+                nav.style.top = '90px';
+                nav.style.left = '0';
+                nav.style.width = '100%';
+                nav.style.background = 'white';
+                nav.style.padding = '20px';
+                nav.style.boxShadow = '0 5px 10px rgba(0,0,0,0.1)';
+            }
+        });
+    </script>
+</body>
+</html>
