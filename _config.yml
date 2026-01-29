@@ -1,0 +1,22 @@
+# Jekyll configuration
+title: My Website
+description: Welcome to our website
+url: ""
+baseurl: ""
+
+# Build settings
+markdown: kramdown
+permalink: /blog/:title/
+
+# Plugins
+plugins:
+  - jekyll-feed
+  - jekyll-seo-tag
+
+# Collections
+defaults:
+  - scope:
+      path: "_posts"
+      type: "posts"
+    values:
+      layout: "post"
