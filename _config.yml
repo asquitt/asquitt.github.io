@@ -1,0 +1,22 @@
+# Jekyll configuration
+title: Connecticut Ave Dental Studio - Expert Dental Care in DC
+description: Transform your smile with our compassionate, state-of-the-art dental services. Schedule your personalized consultation today for healthy, beautiful teeth!
+url: ""
+baseurl: ""
+
+# Build settings
+markdown: kramdown
+permalink: /blog/:title/
+
+# Plugins
+plugins:
+  - jekyll-feed
+  - jekyll-seo-tag
+
+# Collections
+defaults:
+  - scope:
+      path: "_posts"
+      type: "posts"
+    values:
+      layout: "post"
