@@ -1,67 +1,479 @@
 <!DOCTYPE html>
-
-<html>
+<html lang="en">
 <head>
-<!-- ISSUE: missing_title - NO TITLE TAG -->
-<!-- ISSUE: missing_meta_description - NO META DESCRIPTION -->
-<!-- ISSUE: missing_viewport - NO VIEWPORT TAG -->
-<!-- ISSUE: missing_canonical - NO CANONICAL TAG -->
-<style>
-        body { font-family: Arial; margin: 0; padding: 20px; background: #f5f5f5; }
-        .hero { background: #2563eb; color: white; padding: 60px 20px; text-align: center; }
-        .content { max-width: 800px; margin: 0 auto; padding: 20px; }
-        .service-card { background: white; padding: 20px; margin: 10px 0; border-radius: 8px; }
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Connecticut Ave Dental Studio | Premier Dental Care in Washington DC</title>
+    <meta name="description" content="Connecticut Ave Dental Studio provides exceptional dental care in Washington DC. Expert dentists offering comprehensive services in a comfortable, modern environment.">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background-color: #ffffff;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        /* Header */
+        header {
+            background: linear-gradient(135deg, #f8fbff 0%, #e8f4fd 100%);
+            padding: 15px 0;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
+        }
+
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            font-size: 24px;
+            font-weight: 700;
+            color: #2c5aa0;
+            text-decoration: none;
+        }
+
+        .nav-links {
+            display: flex;
+            list-style: none;
+            gap: 30px;
+        }
+
+        .nav-links a {
+            text-decoration: none;
+            color: #555;
+            font-weight: 500;
+            transition: color 0.3s ease;
+            position: relative;
+        }
+
+        .nav-links a:hover {
+            color: #2c5aa0;
+        }
+
+        .nav-links a::after {
+            content: '';
+            position: absolute;
+            bottom: -5px;
+            left: 0;
+            width: 0;
+            height: 2px;
+            background: #2c5aa0;
+            transition: width 0.3s ease;
+        }
+
+        .nav-links a:hover::after {
+            width: 100%;
+        }
+
+        /* Hero Section */
+        .hero {
+            background: linear-gradient(135deg, #f8fbff 0%, #e8f4fd 100%);
+            padding: 120px 0 80px;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 1000"><defs><linearGradient id="grad" x1="0%" y1="0%" x2="100%" y2="100%"><stop offset="0%" style="stop-color:%23ffffff;stop-opacity:0.1" /><stop offset="100%" style="stop-color:%232c5aa0;stop-opacity:0.05" /></linearGradient></defs><circle cx="200" cy="200" r="100" fill="url(%23grad)"/><circle cx="800" cy="300" r="150" fill="url(%23grad)"/><circle cx="600" cy="700" r="120" fill="url(%23grad)"/></svg>') no-repeat center center;
+            background-size: cover;
+            opacity: 0.3;
+        }
+
+        .hero-content {
+            position: relative;
+            z-index: 2;
+        }
+
+        .hero h1 {
+            font-size: 3.5rem;
+            font-weight: 700;
+            color: #2c5aa0;
+            margin-bottom: 20px;
+            line-height: 1.2;
+        }
+
+        .hero p {
+            font-size: 1.3rem;
+            color: #666;
+            margin-bottom: 40px;
+            max-width: 600px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .cta-button {
+            display: inline-block;
+            background: linear-gradient(135deg, #2c5aa0 0%, #1e3f73 100%);
+            color: white;
+            padding: 18px 40px;
+            text-decoration: none;
+            border-radius: 50px;
+            font-weight: 600;
+            font-size: 1.1rem;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 15px rgba(44, 90, 160, 0.3);
+            margin: 0 10px;
+        }
+
+        .cta-button:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 8px 25px rgba(44, 90, 160, 0.4);
+        }
+
+        .cta-secondary {
+            background: transparent;
+            color: #2c5aa0;
+            border: 2px solid #2c5aa0;
+            box-shadow: none;
+        }
+
+        .cta-secondary:hover {
+            background: #2c5aa0;
+            color: white;
+        }
+
+        /* Services Section */
+        .services {
+            padding: 80px 0;
+            background: #ffffff;
+        }
+
+        .section-title {
+            text-align: center;
+            font-size: 2.5rem;
+            color: #2c5aa0;
+            margin-bottom: 20px;
+            font-weight: 700;
+        }
+
+        .section-subtitle {
+            text-align: center;
+            color: #666;
+            font-size: 1.2rem;
+            margin-bottom: 60px;
+            max-width: 600px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 40px;
+            margin-top: 60px;
+        }
+
+        .service-card {
+            background: white;
+            padding: 40px 30px;
+            border-radius: 15px;
+            text-align: center;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.08);
+            transition: all 0.3s ease;
+            border: 1px solid #f0f4f8;
+        }
+
+        .service-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 15px 40px rgba(0,0,0,0.12);
+        }
+
+        .service-icon {
+            width: 80px;
+            height: 80px;
+            background: linear-gradient(135deg, #e8f4fd 0%, #d1e7fc 100%);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 25px;
+            font-size: 2rem;
+            color: #2c5aa0;
+        }
+
+        .service-card h3 {
+            font-size: 1.5rem;
+            color: #2c5aa0;
+            margin-bottom: 15px;
+            font-weight: 600;
+        }
+
+        .service-card p {
+            color: #666;
+            line-height: 1.6;
+        }
+
+        /* About Section */
+        .about {
+            padding: 80px 0;
+            background: linear-gradient(135deg, #f8fbff 0%, #e8f4fd 100%);
+        }
+
+        .about-content {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 60px;
+            align-items: center;
+        }
+
+        .about-text h2 {
+            font-size: 2.5rem;
+            color: #2c5aa0;
+            margin-bottom: 25px;
+            font-weight: 700;
+        }
+
+        .about-text p {
+            color: #666;
+            font-size: 1.1rem;
+            margin-bottom: 25px;
+            line-height: 1.7;
+        }
+
+        .about-features {
+            list-style: none;
+            margin: 30px 0;
+        }
+
+        .about-features li {
+            color: #666;
+            margin-bottom: 15px;
+            padding-left: 30px;
+            position: relative;
+        }
+
+        .about-features li::before {
+            content: '✓';
+            position: absolute;
+            left: 0;
+            color: #2c5aa0;
+            font-weight: bold;
+            font-size: 1.2rem;
+        }
+
+        .about-image {
+            background: white;
+            border-radius: 15px;
+            padding: 20px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+            text-align: center;
+            color: #2c5aa0;
+            font-size: 4rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            min-height: 300px;
+        }
+
+        /* Contact Section */
+        .contact {
+            padding: 80px 0;
+            background: white;
+        }
+
+        .contact-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 60px;
+            margin-top: 40px;
+        }
+
+        .contact-info {
+            background: linear-gradient(135deg, #f8fbff 0%, #e8f4fd 100%);
+            padding: 40px;
+            border-radius: 15px;
+        }
+
+        .contact-item {
+            display: flex;
+            align-items: center;
+            margin-bottom: 30px;
+        }
+
+        .contact-icon {
+            width: 50px;
+            height: 50px;
+            background: #2c5aa0;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            margin-right: 20px;
+            font-size: 1.2rem;
+        }
+
+        .contact-details h4 {
+            color: #2c5aa0;
+            font-weight: 600;
+            margin-bottom: 5px;
+        }
+
+        .contact-details p {
+            color: #666;
+        }
+
+        .contact-form {
+            background: white;
+            padding: 40px;
+            border-radius: 15px;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.08);
+        }
+
+        .form-group {
+            margin-bottom: 25px;
+        }
+
+        .form-group label {
+            display: block;
+            color: #333;
+            font-weight: 500;
+            margin-bottom: 8px;
+        }
+
+        .form-group input,
+        .form-group textarea {
+            width: 100%;
+            padding: 15px;
+            border: 2px solid #f0f4f8;
+            border-radius: 8px;
+            font-size: 1rem;
+            transition: border-color 0.3s ease;
+        }
+
+        .form-group input:focus,
+        .form-group textarea:focus {
+            outline: none;
+            border-color: #2c5aa0;
+        }
+
+        /* Footer */
+        footer {
+            background: #1e3f73;
+            color: white;
+            padding: 40px 0 20px;
+            text-align: center;
+        }
+
+        .footer-content {
+            margin-bottom: 30px;
+        }
+
+        .footer-logo {
+            font-size: 1.8rem;
+            font-weight: 700;
+            margin-bottom: 15px;
+        }
+
+        .footer-text {
+            color: #b8d4f0;
+            margin-bottom: 20px;
+        }
+
+        .footer-bottom {
+            border-top: 1px solid #2c5aa0;
+            padding-top: 20px;
+            color: #b8d4f0;
+        }
+
+        /* Mobile Responsiveness */
+        @media (max-width: 768px) {
+            .nav-links {
+                display: none;
+            }
+
+            .hero h1 {
+                font-size: 2.5rem;
+            }
+
+            .hero p {
+                font-size: 1.1rem;
+            }
+
+            .about-content,
+            .contact-grid {
+                grid-template-columns: 1fr;
+                gap: 40px;
+            }
+
+            .services-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .cta-button {
+                display: block;
+                margin: 10px 0;
+                text-align: center;
+            }
+        }
     </style>
-<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-<style>
-            /* Sticky CTA bar offset - push fixed headers and content below the bar */
-            body > header[style*="position: fixed"],
-            body > header[style*="position:fixed"],
-            header.fixed,
-            .fixed-header {
-                top: 50px !important;
-            }
-            /* Also offset the hero section if it has margin-top for the fixed header */
-            .hero,
-            section.hero,
-            [class*="hero"] {
-                margin-top: calc(80px + 50px) !important;
-            }
-        </style></head>
-<body><div id="sticky-cta-bar" style="position: fixed; top: 0; left: 0; right: 0; background: #2563eb; color: white; padding: 12px 20px; display: flex; align-items: center; justify-content: center; gap: 20px; z-index: 1100; font-family: Arial; box-shadow: 0 2px 4px rgba(0,0,0,0.1);">
-<span style="font-size: 14px; font-weight: 500;">Ready to get started? Schedule your consultation now!</span>
-<a href="/contact" style="background: white; color: #2563eb; padding: 8px 16px; text-decoration: none; border-radius: 4px; font-weight: 600; font-size: 14px; transition: all 0.3s ease;">Book Your Appointment Today</a>
-<button aria-label="Close notification bar" onclick="document.getElementById('sticky-cta-bar').style.display='none'" style="background: none; border: none; color: white; font-size: 18px; cursor: pointer; padding: 4px; margin-left: auto;">&times;</button>
-</div>
-<!-- ISSUE: missing_h1 - NO H1 ON PAGE -->
-<div class="hero">
-<h2>Welcome to DC Dental Studio</h2>
-<p>Professional Dental Care</p>
-</div>
-<div class="content">
-<!-- ISSUE: thin_content -->
-<div class="service-card">
-<h3>Our Services</h3>
-<p>We offer dental services.</p>
-</div>
-<div class="service-card">
-<h3>About Us</h3>
-<p>We are dentists in DC.</p>
-</div>
-<!-- ISSUE: missing_alt_text -->
-<img alt="Modern dental office with sleek chairs and professional equipment at Connecticut Ave Dental Studio" src="dental-office.jpg">
-<img alt="Warm, welcoming smile representing Connecticut Ave Dental Studio's professional care" src="smile.jpg">
-<img alt="Smiling dental team in white coats standing together at Connecticut Ave Dental Studio" src="team.jpg">
-<!-- ISSUE: broken_internal_links -->
-<p>Check out our <a href="services-that-dont-exist.html">special services</a></p>
-<p>Read our <a href="blog-missing.html">blog</a></p>
-</div>
-<div style="background: white; border: 2px solid #2563eb; border-radius: 8px; padding: 40px 20px; margin: 40px 0; text-align: center; box-shadow: 0 2px 10px rgba(0,0,0,0.1);">
-<h3 style="font-family: Arial; color: #2563eb; margin: 0 0 15px 0; font-size: 24px;">Have Questions? We're Here to Help</h3>
-<p style="font-family: Arial; color: #666; margin: 0 0 25px 0; font-size: 16px;">Get in touch with our team for personalized assistance</p>
-<a class="btn btn-primary" href="/contact" style="font-family: Arial; background: #2563eb; color: white; padding: 12px 30px; text-decoration: none; border-radius: 5px; font-weight: bold; display: inline-block;">Contact Us Today</a>
-</div><footer style="text-align: center; padding: 20px; color: #666;">
-<p>Contact us today!</p>
-</footer>
-</body>
-</html>
+</head>
+<body>
+    <header>
+        <nav class="container">
+            <a href="#" class="logo">Connecticut Ave Dental Studio</a>
+            <ul class="nav-links">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#services">Services</a></li>
+                <li><a href="#about">About Us</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section id="home" class="hero">
+            <div class="container">
+                <div class="hero-content">
+                    <h1>Your Smile is Our Priority</h1>
+                    <p>Experience exceptional dental care in the heart of Washington DC. Our modern practice combines advanced technology with compassionate care to give you the healthy, beautiful smile you deserve.</p>
+                    <a href="#contact" class="cta-button">Schedule Appointment</a>
+                    <a href="#services" class="cta-button cta-secondary">Our Services</a>
+                </div>
+            </div>
+        </section>
+
+        <section id="services" class="services">
+            <div class="container">
+                <h2 class="section-title">Comprehensive Dental Services</h2>
+                <p class="section-subtitle">From routine cleanings to advanced procedures, we provide complete dental care for your entire family</p>
+                
+                <div class="services-grid">
+                    <div class="service-card">
+                        <div class="service-icon">🦷</div>
+                        <h3>General Dentistry</h3>
+                        <p>Comprehensive oral health care including cleanings, fillings, and preventive treatments to keep your smile healthy.</p>
+                    </div>
+                    <div class="service-card">
+                        <div class="service-icon">✨</div>
+                        <h3>Cosmetic Dentistry</h3>
+                        <p>Transform your smile with veneers, whitening, and smile makeovers designed to boost your confidence.</p>
+                    </div>
+                    <div class="service-card">
+                        <div class="service-icon">🔧</div>
+                        <h3>Restorative Care</h3>
+                        <p>Repair and restore damaged teeth with
