@@ -1,0 +1,6 @@
+# robots.txt for https://asquitt.github.io
+User-agent: *
+Allow: /
+
+# Sitemap location
+Sitemap: https://asquitt.github.io/sitemap.xml
