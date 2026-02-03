@@ -1,0 +1,22 @@
+# Jekyll configuration
+title: Connecticut Ave Dental Studio
+description: Expert dental care in a modern, comfortable setting. Schedule your comprehensive exam today and transform your smile with our skilled, compassionate team.
+url: ""
+baseurl: ""
+
+# Build settings
+markdown: kramdown
+permalink: /blog/:title/
+
+# Plugins
+plugins:
+  - jekyll-feed
+  - jekyll-seo-tag
+
+# Collections
+defaults:
+  - scope:
+      path: "_posts"
+      type: "posts"
+    values:
+      layout: "post"
