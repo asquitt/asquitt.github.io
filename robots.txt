@@ -1,0 +1,38 @@
+# robots.txt for https://asquitt.github.io
+
+# Standard web crawlers
+User-agent: *
+Allow: /
+
+# AI Crawlers - Allow for visibility in AI search results
+# Uncomment Disallow lines below to block AI training while keeping search visibility
+User-agent: GPTBot
+Allow: /
+# Disallow: /
+
+User-agent: ChatGPT-User
+Allow: /
+
+User-agent: CCBot
+Allow: /
+# Disallow: /
+
+User-agent: anthropic-ai
+Allow: /
+# Disallow: /
+
+User-agent: Claude-Web
+Allow: /
+
+User-agent: Google-Extended
+Allow: /
+# Disallow: /
+
+User-agent: PerplexityBot
+Allow: /
+
+User-agent: Bytespider
+Allow: /
+
+# Sitemap location
+Sitemap: https://asquitt.github.io/sitemap.xml
