@@ -496,5 +496,21 @@ window.ORBITR_AB = {
 <a class="btn btn-primary" href="#contact" style="display: inline-block; padding: 12px 30px; text-decoration: none; border-radius: 5px; font-weight: 500; margin-right: 15px;">Contact Us Today</a>
 <button class="exit-popup-dismiss" style="background: none; border: 1px solid #ddd; padding: 12px 20px; border-radius: 5px; cursor: pointer; color: #666; font-family: 'Inter', sans-serif;">No Thanks</button>
 </div>
-</div></body>
+</div>
+<!-- Orbitr A/B Test: 9e0f5c5f-d682-46ef-bdb4-b4c08487dc29 -->
+<script>
+window.ORBITR_AB = {
+  testId: "9e0f5c5f-d682-46ef-bdb4-b4c08487dc29",
+  endpoint: "https://dean-semeiological-jewel.ngrok-free.dev/api/v1/ab",
+  selector: ".cta-button, #cta, button.btn-primary, a.btn",
+  controlValue: "Hero section without CTA button",
+  variationValue: "Hero section with 'Schedule Your Visit' CTA button",
+  conversionSelector: ".cta-button, #cta, button.btn-primary, a.btn",
+  modifyAttribute: "innerHTML"
+};
+</script>
+<script src="https://dean-semeiological-jewel.ngrok-free.dev/static/orbitr-ab.js"></script>
+<!-- End Orbitr A/B Test: 9e0f5c5f-d682-46ef-bdb4-b4c08487dc29 -->
+
+</body>
 </html>
