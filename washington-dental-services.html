@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Premier Dental Services Washington DC | Connecticut Ave Dental Studio</title>
+<meta content="Expert dental care in Washington DC at Connecticut Ave Dental Studio. Advanced treatments, personalized service, and cutting-edge technology for your perfect smile." name="description"/>
+<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&amp;family=Playfair+Display:wght@400;700&amp;display=swap" rel="stylesheet"/>
+<style>
+        /* --- CSS RESET & VARIABLES --- */
+        :root {
+            --primary: #0f2746; /* Deep DC Navy */
+            --secondary: #2dd4bf; /* Modern Mint/Teal */
+            --gold: #d4af37; /* Subtle Gold Accent */
+            --light: #f3f4f6;
+            --white: #ffffff;
+            --text-dark: #1e293b;
+            --text-light: #64748b;
+        }
+
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        html { scroll-behavior: smooth; }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            color: var(--text-dark);
+            line-height: 1.6;
+            background-color: var(--white);
+        }
+
+        h1, h2, h3, h4 {
+            font-family: 'Playfair Display', serif;
+            color: var(--primary);
+            font-weight: 700;
+        }
+
+        /* --- UTILITY CLASSES --- */
+        .container { max-width: 1200px; margin: 0 auto; padding: 0 20px; }
+        .text-center { text-align: center; }
+        .section { padding: 80px 0; }
+        .bg-light { background-color: var(--light); }
+
+        .btn {
+            display: inline-block;
+            padding: 14px 32px;
+            border-radius: 50px;
+            font-weight: 600;
+            text-decoration: none;
+            transition: all 0.3s ease;
+            text-transform: uppercase;
+            font-size: 0.9rem;
+            letter-spacing: 0.5px;
+        }
+        .btn-primary {
+            background-color: var(--secondary);
+            color: var(--primary);
+            border: 2px solid var(--secondary);
+        }
+        .btn-primary:hover {
+            background-color: transparent;
+            color: var(--secondary);
+        }
+        .btn-outline {
+            background-color: transparent;
+            color: var(--white);
+            border: 2px solid var(--white);
+        }
+        .btn-outline:hover {
+            background-color: var(--white);
+            color: var(--primary);
+        }
+
+        /* --- HEADER & NAV --- */
+        header {
+            background: rgba(255, 255, 255, 0.98);
+            box-shadow: 0 2px 20px rgba(0,0,0,0.05);
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
+        }
+        .nav-wrapper {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            height: 90px;
+        }
+        .logo {
+            font-size: 1.5rem;
+            font-weight: bold;
+            color: var(--primary);
+            text-decoration: none;
+            font-family: 'Playfair Display', serif;
+            letter-spacing: -0.5px;
+        }
+        .logo span { color: var(--secondary); }
+
+        nav ul { display: flex; list-style: none; gap: 35px; align-items: center; }
+        nav a { text-decoration: none; color: var(--primary); font-weight: 500; font-size: 0.95rem; transition: color 0.3s; }
+        nav a:hover { color: var(--secondary); }
+
+        .mobile-toggle { display: none; font-size: 1.5rem; color: var(--primary); cursor: pointer; }
+
+        /* --- PAGE HERO --- */
+        .page-hero {
+            padding: 150px 0 80px 0;
+            background: linear-gradient(135deg, var(--primary) 0%, var(--text-dark) 100%);
+            color: white;
+            text-align: center;
+        }
+        .page-hero h1 {
+            font-size: 3rem;
+            color: white;
+            margin-bottom: 20px;
+            line-height: 1.1;
+        }
+        .hero-subtitle {
+            font-size: 1.2rem;
+            opacity: 0.9;
+            font-weight: 300;
+        }
+
+        /* --- SERVICE INTRO --- */
+        .service-intro {
+            padding: 60px 0;
+            background-color: var(--light);
+        }
+        .service-intro p {
+            font-size: 1.1rem;
+            text-align: center;
+            max-width: 900px;
+            margin: 0 auto;
+            color: var(--text-dark);
+        }
+
+        /* --- SERVICES --- */
+        .services-grid {
+            padding: 80px 0;
+        }
+        .services-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 40px;
+            margin-top: 50px;
+        }
+        .service-card {
+            background: white;
+            padding: 40px 30px;
+            border-radius: 8px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.03);
+            transition: transform 0.3s;
+            border-top: 4px solid var(--secondary);
+        }
+        .service-card:hover { transform: translateY(-5px); }
+        .service-card h3 { 
+            font-size: 1.5rem; 
+            margin-bottom: 15px; 
+            color: var(--primary);
+        }
+        .service-card p {
+            color: var(--text-light);
+            line-height: 1.6;
+        }
+
+        /* --- SERVICE CTA --- */
+        .service-cta {
+            background-color: var(--primary);
+            color: white;
+            text-align: center;
+            padding: 80px 0;
+        }
+        .service-cta h2 {
+            color: white;
+            font-size: 2.5rem;
+            margin-bottom: 30px;
+        }
+
+        /* --- FOOTER --- */
+        footer {
+            background: var(--primary);
+            color: white;
+            padding: 60px 0 20px;
+            text-align: center;
+        }
+        .social-icons { margin: 20px 0; }
+        .social-icons a { color: white; margin: 0 10px; font-size: 1.2rem; transition: color 0.3s; }
+        .social-icons a:hover { color: var(--secondary); }
+        .copyright { border-top: 1px solid rgba(255,255,255,0.1); padding-top: 20px; margin-top: 40px; font-size: 0.8rem; opacity: 0.6; }
+
+        /* --- MOBILE RESPONSIVE --- */
+        @media (max-width: 768px) {
+            .nav-menu { display: none; }
+            .mobile-toggle { display: block; }
+            .page-hero h1 { font-size: 2.5rem; }
+            .services-container { grid-template-columns: 1fr; }
+        }
+    </style>
+</head>
+<body>
+<header>
+<div class="container nav-wrapper">
+<a class="logo" href="#">ConnAve <span>Dental</span></a>
+<nav>
+<ul class="nav-menu">
+<li><a href="#about">About</a></li>
+<li><a href="#services">Services</a></li>
+<li><a href="#new-patients">New Patients</a></li>
+<li><a href="#reviews">Reviews</a></li>
+<li><a class="btn btn-primary" href="#contact">Schedule Consultation</a></li>
+</ul>
+<div class="mobile-toggle"><i class="fas fa-bars"></i></div>
+</nav>
+</div>
+</header>
+<main>
+<section class="page-hero service-hero">
+<div class="container">
+<h1>Premier Dental Services Washington DC | Connecticut Ave Dental Studio</h1>
+<p class="hero-subtitle">Professional Dental services tailored to your needs</p>
+</div>
+</section>
+<section class="service-intro">
+<div class="container">
+<p>Experience exceptional dental services washington residents trust at Connecticut Ave Dental Studio, where cutting-edge technology meets personalized luxury care. Our comprehensive suite of advanced dental treatments is designed to enhance your smile while ensuring maximum comfort in our state-of-the-art 20008 location.</p>
+</div>
+</section>
+<section class="services-grid">
+<div class="container">
+<div class="services-container">
+<div class="service-card">
+<h3>Preventive Dentistry</h3>
+<p>Protect your oral health with our comprehensive preventive care programs featuring advanced diagnostic technology and personalized treatment plans. Our meticulous approach to routine cleanings, examinations, and preventive treatments helps maintain your smile's natural beauty while preventing costly</p>
+</div>
+<div class="service-card">
+<h3>Smile Makeovers</h3>
+<p>Transform your smile with our bespoke smile makeover services that combine artistry with advanced dental techniques. Our experienced team creates personalized treatment plans using premium materials and cutting-edge technology to achieve your dream smile, enhancing both your confidence and overall f</p>
+</div>
+<div class="service-card">
+<h3>Invisalign Clear Aligners</h3>
+<p>Straighten your teeth discreetly with Invisalign clear aligners, the sophisticated alternative to traditional braces. Our certified Invisalign providers create custom treatment plans using 3D imaging technology, allowing you to achieve a perfectly aligned smile while maintaining your professional ap</p>
+</div>
+<div class="service-card">
+<h3>Emergency Dentistry</h3>
+<p>Receive immediate, expert care when dental emergencies strike with our priority emergency services. Our skilled team provides prompt pain relief and comprehensive treatment for urgent dental issues, utilizing advanced diagnostic tools and sedation options to restore your comfort and oral health quic</p>
+</div>
+<div class="service-card">
+<h3>Digital Cleanings</h3>
+<p>Experience the future of dental hygiene with our advanced digital cleaning technology that provides superior plaque removal and gum health assessment. Our innovative approach combines traditional dental expertise with cutting-edge digital tools, delivering a more thorough, comfortable cleaning exper</p>
+</div>
+<div class="service-card">
+<h3>Cosmetic Dentistry</h3>
+<p>Enhance your natural beauty with our luxury cosmetic dental services, including porcelain veneers, professional whitening, and aesthetic bonding. Our artistic approach to smile design utilizes premium materials and advanced techniques to create stunning, natural-looking results that complement your </p>
+</div>
+</div>
+</div>
+</section>
+<section class="service-cta">
+<div class="container">
+<h2>Ready to Get Started?</h2>
+<a class="btn btn-primary" href="/#contact">Schedule Consultation</a>
+</div>
+</section>
+</main>
+<footer>
+<div class="container">
+<h3>Connecticut Ave Dental Studio</h3>
+<p>Your premier dental destination in Washington DC</p>
+<div class="social-icons">
+<a href="#"><i class="fab fa-facebook-f"></i></a>
+<a href="#"><i class="fab fa-instagram"></i></a>
+<a href="#"><i class="fab fa-twitter"></i></a>
+<a href="#"><i class="fab fa-linkedin-in"></i></a>
+</div>
+<div class="copyright">
+<p>© 2026 Connecticut Ave Dental Studio. All rights reserved.</p>
+</div>
+</div>
+</footer>
+</body>
+</html>
