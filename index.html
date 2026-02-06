@@ -421,5 +421,21 @@
             }
         });
     </script>
+
+<!-- Orbitr A/B Test: 30fdf823-ccdf-4c04-b260-14aec14c783c -->
+<script>
+window.ORBITR_AB = {
+  testId: "30fdf823-ccdf-4c04-b260-14aec14c783c",
+  endpoint: "https://dean-semeiological-jewel.ngrok-free.dev/api/v1/ab",
+  selector: ".cta-button, #cta, button.btn-primary, a.btn",
+  controlValue: "Generic CTA text",
+  variationValue: "'Book Your Consultation' CTA text",
+  conversionSelector: ".cta-button, #cta, button.btn-primary, a.btn",
+  modifyAttribute: "innerHTML"
+};
+</script>
+<script src="https://dean-semeiological-jewel.ngrok-free.dev/static/orbitr-ab.js"></script>
+<!-- End Orbitr A/B Test: 30fdf823-ccdf-4c04-b260-14aec14c783c -->
+
 </body>
 </html>
