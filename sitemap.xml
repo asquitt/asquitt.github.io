@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
-    <loc>https://asquitt.github.io/blog.html</loc>
+    <loc>https://asquitt.github.io/blog/</loc>
     <lastmod>2026-02-06</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.8</priority>
@@ -43,6 +43,12 @@
     <priority>0.6</priority>
   </url>
   <url>
+    <loc>https://asquitt.github.io/blog/complete-dental-solutions-premier-dentist-washington-dc-at-connecticut-ave-dental-studio/</loc>
+    <lastmod>2026-02-06</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
     <loc>https://asquitt.github.io/blog/emergency-dental-care-washington-dc-after-hours-treatment-guide/</loc>
     <lastmod>2026-02-06</lastmod>
     <changefreq>daily</changefreq>
@@ -50,36 +56,6 @@
   </url>
   <url>
     <loc>https://asquitt.github.io/blog/how-to-choose-the-right-crm-software-for-small-businesses-a-complete-2024-buyers-guide/</loc>
-    <lastmod>2026-02-06</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.6</priority>
-  </url>
-  <url>
-    <loc>https://asquitt.github.io/dc/dental-services/</loc>
-    <lastmod>2026-02-06</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.6</priority>
-  </url>
-  <url>
-    <loc>https://asquitt.github.io/washington/dc/dental-services/</loc>
-    <lastmod>2026-02-06</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.4</priority>
-  </url>
-  <url>
-    <loc>https://asquitt.github.io/austin/dental-services/</loc>
-    <lastmod>2026-02-06</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.6</priority>
-  </url>
-  <url>
-    <loc>https://asquitt.github.io/washington/dental-services/</loc>
-    <lastmod>2026-02-06</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.6</priority>
-  </url>
-  <url>
-    <loc>https://asquitt.github.io/comprehensive-dental-care-austin/dental-services/</loc>
     <lastmod>2026-02-06</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
