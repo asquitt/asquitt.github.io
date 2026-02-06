@@ -1,7 +1,7 @@
 ---
 categories:
 - blog
-date: '2026-02-06 13:11:13'
+date: '2026-02-06 13:23:46'
 description: Need emergency dental care Washington DC after hours? Learn immediate
   steps to take and when to seek urgent treatment. Get expert care when you need it
   most.
