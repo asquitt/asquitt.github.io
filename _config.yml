@@ -1,0 +1,22 @@
+# Jekyll configuration
+title: Connecticut Ave Dental Studio
+description: Top dentist Washington DC on Connecticut Ave. Advanced dental care in Cleveland Park.
+url: ""
+baseurl: ""
+
+# Build settings
+markdown: kramdown
+permalink: /blog/:title/
+
+# Plugins
+plugins:
+  - jekyll-feed
+  - jekyll-seo-tag
+
+# Collections
+defaults:
+  - scope:
+      path: "_posts"
+      type: "posts"
+    values:
+      layout: "post"
