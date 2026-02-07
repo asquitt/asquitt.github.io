@@ -37,6 +37,7 @@
         footer { background: var(--primary); color: white; padding: 50px 0 20px; text-align: center; }
         .social-icons a { color: white; margin: 0 10px; font-size: 1.2rem; text-decoration: none; }
     </style>
+
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
@@ -51,7 +52,44 @@
     "@type": "PostalAddress",
     "addressCountry": "US"
   },
-  "telephone": "(202) 555-0123"
+  "telephone": "(202) 555-0123",
+  "openingHoursSpecification": [
+    {
+      "@type": "OpeningHoursSpecification",
+      "dayOfWeek": "Monday",
+      "opens": "08:00",
+      "closes": "18:00"
+    },
+    {
+      "@type": "OpeningHoursSpecification",
+      "dayOfWeek": "Tuesday",
+      "opens": "08:00",
+      "closes": "18:00"
+    },
+    {
+      "@type": "OpeningHoursSpecification",
+      "dayOfWeek": "Wednesday",
+      "opens": "08:00",
+      "closes": "18:00"
+    },
+    {
+      "@type": "OpeningHoursSpecification",
+      "dayOfWeek": "Thursday",
+      "opens": "08:00",
+      "closes": "18:00"
+    },
+    {
+      "@type": "OpeningHoursSpecification",
+      "dayOfWeek": "Friday",
+      "opens": "08:00",
+      "closes": "18:00"
+    }
+  ],
+  "geo": {
+    "@type": "GeoCoordinates",
+    "latitude": 38.9357343,
+    "longitude": -77.0579552
+  }
 }
 </script>
 </head>
