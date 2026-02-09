@@ -60,3 +60,23 @@ Our team believes every patient deserves exceptional dental care. We coordinate 
 Take the first step toward better oral health and a more confident smile. Whether you need routine care, cosmetic enhancement, dental implants, or emergency treatment, our experienced team is ready to help you achieve your goals.
 
 Early treatment leads to better outcomes and often reduces costs. Don't wait to address your dental concerns. Call us at (202) 555-0123 or email hello@connavedental.com to schedule your appointment today. Your healthiest, most confident smile awaits at Connecticut Ave Dental Studio.
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Article",
+  "headline": "Untitled Article",
+  "description": "",
+  "author": {
+    "@type": "Organization",
+    "name": "Dentist Washington DC"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "Dentist Washington DC"
+  },
+  "mainEntityOfPage": {
+    "@type": "WebPage",
+    "@id": "https://asquitt.github.io/blog/complete-guide-to-dental-services-in-washington-dc-from-general-dentistry-to-emergency-care-at-conn/"
+  }
+}
+</script>
