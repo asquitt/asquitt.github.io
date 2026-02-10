@@ -80,3 +80,23 @@ Connecticut Ave Dental Studio combines exceptional general dentistry with person
 Ready to transform your smile with Invisalign treatment? Contact Connecticut Ave Dental Studio today at (202) 555-0123 or email hello@connavedental.com to schedule your consultation. Visit us at 3501 Connecticut Ave NW, Washington, DC, 20008.
 
 Don't let traditional braces compromise your professional image. Choose Invisalign treatment and maintain your confidence throughout your orthodontic journey. Join countless DC professionals who've chosen the clear advantage of Invisalign for their cosmetic design and orthodontic care needs.
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Article",
+  "headline": "Untitled Article",
+  "description": "",
+  "author": {
+    "@type": "Organization",
+    "name": "Connecticut Ave Dental Studio"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "Connecticut Ave Dental Studio"
+  },
+  "mainEntityOfPage": {
+    "@type": "WebPage",
+    "@id": "https://asquitt.github.io/blog/invisalign-vs-traditional-braces-why-dc-dental-care-patients-choose-clear-aligners/"
+  }
+}
+</script>
