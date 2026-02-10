@@ -1,9 +1,10 @@
 ---
 layout: default
-title: Blog
+title: Blog - Latest Insights & Updates
+description: Discover our latest blog posts featuring expert insights, industry trends, and valuable tips. Stay updated with fresh content published regularly in 2026.
 ---
 <section class="blog-section" style="padding: 60px 20px; max-width: 900px; margin: 0 auto;">
-  <h1 style="font-size: 2.5rem; margin-bottom: 40px; text-align: center; color: #0f2746;">Our Blog</h1>
+  <h1 style="font-size: 2.5rem; margin-bottom: 40px; text-align: center; color: #0f2746;">Latest Insights & Updates</h1>
   <div class="posts-list">
     {% for post in site.posts %}
     <article class="post-preview" style="margin-bottom: 40px; padding-bottom: 40px; border-bottom: 1px solid #eee;">
@@ -14,7 +15,7 @@ title: Blog
         {{ post.date | date: "%B %d, %Y" }}
       </p>
       <p style="color: #333333; line-height: 1.6;">{{ post.description | default: post.excerpt | strip_html | truncate: 200 }}</p>
-      <a href="{{ post.url }}" style="color: #0f2746; text-decoration: none; font-weight: 500;">Read more &rarr;</a>
+      <a href="{{ post.url }}" style="color: #0f2746; text-decoration: none; font-weight: 500;">Continue reading &rarr;</a>
     </article>
     {% endfor %}
   </div>
