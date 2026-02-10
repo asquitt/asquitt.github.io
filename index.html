@@ -2,12 +2,12 @@
 
 <html lang="en">
 <head>
-<meta charset="utf-8">
-<meta content="width=device-width, initial-scale=1.0" name="viewport">
-<meta content="PDXK53m3jbol2eaexn3PAoygEdroDwbegAuQOEcQsNs" name="google-site-verification">
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<meta content="PDXK53m3jbol2eaexn3PAoygEdroDwbegAuQOEcQsNs" name="google-site-verification"/>
 <title>Connecticut Ave Dental Studio | Washington DC</title>
-<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&amp;family=Playfair+Display:wght@400;700&amp;display=swap" rel="stylesheet">
+<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&amp;family=Playfair+Display:wght@400;700&amp;display=swap" rel="stylesheet"/>
 <style>
         /* --- CSS RESET & VARIABLES --- */
         :root {
@@ -276,21 +276,37 @@
 }
 </script>
 <style>body>header[style*="position: fixed"],body>header[style*="position:fixed"],header.fixed,.fixed-header{top:50px!important}.hero,section.hero,[class*="hero"]{margin-top:calc(80px + 50px)!important}#orbitr-sticky-bar-spacer{height:50px}</style>
-</head>
+<style>
+                    /* Sticky CTA bar offset - push fixed headers and content below the bar */
+                    body > header[style*="position: fixed"],
+                    body > header[style*="position:fixed"],
+                    header.fixed,
+                    .fixed-header {
+                        top: 50px !important;
+                    }
+                    .hero,
+                    section.hero,
+                    [class*="hero"] {
+                        margin-top: calc(80px + 50px) !important;
+                    }
+                    #orbitr-sticky-bar-spacer {
+                        height: 50px;
+                    }
+                </style></head>
 <body>
-<div id="sticky-cta-bar" style="position: fixed; top: 0; left: 0; right: 0; background: linear-gradient(135deg, #0f2746 0%, #1a365d 100%); color: white; padding: 12px 20px; z-index: 1000; box-shadow: 0 2px 10px rgba(0,0,0,0.1); font-family: 'Inter', sans-serif;">
-  <div style="max-width: 1200px; margin: 0 auto; display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 15px;">
-    <div style="display: flex; align-items: center; gap: 12px;">
-      <i class="fas fa-calendar-check" style="color: #2dd4bf; font-size: 18px;" aria-label="Calendar icon"></i>
-      <span style="font-weight: 400; font-size: 14px;">Ready for your best smile? Schedule your visit today!</span>
-    </div>
-    <div style="display: flex; align-items: center; gap: 15px;">
-      <a href="#contact" class="btn btn-primary" style="background: #2dd4bf; border: none; color: #0f2746; font-weight: 600; padding: 8px 20px; border-radius: 25px; text-decoration: none; font-size: 14px; transition: all 0.3s ease; font-family: 'Inter', sans-serif;">Book Your Appointment Today</a>
-      <button class="orbitr-cta-close" data-orbitr-close="true" aria-label="Close notification bar" style="background: none; border: none; color: white; font-size: 18px; cursor: pointer; padding: 5px; opacity: 0.7; transition: opacity 0.3s ease;" onclick="document.getElementById('sticky-cta-bar').style.display='none'">
-        <i class="fas fa-times"></i>
-      </button>
-    </div>
-  </div>
+<div id="sticky-cta-bar" style="position: fixed; top: 0; left: 0; right: 0; background: #2dd4bf; color: white; padding: 12px 20px; z-index: 1000; box-shadow: 0 2px 10px rgba(0,0,0,0.1); font-family: 'Inter', sans-serif; background-color: #2dd4bf">
+<div style="max-width: 1200px; margin: 0 auto; display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 15px;">
+<div style="display: flex; align-items: center; gap: 12px;">
+<i aria-label="Calendar icon" class="fas fa-calendar-check" style="color: #2dd4bf; font-size: 18px;"></i>
+<span style="font-weight: 400; font-size: 14px;">Ready for your best smile? Schedule your visit today!</span>
+</div>
+<div style="display: flex; align-items: center; gap: 15px;">
+<a class="btn btn-primary" href="#contact" style="border: none; font-weight: 600; padding: 8px 20px; border-radius: 25px; text-decoration: none; font-size: 14px; transition: all 0.3s ease; font-family: 'Inter', sans-serif">Book Your Appointment Today</a>
+<button aria-label="Close notification bar" class="orbitr-cta-close" data-orbitr-close="true" onclick="document.getElementById('sticky-cta-bar').style.display='none'" style="background: transparent; border: 1px solid currentColor; color: white; font-size: 18px; cursor: pointer; padding: 0; opacity: 0.7; transition: opacity 0.2s ease; border-radius: 999px; width: 32px; height: 32px; display: inline-flex; align-items: center; justify-content: center; line-height: 1; font-family: 'Inter'">
+<i class="fas fa-times"></i>
+</button>
+</div>
+</div>
 </div>
 <div id="orbitr-sticky-bar-spacer" style="height:50px;"></div>
 <header>
@@ -311,7 +327,7 @@
 <section class="hero">
 <div class="container hero-content">
 <p>SERVING WASHINGTON DC 20008</p>
-<h1>Refined Dentistry on<br>Connecticut Avenue</h1>
+<h1>Refined Dentistry on<br/>Connecticut Avenue</h1>
 <p>Experience world-class dental care in the heart of Cleveland Park. Modern technology, neighborhood warmth, and a patient-first approach.</p>
 <div style="margin-top: 30px;">
 <a class="btn btn-primary" href="#contact">Book Appointment</a>
@@ -333,7 +349,7 @@
 <h2 style="margin-bottom: 20px;">Your Neighborhood Dental Studio</h2>
 <p>Located in the historic 20008 zip code, we bridge the gap between clinical excellence and luxury comfort.</p>
 <p>We understand that visiting the dentist isn't everyone's favorite activity. That's why we've designed our studio to feel less like a clinic and more like a lounge. From noise-canceling headphones to warm towels, we prioritize your relaxation.</p>
-<br>
+<br/>
 <ul style="list-style: none;">
 <li style="margin-bottom: 10px;"><i class="fas fa-check" style="color: var(--secondary); margin-right: 10px;"></i> Advanced 3D Imaging</li>
 <li style="margin-bottom: 10px;"><i class="fas fa-check" style="color: var(--secondary); margin-right: 10px;"></i> Sedation Dentistry Options</li>
@@ -341,7 +357,7 @@
 </ul>
 </div>
 <div class="about-image">
-<img alt="Dental professional in blue scrubs preparing tools for patient examination" src="https://images.unsplash.com/photo-1629909613654-28e377c37b09?auto=format&amp;fit=crop&amp;q=80">
+<img alt="Dental professional in blue scrubs preparing tools for patient examination" src="https://images.unsplash.com/photo-1629909613654-28e377c37b09?auto=format&amp;fit=crop&amp;q=80"/>
 </div>
 </div>
 </section>
@@ -377,17 +393,17 @@
 </div>
 </section>
 <div class="inline-cta" style="background: linear-gradient(135deg, #0f2746 0%, #1a365d 100%); padding: 40px 30px; margin: 60px 0 40px 0; border-radius: 12px; text-align: center; box-shadow: 0 8px 32px rgba(15, 39, 70, 0.15);">
-  <div style="max-width: 600px; margin: 0 auto;">
-    <div style="display: flex; align-items: center; justify-content: center; margin-bottom: 20px;">
-      <i class="fas fa-comments" style="color: #2dd4bf; font-size: 24px; margin-right: 12px;" aria-label="Chat icon"></i>
-      <h3 style="font-family: 'Inter', sans-serif; font-size: 24px; font-weight: 600; color: white; margin: 0;">Have Questions About Your Dental Care?</h3>
-    </div>
-    <p style="font-family: 'Inter', sans-serif; font-size: 16px; color: rgba(255, 255, 255, 0.9); margin-bottom: 25px; line-height: 1.5;">Our friendly team is ready to help you schedule your visit and answer any questions.</p>
-    <a href="#contact" class="btn btn-primary" style="background: #2dd4bf; border: none; padding: 14px 32px; font-family: 'Inter', sans-serif; font-size: 16px; font-weight: 600; border-radius: 8px; text-decoration: none; color: #0f2746; display: inline-flex; align-items: center; transition: all 0.3s ease;">
-      <i class="fas fa-phone" style="margin-right: 8px;" aria-label="Phone icon"></i>
+<div style="max-width: 600px; margin: 0 auto;">
+<div style="display: flex; align-items: center; justify-content: center; margin-bottom: 20px;">
+<i aria-label="Chat icon" class="fas fa-comments" style="color: #2dd4bf; font-size: 24px; margin-right: 12px;"></i>
+<h3 style="font-family: 'Inter', sans-serif; font-size: 24px; font-weight: 600; color: white; margin: 0;">Have Questions About Your Dental Care?</h3>
+</div>
+<p style="font-family: 'Inter', sans-serif; font-size: 16px; color: rgba(255, 255, 255, 0.9); margin-bottom: 25px; line-height: 1.5;">Our friendly team is ready to help you schedule your visit and answer any questions.</p>
+<a class="btn btn-primary" href="#contact" style="background: #2dd4bf; border: none; padding: 14px 32px; font-family: 'Inter', sans-serif; font-size: 16px; font-weight: 600; border-radius: 8px; text-decoration: none; color: #0f2746; display: inline-flex; align-items: center; transition: all 0.3s ease;">
+<i aria-label="Phone icon" class="fas fa-phone" style="margin-right: 8px;"></i>
       Questions? We're Here to Help
     </a>
-  </div>
+</div>
 </div>
 <section class="section testimonials" id="reviews">
 <div class="container">
@@ -398,7 +414,7 @@
 <div class="quote-box">
                 "I've lived in Cleveland Park for 10 years and finally found a dentist I trust. The office is beautiful, the staff is incredibly kind, and the location on Connecticut Ave is perfect."
             </div>
-<p style="font-weight: bold;">&mdash; Sarah J., Washington DC</p>
+<p style="font-weight: bold;">— Sarah J., Washington DC</p>
 </div>
 </section>
 <section class="section" id="contact">
@@ -413,37 +429,37 @@
 <div class="contact-row">
 <i class="fas fa-map-pin"></i>
 <div>
-<strong>Address</strong><br>
-                            3501 Connecticut Ave NW<br>
+<strong>Address</strong><br/>
+                            3501 Connecticut Ave NW<br/>
                             Washington, DC 20008
                         </div>
 </div>
 <div class="contact-row">
 <i class="fas fa-clock"></i>
 <div>
-<strong>Hours</strong><br>
-                            Mon - Fri: 8:00 AM - 6:00 PM<br>
+<strong>Hours</strong><br/>
+                            Mon - Fri: 8:00 AM - 6:00 PM<br/>
                             Sat: 9:00 AM - 2:00 PM
                         </div>
 </div>
 <div class="contact-row">
 <i class="fas fa-phone"></i>
 <div>
-<strong>Phone</strong><br>
+<strong>Phone</strong><br/>
                             (202) 555-0123
                         </div>
 </div>
 <div class="contact-row">
 <i class="fas fa-envelope"></i>
 <div>
-<strong>Email</strong><br>
+<strong>Email</strong><br/>
                             hello@connavedental.com
                         </div>
 </div>
 <a class="btn btn-primary" href="#" style="margin-top: 20px; width: 100%; text-align: center;">Book Appointment Online</a>
 </div>
 <div class="map-container">
-<iframe allowfullscreen height="100%" loading="lazy" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3103.886026857997!2d-77.058!3d38.935!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89b7c83b8b8b8b8b%3A0x8b8b8b8b8b8b8b8b!2sConnecticut%20Ave%20NW%2C%20Washington%2C%20DC%2020008!5e0!3m2!1sen!2sus!4v1620000000000!5m2!1sen!2sus" style="border:0;" width="100%">
+<iframe allowfullscreen="" height="100%" loading="lazy" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3103.886026857997!2d-77.058!3d38.935!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89b7c83b8b8b8b8b%3A0x8b8b8b8b8b8b8b8b!2sConnecticut%20Ave%20NW%2C%20Washington%2C%20DC%2020008!5e0!3m2!1sen!2sus!4v1620000000000!5m2!1sen!2sus" style="border:0;" width="100%">
 </iframe>
 </div>
 </div>
@@ -459,7 +475,7 @@
 <a href="#"><i class="fab fa-twitter"></i></a>
 </div>
 <div class="copyright">
-                &copy; 2026 Connecticut Ave Dental Studio. All Rights Reserved.
+                © 2026 Connecticut Ave Dental Studio. All Rights Reserved.
             </div>
 </div>
 </footer>
@@ -481,5 +497,40 @@
             }
         });
     </script>
+<div id="exitPopup" class="exit-popup-overlay" style="display: none; position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: rgba(15, 39, 70, 0.8); z-index: 9999; font-family: 'Inter', sans-serif;">
+  <div class="exit-popup-content" style="position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); background: white; padding: 40px; border-radius: 8px; max-width: 500px; width: 90%; text-align: center; box-shadow: 0 10px 30px rgba(0,0,0,0.3);">
+    <button class="exit-popup-close" style="position: absolute; top: 15px; right: 20px; background: none; border: none; font-size: 24px; color: #666; cursor: pointer;" aria-label="Close popup">&times;</button>
+    
+    <h3 style="color: #0f2746; margin-bottom: 15px; font-size: 24px; font-weight: 600;">Wait! Let's Talk First</h3>
+    
+    <p style="color: #666; margin-bottom: 25px; font-size: 16px; line-height: 1.5;">Have questions about your dental care? We're here to help you get the answers you need.</p>
+    
+    <a href="#contact" class="btn btn-primary" style="background: #0f2746; color: white; padding: 12px 30px; text-decoration: none; border-radius: 5px; font-weight: 600; display: inline-block; transition: all 0.3s ease;">Contact Us Today</a>
+    
+    <p style="margin-top: 15px; font-size: 14px; color: #999;">Quick response guaranteed</p>
+  </div>
+</div>
+
+<script>
+let exitPopupShown = false;
+const exitPopup = document.getElementById('exitPopup');
+
+document.addEventListener('mouseleave', function(e) {
+  if (e.clientY <= 0 && !exitPopupShown) {
+    exitPopup.style.display = 'block';
+    exitPopupShown = true;
+  }
+});
+
+document.querySelector('.exit-popup-close').addEventListener('click', function() {
+  exitPopup.style.display = 'none';
+});
+
+document.querySelector('.exit-popup-overlay').addEventListener('click', function(e) {
+  if (e.target === this) {
+    exitPopup.style.display = 'none';
+  }
+});
+</script>
 </body>
 </html>
