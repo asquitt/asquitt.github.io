@@ -87,3 +87,23 @@ When you're facing a dental emergency, quick action makes a difference. Don't wa
 Dental emergencies require prompt attention. If you're experiencing severe pain, trauma, or other urgent dental issues, don't delay treatment.
 
 Contact Connecticut Ave Dental Studio at (202) 555-0123 or email hello@connavedental.com for emergency dental care in Washington DC. Our experienced team is ready to help restore your comfort and oral health when you need it most.
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Article",
+  "headline": "Untitled Article",
+  "description": "",
+  "author": {
+    "@type": "Organization",
+    "name": "Connecticut Ave Dental Studio"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "Connecticut Ave Dental Studio"
+  },
+  "mainEntityOfPage": {
+    "@type": "WebPage",
+    "@id": "https://asquitt.github.io/blog/emergency-dc-dental-care-247-treatment-when-you-need-it-most/"
+  }
+}
+</script>
