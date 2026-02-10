@@ -72,3 +72,23 @@ Excellent dental care is just a phone call away. Connecticut Ave Dental Studio c
 Don't wait to address your dental needs or start your smile transformation. Whether you need routine preventive care, cosmetic improvements, emergency treatment, or Invisalign consultation, our experienced team is ready to help.
 
 **Ready to experience exceptional dental care in Washington DC? Call us today at (202) 555-0123 or email hello@connavedental.com to schedule your appointment. Visit us at 3501 Connecticut Ave NW, Washington, DC 20008. Your perfect smile transformation starts here!**
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Article",
+  "headline": "Untitled Article",
+  "description": "",
+  "author": {
+    "@type": "Organization",
+    "name": "Connecticut Ave Dental Studio"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "Connecticut Ave Dental Studio"
+  },
+  "mainEntityOfPage": {
+    "@type": "WebPage",
+    "@id": "https://asquitt.github.io/blog/complete-guide-to-dc-dental-care-connecticut-ave-dental-studio-services/"
+  }
+}
+</script>
