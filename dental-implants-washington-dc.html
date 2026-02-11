@@ -1,0 +1,375 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<meta content="PDXK53m3jbol2eaexn3PAoygEdroDwbegAuQOEcQsNs" name="google-site-verification"/>
+<title>Dental Implants DC - Connecticut Ave Dental Studio</title>
+<meta content="Restore your smile with expert dental implants at Connecticut Ave Dental Studio. Professional, painless" name="description">
+<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&amp;family=Playfair+Display:wght@400;700&amp;display=swap" rel="stylesheet"/>
+<style>
+        /* --- CSS RESET & VARIABLES --- */
+        :root {
+            --primary: #0f2746; /* Deep DC Navy */
+            --secondary: #2dd4bf; /* Modern Mint/Teal */
+            --gold: #d4af37; /* Subtle Gold Accent */
+            --light: #f3f4f6;
+            --white: #ffffff;
+            --text-dark: #1e293b;
+            --text-light: #64748b;
+        }
+
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        html { scroll-behavior: smooth; }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            color: var(--text-dark);
+            line-height: 1.6;
+            background-color: var(--white);
+        }
+
+        h1, h2, h3, h4 {
+            font-family: 'Playfair Display', serif;
+            color: var(--primary);
+            font-weight: 700;
+        }
+
+        /* --- UTILITY CLASSES --- */
+        .container { max-width: 1200px; margin: 0 auto; padding: 0 20px; }
+        .text-center { text-align: center; }
+        .section { padding: 80px 0; }
+        .bg-light { background-color: var(--light); }
+
+        .btn {
+            display: inline-block;
+            padding: 14px 32px;
+            border-radius: 50px;
+            font-weight: 600;
+            text-decoration: none;
+            transition: all 0.3s ease;
+            text-transform: uppercase;
+            font-size: 0.9rem;
+            letter-spacing: 0.5px;
+        }
+        .btn-primary {
+            background-color: var(--secondary);
+            color: var(--primary);
+            border: 2px solid var(--secondary);
+        }
+        .btn-primary:hover {
+            background-color: transparent;
+            color: var(--secondary);
+        }
+        .btn-outline {
+            background-color: transparent;
+            color: var(--white);
+            border: 2px solid var(--white);
+        }
+        .btn-outline:hover {
+            background-color: var(--white);
+            color: var(--primary);
+        }
+
+        /* --- HEADER & NAV --- */
+        header {
+            background: rgba(255, 255, 255, 0.98);
+            box-shadow: 0 2px 20px rgba(0,0,0,0.05);
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
+        }
+        .nav-wrapper {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            height: 90px;
+        }
+        .logo {
+            font-size: 1.5rem;
+            font-weight: bold;
+            color: var(--primary);
+            text-decoration: none;
+            font-family: 'Playfair Display', serif;
+            letter-spacing: -0.5px;
+        }
+        .logo span { color: var(--secondary); }
+
+        nav ul { display: flex; list-style: none; gap: 35px; align-items: center; }
+        nav a { text-decoration: none; color: var(--primary); font-weight: 500; font-size: 0.95rem; transition: color 0.3s; }
+        nav a:hover { color: var(--secondary); }
+
+        .mobile-toggle { display: none; font-size: 1.5rem; color: var(--primary); cursor: pointer; }
+
+        /* --- HERO SECTION --- */
+        .hero {
+            position: relative;
+            height: 90vh; /* Full screen height */
+            background: linear-gradient(rgba(15, 39, 70, 0.85), rgba(15, 39, 70, 0.7)), url('https://images.unsplash.com/photo-1609840114035-1c99d59242cc?auto=format&fit=crop&q=80');
+            background-size: cover;
+            background-position: center;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            color: white;
+            margin-top: 90px;
+        }
+        .hero-content h1 {
+            font-size: 4rem;
+            color: white;
+            margin-bottom: 20px;
+            line-height: 1.1;
+        }
+        .hero-content p {
+            font-size: 1.3rem;
+            max-width: 700px;
+            margin: 0 auto 40px auto;
+            opacity: 0.9;
+            font-weight: 300;
+        }
+
+        /* --- INFO BAR --- */
+        .info-bar {
+            background: var(--secondary);
+            color: var(--primary);
+            padding: 20px 0;
+            margin-top: -5px;
+        }
+        .info-grid {
+            display: flex;
+            justify-content: space-around;
+            text-align: center;
+            font-weight: 600;
+        }
+        .info-item i { margin-right: 8px; }
+
+        /* --- ABOUT --- */
+        .about-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 60px;
+            align-items: center;
+        }
+        .about-image img {
+            width: 100%;
+            border-radius: 10px;
+            box-shadow: 20px 20px 0px var(--light);
+        }
+
+        /* --- SERVICES --- */
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+            margin-top: 50px;
+        }
+        .service-card {
+            background: white;
+            padding: 40px 30px;
+            border-radius: 8px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.03);
+            transition: transform 0.3s;
+            border-top: 4px solid var(--secondary);
+        }
+        .service-card:hover { transform: translateY(-5px); }
+        .service-icon { font-size: 2.5rem; color: var(--primary); margin-bottom: 20px; }
+        .service-card h3 { font-size: 1.5rem; margin-bottom: 15px; }
+
+        /* --- TESTIMONIALS --- */
+        .testimonials { background-color: var(--primary); color: white; text-align: center; }
+        .testimonials h2 { color: white; }
+        .quote-box {
+            font-size: 1.2rem;
+            font-style: italic;
+            max-width: 800px;
+            margin: 30px auto;
+            opacity: 0.9;
+        }
+        .stars { color: var(--gold); margin-bottom: 10px; }
+
+        /* --- CONTACT / MAP --- */
+        .contact-wrapper {
+            display: flex;
+            flex-wrap: wrap;
+            box-shadow: 0 10px 40px rgba(0,0,0,0.1);
+            border-radius: 15px;
+            overflow: hidden;
+            background: white;
+        }
+        .contact-info {
+            flex: 1;
+            padding: 60px;
+            min-width: 300px;
+            background: white;
+        }
+        .map-container {
+            flex: 1;
+            min-width: 300px;
+            background: #eee;
+            min-height: 400px;
+        }
+        .contact-row {
+            display: flex;
+            align-items: center;
+            margin-bottom: 30px;
+        }
+        .contact-row i {
+            font-size: 1.5rem;
+            color: var(--secondary);
+            margin-right: 20px;
+            width: 30px;
+        }
+
+        /* --- FOOTER --- */
+        footer {
+            background: var(--primary);
+            color: white;
+            padding: 60px 0 20px;
+            text-align: center;
+        }
+        .social-icons { margin: 20px 0; }
+        .social-icons a { color: white; margin: 0 10px; font-size: 1.2rem; transition: color 0.3s; }
+        .social-icons a:hover { color: var(--secondary); }
+        .copyright { border-top: 1px solid rgba(255,255,255,0.1); padding-top: 20px; margin-top: 40px; font-size: 0.8rem; opacity: 0.6; }
+
+        /* --- SERVICE CTA --- */
+        .service-cta {
+            background: var(--primary);
+            color: white;
+            text-align: center;
+        }
+        .service-cta h2 {
+            color: white;
+            margin-bottom: 30px;
+        }
+
+        /* --- MOBILE RESPONSIVE --- */
+        @media (max-width: 768px) {
+            .nav-menu { display: none; }
+            .mobile-toggle { display: block; }
+            .hero-content h1 { font-size: 2.5rem; }
+            .about-grid { grid-template-columns: 1fr; }
+            .contact-info { padding: 30px; }
+            .info-grid { flex-direction: column; gap: 10px; }
+        }
+    </style>
+</meta><style id="orbitr-generated-content-style">
+.orbitr-generated-content > * {
+    margin: 0;
+}
+
+.orbitr-generated-content > * + * {
+    margin-top: 1rem;
+}
+
+.orbitr-generated-content p {
+    line-height: 1.75;
+}
+
+.orbitr-generated-content h2,
+.orbitr-generated-content h3,
+.orbitr-generated-content h4 {
+    margin-top: 1.75rem;
+    line-height: 1.25;
+}
+
+.orbitr-generated-content ul,
+.orbitr-generated-content ol {
+    margin: 0.75rem 0 1.25rem;
+    padding-inline-start: 0;
+    list-style-position: inside;
+}
+
+.orbitr-generated-content li + li {
+    margin-top: 0.4rem;
+}
+</style></head>
+<body>
+<header>
+<div class="container nav-wrapper">
+<a class="logo" href="#">ConnAve <span>Dental</span></a>
+<nav>
+<ul class="nav-menu">
+<li><a href="#about">About</a></li>
+<li><a href="#services">Services</a></li>
+<li><a href="#new-patients">New Patients</a></li>
+<li><a href="#reviews">Reviews</a></li>
+<li><a class="btn btn-primary" href="#contact">Book Visit</a></li>
+</ul>
+<div class="mobile-toggle"><i class="fas fa-bars"></i></div>
+</nav>
+</div>
+</header>
+<main style="margin-top: 90px;">
+<section class="section">
+<div class="container orbitr-generated-content">
+<h1>Professional Dental Implants DC - Connecticut Ave Dental Studio</h1>
+<p>Looking for reliable dental implants DC residents can trust? Connecticut Ave Dental Studio provides comprehensive dental care with a patient-first approach. Our experienced team combines world-class dental care with neighborhood warmth to help you craft your perfect 'Capitol Smile.'</p>
+<h2>Why Choose Our Comprehensive Care for Dental Implants DC</h2>
+<p>Our comprehensive care approach means we handle every aspect of your dental health journey. We understand that dental implants are a significant investment in your smile and overall well-being.</p>
+<p>Our team brings extensive experience in general dentistry and cosmetic design. We use modern equipment and advanced technology to ensure the best possible outcomes for our patients.</p>
+<h3>What Makes Us Different</h3>
+<p>We're less like a clinic and more like your trusted dental studio. Our approach focuses on:</p>
+<ul>
+<li>Complete patient comfort and care</li>
+<li>Personalized treatment planning</li>
+<li>Modern dental technology</li>
+<li>Flexible scheduling options</li>
+<li>Emergency care when you need it most</li>
+</ul>
+<h2>Our Dental Implant Process</h2>
+<p>At Connecticut Ave Dental Studio, we make the dental implants DC process straightforward and comfortable. Our comprehensive care includes thorough consultations and detailed treatment planning.</p>
+<h3>Single Tooth Replacement</h3>
+<p>Missing one tooth? Single dental implants provide a permanent solution that looks and feels natural. Our cosmetic design expertise ensures seamless integration with your existing smile.</p>
+<h3>Multiple Tooth Solutions</h3>
+<p>For patients missing several teeth, we offer implant-supported bridges and partial solutions. These options restore full function while maintaining the health of surrounding teeth.</p>
+<h3>Full Mouth Restoration</h3>
+<p>Complete tooth replacement using strategically placed implants provides stability and confidence. Our comprehensive approach evaluates bone structure and gum health for optimal results.</p>
+<h2>General Dentistry Foundation</h2>
+<p>Our general dentistry services provide the foundation for successful implant treatment. We evaluate your overall oral health to ensure the best possible results. Pre-implant care includes treating any existing dental issues to create the ideal environment for healing.</p>
+<h2>Cosmetic Design Excellence</h2>
+<p>Our cosmetic design expertise ensures your new teeth look natural and beautiful. We craft each restoration to match your unique smile perfectly. Color matching and shape customization create results that blend seamlessly with your natural teeth.</p>
+<h2>Investment in Your Smile</h2>
+<p>Dental implant costs vary based on individual needs and treatment complexity. During your consultation, we'll provide detailed pricing information and discuss payment options. Most patients find implants offer excellent long-term value compared to temporary solutions.</p>
+<h2>Serving Washington DC with Excellence</h2>
+<p>We're proud to serve the Washington DC community. Our convenient location makes it easy for residents throughout the area to access quality dental care.</p>
+<h3>Convenient Scheduling</h3>
+<p>We offer flexible hours to accommodate your busy lifestyle:</p>
+<ul>
+<li>Monday - Friday: 8:00 AM - 6:00 PM</li>
+<li>Saturday: 9:00 AM - 2:00 PM</li>
+</ul>
+<p>Evening and weekend appointments ensure you can receive care without disrupting your work schedule.</p>
+<h2>Emergency Care When You Need It</h2>
+<p>Dental emergencies don't wait for convenient times. That's why we provide emergency care services for our patients. Whether you have an existing implant concern or need urgent dental attention, we're here to help.</p>
+<h2>Schedule Your Free Consultation Today</h2>
+<p>Ready to restore your smile with dental implants DC residents recommend? Connecticut Ave Dental Studio is here to help you achieve the perfect smile you deserve.</p>
+<p>Our comprehensive consultation includes examination, treatment planning, and detailed cost breakdown. We'll answer all your questions and help you understand every step of the process.</p>
+<strong>Contact us today to schedule your free consultation. Your new smile is just a phone call away!</strong>
+</div>
+</section>
+<section class="section service-cta">
+<div class="container">
+<h2>Ready to Get Started?</h2>
+<a class="btn btn-primary" href="/#contact">Contact Us</a>
+</div>
+</section>
+</main>
+<footer>
+<div class="container">
+<div class="social-icons">
+<a href="#"><i class="fab fa-facebook"></i></a>
+<a href="#"><i class="fab fa-instagram"></i></a>
+<a href="#"><i class="fab fa-google"></i></a>
+</div>
+<div class="copyright">
+                © 2024 ConnAve Dental Studio. All rights reserved.
+            </div>
+</div>
+</footer>
+</body>
+</html>
