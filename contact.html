@@ -1,0 +1,408 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<meta content="PDXK53m3jbol2eaexn3PAoygEdroDwbegAuQOEcQsNs" name="google-site-verification"/>
+<title>Contact Connecticut Ave Dental Studio | Your Washington DC Dental Contact Page</title>
+<meta content="Contact Connecticut Ave Dental Studio in Washington DC for expert dental care. Schedule your appointment today and achi" name="description">
+<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&amp;family=Playfair+Display:wght@400;700&amp;display=swap" rel="stylesheet"/>
+<style>
+        /* --- CSS RESET & VARIABLES --- */
+        :root {
+            --primary: #0f2746; /* Deep DC Navy */
+            --secondary: #2dd4bf; /* Modern Mint/Teal */
+            --gold: #d4af37; /* Subtle Gold Accent */
+            --light: #f3f4f6;
+            --white: #ffffff;
+            --text-dark: #1e293b;
+            --text-light: #64748b;
+        }
+
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        html { scroll-behavior: smooth; }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            color: var(--text-dark);
+            line-height: 1.6;
+            background-color: var(--white);
+        }
+
+        h1, h2, h3, h4 {
+            font-family: 'Playfair Display', serif;
+            color: var(--primary);
+            font-weight: 700;
+        }
+
+        /* --- UTILITY CLASSES --- */
+        .container { max-width: 1200px; margin: 0 auto; padding: 0 20px; }
+        .text-center { text-align: center; }
+        .section { padding: 80px 0; }
+        .bg-light { background-color: var(--light); }
+
+        .btn {
+            display: inline-block;
+            padding: 14px 32px;
+            border-radius: 50px;
+            font-weight: 600;
+            text-decoration: none;
+            transition: all 0.3s ease;
+            text-transform: uppercase;
+            font-size: 0.9rem;
+            letter-spacing: 0.5px;
+        }
+        .btn-primary {
+            background-color: var(--secondary);
+            color: var(--primary);
+            border: 2px solid var(--secondary);
+        }
+        .btn-primary:hover {
+            background-color: transparent;
+            color: var(--secondary);
+        }
+        .btn-outline {
+            background-color: transparent;
+            color: var(--white);
+            border: 2px solid var(--white);
+        }
+        .btn-outline:hover {
+            background-color: var(--white);
+            color: var(--primary);
+        }
+
+        /* --- HEADER & NAV --- */
+        header {
+            background: rgba(255, 255, 255, 0.98);
+            box-shadow: 0 2px 20px rgba(0,0,0,0.05);
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
+        }
+        .nav-wrapper {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            height: 90px;
+        }
+        .logo {
+            font-size: 1.5rem;
+            font-weight: bold;
+            color: var(--primary);
+            text-decoration: none;
+            font-family: 'Playfair Display', serif;
+            letter-spacing: -0.5px;
+        }
+        .logo span { color: var(--secondary); }
+
+        nav ul { display: flex; list-style: none; gap: 35px; align-items: center; }
+        nav a { text-decoration: none; color: var(--primary); font-weight: 500; font-size: 0.95rem; transition: color 0.3s; }
+        nav a:hover { color: var(--secondary); }
+
+        .mobile-toggle { display: none; font-size: 1.5rem; color: var(--primary); cursor: pointer; }
+
+        /* --- HERO SECTION --- */
+        .hero {
+            position: relative;
+            height: 90vh; /* Full screen height */
+            background: linear-gradient(rgba(15, 39, 70, 0.85), rgba(15, 39, 70, 0.7)), url('https://images.unsplash.com/photo-1609840114035-1c99d59242cc?auto=format&fit=crop&q=80');
+            background-size: cover;
+            background-position: center;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            color: white;
+            margin-top: 90px;
+        }
+        .hero-content h1 {
+            font-size: 4rem;
+            color: white;
+            margin-bottom: 20px;
+            line-height: 1.1;
+        }
+        .hero-content p {
+            font-size: 1.3rem;
+            max-width: 700px;
+            margin: 0 auto 40px auto;
+            opacity: 0.9;
+            font-weight: 300;
+        }
+
+        /* --- PAGE HERO --- */
+        .page-hero {
+            position: relative;
+            height: 40vh;
+            background: linear-gradient(rgba(15, 39, 70, 0.85), rgba(15, 39, 70, 0.7)), url('https://images.unsplash.com/photo-1609840114035-1c99d59242cc?auto=format&fit=crop&q=80');
+            background-size: cover;
+            background-position: center;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            color: white;
+            margin-top: 90px;
+        }
+
+        /* --- INFO BAR --- */
+        .info-bar {
+            background: var(--secondary);
+            color: var(--primary);
+            padding: 20px 0;
+            margin-top: -5px;
+        }
+        .info-grid {
+            display: flex;
+            justify-content: space-around;
+            text-align: center;
+            font-weight: 600;
+        }
+        .info-item i { margin-right: 8px; }
+
+        /* --- ABOUT --- */
+        .about-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 60px;
+            align-items: center;
+        }
+        .about-image img {
+            width: 100%;
+            border-radius: 10px;
+            box-shadow: 20px 20px 0px var(--light);
+        }
+
+        /* --- SERVICES --- */
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+            margin-top: 50px;
+        }
+        .service-card {
+            background: white;
+            padding: 40px 30px;
+            border-radius: 8px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.03);
+            transition: transform 0.3s;
+            border-top: 4px solid var(--secondary);
+        }
+        .service-card:hover { transform: translateY(-5px); }
+        .service-icon { font-size: 2.5rem; color: var(--primary); margin-bottom: 20px; }
+        .service-card h3 { font-size: 1.5rem; margin-bottom: 15px; }
+
+        /* --- SERVICE CTA --- */
+        .service-cta {
+            background-color: var(--primary);
+            color: white;
+            text-align: center;
+            padding: 60px 0;
+        }
+        .service-cta h2 { color: white; margin-bottom: 30px; }
+
+        /* --- TESTIMONIALS --- */
+        .testimonials { background-color: var(--primary); color: white; text-align: center; }
+        .testimonials h2 { color: white; }
+        .quote-box {
+            font-size: 1.2rem;
+            font-style: italic;
+            max-width: 800px;
+            margin: 30px auto;
+            opacity: 0.9;
+        }
+        .stars { color: var(--gold); margin-bottom: 10px; }
+
+        /* --- CONTACT / MAP --- */
+        .contact-wrapper {
+            display: flex;
+            flex-wrap: wrap;
+            box-shadow: 0 10px 40px rgba(0,0,0,0.1);
+            border-radius: 15px;
+            overflow: hidden;
+            background: white;
+        }
+        .contact-info {
+            flex: 1;
+            padding: 60px;
+            min-width: 300px;
+            background: white;
+        }
+        .map-container {
+            flex: 1;
+            min-width: 300px;
+            background: #eee;
+            min-height: 400px;
+        }
+        .contact-row {
+            display: flex;
+            align-items: center;
+            margin-bottom: 30px;
+        }
+        .contact-row i {
+            font-size: 1.5rem;
+            color: var(--secondary);
+            margin-right: 20px;
+            width: 30px;
+        }
+
+        /* --- FOOTER --- */
+        footer {
+            background: var(--primary);
+            color: white;
+            padding: 60px 0 20px;
+            text-align: center;
+        }
+        .social-icons { margin: 20px 0; }
+        .social-icons a { color: white; margin: 0 10px; font-size: 1.2rem; transition: color 0.3s; }
+        .social-icons a:hover { color: var(--secondary); }
+        .copyright { border-top: 1px solid rgba(255,255,255,0.1); padding-top: 20px; margin-top: 40px; font-size: 0.8rem; opacity: 0.6; }
+
+        /* --- MOBILE RESPONSIVE --- */
+        @media (max-width: 768px) {
+            .nav-menu { display: none; }
+            .mobile-toggle { display: block; }
+            .hero-content h1 { font-size: 2.5rem; }
+            .about-grid { grid-template-columns: 1fr; }
+            .contact-info { padding: 30px; }
+            .info-grid { flex-direction: column; gap: 10px; }
+        }
+    </style>
+</meta><style id="orbitr-generated-content-style">
+.orbitr-generated-content > * {
+    margin: 0;
+}
+
+.orbitr-generated-content > * + * {
+    margin-top: 1rem;
+}
+
+.orbitr-generated-content p {
+    line-height: 1.75;
+}
+
+.orbitr-generated-content h2,
+.orbitr-generated-content h3,
+.orbitr-generated-content h4 {
+    margin-top: 1.75rem;
+    line-height: 1.25;
+}
+
+.orbitr-generated-content ul,
+.orbitr-generated-content ol {
+    margin: 0.75rem 0 1.25rem;
+    padding-inline-start: 0;
+    list-style-position: inside;
+}
+
+.orbitr-generated-content li + li {
+    margin-top: 0.4rem;
+}
+</style></head>
+<body>
+<header>
+<div class="container nav-wrapper">
+<a class="logo" href="#">ConnAve <span>Dental</span></a>
+<nav>
+<ul class="nav-menu">
+<li><a href="#about">About</a></li>
+<li><a href="#services">Services</a></li>
+<li><a href="#new-patients">New Patients</a></li>
+<li><a href="#reviews">Reviews</a></li>
+<li><a class="btn btn-primary" href="#contact">Book Visit</a></li>
+</ul>
+<div class="mobile-toggle"><i class="fas fa-bars"></i></div>
+</nav>
+</div>
+</header>
+<section class="page-hero">
+<div class="container">
+<h1 style="color: white; font-size: 3rem;">Contact Connecticut Ave Dental Studio</h1>
+</div>
+</section>
+<section class="section">
+<div class="container">
+<h1>Contact Connecticut Ave Dental Studio</h1>
+<p>Ready to transform your smile? Connecticut Ave Dental Studio makes connecting with exceptional dental care effortless. <strong>Schedule your appointment today</strong> and discover why Washington DC patients choose our patient-first approach.</p>
+<h2><strong>Schedule Now - Multiple Ways to Connect</strong></h2>
+<p><strong>📞 Call for appointments</strong> - Speak directly with our friendly team</p>
+<p><strong>✉️ Email for questions</strong> - Get answers to your questions</p>
+<p><strong>Visit Us:</strong> Connecticut Ave NW Washington, DC</p>
+<h2>Office Hours - Flexible Scheduling for Your Life</h2>
+<ul>
+<li><strong>Monday - Friday:</strong> 8:00 AM - 6:00 PM</li>
+<li><strong>Saturday:</strong> 9:00 AM - 2:00 PM</li>
+</ul>
+<p>Whether you need comprehensive care, general dentistry, cosmetic design, Invisalign, or emergency care, we accommodate your schedule.</p>
+<h2>What to Expect When You Contact Us</h2>
+<p>Experience our patient-first approach from your very first call:</p>
+<ul>
+<li><strong>Immediate assistance</strong> with scheduling and questions</li>
+<li><strong>Personalized consultation</strong> about your dental care needs</li>
+<li><strong>Insurance verification</strong> and payment option discussions</li>
+<li><strong>Clear directions</strong> to our Connecticut Ave location</li>
+<li><strong>Comfortable first visit</strong> preparation and guidance</li>
+</ul>
+<p>We transform dental care into a welcoming, stress-free experience in our modern studio environment.</p>
+<h2>Emergency Dental Care - We're Here When You Need Us</h2>
+<p>Dental emergencies demand immediate attention. <strong>Call for urgent situations</strong>.</p>
+<p><strong>Our Emergency Protocol:</strong></p>
+<ol>
+<li><strong>Call immediately</strong> - our emergency line connects after hours</li>
+<li><strong>Describe your emergency</strong> - we assess urgency and pain levels</li>
+<li><strong>Receive expert guidance</strong> - get professional care instructions</li>
+<li><strong>Schedule urgent treatment</strong> - same-day appointments available</li>
+</ol>
+<p>We handle severe tooth pain, dental trauma, lost fillings, broken teeth, and all urgent dental needs with compassion and expertise.</p>
+<h2>Insurance and Payment Made Simple</h2>
+<p>Quality dental care should never be out of reach. We offer:</p>
+<ul>
+<li><strong>Complete insurance verification</strong> and benefit maximization</li>
+<li><strong>Flexible payment plans</strong> tailored to your budget</li>
+<li><strong>Treatment financing options</strong> for comprehensive care</li>
+<li><strong>HSA and FSA acceptance</strong> for tax-advantaged payments</li>
+</ul>
+<p>When you contact us, we'll find coverage solutions that work perfectly for your financial situation.</p>
+<h2>Visit Our Modern Washington DC Studio</h2>
+<p>Serving the Washington DC community from our convenient Connecticut Ave NW location, our dental studio combines cutting-edge technology with neighborhood warmth. Our modern facility makes quality dental care accessible throughout the area.</p>
+<p><strong>Easy Access Features:</strong></p>
+<ul>
+<li>Public transportation nearby</li>
+<li>Convenient parking available</li>
+<li>Accessible facility design</li>
+<li>Central Washington DC location</li>
+</ul>
+<h2>Patient-Centered Communication Promise</h2>
+<p>From initial contact to post-appointment follow-up, we prioritize clear communication and personalized attention. Our team ensures every interaction feels positive, informative, and genuinely caring.</p>
+<p><strong>"The team at Connecticut Ave Dental Studio made me feel comfortable from the moment I called. Their communication is outstanding!"</strong> - Verified Patient Review</p>
+<h2>Start Your Dental Journey Today</h2>
+<p>Your healthiest, most confident smile is just one call away. Our experienced team is ready to welcome you into our dental family.</p>
+<p><strong>🔥 Ready to Schedule? Don't Wait!</strong></p>
+<p><strong>Call or email us</strong> now!</p>
+<p><strong>Connecticut Ave Dental Studio - Where exceptional dental care meets genuine patient care in the heart of Washington DC.</strong></p>
+</div>
+</section>
+<section class="service-cta">
+<div class="container">
+<h2>Ready to Get Started?</h2>
+<a class="btn btn-primary" href="/#contact">Contact Us</a>
+</div>
+</section>
+<footer>
+<div class="container">
+<div class="logo" style="color: white; margin-bottom: 20px;">ConnAve <span>Dental</span></div>
+<p>Premium dental care in the heart of Washington DC</p>
+<div class="social-icons">
+<a href="#"><i class="fab fa-facebook-f"></i></a>
+<a href="#"><i class="fab fa-instagram"></i></a>
+<a href="#"><i class="fab fa-google"></i></a>
+</div>
+<div class="copyright">
+<p>© 2024 Connecticut Ave Dental Studio. All rights reserved.</p>
+</div>
+</div>
+</footer>
+</body>
+</html>
