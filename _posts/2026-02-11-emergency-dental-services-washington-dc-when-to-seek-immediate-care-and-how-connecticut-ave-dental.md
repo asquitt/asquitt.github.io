@@ -114,3 +114,23 @@ Dental emergencies require immediate professional attention. Don't suffer throug
 You can also email us at hello@connavedental.com for non-urgent inquiries.
 
 Our experienced team provides prompt, professional emergency care to protect your oral health and restore your comfort. Whether you need emergency treatment or Invisalign support in Washington DC, we're here to help when dental emergencies strike.
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Article",
+  "headline": "Untitled Article",
+  "description": "",
+  "author": {
+    "@type": "Organization",
+    "name": "Connecticut Ave Dental Studio"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "Connecticut Ave Dental Studio"
+  },
+  "mainEntityOfPage": {
+    "@type": "WebPage",
+    "@id": "https://asquitt.github.io/blog/emergency-dental-services-washington-dc-when-to-seek-immediate-care-and-how-connecticut-ave-dental"
+  }
+}
+</script>
