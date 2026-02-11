@@ -86,3 +86,23 @@ Our experienced team will answer all your questions during a comprehensive consu
 Don't wait to get the smile you've always wanted. Your perfect Capitol Smile is just a consultation away.
 
 **Ready to start your smile transformation? Call Connecticut Ave Dental Studio today at (202) 555-0123 or email hello@connavedental.com to schedule your FREE Invisalign consultation. Visit us at 3501 Connecticut Ave NW, Washington, DC, 20008. Take the first step toward your dream smile today!**
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Article",
+  "headline": "Untitled Article",
+  "description": "",
+  "author": {
+    "@type": "Organization",
+    "name": "Connecticut Ave Dental Studio"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "Connecticut Ave Dental Studio"
+  },
+  "mainEntityOfPage": {
+    "@type": "WebPage",
+    "@id": "https://asquitt.github.io/blog/complete-guide-to-invisalign-washington-dc-how-connecticut-ave-dental-studio-transforms-smiles"
+  }
+}
+</script>
