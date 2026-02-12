@@ -249,6 +249,66 @@
     </style>
 <style>#orbitr-sticky-bar-spacer{height:50px;transition:height 0.2s ease;}body:not(.orbitr-sticky-bar-active) #orbitr-sticky-bar-spacer{height:0!important;}</style>
 <script>(function(){if(window.orbitrStickyBarOffsetInitialized){return;}window.orbitrStickyBarOffsetInitialized=true;var fallbackHeight='50px';var stickyBarId='sticky-cta-bar';var stickyBarSelector='[data-orbitr-sticky-bar="true"]';var spacerId='orbitr-sticky-bar-spacer';var activeClass='orbitr-sticky-bar-active';function getStickyBar(){return document.getElementById(stickyBarId) || document.querySelector(stickyBarSelector);}function getBarHeight(){var bar=getStickyBar();if(bar && bar.offsetHeight){return bar.offsetHeight;}var parsed=parseInt(fallbackHeight,10);return Number.isFinite(parsed)?parsed:50;}function shouldOffset(el){var s=window.getComputedStyle(el);if(s.position!=='fixed'&&s.position!=='sticky'){return false;}var rect=el.getBoundingClientRect();return rect.top<=5 && rect.bottom>0;}function navCandidates(){return document.querySelectorAll('header,nav,[role="navigation"],.navbar,.site-header,.main-header,.fixed-top,.sticky-top,.header,.navigation');}function applyOffset(){var bar=getStickyBar();if(!bar){return;}var offset=getBarHeight()+'px';if(document.body){document.body.classList.add(activeClass);}navCandidates().forEach(function(el){if(!shouldOffset(el)){return;}if(el.getAttribute('data-orbitr-offset-applied')==='true'){return;}el.setAttribute('data-orbitr-original-top', el.style.top || '');var baseTop=el.style.top || window.getComputedStyle(el).top || '0px';el.style.setProperty('top', 'calc(' + baseTop + ' + ' + offset + ')', 'important');el.setAttribute('data-orbitr-offset-applied','true');});}function restoreOffset(){document.querySelectorAll('[data-orbitr-offset-applied="true"]').forEach(function(el){var original=el.getAttribute('data-orbitr-original-top')||'';if(original){el.style.setProperty('top',original,'important');}else{el.style.removeProperty('top');}el.removeAttribute('data-orbitr-original-top');el.removeAttribute('data-orbitr-offset-applied');});if(document.body){document.body.classList.remove(activeClass);}}function dismissStickyBar(target){var bar=target || getStickyBar();if(bar){bar.remove();}var spacer=document.getElementById(spacerId);if(spacer){spacer.remove();}restoreOffset();}document.addEventListener('click',function(event){var closeEl=event.target&&event.target.closest('[data-orbitr-close="true"]');if(!closeEl){return;}event.preventDefault();var bar=closeEl.closest(stickyBarSelector) || getStickyBar();dismissStickyBar(bar);},true);if(document.readyState==='loading'){document.addEventListener('DOMContentLoaded',applyOffset);}else{applyOffset();}window.addEventListener('load',applyOffset);})();</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Dentist",
+  "name": "Connecticut Ave Dental Studio",
+  "url": "https://asquitt.github.io",
+  "address": {
+    "streetAddress": "3501 Connecticut Ave NW",
+    "addressLocality": "Washington",
+    "addressRegion": "DC",
+    "postalCode": "20008",
+    "@type": "PostalAddress",
+    "addressCountry": "US"
+  },
+  "telephone": "(202) 555-0123",
+  "openingHoursSpecification": [
+    {
+      "@type": "OpeningHoursSpecification",
+      "dayOfWeek": "Monday",
+      "opens": "08:00",
+      "closes": "18:00"
+    },
+    {
+      "@type": "OpeningHoursSpecification",
+      "dayOfWeek": "Tuesday",
+      "opens": "08:00",
+      "closes": "18:00"
+    },
+    {
+      "@type": "OpeningHoursSpecification",
+      "dayOfWeek": "Wednesday",
+      "opens": "08:00",
+      "closes": "18:00"
+    },
+    {
+      "@type": "OpeningHoursSpecification",
+      "dayOfWeek": "Thursday",
+      "opens": "08:00",
+      "closes": "18:00"
+    },
+    {
+      "@type": "OpeningHoursSpecification",
+      "dayOfWeek": "Friday",
+      "opens": "08:00",
+      "closes": "18:00"
+    },
+    {
+      "@type": "OpeningHoursSpecification",
+      "dayOfWeek": "Saturday",
+      "opens": "09:00",
+      "closes": "14:00"
+    }
+  ],
+  "geo": {
+    "@type": "GeoCoordinates",
+    "latitude": 38.9357816,
+    "longitude": -77.0579824
+  }
+}
+</script>
 </head>
 <body>
 <div data-orbitr-sticky-bar="true" id="sticky-cta-bar" style="position: fixed; top: 0; left: 0; right: 0; background: #2dd4bf; color: white; padding: 12px 20px; z-index: 2147483000; box-shadow: 0 2px 10px rgba(0,0,0,0.1); font-family: 'Inter', sans-serif; width: 100%; background-color: #2dd4bf">
