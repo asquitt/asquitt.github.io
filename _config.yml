@@ -1,0 +1,22 @@
+# Jekyll configuration
+title: Connecticut Ave Dental Studio
+description: Discover world-class dental care in Cleveland Park. Modern technology, personalized service, and expert treatments that keep your smile healthy and bright.
+url: ""
+baseurl: ""
+
+# Build settings
+markdown: kramdown
+permalink: /blog/:title/
+
+# Plugins
+plugins:
+  - jekyll-feed
+  - jekyll-seo-tag
+
+# Collections
+defaults:
+  - scope:
+      path: "_posts"
+      type: "posts"
+    values:
+      layout: "post"
