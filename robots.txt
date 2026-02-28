@@ -1,0 +1,6 @@
+# robots.txt - SEO crawler directives
+User-agent: *
+Allow: /
+
+# Sitemap
+Sitemap: https://asquitt.github.io/sitemap.xml
