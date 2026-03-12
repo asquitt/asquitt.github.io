@@ -1,0 +1,428 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<meta content="PDXK53m3jbol2eaexn3PAoygEdroDwbegAuQOEcQsNs" name="google-site-verification"/>
+<meta content="Master visual hierarchy design to create intuitive web layouts. Learn proven techniques to guide user attention and improve engagement. Get started today." name="description"/><meta content="Visual Hierarchy Design: Create Better Web Layouts" property="og:title"/><meta content="Master visual hierarchy design to create intuitive web layouts. Learn proven techniques to guide user attention and improve engagement. Get started today." property="og:description"/><meta content="https://asquitt.github.io/" property="og:url"/><meta content="website" property="og:type"/>
+<title>Visual Hierarchy Design: Create Better Web Layouts</title>
+<link href="https://asquitt.github.io/" rel="canonical"/>
+<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&amp;family=Playfair+Display:wght@400;700&amp;display=swap" rel="stylesheet"/>
+<style>
+ /* --- CSS RESET & VARIABLES --- */
+ :root {
+ --primary: #0f2746; /* Deep DC Navy */
+ --secondary: #2dd4bf; /* Modern Mint/Teal */
+ --gold: #d4af37; /* Subtle Gold Accent */
+ --light: #f3f4f6;
+ --white: #ffffff;
+ --text-dark: #1e293b;
+ --text-light: #64748b;
+ }
+
+ * { margin: 0; padding: 0; box-sizing: border-box; }
+ html { scroll-behavior: smooth; }
+
+ body {
+ font-family: 'Inter', sans-serif;
+ color: var(--text-dark);
+ line-height: 1.6;
+ background-color: var(--white);
+ }
+
+ h1, h2, h3, h4 {
+ font-family: 'Playfair Display', serif;
+ color: var(--primary);
+ font-weight: 700;
+ }
+
+ /* --- UTILITY CLASSES --- */
+ .container { max-width: 1200px; margin: 0 auto; padding: 0 20px; }
+ .text-center { text-align: center; }
+ .section { padding: 80px 0; }
+ .bg-light { background-color: var(--light); }
+
+ .btn {
+ display: inline-block;
+ padding: 14px 32px;
+ border-radius: 50px;
+ font-weight: 600;
+ text-decoration: none;
+ transition: all 0.3s ease;
+ text-transform: uppercase;
+ font-size: 0.9rem;
+ letter-spacing: 0.5px;
+ }
+ .btn-primary {
+ background-color: var(--secondary);
+ color: var(--primary);
+ border: 2px solid var(--secondary);
+ }
+ .btn-primary:hover {
+ background-color: transparent;
+ color: var(--secondary);
+ }
+ .btn-outline {
+ background-color: transparent;
+ color: var(--white);
+ border: 2px solid var(--white);
+ }
+ .btn-outline:hover {
+ background-color: var(--white);
+ color: var(--primary);
+ }
+
+ /* --- HEADER & NAV --- */
+ header {
+ background: rgba(255, 255, 255, 0.98);
+ box-shadow: 0 2px 20px rgba(0,0,0,0.05);
+ position: fixed;
+ width: 100%;
+ top: 0;
+ z-index: 1000;
+ }
+ .nav-wrapper {
+ display: flex;
+ justify-content: space-between;
+ align-items: center;
+ height: 90px;
+ }
+ .logo {
+ font-size: 1.5rem;
+ font-weight: bold;
+ color: var(--primary);
+ text-decoration: none;
+ font-family: 'Playfair Display', serif;
+ letter-spacing: -0.5px;
+ }
+ .logo span { color: var(--secondary); }
+
+ nav ul { display: flex; list-style: none; gap: 35px; align-items: center; }
+ nav a { text-decoration: none; color: var(--primary); font-weight: 500; font-size: 0.95rem; transition: color 0.3s; }
+ nav a:hover { color: var(--secondary); }
+
+ .mobile-toggle { display: none; font-size: 1.5rem; color: var(--primary); cursor: pointer; }
+
+ /* --- HERO SECTION --- */
+ .hero {
+ position: relative;
+ height: 90vh; /* Full screen height */
+ background: linear-gradient(rgba(15, 39, 70, 0.85), rgba(15, 39, 70, 0.7)), url('https://images.unsplash.com/photo-1609840114035-1c99d59242cc?auto=format&fit=crop&q=80');
+ background-size: cover;
+ background-position: center;
+ display: flex;
+ align-items: center;
+ justify-content: center;
+ text-align: center;
+ color: white;
+ margin-top: 90px;
+ }
+ .hero-content h1 {
+ font-size: 4rem;
+ color: white;
+ margin-bottom: 20px;
+ line-height: 1.1;
+ }
+ .hero-content p {
+ font-size: 1.3rem;
+ max-width: 700px;
+ margin: 0 auto 40px auto;
+ opacity: 0.9;
+ font-weight: 300;
+ }
+
+ /* --- INFO BAR --- */
+ .info-bar {
+ background: var(--secondary);
+ color: var(--primary);
+ padding: 20px 0;
+ margin-top: -5px;
+ }
+ .info-grid {
+ display: flex;
+ justify-content: space-around;
+ text-align: center;
+ font-weight: 600;
+ }
+ .info-item i { margin-right: 8px; }
+
+ /* --- ABOUT --- */
+ .about-grid {
+ display: grid;
+ grid-template-columns: 1fr 1fr;
+ gap: 60px;
+ align-items: center;
+ }
+ .about-image img {
+ width: 100%;
+ border-radius: 10px;
+ box-shadow: 20px 20px 0px var(--light);
+ }
+
+ /* --- SERVICES --- */
+ .services-grid {
+ display: grid;
+ grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+ gap: 30px;
+ margin-top: 50px;
+ }
+ .service-card {
+ background: white;
+ padding: 40px 30px;
+ border-radius: 8px;
+ box-shadow: 0 10px 30px rgba(0,0,0,0.03);
+ transition: transform 0.3s;
+ border-top: 4px solid var(--secondary);
+ }
+ .service-card:hover { transform: translateY(-5px); }
+ .service-icon { font-size: 2.5rem; color: var(--primary); margin-bottom: 20px; }
+ .service-card h3 { font-size: 1.5rem; margin-bottom: 15px; }
+
+ /* --- TESTIMONIALS --- */
+ .testimonials { background-color: var(--primary); color: white; text-align: center; }
+ .testimonials h2 { color: white; }
+ .quote-box {
+ font-size: 1.2rem;
+ font-style: italic;
+ max-width: 800px;
+ margin: 30px auto;
+ opacity: 0.9;
+ }
+ .stars { color: var(--gold); margin-bottom: 10px; }
+
+ /* --- CONTACT / MAP --- */
+ .contact-wrapper {
+ display: flex;
+ flex-wrap: wrap;
+ box-shadow: 0 10px 40px rgba(0,0,0,0.1);
+ border-radius: 15px;
+ overflow: hidden;
+ background: white;
+ }
+ .contact-info {
+ flex: 1;
+ padding: 60px;
+ min-width: 300px;
+ background: white;
+ }
+ .map-container {
+ flex: 1;
+ min-width: 300px;
+ background: #eee;
+ min-height: 400px;
+ }
+ .contact-row {
+ display: flex;
+ align-items: center;
+ margin-bottom: 30px;
+ }
+ .contact-row i {
+ font-size: 1.5rem;
+ color: var(--secondary);
+ margin-right: 20px;
+ width: 30px;
+ }
+
+ /* --- FOOTER --- */
+ footer {
+ background: var(--primary);
+ color: white;
+ padding: 60px 0 20px;
+ text-align: center;
+ }
+ .social-icons { margin: 20px 0; }
+ .social-icons a { color: white; margin: 0 10px; font-size: 1.2rem; transition: color 0.3s; }
+ .social-icons a:hover { color: var(--secondary); }
+ .copyright { border-top: 1px solid rgba(255,255,255,0.1); padding-top: 20px; margin-top: 40px; font-size: 0.8rem; opacity: 0.6; }
+
+ /* --- PAGE HERO STYLES --- */
+ .page-hero {
+ padding: 140px 0 80px;
+ background: linear-gradient(135deg, var(--primary) 0%, rgba(15, 39, 70, 0.9) 100%);
+ color: white;
+ text-align: center;
+ }
+ .page-hero h1 {
+ font-size: 3.5rem;
+ color: white;
+ margin-bottom: 30px;
+ line-height: 1.1;
+ }
+
+ /* --- LANDING CONTENT STYLES --- */
+ .landing-content {
+ padding: 80px 0;
+ }
+ .landing-content h1 {
+ font-size: 2.5rem;
+ margin-bottom: 30px;
+ }
+ .landing-content h2 {
+ font-size: 2rem;
+ margin: 40px 0 20px;
+ }
+ .landing-content p {
+ font-size: 1.1rem;
+ margin-bottom: 20px;
+ }
+ .landing-content ul {
+ margin: 20px 0 20px 30px;
+ }
+ .landing-content ul li {
+ margin-bottom: 10px;
+ }
+
+ /* --- LANDING CTA STYLES --- */
+ .landing-cta {
+ padding: 80px 0;
+ background: var(--light);
+ text-align: center;
+ }
+ .landing-cta h2 {
+ font-size: 2.5rem;
+ margin-bottom: 30px;
+ }
+
+ /* --- MOBILE RESPONSIVE --- */
+ @media (max-width: 768px) {
+ .nav-menu { display: none; }
+ .mobile-toggle { display: block; }
+ .hero-content h1 { font-size: 2.5rem; }
+ .page-hero h1 { font-size: 2.5rem; }
+ .about-grid { grid-template-columns: 1fr; }
+ .contact-info { padding: 30px; }
+ .info-grid { flex-direction: column; gap: 10px; }
+ .landing-content h1 { font-size: 2rem; }
+ .landing-content h2 { font-size: 1.5rem; }
+ .landing-cta h2 { font-size: 2rem; }
+ }
+ </style>
+<link as="image" href="https://images.unsplash.com/photo-1629909613654-28e377c37b09?auto=format&amp;fit=crop&amp;q=80" rel="preload"/>
+<style>#orbitr-sticky-bar-spacer{height:50px;transition:height 0.2s ease;}body:not(.orbitr-sticky-bar-active) #orbitr-sticky-bar-spacer{height:0!important;}</style>
+<script>(function(){if(window.orbitrStickyBarOffsetInitialized){return;}window.orbitrStickyBarOffsetInitialized=true;var fallbackHeight='50px';var stickyBarId='sticky-cta-bar';var stickyBarSelector='[data-orbitr-sticky-bar="true"]';var spacerId='orbitr-sticky-bar-spacer';var activeClass='orbitr-sticky-bar-active';function getStickyBar(){return document.getElementById(stickyBarId) || document.querySelector(stickyBarSelector);}function getBarHeight(){var bar=getStickyBar();if(bar && bar.offsetHeight){return bar.offsetHeight;}var parsed=parseInt(fallbackHeight,10);return Number.isFinite(parsed)?parsed:50;}function shouldOffset(el){var s=window.getComputedStyle(el);if(s.position!=='fixed'&&s.position!=='sticky'){return false;}var rect=el.getBoundingClientRect();return rect.top<=5 && rect.bottom>0;}function navCandidates(){return document.querySelectorAll('header,nav,[role="navigation"],.navbar,.site-header,.main-header,.fixed-top,.sticky-top,.header,.navigation');}function applyOffset(){var bar=getStickyBar();if(!bar){return;}var offset=getBarHeight()+'px';if(document.body){document.body.classList.add(activeClass);}navCandidates().forEach(function(el){if(!shouldOffset(el)){return;}if(el.getAttribute('data-orbitr-offset-applied')==='true'){return;}el.setAttribute('data-orbitr-original-top', el.style.top || '');var baseTop=el.style.top || window.getComputedStyle(el).top || '0px';el.style.setProperty('top', 'calc(' + baseTop + ' + ' + offset + ')', 'important');el.setAttribute('data-orbitr-offset-applied','true');});}function restoreOffset(){document.querySelectorAll('[data-orbitr-offset-applied="true"]').forEach(function(el){var original=el.getAttribute('data-orbitr-original-top')||'';if(original){el.style.setProperty('top',original,'important');}else{el.style.removeProperty('top');}el.removeAttribute('data-orbitr-original-top');el.removeAttribute('data-orbitr-offset-applied');});if(document.body){document.body.classList.remove(activeClass);}}function dismissStickyBar(target){var bar=target || getStickyBar();if(bar){bar.remove();}var spacer=document.getElementById(spacerId);if(spacer){spacer.remove();}restoreOffset();}document.addEventListener('click',function(event){var closeEl=event.target&&event.target.closest('[data-orbitr-close="true"]');if(!closeEl){return;}event.preventDefault();var bar=closeEl.closest(stickyBarSelector) || getStickyBar();dismissStickyBar(bar);},true);if(document.readyState==='loading'){document.addEventListener('DOMContentLoaded',applyOffset);}else{applyOffset();}window.addEventListener('load',applyOffset);})();</script>
+<style id="orbitr-generated-content-style">
+.orbitr-generated-content > * {
+ margin: 0;
+}
+
+.orbitr-generated-content > * + * {
+ margin-top: 1rem;
+}
+
+.orbitr-generated-content p {
+ line-height: 1.75;
+}
+
+.orbitr-generated-content h2,
+.orbitr-generated-content h3,
+.orbitr-generated-content h4 {
+ margin-top: 1.75rem;
+ line-height: 1.25;
+}
+
+.orbitr-generated-content ul,
+.orbitr-generated-content ol {
+ margin: 0.75rem 0 1.25rem;
+ padding-inline-start: 1.25rem;
+ list-style-position: outside;
+}
+
+.orbitr-generated-content li + li {
+ margin-top: 0.4rem;
+}
+
+.orbitr-generated-content li {
+ line-height: 1.65;
+}
+</style></head>
+<body>
+<div data-orbitr-sticky-bar="true" id="sticky-cta-bar" style="position: fixed; top: 0; left: 0; right: 0; background: #0f2746; color: white; padding: 12px 20px; z-index: 2147483000; box-shadow: 0 2px 10px rgba(0,0,0,0.1); font-family: 'Inter', sans-serif; width: 100%">
+<div style="max-width: 1200px; margin: 0 auto; display: flex; align-items: center; justify-content: space-between; gap: 20px;">
+<div style="flex: 1; text-align: center;">
+<span style="font-size: 16px; font-weight: 500;">Ready for premier dental care? Schedule your appointment today!</span>
+</div>
+<div style="display: flex; align-items: center; gap: 15px;">
+<a class="btn btn-primary" href="#contact" style="background: #2dd4bf; border: none; padding: 10px 24px; border-radius: 6px; color: #0f2746; font-weight: 600; text-decoration: none; font-size: 14px; white-space: nowrap;">Book Your Appointment Today</a>
+<button aria-label="Close notification" class="orbitr-cta-close" data-orbitr-close="true" style="background: transparent; border: 1px solid currentColor; color: white; font-size: 18px; cursor: pointer; padding: 0; line-height: 1; border-radius: 999px; width: 32px; height: 32px; display: inline-flex; align-items: center; justify-content: center; font-weight: 600; transition: opacity 0.2s ease" type="button">×</button>
+</div>
+</div>
+</div>
+<div id="orbitr-sticky-bar-spacer" style="height:50px;"></div>
+<header>
+<div class="container nav-wrapper" style="font-family: 'Inter'">
+<a class="logo" href="#" style="">ConnAve <span>Dental</span></a>
+<nav>
+<ul class="nav-menu">
+<li><a href="#about" style="">About</a></li>
+<li><a href="#services" style="">Services</a></li>
+<li><a href="#new-patients" style="">New Patients</a></li>
+<li><a href="#reviews" style="">Reviews</a></li>
+<li><a class="btn btn-primary" href="#contact" style="">Contact</a></li>
+</ul>
+<div class="mobile-toggle">☰</div>
+</nav>
+</div>
+</header>
+<main>
+<section class="page-hero landing-hero">
+<div class="container">
+<h1>Visual Hierarchy Design: Create Better Web Layouts</h1>
+<a class="btn btn-primary" href="/#contact">Contact Us</a>
+</div>
+</section>
+<section class="landing-content">
+<div class="container orbitr-generated-content">
+<h1>Visual Hierarchy Design: Create Better Web Layouts</h1>
+<p>Good visual hierarchy design guides users through your website naturally. It helps visitors find information quickly and take action. When done right, your site becomes easier to use and more effective.</p>
+<h2>What Makes Visual Hierarchy Work</h2>
+<p>Visual hierarchy design uses size, color, and spacing to show importance. Larger elements grab attention first. Bold colors highlight key information. White space creates breathing room and focus.</p>
+<p>Your eyes follow a predictable path when viewing content. Most people scan in an F-pattern or Z-pattern. Smart designers place important elements along these natural eye movements.</p>
+<h2>Key Elements of Strong Visual Hierarchy</h2>
+<p>Effective visual hierarchy design relies on these core principles:</p>
+<ul>
+<li><strong>Size and Scale</strong>: Bigger elements feel more important</li>
+<li><strong>Color Contrast</strong>: Bold colors draw the eye first</li>
+<li><strong>Typography</strong>: Different fonts create clear information levels</li>
+<li><strong>Spacing</strong>: White space separates and groups content</li>
+<li><strong>Alignment</strong>: Organized layouts feel professional</li>
+</ul>
+<p>These elements work together to create clear information paths. Users know where to look first, second, and third.</p>
+<h2>Common Visual Hierarchy Mistakes</h2>
+<p>Many websites fail because they ignore visual hierarchy design basics. Everything looks the same size. Colors compete for attention. Text runs together without breaks.</p>
+<p>Poor hierarchy confuses visitors. They can't find what they need quickly. This leads to higher bounce rates and lost conversions.</p>
+<p>Good hierarchy makes scanning easy. Important information stands out. Secondary details support without overwhelming.</p>
+<h2>Building Better Web Layouts</h2>
+<p>Start with your most important message. Make it the biggest, boldest element on the page. This could be your headline, main benefit, or call-to-action.</p>
+<p>Next, organize supporting information by importance. Use different text sizes, colors, and spacing to create clear levels. Group related content together with consistent styling.</p>
+<p>Test your design by squinting at it. The most important elements should still be visible. If everything blurs together, you need stronger contrast.</p>
+<h2>Professional Web Design Support</h2>
+<p>At Connecticut Ave Dental Studio, we understand how visual hierarchy design impacts patient experience. Our website uses clear layouts to help patients find the care they need quickly.</p>
+<p>We apply these same design principles to our practice. Important information like our services and contact details are easy to find. Patients can book appointments without confusion.</p>
+<p>Our Complete Dental Care, Preventive Dentistry, and Cosmetic Dentistry services are presented with clear visual hierarchy. This helps patients understand their options and make informed decisions.</p>
+<strong>Ready to improve your website's visual hierarchy design?</strong> Contact our team or visit us in Washington, DC, and we're here to help you create better user experiences.
+ </div>
+</section>
+<section class="landing-cta">
+<div class="container">
+<h2>Take the Next Step</h2>
+<a class="btn btn-primary" href="/#contact">Contact Us</a>
+</div>
+</section>
+</main>
+<footer>
+<div class="container">
+<p>© 2024 Connecticut Ave Dental Studio. All rights reserved.</p>
+<div class="social-icons">
+<a href="#"><i class="fab fa-facebook"></i></a>
+<a href="#"><i class="fab fa-twitter"></i></a>
+<a href="#"><i class="fab fa-instagram"></i></a>
+</div>
+<div class="copyright">
+ Professional dental care in Washington DC
+ </div>
+</div>
+</footer>
+</body>
+</html>
